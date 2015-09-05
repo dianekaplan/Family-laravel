@@ -10,5 +10,8 @@
 
         @endforeach
     @endif
+<br/>
+    Here's what we have for the database url (passed in from PeopleController.php): {{ $url_results }}
+
 
 @stop

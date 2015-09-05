@@ -16,12 +16,16 @@ class PeopleController extends Controller
      */
     public function index()
     {
-       // $people =[];
+        $people =[];
 
         $results = \DB::select('select * from test', array(1));
         $people = $results;
+
+       $url = parse_url(getenv("DATABASE_URL"));
+        $url_results= print_r($url, true);
+
        //$people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
-        return view ('pages.person_index', compact('people'));
+        return view ('pages.person_index', compact('people', 'url_results'));
     }
 
     /**
