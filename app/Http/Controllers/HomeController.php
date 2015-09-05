@@ -30,8 +30,5 @@ class HomeController extends Controller {
     {
         return view ('pages.home');
     }
-    public function person()
-    {
-        return view ('pages.person');
-    }
+
 }
