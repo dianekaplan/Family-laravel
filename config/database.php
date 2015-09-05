@@ -1,5 +1,13 @@
 <?php
 
+//DK added based on this: https://mattstauffer.co/blog/laravel-on-heroku-using-a-postgresql-database
+$url = parse_url(getenv("DATABASE_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"],1);
+
 return [
 
     /*
