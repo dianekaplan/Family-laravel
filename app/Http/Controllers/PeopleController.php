@@ -18,14 +18,16 @@ class PeopleController extends Controller
     {
         $people =[];
 
-        //this didn't work- threw 'connection refused' error in production- will come back
-        $results = \DB::select('select * from test', array(1));
-        $people = $results;
+        //this didn't work- threw 'connection refused' error in production-
+        // (even though it parses env stuff below where local doesn't)
+        // will come back
+       // $results = \DB::select('select * from test', array(1));
+        //$people = $results;
 
        $url = parse_url(getenv("DATABASE_URL"));
         $url_results= print_r($url, true);
 
-      // $people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
+       $people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
         return view ('pages.person_index', compact('people', 'url_results'));
     }
 

@@ -2,13 +2,15 @@
 
 //DK tried based on this: https://mattstauffer.co/blog/laravel-on-heroku-using-a-postgresql-database
 //but locally it says 'Undefined index' about host, user, pass
-//and on heroku I can't connect yet
-$url = parse_url(getenv("DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"],1);
+//and on heroku: could not connect to server: Connection refused
+//Is the server running on host "localhost" (127.0.0.1) and accepting
+//TCP/IP connections on port 5432?
+//$url = parse_url(getenv("DATABASE_URL"));
+//
+//$host = $url["host"];
+//$username = $url["user"];
+//$password = $url["pass"];
+//$database = substr($url["path"],1);
 
 return [
 
