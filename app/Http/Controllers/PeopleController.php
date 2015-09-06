@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Person;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,19 +16,22 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $people =[];
-
-        //this didn't work- threw 'connection refused' error in production-
-        // (even though it parses env stuff below where local doesn't)
-        // will come back
-       // $results = \DB::select('select * from test', array(1));
-        //$people = $results;
-
+       // $people =[];
+//
+//        //this didn't work- threw 'connection refused' error in production-
+//        // (even though it parses env stuff below where local doesn't)
+//        // will come back
+////        $results = \DB::select('select * from test', array(1));
+////        $people = $results;
+//
        $url = parse_url(getenv("DATABASE_URL"));
         $url_results= print_r($url, true);
+//
+       //$people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
+        $people = Person::all();
+        return view ('person.index', compact('people'));
+        //return view ('person.index', compact('people', 'url_results'));
 
-       $people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
-        return view ('pages.person_index', compact('people', 'url_results'));
     }
 
     /**
@@ -38,7 +41,7 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        //
+        return view ('person.create');
     }
 
     /**
@@ -59,9 +62,11 @@ class PeopleController extends Controller
      * @return Response
      */
 //    public function show($id)
-    public function show()
+    public function show($id)
     {
-        return view ('pages.person');
+        $person = Person::findOrFail($id);
+
+        return view ('person.show', compact('person'));
     }
 
     /**

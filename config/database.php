@@ -39,7 +39,7 @@ return array(
     */
 
 //    'default' => env('DB_CONNECTION', 'mysql'),
-    'default' => env('DB_CONNECTION', 'pgsql'),
+      'default' => env('DB_CONNECTION', 'pgsql'),
      //'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
