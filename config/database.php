@@ -12,7 +12,7 @@
 //$password = $url["pass"];
 //$database = substr($url["path"],1);
 
-return [
+return array(
 
     /*
     |--------------------------------------------------------------------------
@@ -40,6 +40,7 @@ return [
 
 //    'default' => env('DB_CONNECTION', 'mysql'),
     'default' => env('DB_CONNECTION', 'pgsql'),
+     //'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,15 +58,15 @@ return [
     |
     */
 
-    'connections' => [
+    'connections' => array(
 
-        'sqlite' => [
+        'sqlite' => array(
             'driver'   => 'sqlite',
             'database' => storage_path('database.sqlite'),
             'prefix'   => '',
-        ],
+        ),
 
-        'mysql' => [
+        'mysql' => array(
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge'),
@@ -75,9 +76,9 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
-        ],
+        ),
 
-        'pgsql' => [
+        'pgsql' => array(
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -86,9 +87,9 @@ return [
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
-        ],
+        ),
 
-        'sqlsrv' => [
+        'sqlsrv' => array(
             'driver'   => 'sqlsrv',
             'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -96,9 +97,9 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset'  => 'utf8',
             'prefix'   => '',
-        ],
+        ),
 
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -124,16 +125,16 @@ return [
     |
     */
 
-    'redis' => [
+    'redis' => array(
 
         'cluster' => false,
 
-        'default' => [
+        'default' => array(
             'host'     => '127.0.0.1',
             'port'     => 6379,
             'database' => 0,
-        ],
+        ),
 
-    ],
+    ),
 
-];
+);
