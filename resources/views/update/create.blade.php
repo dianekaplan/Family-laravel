@@ -1,13 +1,13 @@
 @extends('default')
 
 @section('content')
-    <h3>Add a new person</h3>
+    <h3>Add a suggested update</h3>
 
-    {!! Form::open(['url' => 'people']) !!}
+    {!! Form::open(['url' => 'updates']) !!}
     {{--{!! Form::open( ['route' => ['person.store']]) !!}--}}
 
     @include ('errors.list')
-    @include ('person._form', ['submitButtonText' => 'Add Person'])
+    @include ('update._form', ['submitButtonText' => 'Add Suggested Update'])
 
     {!! Form::close() !!}
 

@@ -10,9 +10,9 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract,
-                                    AuthorizableContract,
-                                    CanResetPasswordContract
+class Update extends Model implements AuthenticatableContract,
+    AuthorizableContract,
+    CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
 
@@ -21,30 +21,28 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'updates';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'person_id', 'super_admin',
-        'last_pestered', 'connection_notes', 'furthest_html', 'keem_access',
-        'husband_access', 'kemler_access', 'kaplan_access'];
+    protected $fillable = ['user_id', 'person_id', 'family_id', 'summary'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['moderated'];
 
-    //A user can have many updates he/she adds
-    public function updates()
+
+//An update is created by a user
+    public function user()
     {
-        return $this->hasMany('App\Update');
+        return $this->belongsTo('App\User');
 
     }
+
 }
-
-

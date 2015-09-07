@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
-  //still getting MassAssignmentException even though I did this!
-
     protected $fillable = [
 
         'first',
@@ -31,4 +29,11 @@ class Person extends Model
         'kemler_bool',
         'kaplan_bool',
     ];
+
+    protected $dates = ['birthdate'];
+
+    public function scopeDisplayable($query)
+    {
+        $query->where('hide_bool', '=', false);
+    }
 }

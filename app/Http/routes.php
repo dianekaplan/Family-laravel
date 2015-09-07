@@ -18,8 +18,21 @@ Route::get('/', 'HomeController@index');
 Route::get('contact', 'HomeController@contact');
 Route::get('home', 'HomeController@home');
 
+//
+//Route::get('people', 'PeopleController@index');
+//Route::get('people/create', 'PeopleController@create');
+//Route::get('people/{id}', 'PeopleController@show');
+//Route::post('people', 'PeopleController@store');
+//
+//Route::get('people/{id}/edit', 'PeopleController@edit');
+//Route::get('people/{id}/update', 'PeopleController@update');
 
-Route::get('people', 'PeopleController@index');
-Route::get('people/create', 'PeopleController@create');
-Route::get('people/{id}', 'PeopleController@show');
-Route::post('people', 'PeopleController@store');
+Route::resource('people', 'PeopleController');
+Route::resource('users', 'UserController');
+Route::resource('updates', 'UpdateController');
+
+//$router->bind('people', function($id)
+////Route::bind('song', function($slug) //original value
+//{
+//    return App\Person::whereId($id)->first();
+//});
