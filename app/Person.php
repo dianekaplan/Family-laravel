@@ -37,3 +37,4 @@ class Person extends Model
         $query->where('hide_bool', '=', false);
     }
 }
+//nothing

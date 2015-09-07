@@ -46,3 +46,5 @@ class Update extends Model implements AuthenticatableContract,
     }
 
 }
+
+//nothing
