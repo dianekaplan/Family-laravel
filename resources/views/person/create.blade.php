@@ -3,7 +3,7 @@
 @section('content')
     <h3>Add a new person</h3>
 
-    {!! Form::open() !!}
+    {!! Form::open(['url' => 'people']) !!}
     {{--{!! Form::open( ['route' => ['person.store']]) !!}--}}
     @include ('person._form')
 

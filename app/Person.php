@@ -25,6 +25,10 @@ class Person extends Model
         'birthdate',
         'birthplace',
         'deathdate',
-        'resting_place'
+        'resting_place',
+        'keem_bool',
+        'husband_bool',
+        'kemler_bool',
+        'kaplan_bool',
     ];
 }

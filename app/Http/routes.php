@@ -22,3 +22,4 @@ Route::get('home', 'HomeController@home');
 Route::get('people', 'PeopleController@index');
 Route::get('people/create', 'PeopleController@create');
 Route::get('people/{id}', 'PeopleController@show');
+Route::post('people', 'PeopleController@store');

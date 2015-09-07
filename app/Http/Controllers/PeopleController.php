@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Person;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+//use Illuminate\Http\Request;
+use Request;
 
 class PeopleController extends Controller
 {
@@ -16,22 +17,10 @@ class PeopleController extends Controller
      */
     public function index()
     {
-       // $people =[];
-//
-//        //this didn't work- threw 'connection refused' error in production-
-//        // (even though it parses env stuff below where local doesn't)
-//        // will come back
-////        $results = \DB::select('select * from test', array(1));
-////        $people = $results;
-//
-       $url = parse_url(getenv("DATABASE_URL"));
-        $url_results= print_r($url, true);
-//
-       //$people = ['Larry Kaplan', 'Susan Kaplan', 'Ken Kaplan'];
         $people = Person::all();
-        return view ('person.index', compact('people'));
-        //return view ('person.index', compact('people', 'url_results'));
+        //$people = Person::order_by('last');
 
+        return view('person.index', compact('people'));
     }
 
     /**
@@ -50,9 +39,17 @@ class PeopleController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+//    public function store(CreatePersonRequest $request, Person $person)
+//    {
+//        $person->create($request->all());
+//        return redirect()->route('person.index');
+//    }
+
+    public function store()
     {
-        //
+        $input = Request::all();
+        Person::create($input);
+        return redirect('people');
     }
 
     /**
