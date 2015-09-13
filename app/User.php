@@ -43,8 +43,7 @@ class User extends Model implements AuthenticatableContract,
     public function updates()
     {
         return $this->hasMany('App\Update');
-
     }
 }
 
-//nothing
+

@@ -29,22 +29,35 @@ class Update extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $fillable = ['user_id', 'person_id', 'family_id', 'summary'];
+    //user_id is temporary- we'll be able to take that out once we have auth set up
+
+    public function scopePending($query)
+    {
+        $query->where('added', '=', 'false');
+    }
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
+    //@@TODO: come back  to see if this works (added in episode 11)
+    public function setAddedAttribute($update)
+    {
+        $this->attributes['added'] = true;
+    }
+
     protected $hidden = ['moderated'];
 
 
-//An update is created by a user
-    public function user()
+//An update (request) is created by a user
+    public function requesting_user()
     {
         return $this->belongsTo('App\User');
-
     }
+    //later this can make it possible to have a route to a page showing updates from a specific user (episode 14, 15:41)
+    //where('username', 'John Doe')->first();
+    //in controller, you'd return view('updates.index', compact('updates'));
 
 }
 
-//nothing

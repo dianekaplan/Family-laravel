@@ -18,7 +18,7 @@ class CreateUpdatesTable extends Migration
             $table->tinyInteger('person_id')->nullable();
             $table->tinyInteger('family_id')->nullable();
             $table->boolean('moderated')->default(true);
-            $table->boolean('status')->default(false);
+            $table->boolean('added')->default(false);
             $table->text('summary')->nullable();
             $table->timestamps();
 

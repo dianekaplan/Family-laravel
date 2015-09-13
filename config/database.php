@@ -60,11 +60,11 @@ return array(
 
     'connections' => array(
 
-        'sqlite' => array(
-            'driver'   => 'sqlite',
-            'database' => storage_path('database.sqlite'),
-            'prefix'   => '',
-        ),
+//        'sqlite' => array(
+//            'driver'   => 'sqlite',
+//            'database' => storage_path('database.sqlite'),
+//            'prefix'   => '',
+//        ),
 
         'mysql' => array(
             'driver'    => 'mysql',

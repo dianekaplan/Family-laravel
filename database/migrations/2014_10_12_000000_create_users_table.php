@@ -33,6 +33,11 @@ class CreateUsersTable extends Migration
 
             $table->rememberToken();
             $table->timestamps();
+
+//@FIXME: need to add this back once I figure out why renaming migration makes the class not found
+//            $table->foreign('person_id')
+//                ->references('id')
+//                ->on('people');
         });
     }
 

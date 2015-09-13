@@ -19,9 +19,17 @@ class UpdateController extends Controller
      */
     public function index()
     {
-        $users = Update::latest('created_at')->get();
+        $updates = Update::latest('created_at')->get();
         return view('update.index', compact('updates'));
     }
+
+    public function pending()
+    {
+//        return 'pending updates';
+        $updates = Update::latest('created_at')->pending()->get();
+        return view('update.index', compact('updates'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -32,7 +40,6 @@ class UpdateController extends Controller
     {
         return view ('update.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -41,10 +48,11 @@ class UpdateController extends Controller
      */
     public function store(SaveUpdateRequest $request)
     {
+        //@TODO: once we do authentication will have something like:
+        //Auth::user();
         Update::create($request->all());
         return redirect('updates');
     }
-
     /**
      * Display the specified resource.
      *
