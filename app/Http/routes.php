@@ -29,3 +29,7 @@ Route::resource('updates', 'UpdateController');
 //    return App\Person::whereId($id)->first();
 //});
 
+Route::controllers ([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
