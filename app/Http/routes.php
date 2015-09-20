@@ -16,11 +16,14 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('contact', 'HomeController@contact');
-Route::get('home', 'HomeController@home');
+//Route::get('home', 'HomeController@home');
+Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 
 Route::resource('people', 'PeopleController');
 Route::resource('users', 'UserController');
-Route::get('updates/pending', 'UpdateController@pending');
+
+Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
+//Route::get('updates/pending', 'UpdateController@pending');
 Route::resource('updates', 'UpdateController');
 
 ////name the route so you can refer to it later and not have to hard code a url$router
@@ -39,3 +42,8 @@ Route::controllers ([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
+
+//Route::get('foo', ['middleware' => 'super', function()
+//{
+//    return 'this page may only be viewed by super users';
+//}]);

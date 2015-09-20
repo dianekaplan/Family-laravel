@@ -44,6 +44,21 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('App\Update');
     }
+
+    public function isASuperUser()
+    {
+        if ($this->super_admin)
+        return true;
+    }
+
+//    public function setPasswordAttribute($password)
+//    {
+//        $this->attributes['password'] = mcrypt($password);
+//Call to undefined function App\mcrypt()
+//    }
+
+    //Protected $dates = [last_login, last_pestered];
 }
+
 
 

@@ -12,6 +12,14 @@ use App\Http\Controllers\Controller;
 
 class UpdateController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'index']);
+        //$this->middleware('auth', ['only' => 'create']);
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,6 +27,9 @@ class UpdateController extends Controller
      */
     public function index()
     {
+
+//       return  \Auth::user()->name;
+
         $updates = Update::latest('created_at')->get();
         return view('update.index', compact('updates'));
     }
@@ -58,7 +69,11 @@ class UpdateController extends Controller
     {
         //@TODO: once we do authentication will have something like:
         //Auth::user();
-        Update::create($request->all());
+
+        $update = new Update($request->all());
+
+        \Auth::user()->updates()->save($update); //this line will save the logged in user for user_id
+//        Update::create($request->all());
         return redirect('updates');
     }
     /**

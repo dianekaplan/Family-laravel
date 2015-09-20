@@ -8,10 +8,10 @@
     {!! $errors->first('summary', '<span class="help-block">:message</span>') !!}
 </div>
 
-<div class="form-group">
-    {!! Form::label('user_id','User ID:') !!}
-    {!! Form::text('user_id', null, ['class' => 'form-control']) !!}
-</div>
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('user_id','User ID:') !!}--}}
+    {{--{!! Form::text('user_id', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
 
 <div class="form-group">
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}

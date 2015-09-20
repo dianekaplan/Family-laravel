@@ -25,7 +25,7 @@ class SaveUpdateRequest extends Request
     {
         $rules = [
             'summary' => 'required',
-            'user_id' => 'required',
+            //'user_id' => 'required', //Now that we pass it in directly instead of prompting user, no longer validating on form for it
 
         ];
         return $rules;

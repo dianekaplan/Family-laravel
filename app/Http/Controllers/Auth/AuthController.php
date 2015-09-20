@@ -23,6 +23,8 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    protected $redirectTo = '/people'; //if there's no other redirect path, bring users here.  Otherwise default will be /home
+
     /**
      * Create a new authentication controller instance.
      *
