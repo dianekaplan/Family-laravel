@@ -36,6 +36,7 @@
     {!! Form::select('gender', array('unspecified', 'Male'=>'M', 'Female'=>'F'), ['class' => 'form-control']) !!}
 </div>
 
+{{--//TODO:  update these to checkboxes--}}
 {{--//TODO:  make it default to the current value--}}
 <div class="form-group">
     {!! Form::label('keem_bool','Keem Bool:') !!}

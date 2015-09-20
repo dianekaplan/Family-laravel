@@ -30,6 +30,14 @@ class UpdateController extends Controller
         return view('update.index', compact('updates'));
     }
 
+    //@TODO come back and try again when not tired- episode 14, 12:17
+//    public function user_updates($user)
+//    {
+////        return all updates suggested by the specified user
+//        $updates = $user->updates->get();
+//        return view('update.index', compact('updates'));
+//    }
+
 
     /**
      * Show the form for creating a new resource.

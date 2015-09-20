@@ -7,8 +7,14 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+
+        //        adding because of missing stuff, see here https://laracasts.com/discuss/channels/laravel/is-my-laravel-installer-working-correctly
+      //  "bestmomo/scafold":"dev-master",
         "doctrine/dbal": "^2.5",
         "illuminate/html": "^5.0"
+
+
+
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -50,4 +56,6 @@
     "config": {
         "preferred-install": "dist"
     }
+
+
 }

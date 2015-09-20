@@ -23,6 +23,12 @@ Route::resource('users', 'UserController');
 Route::get('updates/pending', 'UpdateController@pending');
 Route::resource('updates', 'UpdateController');
 
+////name the route so you can refer to it later and not have to hard code a url$router
+//ex: http://family.app/updates/user/1
+//Route::get('updates/user/test',function(){return 'user updates'; }); //is found
+Route::get('updates/user/{$user}',function(){return 'user updates'; }); //NotFoundHttpException in RouteCollection.php line 143:
+//Route::get('updates/user/{$user}',['as' =>'user_updates', 'uses'=> 'UpdateController@user_updates'] );
+
 //$router->bind('people', function($id)
 ////Route::bind('song', function($slug) //original value
 //{
