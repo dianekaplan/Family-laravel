@@ -18,8 +18,6 @@ class UpdateController extends Controller
         //$this->middleware('auth', ['only' => 'create']);
     }
 
-
-
     /**
      * Display a listing of the resource.
      *
@@ -79,12 +77,11 @@ class UpdateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Update $update
      * @return Response
      */
-    public function show($id)
+    public function show(Update $update)
     {
-        $update = Update::findOrFail($id);
         return view ('update.show', compact('update'));
     }
 
@@ -94,9 +91,8 @@ class UpdateController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(Update $update)
     {
-        $update = Update::findOrFail($id);
         return view('update.edit', compact('update'));
     }
 
@@ -107,9 +103,8 @@ class UpdateController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(SaveUpdateRequest $request, $id)
+    public function update(SaveUpdateRequest $request, Update $update)
     {
-        $update = Update::findOrFail($id);
         $update->Update($request->all());
 
         return redirect('updates');

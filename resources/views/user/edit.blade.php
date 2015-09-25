@@ -4,7 +4,7 @@
 fine on the index page--}}
 
 @section('content')
-    <h2>Edit:  {{$user->email}} } </h2>
+    <h2>Edit:  {{$user->email}}  </h2>
 
     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'PATCH']) !!}
     {{--//alternative to using route is: 'action' => ['PeopleController@update', $person->id]]) --}}

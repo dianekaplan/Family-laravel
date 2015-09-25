@@ -52,7 +52,12 @@ class PeopleController extends Controller
     public function store(SavePersonRequest $request)
     {
         Person::create($request->all());
+
+//        flash()->success('You successfully added a person');
+        flash()->overlay('You successfully added a person', 'Thank you');
+
         return redirect('people');
+
     }
 
     //TODO: update doc blocks (everywhere) when things have solidified
@@ -64,9 +69,8 @@ class PeopleController extends Controller
      * @return Response
      */
 //    public function show($id)
-    public function show($id)
+    public function show(Person $person)
     {
-        $person = Person::findOrFail($id);
         return view ('person.show', compact('person'));
     }
 
@@ -81,9 +85,8 @@ class PeopleController extends Controller
 //        $person = Person::findOrFail($person);
 //        return view('person.edit', compact('person'));
 //    }
-    public function edit($id)
+    public function edit(Person $person)
     {
-        $person = Person::findOrFail($id);
         return view('person.edit', compact('person'));
     }
 
@@ -94,11 +97,12 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id, SavePersonRequest $request)
+    public function update(Person $person, SavePersonRequest $request)
     {
 
-      $person = Person::findOrFail($id);
         $person->update($request->all());
+
+        flash()->success('Your edit has been saved');
 
         return redirect('people');
     }
