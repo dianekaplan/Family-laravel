@@ -37,18 +37,6 @@ class PeopleController extends Controller
         return view ('person.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-//    public function store(CreatePersonRequest $request, Person $person)
-//    {
-//        $person->create($request->all());
-//        return redirect()->route('person.index');
-//    }
-
     public function store(SavePersonRequest $request)
     {
         Person::create($request->all());
@@ -62,41 +50,18 @@ class PeopleController extends Controller
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-//    public function show($id)
     public function show(Person $person)
     {
         return view ('person.show', compact('person'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-//    public function edit(Person $person)
-//    {
-//        $person = Person::findOrFail($person);
-//        return view('person.edit', compact('person'));
-//    }
+
     public function edit(Person $person)
     {
         return view('person.edit', compact('person'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
+
     public function update(Person $person, SavePersonRequest $request)
     {
 
@@ -107,19 +72,7 @@ class PeopleController extends Controller
         return redirect('people');
     }
 
-//    public function update(Person $person, Request $request)
-//    {
-//        $person->fill($request->input())->save();
-//        return redirect('person');
-//    }
 
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
     public function destroy(Person $person)
     {
         $person->delete();
