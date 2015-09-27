@@ -1,8 +1,8 @@
 @extends('default')
 
 @section('content')
-    <h3>Person Index</h3>
-
+    <h3>Person Results</h3>
+(here we have a list of people filtered by something)
     @if (count($people))
 
         @foreach ($people as $person)

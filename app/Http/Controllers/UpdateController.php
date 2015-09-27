@@ -110,6 +110,17 @@ class UpdateController extends Controller
         return redirect('updates');
     }
 
+//@FIXME: added this with update link on updates index page (not sure how to call the class' function)
+//But error said UpdateController@setAdded not defined
+
+    public function setAdded(Update $update)
+    {
+        $update->setAddedAttribute($update);
+
+        return redirect('updates');
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *

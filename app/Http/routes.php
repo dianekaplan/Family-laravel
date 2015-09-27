@@ -26,6 +26,9 @@ Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateControl
 //Route::get('updates/pending', 'UpdateController@pending');
 Route::resource('updates', 'UpdateController');
 
+Route::get('tags/{tags}', 'TagsController@show');
+
+
 ////name the route so you can refer to it later and not have to hard code a url$router
 //ex: http://family.app/updates/user/1
 //Route::get('updates/user/test',function(){return 'user updates'; }); //is found

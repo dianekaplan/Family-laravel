@@ -6,7 +6,7 @@
     @if (count($users))
 
         @foreach ($users as $user)
-        <li><a href="{{ action('UserController@show', [$user->id]) }}">{{ $user->email }}</a></li>
+        <li><a href="{{ action('UserController@show', [$user->id]) }}">{{ $user->email }}</a>- stuff: {{$user}} </li>
 
         {{--@TODO: come back and try again when not tired- episode 14, 12:17--}}
         {{--<li><a href="{{ action('UpdateController@user_updates', [$user->id]) }}">see suggested updates</a></li>--}}

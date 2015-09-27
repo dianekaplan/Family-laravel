@@ -46,6 +46,6 @@ class Person extends Model
     //get list of tag IDs  associated with the given person
     public function getTagListAttribute()
     {
-        return $this->tags->lists('id');
+        return $this->tags->lists('id')->all();
     }
 }

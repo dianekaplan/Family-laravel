@@ -11,9 +11,14 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+//    @TODO: added this for example, saving in case I need something like that later (but might not)
     public function boot()
     {
-        //
+        view()->composer('partials._nav', function($view)
+        {
+            $view->with('latest', \App\Update::latest()->first());
+        });
     }
 
     /**

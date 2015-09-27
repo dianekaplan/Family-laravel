@@ -68,12 +68,6 @@
     {!! Form::label('tag_list','Tags:') !!}
     {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
             <!--name of the select element, the defaults, the selected option in the list, additional attributes-->
-
-    <!--@FIXME -->
-    <!--null is supposed to be okay for selection option (instead of something like $person->tagsList()),
-    because form/model binding takes care of it for me, but it isn't working- nothing's appearing as selected.
-    episode 22, 12:14
-    -->
 </div>
 
 

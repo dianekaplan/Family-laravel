@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Laravel family tree</title>
-    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css">
-    <link real="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 
 
 </head>
 
 <body>
+
+@include ('partials._nav')
+
+
 <div class="container">
 
 <h1>Laravel family tree</h1>
