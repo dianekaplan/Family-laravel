@@ -36,11 +36,6 @@ class Update extends Model implements AuthenticatableContract,
         $query->where('added', '=', 'false');
     }
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
     //@@TODO: come back  to see if this works (added in episode 11)
     public function setAddedAttribute($update)
     {

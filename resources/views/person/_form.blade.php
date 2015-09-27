@@ -58,9 +58,46 @@
     {!! Form::select('kaplan_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
 </div>
 
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('tag_list','Tags:') !!}--}}
+    {{--{!! Form::select('tag_list[]', $tags, null, ['class' => 'form-control', 'multiple']) !!}--}}
+    {{--<!--name of the select element, the defaults, the selected option in the list, additional attributes-->--}}
+{{--</div>--}}
+
+<div class="form-group">
+    {!! Form::label('tag_list','Tags:') !!}
+    {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
+            <!--name of the select element, the defaults, the selected option in the list, additional attributes-->
+
+    <!--@FIXME -->
+    <!--null is supposed to be okay for selection option (instead of something like $person->tagsList()),
+    because form/model binding takes care of it for me, but it isn't working- nothing's appearing as selected.
+    episode 22, 12:14
+    -->
+</div>
+
+
 <div class="form-group">
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
 
     {{--{!! Form::submit('Save Person', ['class' => 'btn btn-primary form-control']) !!}--}}
 </div>
 
+@section('footer')
+
+        <!--Fetch our kaplan_bool and call select2 on it -->
+    <script>
+        $('#kaplan_bool').select2({
+            placeholder: 'Choose yes or no'
+        });
+    </script>
+
+    <!--Fetch our tag_list and call select2 on it -->
+    <script>
+        $('#tag_list').select2({
+            placeholder: 'Choose a tag'
+            //tags:true  //This'll let the user add a new one (type and hit Enter), but for it to work we need to add code to save it
+        });
+    </script>
+
+@endsection

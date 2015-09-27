@@ -17,4 +17,15 @@
         @endif
    @endif
 
+    @unless ($person->tags->isEmpty())
+        <h5>Tags:</h5>
+        <ul>
+            @foreach($person->tags as $tag)
+                <li> {{ $tag->name  }}</li>
+                @endforeach
+        </ul>
+    @endunless
+
+    @stop
+
     {{--{!! link_to_route('person.index', 'Back') !!}--}}

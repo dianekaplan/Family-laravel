@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Person;
+use App\Tag;
 use App\Http\Requests;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
@@ -11,11 +12,6 @@ use Illuminate\Http\Request;
 
 class PeopleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
     public function index()
     {
 //        $people = Person::all();
@@ -23,30 +19,11 @@ class PeopleController extends Controller
 
         //will want to figure out how to show in alphabetical order
         //$people = Person::order_by('last');
+        //actually, may happen on the view instead
 
         return view('person.index', compact('people'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view ('person.create');
-    }
-
-    public function store(SavePersonRequest $request)
-    {
-        Person::create($request->all());
-
-//        flash()->success('You successfully added a person');
-        flash()->overlay('You successfully added a person', 'Thank you');
-
-        return redirect('people');
-
-    }
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
@@ -56,9 +33,28 @@ class PeopleController extends Controller
     }
 
 
+    public function create()
+    {
+        $tags = Tag::lists('name', 'id');
+        return view ('person.create', compact ('tags'));
+    }
+
+    public function store(SavePersonRequest $request)
+    {
+        $this->createPerson($request);
+
+//        flash()->success('You successfully added a person');
+        flash()->overlay('You successfully added a person', 'Thank you');
+
+        return redirect('people');
+    }
+
+
+
     public function edit(Person $person)
     {
-        return view('person.edit', compact('person'));
+        $tags = Tag::lists('name');
+        return view('person.edit', compact('person', 'tags'));
     }
 
 
@@ -66,12 +62,26 @@ class PeopleController extends Controller
     {
 
         $person->update($request->all());
+        $this->syncTags($person, $request->input('tag_list'));
 
         flash()->success('Your edit has been saved');
 
         return redirect('people');
     }
 
+    private function syncTags(Person $person, array $tags)
+    {
+        $person->tags()->sync($tags);
+    }
+
+
+    private function createPerson(SavePersonRequest $request)
+    {
+        $person = Person::create($request->all());
+
+        $this->syncTags($person, $request->input('tag_list'));
+        return $person;
+    }
 
     public function destroy(Person $person)
     {

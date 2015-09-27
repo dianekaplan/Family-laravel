@@ -36,4 +36,16 @@ class Person extends Model
     {
         $query->where('hide_bool', '=', false);
     }
+
+    //get the tags associated with the given person
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
+
+    //get list of tag IDs  associated with the given person
+    public function getTagListAttribute()
+    {
+        return $this->tags->lists('id');
+    }
 }
