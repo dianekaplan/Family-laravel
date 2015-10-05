@@ -20,6 +20,7 @@ Route::get('contact', 'HomeController@contact');
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 
 Route::resource('people', 'PeopleController');
+Route::resource('families', 'FamilyController');
 Route::resource('users', 'UserController');
 
 Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);

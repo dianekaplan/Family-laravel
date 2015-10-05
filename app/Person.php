@@ -24,10 +24,10 @@ class Person extends Model
         'birthplace',
         'deathdate',
         'resting_place',
-        'keem_bool',
-        'husband_bool',
-        'kemler_bool',
-        'kaplan_bool',
+        'keem_line',
+        'husband_line',
+        'kemler_line',
+        'kaplan_line',
     ];
 
     protected $dates = ['birthdate'];

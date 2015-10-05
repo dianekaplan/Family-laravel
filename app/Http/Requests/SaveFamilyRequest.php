@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateFamilyRequest extends Request
+class SaveFamilyRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,8 @@ class CreateFamilyRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
+        //@TODO: come back and make permission levels: everyone can update themselves, some can update those in their branch
     }
 
     /**
@@ -23,8 +24,19 @@ class CreateFamilyRequest extends Request
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'caption' => 'required',
+            'keem_line' => 'required',
+            'husband_line' => 'required',
+            'kemler_line' => 'required',
+            'kaplan_line' => 'required',
         ];
+
+        //note for later: if you want different rules in different cases, add like so:
+        //if (4condition) {
+//        $rules['something_else'] = 'required';
+//    }
+
+        return $rules;
     }
 }

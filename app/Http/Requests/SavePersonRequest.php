@@ -26,10 +26,10 @@ class SavePersonRequest extends Request
         $rules = [
             'first' => 'required',
             'last' => 'required',
-            'keem_bool' => 'required',
-            'husband_bool' => 'required',
-            'kemler_bool' => 'required',
-            'kaplan_bool' => 'required',
+            'keem_line' => 'required',
+            'husband_line' => 'required',
+            'kemler_line' => 'required',
+            'kaplan_line' => 'required',
         ];
 
         //note for later: if you want different rules in different cases, add like so:

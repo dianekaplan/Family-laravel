@@ -33,30 +33,18 @@
 {{--//TODO:  make it default to the current value--}}
 <div class="form-group">
     {!! Form::label('gender','Gender:') !!}
-    {!! Form::select('gender', array('unspecified', 'Male'=>'M', 'Female'=>'F'), ['class' => 'form-control']) !!}
+
+    {!! Form::label('gender','Female:') !!}
+    {!! Form::radio('gender', 'F') !!}
+    {!! Form::label('gender','Male:') !!}
+    {!! Form::radio('gender', 'M') !!}
 </div>
 
-{{--//TODO:  update these to checkboxes--}}
-{{--//TODO:  make it default to the current value--}}
-<div class="form-group">
-    {!! Form::label('keem_bool','Keem Bool:') !!}
-    {!! Form::select('keem_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
-</div>
+{{--//@FIXME:  make it default to the current value, now showing false even when true in db--}}
 
-<div class="form-group">
-    {!! Form::label('husband_bool','Husband Bool:') !!}
-    {!! Form::select('husband_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
-</div>
+@include ('partials._family_bools')
 
-<div class="form-group">
-    {!! Form::label('kemler_bool','Kemler Bool:') !!}
-    {!! Form::select('kemler_bool',array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
-</div>
 
-<div class="form-group">
-    {!! Form::label('kaplan_bool','Kaplan Bool:') !!}
-    {!! Form::select('kaplan_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
-</div>
 
 {{--<div class="form-group">--}}
     {{--{!! Form::label('tag_list','Tags:') !!}--}}
@@ -81,7 +69,7 @@
 
         <!--Fetch our kaplan_bool and call select2 on it -->
     <script>
-        $('#kaplan_bool').select2({
+        $('#kaplan_line').select2({
             placeholder: 'Choose yes or no'
         });
     </script>

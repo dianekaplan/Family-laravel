@@ -10,11 +10,21 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
+    //added this from intermediate-laravel/episodes/9
+    protected $toTruncate = ['users'];
+
     public function run()
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        foreach ($this->$toTruncate as $table){
+            DB::table($table)->tuncate();
+        }
+
+
+        $this->call('UsersTableSeeder');
+        //$this->call(UsersTableSeeder::class);
 
         Model::reguard();
     }
