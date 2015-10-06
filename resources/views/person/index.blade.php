@@ -8,13 +8,10 @@
         @foreach ($people as $person)
 
         <li>@if($person->face)
-                <img src="/resources/assets/images/faces/{{  $person->face  }}"/>,
-                <img src="http://dk-family.herokuapp.com/resources/assets/images/faces/{{  $person->face  }}"/>
-
-                {{--{{ Fbuilder::image ('$this->face', 'alt text') }}>--}}
-                {{--{{ HTML::image ('/resources/assets/images/faces/{{ $person->face }}', 'face')}}>--}}
+                <img src="/faces/{{  $person->face  }}"/>
+            @else
+                <img src="/faces/noimage.gif" border="0" height="50"/>
             @endif
-
             <a href="{{ action('PeopleController@show', [$person->id]) }}">{{ $person->first }} {{ $person->last }}</a>
         </li>
 
