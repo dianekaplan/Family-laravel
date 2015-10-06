@@ -200,6 +200,7 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Fbuilder'   => Illuminate\Html\FormBuilder::class, //added to figure out image stuff, may not need
     ],
 
 ];

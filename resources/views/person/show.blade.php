@@ -24,7 +24,9 @@
     Interests:   {{  $person->inerests }}  <br/>
     Current location:  {{  $person->current_location }}  <br/>
 
-   @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif<br/>
+   @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif
+    @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
+    <br/>
 
 
 

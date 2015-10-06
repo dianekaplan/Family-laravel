@@ -17,13 +17,12 @@
 
 <div class="container">
 
-<h1>Laravel family tree</h1>
+{{--<h1>Laravel family tree</h1>--}}
 
     @include('flash::message')
+    {{--@include('Fbuilder::image')  <!--added to figure out image stuff- may not need-->--}}
 
 {{--@include('partials.flash')--}}
-
-
 
 
 @yield('content')

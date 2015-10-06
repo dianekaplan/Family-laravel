@@ -25,7 +25,7 @@ class CreatePeopleTable extends Migration
             $table->string('origin')->nullable();
             $table->string('current_location')->nullable();
             $table->integer('family_of_origin')->nullable();;
-            $table->boolean('sibling_seq')->nullable();
+            $table->integer('sibling_seq')->nullable();
             $table->boolean('keem_line');
             $table->boolean('husband_line');
             $table->boolean('kemler_line');
@@ -40,6 +40,7 @@ class CreatePeopleTable extends Migration
             $table->text('birthdate_note')->nullable();
             $table->string('birthplace')->nullable();
             $table->date('deathdate')->nullable();
+            $table->text('deathdate_note')->nullable();
             $table->string('resting_place')->nullable();
             $table->string('flag1')->nullable();
             $table->string('flag2')->nullable();
