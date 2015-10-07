@@ -5,7 +5,7 @@
     <title>Laravel family tree</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
-    {{--<link rel="stylesheet" href="/css/style.css">--}}
+    <link rel="stylesheet" href="/css/style.css">
 
 
 </head>
