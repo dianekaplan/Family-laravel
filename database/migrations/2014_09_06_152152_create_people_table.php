@@ -44,7 +44,6 @@ class CreatePeopleTable extends Migration
             $table->string('resting_place')->nullable();
             $table->string('flag1')->nullable();
             $table->string('flag2')->nullable();
-            $table->string('ext_id')->nullable();
             $table->string('notes1')->nullable();
             $table->string('notes2')->nullable();
             $table->string('notes3')->nullable();
