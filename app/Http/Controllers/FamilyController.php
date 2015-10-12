@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Requests;
+//namespace App\Http\Requests;
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Family;
-use App\Http\Requests\SaveFamilyRequest;
-
 use App\Http\Requests;
+use App\Http\Requests\SaveFamilyRequest;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
 
 class FamilyController extends Controller
 {
@@ -71,6 +68,8 @@ class FamilyController extends Controller
      */
     public function show(Family $family)
     {
+//        dd($family);
+//        return $family;
         return view ('family.show', compact('family'));
     }
 

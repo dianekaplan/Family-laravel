@@ -14,11 +14,11 @@ class CreateFamiliesTable extends Migration
     {
         Schema::create('families', function (Blueprint $table) {
             $table->increments('id');
-
             $table->string('caption');
             $table->integer('mother_id')->nullable(); /**for now, later will update and make unsigned*/
             $table->integer('father_id')->nullable(); /**for now, later will update and make unsigned*/
             $table->date('marriage_date')->nullable();
+            $table->text('marriage_date_note')->nullable();
             $table->text('notes1')->nullable();
             $table->text('notes2')->nullable();
             $table->boolean('original_family')->nullable();
@@ -26,6 +26,9 @@ class CreateFamiliesTable extends Migration
 
 //            later consider deriving/omitting  no_kids_bool
             $table->boolean('no_kids_bool')->nullable();
+            $table->integer('sequence')->nullable();
+            $table->integer('branch')->nullable();
+            $table->integer('branch_seq')->nullable();
             $table->boolean('keem_line');
             $table->boolean('husband_line');
             $table->boolean('kemler_line');
@@ -35,6 +38,7 @@ class CreateFamiliesTable extends Migration
             $table->string('flag1')->nullable();
             $table->string('flag2')->nullable();
 
+            $table->integer('junk')->nullable();
             $table->timestamps();
 
         });

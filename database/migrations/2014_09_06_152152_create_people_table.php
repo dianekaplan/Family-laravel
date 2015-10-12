@@ -24,7 +24,7 @@ class CreatePeopleTable extends Migration
             $table->string('face')->nullable();
             $table->string('origin')->nullable();
             $table->string('current_location')->nullable();
-            $table->integer('family_of_origin')->nullable();;
+            $table->integer('family_of_origin')->nullable();
             $table->integer('sibling_seq')->nullable();
             $table->boolean('keem_line');
             $table->boolean('husband_line');

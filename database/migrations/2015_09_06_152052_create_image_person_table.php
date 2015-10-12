@@ -14,6 +14,8 @@ class CreateImagePersonTable extends Migration
     {
         Schema::create('image_person', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('image_id');
+            $table->integer('person_id')->nullable();
             $table->timestamps();
         });
     }

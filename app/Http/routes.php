@@ -19,11 +19,16 @@ Route::get('contact', 'HomeController@contact');
 //Route::get('home', 'HomeController@home');
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 
+Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
+
 Route::resource('people', 'PeopleController');
+
 Route::resource('families', 'FamilyController');
 Route::resource('users', 'UserController');
 
 Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
+
+
 //Route::get('updates/pending', 'UpdateController@pending');
 Route::resource('updates', 'UpdateController');
 

@@ -50,7 +50,6 @@ class PeopleController extends Controller
     }
 
 
-
     public function edit(Person $person)
     {
         $tags = Tag::lists('name');
@@ -88,4 +87,13 @@ class PeopleController extends Controller
         $person->delete();
         return redirect()->route('person.index');
     }
+
+    public function get_kaplans()
+    {
+//        return people where kaplan_bool is true
+        $people = Person::kaplans('created_at')->kaplans()->get();
+//        return view('person.index', compact('people'));
+        return $people;
+    }
+
 }

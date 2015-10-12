@@ -31,6 +31,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('updates', 'App\Update');
         $router->model('people', 'App\Person');
         $router->model('user', 'App\User');
+        $router->model('families', 'App\Family');
 //        $router->model('tags', 'App\Tag');
 
         $router->bind('tags', function($name)

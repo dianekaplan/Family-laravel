@@ -30,12 +30,18 @@ class Person extends Model
         'kaplan_line',
     ];
 
-    protected $dates = ['birthdate'];
+    protected $dates = ['birthdate', 'deathdate'];
 
     public function scopeDisplayable($query)
     {
         $query->where('hide_bool', '=', false);
     }
+
+    public function scopeKaplans($query)
+    {
+        $query->where('kaplan_line', '=', 'true');
+    }
+
 
     //get the tags associated with the given person
     public function tags()
@@ -48,4 +54,9 @@ class Person extends Model
     {
         return $this->tags->lists('id')->all();
     }
+
+
+
+
+
 }

@@ -1,7 +1,8 @@
 
-@if (count($people))
+{{--@if (count($persongroup))--}}
+@if (count($person_group))
 
-    @foreach ($people as $person)
+    @foreach ($person_group as $person)
 
         <li>@if($person->face)
                 <img src="/faces/{{  $person->face  }}"/>
