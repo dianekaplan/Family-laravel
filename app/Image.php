@@ -15,5 +15,13 @@ class Image extends Model
     {
         return $this->belongsToMany('App\Person');
     }
+
+
+    public function getPersonListAttribute()
+    {
+        return $this->people->lists('id')->all();
+    }
+
+
 }
 

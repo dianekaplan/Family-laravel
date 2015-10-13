@@ -16,12 +16,10 @@ class PeopleController extends Controller
     public function index()
     {
 //        $people = Person::all();
-        $people = Person::latest('created_at')->displayable()->get();
-
-        //will want to figure out how to show in alphabetical order
-        //$people = Person::order_by('last');
-        //actually, may happen on the view instead
-
+        $people = Person::latest('created_at')
+            ->displayable()
+            ->orderBy('last', 'asc', 'first', 'asc')
+            ->get();
         return view('person.index', compact('people'));
     }
 
@@ -69,11 +67,6 @@ class PeopleController extends Controller
         return redirect('people');
     }
 
-    private function syncTags(Person $person, array $tags)
-    {
-        $person->tags()->sync($tags);
-    }
-
 
     private function createPerson(SavePersonRequest $request)
     {
@@ -98,7 +91,6 @@ class PeopleController extends Controller
     }
 
 
-
     public function get_solo_images($id) {
         $solo_images =  DB::table('images')
             ->orderBy('year', 'asc')
@@ -106,12 +98,15 @@ class PeopleController extends Controller
             ->get();
 
         return $solo_images;
-
     }
 //
 //
 //        Image::latest('created_at')->where('subject', '=', '$person->id')->get();
 
 
+    private function syncTags(Person $person, array $tags)
+    {
+        $person->tags()->sync($tags);
+    }
 
 }

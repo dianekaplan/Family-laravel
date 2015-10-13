@@ -37,11 +37,16 @@
         <h5>Group images:</h5>
         <ul>
             @foreach($person->images as $image)
-                <a href="http://newribbon.com/family/images/{{ $image->big_name  }}">
+                {{--<a href="http://newribbon.com/family/images/{{ $image->big_name  }}">--}}
+                        {{--<img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>--}}
+                    {{--{{ $image->caption  }}</a>--}}
+               {{--({{ $image->year}})               --}}
+
+                <a href="/image/{{ $image->id  }}">
                         <img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>
                     {{ $image->caption  }}</a>
                ({{ $image->year}})
-                        {{--{{ $image->big_name  }}</a></li>--}}
+
             @endforeach
         </ul>
     @endunless
