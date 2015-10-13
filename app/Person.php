@@ -32,6 +32,7 @@ class Person extends Model
 
     protected $dates = ['birthdate', 'deathdate'];
 
+
     public function scopeDisplayable($query)
     {
         $query->where('hide_bool', '=', false);
@@ -55,7 +56,17 @@ class Person extends Model
         return $this->tags->lists('id')->all();
     }
 
+    //get the images associated with the given person
+    public function images()
+    {
+        return $this->belongsToMany('App\Image')->withTimestamps();
+    }
 
+    //get list of tag IDs  associated with the given person
+    public function getImageListAttribute()
+    {
+        return $this->images->lists('id')->all();
+    }
 
 
 

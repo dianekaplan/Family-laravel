@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Person;
 use App\Tag;
+use App\Image;
 use App\Http\Requests;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
@@ -95,5 +96,22 @@ class PeopleController extends Controller
 //        return view('person.index', compact('people'));
         return $people;
     }
+
+
+
+    public function get_solo_images($id) {
+        $solo_images =  DB::table('images')
+            ->orderBy('year', 'asc')
+            ->Where('subject', $id)
+            ->get();
+
+        return $solo_images;
+
+    }
+//
+//
+//        Image::latest('created_at')->where('subject', '=', '$person->id')->get();
+
+
 
 }

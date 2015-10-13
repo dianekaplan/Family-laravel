@@ -29,15 +29,22 @@
     <br/>
 
 
+    <h5>Pictures of {{$person->first}}:</h5>
 
+    {{--{{ $solo_images }}--}}
 
-
-    <br/>
-    Whole record: {{$person}}
-
-    <br/>
-    <br/>
-
+    @unless ($person->images->isEmpty())
+        <h5>Group images:</h5>
+        <ul>
+            @foreach($person->images as $image)
+                <a href="http://newribbon.com/family/images/{{ $image->big_name  }}">
+                        <img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>
+                    {{ $image->caption  }}</a>
+               ({{ $image->year}})
+                        {{--{{ $image->big_name  }}</a></li>--}}
+            @endforeach
+        </ul>
+    @endunless
 
     @unless ($person->tags->isEmpty())
         <h5>Tags:</h5>
@@ -47,6 +54,12 @@
                 @endforeach
         </ul>
     @endunless
+
+    <br/>
+    Whole record: {{$person}}
+
+    <br/>
+    <br/>
 
     @stop
 
