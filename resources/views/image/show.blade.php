@@ -16,7 +16,7 @@
 
             <li><a href="/people/{{ $person->id  }}">{{$person->first }} {{$person->last}}</a></li>
             @endforeach
-    
+
 
 
 @stop

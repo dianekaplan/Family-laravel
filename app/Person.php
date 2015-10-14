@@ -43,6 +43,21 @@ class Person extends Model
         $query->where('kaplan_line', '=', 'true');
     }
 
+    public function scopeKemlers($query)
+    {
+        $query->where('kemler_line', '=', 'true');
+    }
+
+    public function scopeKeems($query)
+    {
+        $query->where('keem_line', '=', 'true');
+    }
+
+    public function scopeHusbands($query)
+    {
+        $query->where('husband_line', '=', 'true');
+    }
+
 
     //get the tags associated with the given person
     public function tags()

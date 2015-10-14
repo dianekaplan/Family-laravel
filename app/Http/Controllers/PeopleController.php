@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 
 class PeopleController extends Controller
 {
+
+//    public function get_kaplans()
+//    {
+////        return people where kaplan_bool is true
+//        $people = Person::kaplans('created_at')->kaplans()->get();
+////        return view('person.index', compact('people'));
+//        return $people;
+//    }
+
+
     public function index()
     {
 //        $people = Person::all();
@@ -20,7 +30,13 @@ class PeopleController extends Controller
             ->displayable()
             ->orderBy('last', 'asc', 'first', 'asc')
             ->get();
-        return view('person.index', compact('people'));
+
+        $kaplans = Person::kaplans('created_at')->get();
+        $keems = Person::keems('created_at')->get();
+        $kemlers = Person::kemlers('created_at')->get();
+        $husbands = Person::husbands('created_at')->get();
+
+        return view('person.index', compact('people', 'kaplans', 'keems', 'husbands', 'kemlers'));
     }
 
 
@@ -81,15 +97,6 @@ class PeopleController extends Controller
         $person->delete();
         return redirect()->route('person.index');
     }
-
-    public function get_kaplans()
-    {
-//        return people where kaplan_bool is true
-        $people = Person::kaplans('created_at')->kaplans()->get();
-//        return view('person.index', compact('people'));
-        return $people;
-    }
-
 
     public function get_solo_images($id) {
         $solo_images =  DB::table('images')
