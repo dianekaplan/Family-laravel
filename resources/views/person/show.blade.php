@@ -31,7 +31,22 @@
 
     <h5>Pictures of {{$person->first}}:</h5>
 
-    {{--{{ $solo_images }}--}}
+    $solo_images
+
+
+    @if ($solo_images)
+        <h5>Solo images:</h5>
+        <ul>
+            @foreach($solo_images as $image)
+                <a href="/image/{{ $image->id  }}">
+                    <img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>
+                    {{ $image->caption  }}</a>
+                ({{ $image->year}})
+
+            @endforeach
+        </ul>
+    @endif
+
 
     @unless ($person->images->isEmpty())
         <h5>Group images:</h5>

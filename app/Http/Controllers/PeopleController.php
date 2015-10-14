@@ -14,18 +14,9 @@ use Illuminate\Http\Request;
 class PeopleController extends Controller
 {
 
-//    public function get_kaplans()
-//    {
-////        return people where kaplan_bool is true
-//        $people = Person::kaplans('created_at')->kaplans()->get();
-////        return view('person.index', compact('people'));
-//        return $people;
-//    }
-
 
     public function index()
     {
-//        $people = Person::all();
         $people = Person::latest('created_at')
             ->displayable()
             ->orderBy('last', 'asc', 'first', 'asc')
@@ -44,7 +35,13 @@ class PeopleController extends Controller
 
     public function show(Person $person)
     {
-        return view ('person.show', compact('person'));
+        $id = $person->id;
+        $solo_images =  Image::latest('created_at')
+            ->orderBy('year', 'asc')
+            ->Where('subject', $id)
+            ->get();
+
+        return view ('person.show', compact('person', 'solo_images'));
     }
 
 
@@ -98,15 +95,6 @@ class PeopleController extends Controller
         return redirect()->route('person.index');
     }
 
-    public function get_solo_images($id) {
-        $solo_images =  DB::table('images')
-            ->orderBy('year', 'asc')
-            ->Where('subject', $id)
-            ->get();
-
-        return $solo_images;
-    }
-//
 //
 //        Image::latest('created_at')->where('subject', '=', '$person->id')->get();
 
