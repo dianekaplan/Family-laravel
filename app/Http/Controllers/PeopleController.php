@@ -69,6 +69,19 @@ class PeopleController extends Controller
     }
 
 
+    public function landing()
+    {
+        $people = Person::latest('created_at')
+            ->displayable()
+            ->orderBy('last', 'asc', 'first', 'asc')
+            ->get();
+
+        return view ('person.landing', compact('people'));
+    }
+
+
+
+
     public function update(Person $person, SavePersonRequest $request)
     {
 
@@ -94,6 +107,7 @@ class PeopleController extends Controller
         $person->delete();
         return redirect()->route('person.index');
     }
+
 
 //
 //        Image::latest('created_at')->where('subject', '=', '$person->id')->get();
