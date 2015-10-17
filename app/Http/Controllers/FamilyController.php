@@ -4,6 +4,8 @@
 namespace App\Http\Controllers;
 
 use App\Family;
+use App\Person;
+use App\Image;
 use App\Http\Requests;
 use App\Http\Requests\SaveFamilyRequest;
 use App\Http\Controllers\Controller;
@@ -68,9 +70,22 @@ class FamilyController extends Controller
      */
     public function show(Family $family)
     {
+        $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->get();
+        $father =  Person::latest('created_at') ->where('id', '=', $family->father_id)->get();
+
+       $kids = Person::latest('created_at')
+           ->where('family_of_origin', '=', $family->id)
+           ->orderBy('sibling_seq')
+           ->get();
+
+        $images = Image::latest('created_at')
+            ->where('family', '=', $family->id)
+            ->orderBy('year')
+            ->get();
+
+
 //        dd($family);
-//        return $family;
-        return view ('family.show', compact('family'));
+        return view ('family.show', compact('family', 'kids', 'mother', 'father', 'images'));
     }
 
     /**

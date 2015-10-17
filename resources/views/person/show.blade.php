@@ -17,6 +17,9 @@
 
 
     Born in: {{ $person->birthplace }}<br/>
+    {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
+    {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
+
     Grew up in family: <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $person->family_of_origin }}</a><br/>
     National Origin:  {{  $person->origin }}  <br/>
     Education:   {{  $person->education }}  <br/>
@@ -38,11 +41,7 @@
         <h5>Solo images:</h5>
         <ul>
             @foreach($solo_images as $image)
-                <a href="/image/{{ $image->id  }}">
-                    <img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>
-                    {{ $image->caption  }}</a>
-                ({{ $image->year}})
-
+                @include ('partials._image_link', ['image' => $image])
             @endforeach
         </ul>
     @endif
@@ -52,16 +51,7 @@
         <h5>Group images:</h5>
         <ul>
             @foreach($person->images as $image)
-                {{--<a href="http://newribbon.com/family/images/{{ $image->big_name  }}">--}}
-                        {{--<img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>--}}
-                    {{--{{ $image->caption  }}</a>--}}
-               {{--({{ $image->year}})               --}}
-
-                <a href="/image/{{ $image->id  }}">
-                        <img src="http://newribbon.com/family/images/{{ $image->little_name  }}"> <br/>
-                    {{ $image->caption  }}</a>
-               ({{ $image->year}})
-
+                    @include ('partials._image_link', ['image' => $image])
             @endforeach
         </ul>
     @endunless

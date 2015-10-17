@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Person;
 use App\Tag;
 use App\Image;
+use App\Family;
 use App\Http\Requests;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
@@ -40,8 +41,8 @@ class PeopleController extends Controller
             ->orderBy('year', 'asc')
             ->Where('subject', $id)
             ->get();
-
-        return view ('person.show', compact('person', 'solo_images'));
+        $family_of_origin = Family::latest('created_at')->Where('id', $person->family_of_origin)->get();
+        return view ('person.show', compact('person', 'solo_images', 'family_of_origin'));
     }
 
 
