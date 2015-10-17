@@ -1,19 +1,18 @@
-
 {{--<div class="form-group{{ $errors->has('title') ? 'has-error' : '' }}">--}}
-    {{--{!! Form::label('name','Name:') !!}--}}
-    {{--{!! Form::text('name', null, ['class' => 'form-control']) !!}--}}
-    {{--{!! $errors->first('name', '<span class="help-block">:message</span>') !!}--}}
+{{--{!! Form::label('name','Name:') !!}--}}
+{{--{!! Form::text('name', null, ['class' => 'form-control']) !!}--}}
+{{--{!! $errors->first('name', '<span class="help-block">:message</span>') !!}--}}
 {{--</div>--}}
 
 {{--<div class="form-group">--}}
-    {{--{!! Form::label('email','Email:') !!}--}}
-    {{--{!! Form::text('email', null, ['class' => 'form-control']) !!}--}}
+{{--{!! Form::label('email','Email:') !!}--}}
+{{--{!! Form::text('email', null, ['class' => 'form-control']) !!}--}}
 {{--</div>--}}
 
 {{--<div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">--}}
-    {{--{!! Form::label('password','Password:') !!}--}}
-    {{--{!! Form::text('password', null, ['class' => 'form-control']) !!}--}}
-    {{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
+{{--{!! Form::label('password','Password:') !!}--}}
+{{--{!! Form::text('password', null, ['class' => 'form-control']) !!}--}}
+{{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
 {{--</div>--}}
 
 <div class="form-group">

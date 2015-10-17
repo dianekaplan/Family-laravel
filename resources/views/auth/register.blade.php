@@ -20,7 +20,6 @@
 
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
                             {!! csrf_field() !!}
-
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Name</label>
                                 <div class="col-md-6">

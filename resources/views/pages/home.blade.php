@@ -1,10 +1,21 @@
 @extends('default')
 
 @section('content')
-    Home Page- hello
+    Home Page- hello!
 
     <!--Eventually we can pull in the user's name sort of like this (see 9:45 of episode 15)-->
     <!--,  \Auth::user()->name(); }} -->
+
+<br/>Welcome: {{$user->name}}! <br/><br/>
+
+    My Page: <a href="{{ action('PeopleController@show', [$user->person_id]) }}">{{$user->person_id}}</a><br/>
+
+
+    My family history:<br/>
+    Chronolocial outline<br/>
+    Fun & general family history<br/>
+    People in my family:<br/>
+
 
     <br/>
 @stop

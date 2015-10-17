@@ -8,6 +8,8 @@
 
 namespace App\Http\Controllers;
 
+//use App\Http\Controllers\Auth;
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -24,6 +26,7 @@ class HomeController extends Controller {
 
     public function contact()
 {
+
     return view ('pages.contact');
 }
 
@@ -31,7 +34,8 @@ class HomeController extends Controller {
 
     public function home()
     {
-        return view ('pages.home');
+        $user =  \Auth::user();
+        return view ('pages.home', compact('user'));
     }
 
 }

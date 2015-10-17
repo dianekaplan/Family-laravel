@@ -17,7 +17,9 @@
     <br/><br/>
     Thanks!<br/>
     Diane Kaplan (Cambridge, MA USA)
+    <br/>
 
+    @include ('auth._login_partial');
     <br/><br/>
 
 
