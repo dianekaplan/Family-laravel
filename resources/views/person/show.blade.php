@@ -24,18 +24,16 @@
     National Origin:  {{  $person->origin }}  <br/>
     Education:   {{  $person->education }}  <br/>
     Work:  {{  $person->work }} <br/>
-    Interests:   {{  $person->inerests }}  <br/>
+    Interests:   {{  $person->interests }}  <br/>
     Current location:  {{  $person->current_location }}  <br/>
+    Made family: {{  $person->made_family }} <br/>
 
-   @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif
+    @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif
     @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
     <br/>
 
 
     <h5>Pictures of {{$person->first}}:</h5>
-
-    $solo_images
-
 
     @if ($solo_images)
         <h5>Solo images:</h5>
@@ -49,11 +47,11 @@
 
     @unless ($person->images->isEmpty())
         <h5>Group images:</h5>
-        <ul>
+            <div>
             @foreach($person->images as $image)
                     @include ('partials._image_link', ['image' => $image])
             @endforeach
-        </ul>
+            </div>
     @endunless
 
     @unless ($person->tags->isEmpty())

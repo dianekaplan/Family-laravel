@@ -34,6 +34,13 @@ class PeopleController extends Controller
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
+//    public function get_made_family($person)
+//    {
+//        $made_family = Family::latest('created_at')->Where('father_id', $person->id)->get();
+//        return $made_family;
+//    }
+
+
     public function show(Person $person)
     {
         $id = $person->id;
@@ -41,9 +48,15 @@ class PeopleController extends Controller
             ->orderBy('year', 'asc')
             ->Where('subject', $id)
             ->get();
+
         $family_of_origin = Family::latest('created_at')->Where('id', $person->family_of_origin)->get();
-        return view ('person.show', compact('person', 'solo_images', 'family_of_origin'));
+
+        $made_family = Family::latest('created_at')->Where('father_id', $id)->get();
+//        $made_family = get_made_family($person);
+
+        return view ('person.show', compact('person', 'solo_images', 'family_of_origin', 'made_family'));
     }
+
 
 
     public function create()
