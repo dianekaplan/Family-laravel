@@ -16,4 +16,12 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Laravel 5');
     }
+
+    public function copied_from_laracast_19()
+    {
+        $response = $this->call('GET', 'landing');
+
+        $this->assertResponseOk();
+    }
+
 }

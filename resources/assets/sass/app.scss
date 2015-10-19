@@ -1,9 +1,11 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 //
-//body {
-//  padding-top: 40pm;
-//}
-//
-//body, label, .checkbox label {
-//  font-weight:300;
-//}
+
+@import 'pages/home';
+body {
+  padding-top: 50px;
+}
+
+body, label, .checkbox label {
+  font-weight:300;
+}

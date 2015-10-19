@@ -1,21 +1,19 @@
 @extends('default')
 
 @section('content')
-    <h3>Person Index</h3>
 
-    Keem Relatives: @include ('partials._people_list', ['person_group' => $keems]);
-    Husband Relatives: @include ('partials._people_list', ['person_group' => $husbands]);
-    Kemler relatives: @include ('partials._people_list', ['person_group' => $kemlers]);
-    Kaplan/Kobrin relatives: @include ('partials._people_list', ['person_group' => $kaplans]);
+
+<div class="bottom">
+    <div style="float: left; width: 25%;"><h4>Keem Relatives:</h4> @include ('partials._people_list', ['person_group' => $keems]);</div>
+    <div style="float: left; width: 25%;"><h4>Husband Relatives: </h4>@include ('partials._people_list', ['person_group' => $husbands]);</div>
+    <div style="float: left; width: 25%;"><h4>Kemler relatives: </h4>@include ('partials._people_list', ['person_group' => $kemlers]);</div>
+    <div style="float: left; width: 25%;"><h4>Kaplan/Kobrin relatives:</h4> @include ('partials._people_list', ['person_group' => $kaplans]);</div>
+</div>
+
 
     {{--Want to be able to do something like:--}}
     {{--for authenticated user, if kaplan_access is true, then:--}}
     {{--@include ('partials._people_list'), 'PeopleController@get_kaplans')--}}
-
-
-
-
-<br/>
 
 
 @stop

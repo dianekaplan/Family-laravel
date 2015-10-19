@@ -12,6 +12,44 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+
+ //this will generate app.css
+ mix.sass('app.scss', 'resources/css');
+ //mix.sass('app.scss').scripts();  //can also add them all together like that
+
+ //the second argument is the output file, if you leave it NULL it makes css/all.css
+ //the third argument here is the base directory where  we're looking.  resources/assets is the default, but we want public/css
+ //mix.styles([
+ //'vendor/normalize.css', 'app.css'], 'public/output/final.css', 'public/css');
+
+ //this uses app.css that's created above
+ //it will make all.css
+ mix.styles([
+     'libs/bootstrap.min.css',
+     'app.css',
+     'libs/select2.min.css'
+     ], 'public/css', 'resources/css');
+
+ //
+ //'vendor/normalize.css', 'app.css'], null, 'public/css');
+
+
+ //assumes resources/js (but you can modify the third argument to set it)
+    mix.scripts([
+        'libs/jquery.js',
+        'libs/select2.min.js',
+        'libs/bootstrap.min.js'
+        //'libs/jquery.min.js'  //from cloudflare, but including it made a bug during 24
+    ], 'public/js', 'resources/js');
+
+    //jquery.min.js, bootstrap.min.js, and select2.min.js are from cloudflare
+    //jquery.js is from jquery.com
+
+mix.phpUnit();
+
+ mix.version('public/css/all.css');
+
+    //in case you're tempted to try again, adding this for js made a bad error, so it's not right to have both
+    //mix.version('public/js/all.js');
 
 });
