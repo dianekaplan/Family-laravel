@@ -14,8 +14,6 @@ use Illuminate\Http\Request;
 
 class PeopleController extends Controller
 {
-
-
     public function index()
     {
         $people = Person::latest('created_at')
@@ -34,11 +32,15 @@ class PeopleController extends Controller
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
-//    public function get_made_family($person)
-//    {
-//        $made_family = Family::latest('created_at')->Where('father_id', $person->id)->get();
-//        return $made_family;
-//    }
+    public function get_made_family($person)
+    {
+        $made_family = Family::latest('created_at')
+            ->Where('mother_id', $person->id)
+            ->orWhere('father_id', $person->id)
+            ->get();
+
+        return $made_family;
+    }
 
 
     public function show(Person $person)
@@ -49,12 +51,9 @@ class PeopleController extends Controller
             ->Where('subject', $id)
             ->get();
 
-        $family_of_origin = Family::latest('created_at')->Where('id', $person->family_of_origin)->get();
+        $made_family = PeopleController::get_made_family($person);
 
-        $made_family = Family::latest('created_at')->Where('father_id', $id)->get();
-//        $made_family = get_made_family($person);
-
-        return view ('person.show', compact('person', 'solo_images', 'family_of_origin', 'made_family'));
+        return view ('person.show', compact('person', 'solo_images', 'made_family'));
     }
 
 
@@ -94,8 +93,6 @@ class PeopleController extends Controller
     }
 
 
-
-
     public function update(Person $person, SavePersonRequest $request)
     {
 
@@ -121,7 +118,6 @@ class PeopleController extends Controller
         $person->delete();
         return redirect()->route('person.index');
     }
-
 
 //
 //        Image::latest('created_at')->where('subject', '=', '$person->id')->get();

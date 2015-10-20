@@ -84,5 +84,4 @@ class Person extends Model
     }
 
 
-
 }

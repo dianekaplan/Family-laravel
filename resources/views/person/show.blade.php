@@ -17,16 +17,26 @@
 
 
     Born in: {{ $person->birthplace }}<br/>
+
     {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
     {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
-
     Grew up in family: <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $person->family_of_origin }}</a><br/>
     National Origin:  {{  $person->origin }}  <br/>
     Education:   {{  $person->education }}  <br/>
     Work:  {{  $person->work }} <br/>
     Interests:   {{  $person->interests }}  <br/>
     Current location:  {{  $person->current_location }}  <br/>
-    Made family: {{  $person->made_family }} <br/>
+     {{--{{  $made_family }}--}}
+
+    @if ($made_family)
+        <h5>Made family:</h5>
+            @foreach($made_family as $family_made)
+                <a href="{{ action('FamilyController@show', [$family_made->id]) }}">{{$family_made->caption}}</a><br/>
+
+            @endforeach
+    @endif
+
+    <br/>
 
     @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif
     @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
