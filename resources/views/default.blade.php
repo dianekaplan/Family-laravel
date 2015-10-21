@@ -39,7 +39,7 @@
     {{--<script src="http://code.jquery.com/jquery.js"></script>--}}
     {{--<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>--}}
 
-    //keep commented out for sure
+    {{--//keep commented out for sure--}}
     {{--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>--}}
     {{--<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
 

@@ -70,6 +70,9 @@ class FamilyController extends Controller
      */
     public function show(Family $family)
     {
+
+        $id = $family->id;
+
 //        $mother_name =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->value('first');
 //        $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->get();
         $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->first();
@@ -85,10 +88,16 @@ class FamilyController extends Controller
             ->orderBy('year')
             ->get();
 
+        $featured_image = Image::latest('created_at')
+            ->orderBy('year', 'asc')
+            ->Where('family', $id)
+            ->Where ('featured', 1)
+            ->get();
+
 
 //        dd($family);
 //        return view ('family.show', compact('family', 'kids', 'mother', 'father', 'images'));
-        return view ('family.show', compact('family', 'kids', 'images', 'mother'));
+        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'featured_image'));
     }
 
     /**

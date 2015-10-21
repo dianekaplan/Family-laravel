@@ -13,30 +13,42 @@
 
   Mother variable we passed in: {{$mother}} <br/><br/>
 
-    @if ($family->no_kids_bool)
-    Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a><br/>
-    Husband: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a><br/>
-    @else
 
-    {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
-    Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a><br/>
-    Father: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a><br/>
-    @endif
+    <div class="bottom">
 
-    @if ($family->marriage_date)
-        Marriage date: {{  $family->marriage_date }} <br/>
+        {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
 
-        {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
-        {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
-            {{--happy anniversary, {{ $family->caption }} !--}}
-        {{--@endif--}}
-    @endif
+        <div style="float: left; width: 33%;">
+        @if ($family->no_kids_bool)
+                Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a>
+        @else
+            Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a>
+        @endif
+        </div>
 
-    {{--Marriage Date: @if ($family->marriage_date) {{ $family->marriage_date->toDateString() }} @endif--}}
-    @if ($family->marriage_date_note){{  $family->marriage_date_note }} @endif  <br/>
 
-    @if ($family->notes1) Notes 1: {{  $family->notes1 }} @endif  <br/>
-    @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
+        <div style="float: left; width: 33%;">
+
+
+            @if ($featured_image)
+                @foreach($featured_image as $image)
+                    <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
+                @endforeach
+            @endif
+        </div>
+
+
+        @if ($family->no_kids_bool)
+            Husband:  <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a>
+        @else
+            Father: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a>
+        @endif
+    </div>
+
+
+
+
+        <div style="float: left; text-align: center;width: 100%;">
 
     @unless($family->no_kids_bool)
             Kids: <br/>
@@ -46,6 +58,23 @@
              @endforeach
 
     @endunless
+            </div>
+        <div style="float: left;width: 100%;">
+
+        @if ($family->marriage_date)
+            Marriage date: {{  $family->marriage_date }} <br/>
+
+            {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
+            {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
+            {{--happy anniversary, {{ $family->caption }} !--}}
+            {{--@endif--}}
+        @endif
+
+        {{--Marriage Date: @if ($family->marriage_date) {{ $family->marriage_date->toDateString() }} @endif--}}
+        @if ($family->marriage_date_note){{  $family->marriage_date_note }} @endif  <br/>
+
+        @if ($family->notes1) Notes 1: {{  $family->notes1 }} @endif  <br/>
+        @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
 
     <br/>
     Images:
@@ -62,8 +91,12 @@
 
     <br/>
     <br/>
-    Here's everything: {{$family}}
 
+        </div>
+    <div style="float: left;width: 100%;">
+
+    Here's everything: {{$family}}
+</div>
 
 
 @stop

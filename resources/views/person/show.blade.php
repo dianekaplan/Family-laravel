@@ -11,49 +11,61 @@
     @endif
 
 
-    Full Name: {{$person->first}} @if ($person->middle){{$person->middle}} @endif{{$person->last}}<br/>
-    Birthdate: @if ($person->birthdate) {{  $person->birthdate->toDateString() }} @endif
-    @if ($person->birthdate_note){{  $person->birthdate_note }} @endif  <br/>
+
+    <div class="bottom">
+        <div style="float: left; width: 33%;">
+
+        Full Name: {{$person->first}} @if ($person->middle){{$person->middle}} @endif{{$person->last}}<br/>
+        Birthdate: @if ($person->birthdate) {{  $person->birthdate->toDateString() }} @endif
+        @if ($person->birthdate_note){{  $person->birthdate_note }} @endif  <br/>
 
 
-    Born in: {{ $person->birthplace }}<br/>
+        Born in: {{ $person->birthplace }}<br/>
 
     {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
     {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
-    Grew up in family:  <br/>
-    <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $origin_family->caption }}</a><br/>
+        Grew up in family:  <br/>
+        <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $origin_family->caption }}</a><br/>
 
     {{--That works, but when I try this I get an error:--}}
     {{--Grew up in family:--}}
     {{--@include ('partials._family_link', ['family' => $family_of_origin])--}}
     {{--"Trying to get property of non-object"--}}
-    
 
 
-    National Origin:  {{  $person->origin }}  <br/>
+
+         National Origin:  {{  $person->origin }}  <br/>
+        </div>
+        <div style="float: left; width: 33%;">
 
 
-    @if ($featured_image)
-            @foreach($featured_image as $image)
-                    <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
-            @endforeach
-    @endif
-    <br/>
+        @if ($featured_image)
+                @foreach($featured_image as $image)
+                        <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
+                @endforeach
+        @endif
+        </div>
+        <div style="float: left; width: 33%;">
+        Education:   {{  $person->education }}  <br/>
+        Work:  {{  $person->work }} <br/>
+        Interests:   {{  $person->interests }}  <br/>
+        Current location:  {{  $person->current_location }}  <br/>
+            Death date:
+            </div>
 
-
-    Education:   {{  $person->education }}  <br/>
-    Work:  {{  $person->work }} <br/>
-    Interests:   {{  $person->interests }}  <br/>
-    Current location:  {{  $person->current_location }}  <br/>
-     {{--{{  $made_family }}--}}
-
-    @if ($made_family)
-        <h5>Made family:</h5>
+        @if ($made_family)
+            <h5>Made family:</h5>
             @foreach($made_family as $family_made)
                 <a href="{{ action('FamilyController@show', [$family_made->id]) }}">{{$family_made->caption}}</a><br/>
 
             @endforeach
-    @endif
+        @endif
+
+        <div style="float: left; width: 100%;">
+
+         {{--{{  $made_family }}--}}
+
+
 
     <br/>
 
@@ -91,6 +103,10 @@
                 @endforeach
         </ul>
     @endunless
+</div>
+
+    </div>
+
 
     <br/>
     Whole record: {{$person}}
