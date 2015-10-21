@@ -20,8 +20,27 @@
 
     {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
     {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
-    Grew up in family: <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $person->family_of_origin }}</a><br/>
+    Grew up in family:  <br/>
+    <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $origin_family->caption }}</a><br/>
+
+    {{--That works, but when I try this I get an error:--}}
+    {{--Grew up in family:--}}
+    {{--@include ('partials._family_link', ['family' => $family_of_origin])--}}
+    {{--"Trying to get property of non-object"--}}
+    
+
+
     National Origin:  {{  $person->origin }}  <br/>
+
+
+    @if ($featured_image)
+            @foreach($featured_image as $image)
+                    <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
+            @endforeach
+    @endif
+    <br/>
+
+
     Education:   {{  $person->education }}  <br/>
     Work:  {{  $person->work }} <br/>
     Interests:   {{  $person->interests }}  <br/>

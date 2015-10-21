@@ -9,12 +9,16 @@
     {{--{{$mother->first}}--}}
     {{--Mother: @include ('partials._person_link', ['person' => $mother])<br/>--}}
     {{--Mother: <a href="{{ action('PeopleController@show', [$mother->id]) }}">{{$mother->id}}</a><br/>--}}
+    {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
+
+  Mother variable we passed in: {{$mother}} <br/><br/>
 
     @if ($family->no_kids_bool)
     Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a><br/>
     Husband: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a><br/>
     @else
 
+    {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
     Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a><br/>
     Father: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a><br/>
     @endif
@@ -35,10 +39,10 @@
     @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
 
     @unless($family->no_kids_bool)
-            Kids:
+            Kids: <br/>
 
             @foreach($kids as $kid)
-                @include ('partials._person_link', ['person' => $kid])
+                @include ('partials._person_link', ['person' => $kid])<br/>
              @endforeach
 
     @endunless

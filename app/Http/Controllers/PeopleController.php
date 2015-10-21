@@ -51,9 +51,19 @@ class PeopleController extends Controller
             ->Where('subject', $id)
             ->get();
 
+        $featured_image = Image::latest('created_at')
+            ->orderBy('year', 'asc')
+            ->Where('subject', $id)
+            ->Where ('featured', 1)
+            ->get();
+
         $made_family = PeopleController::get_made_family($person);
 
-        return view ('person.show', compact('person', 'solo_images', 'made_family'));
+        $origin_family = Family::latest('created_at')
+            ->Where('id', $person->family_of_origin)
+            ->first();
+
+        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family'));
     }
 
 
