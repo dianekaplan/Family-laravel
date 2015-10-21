@@ -24,9 +24,10 @@
 
     {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
     {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
+            @if ($origin_family)
         Grew up in family:  <br/>
         <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $origin_family->caption }}</a><br/>
-
+                @endif
     {{--That works, but when I try this I get an error:--}}
     {{--Grew up in family:--}}
     {{--@include ('partials._family_link', ['family' => $family_of_origin])--}}
