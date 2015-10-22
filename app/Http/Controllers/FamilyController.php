@@ -20,8 +20,8 @@ class FamilyController extends Controller
      */
     public function index()
     {
-//        $people = Person::all();
-        $families = Family::latest('created_at')->get();
+        $families = Family::all();
+//        $families = Family::latest('created_at')->get();
 
         return view('family.index', compact('families'));
     }
@@ -35,7 +35,6 @@ class FamilyController extends Controller
     public function create()
     {
         return view ('family.create');
-//        return view ('family.create', compact('family'));
     }
 
 
@@ -70,21 +69,18 @@ class FamilyController extends Controller
      */
     public function show(Family $family)
     {
-
         $id = $family->id;
 
-//        $mother_name =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->value('first');
-//        $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->get();
         $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->first();
-        $father =  Person::latest('created_at') ->where('id', '=', $family->father_id)->get();
+        $father =  Person::latest('created_at') ->where('id', '=', $family->father_id)->first();
 
        $kids = Person::latest('created_at')
-           ->where('family_of_origin', '=', $family->id)
+           ->where('family_of_origin', '=', $id)
            ->orderBy('sibling_seq')
            ->get();
 
         $images = Image::latest('created_at')
-            ->where('family', '=', $family->id)
+            ->where('family', '=', $id)
             ->orderBy('year')
             ->get();
 
@@ -94,10 +90,7 @@ class FamilyController extends Controller
             ->Where ('featured', 1)
             ->get();
 
-
-//        dd($family);
-//        return view ('family.show', compact('family', 'kids', 'mother', 'father', 'images'));
-        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'featured_image'));
+        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image'));
     }
 
     /**

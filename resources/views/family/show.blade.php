@@ -4,14 +4,6 @@
     <h3>{{$family->caption}}</h3>
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
-    {{--@FIXME: I can access the $mother and $father people contents, but none of their individual fields by name:
-    undefined property, (neither here nor in the partial), though it DOES work for the kids--}}
-    {{--{{$mother->first}}--}}
-    {{--Mother: @include ('partials._person_link', ['person' => $mother])<br/>--}}
-    {{--Mother: <a href="{{ action('PeopleController@show', [$mother->id]) }}">{{$mother->id}}</a><br/>--}}
-    {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
-
-  Mother variable we passed in: {{$mother}} <br/><br/>
 
 
     <div class="bottom">
@@ -20,14 +12,14 @@
 
         <div style="float: left; width: 33%;">
         @if ($family->no_kids_bool)
-                Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a>
+                Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother->first}} {{$mother->last}}</a>
         @else
-            Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$family->mother_id}}</a>
+            Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother->first}} {{$mother->last}}</a>
         @endif
         </div>
 
 
-        <div style="float: left; width: 33%;">
+        <div style="float: left; vertical-align: bottom; width: 33%;">
 
 
             @if ($featured_image)
@@ -35,35 +27,40 @@
                     <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
                 @endforeach
             @endif
+
+                <br/>
+
+                @unless($family->no_kids_bool)
+                    <br/>
+                    Kids: <br/>
+
+                    @foreach($kids as $kid)
+                        @include ('partials._person_link', ['person' => $kid])<br/>
+                    @endforeach
+
+                @endunless
+
         </div>
 
 
-        @if ($family->no_kids_bool)
-            Husband:  <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a>
-        @else
-            Father: <a href="{{ action('PeopleController@show', [$family->father_id]) }}">{{$family->father_id}}</a>
-        @endif
-    </div>
+        <div style="float: left; width: 33%;">
+            @if ($family->no_kids_bool)
+                Husband:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$father->first}} {{$father->last}}</a>
+            @else
+                Father: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$father->first}} {{$father->last}}</a>
+            @endif
+        </div>
 
 
 
 
-        <div style="float: left; text-align: center;width: 100%;">
 
-    @unless($family->no_kids_bool)
-            Kids: <br/>
-
-            @foreach($kids as $kid)
-                @include ('partials._person_link', ['person' => $kid])<br/>
-             @endforeach
-
-    @endunless
-            </div>
         <div style="float: left;width: 100%;">
 
         @if ($family->marriage_date)
             Marriage date: {{  $family->marriage_date }} <br/>
-
+            @elseif($family->marriage_date_note)
+                Marriage date: {{  $family->marriage_date_note }} <br/>
             {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
             {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
             {{--happy anniversary, {{ $family->caption }} !--}}
@@ -87,15 +84,10 @@
 
 
 
-
-
-    <br/>
-    <br/>
-
         </div>
     <div style="float: left;width: 100%;">
 
-    Here's everything: {{$family}}
+    {{--Here's everything: {{$family}}--}}
 </div>
 
 
