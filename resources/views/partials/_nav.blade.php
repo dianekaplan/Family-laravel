@@ -15,14 +15,18 @@
                 {{--<li class="active"><a href="/people">People</a></li>--}}
                 <li><a href="/people">People</a></li>
                 <li><a href="/families">Families</a></li>
-                <li><a href="/users">Users</a></li>
-                <li><a href="/updates">Updates</a></li>
+                <li><a href="/people">My Page!</a></li>
+                {{--<li><a href="/people/{{$user->person_id}}">My Page!</a></li>--}}
+
+
+                {{--<li> @include ('person.partials._person_link', ['person' => $person])</li>--}}
             </ul>
 
             {{--@FIXME: come back and add logic in case nobody's logged in--}}
 
             <ul class="nav navbar-nav navbar-right">
-
+                {{--<li><a href="/users">Users</a></li>--}}
+                {{--<li><a href="/updates">Updates</a></li>--}}
                 <li><a href="/account">My Account</a></li>
             </ul>
 

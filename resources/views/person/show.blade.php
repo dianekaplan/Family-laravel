@@ -23,10 +23,10 @@
 
 
             @if ($origin_family)
-        Grew up in family:  <br/>
-                @include ('family.partials._family_link', ['family' => $origin_family])
+        Grew up in family:
+                @include ('family.partials._family_link', ['family' => $origin_family, 'generation' => 'NA'])
                 @endif
-
+            <br/>
 
          National Origin:  {{  $person->origin }}  <br/>
         </div>
@@ -51,7 +51,7 @@
         @if ($made_family)
             <h5>Made family:</h5>
             @foreach($made_family as $family_made)
-                @include ('family.partials._family_link', ['family' => $family_made])<br/>
+                @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])<br/>
 
             @endforeach
         @endif

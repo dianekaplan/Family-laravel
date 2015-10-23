@@ -25,10 +25,11 @@ elixir(function(mix) {
  //this uses app.css that's created above
  //it will make all.css
  mix.styles([
+     'newribbon_styles.css',
      'libs/bootstrap.min.css',
      'app.css',
-     'libs/select2.min.css',
-     'newribbon_styles.css'
+     'libs/select2.min.css'
+
      ], 'public/css', 'resources/css');
 
  //

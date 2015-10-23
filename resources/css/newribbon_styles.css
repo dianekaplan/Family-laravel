@@ -20,8 +20,8 @@ a       	{ font-size: 0.750em; text-decoration: underline;
 .g16 { font-size: 12pt; text-decoration: underline;  color: #CC99B3; background-color: #FFFFFF}
 
 
-/*a:hover 	{ text-decoration: underline;*/
-         	 /*color: #888888; background-color: #FFFFFF }*/
+a:hover 	{ text-decoration: underline;
+         	 color: #888888; background-color: #FFFFFF }
 
 
 em   		{font-weight: bold; }
