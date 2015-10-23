@@ -18,7 +18,7 @@
 
     My family history:<br/>
     Chronolocial outline:<br/>
-    Fun & general family history:<br/>
+    Celebrations this month:<br/>
 
 </div>
 

@@ -44,9 +44,6 @@
         </div>
 
 
-
-
-
         <div style="float: left;width: 100%;">
 
         @if ($family->marriage_date)
@@ -77,8 +74,6 @@
 
     <br/>
     <br/>
-
-
 
         </div>
     <div style="float: left;width: 100%;">

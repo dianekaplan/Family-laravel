@@ -8,11 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Family Tree</a>
+            <a class="navbar-brand" href="/home">Home</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/people">People</a></li>
+                {{--<li class="active"><a href="/people">People</a></li>--}}
+                <li><a href="/people">People</a></li>
                 <li><a href="/families">Families</a></li>
                 <li><a href="/users">Users</a></li>
                 <li><a href="/updates">Updates</a></li>

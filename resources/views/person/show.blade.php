@@ -21,17 +21,11 @@
 
         Born in: {{ $person->birthplace }}<br/>
 
-    {{--Grew up in family: @include ('partials._family_link', ['family' => $family_of_origin])--}}
-    {{--@FIXME: exactly like issue in family show view, here I load _family_link partial and undefined property $id--}}
+
             @if ($origin_family)
         Grew up in family:  <br/>
-        <a href="{{ action('FamilyController@show', [$person->family_of_origin]) }}">{{ $origin_family->caption }}</a><br/>
+                @include ('family.partials._family_link', ['family' => $origin_family])
                 @endif
-    {{--That works, but when I try this I get an error:--}}
-    {{--Grew up in family:--}}
-    {{--@include ('partials._family_link', ['family' => $family_of_origin])--}}
-    {{--"Trying to get property of non-object"--}}
-
 
 
          National Origin:  {{  $person->origin }}  <br/>
@@ -57,7 +51,7 @@
         @if ($made_family)
             <h5>Made family:</h5>
             @foreach($made_family as $family_made)
-                <a href="{{ action('FamilyController@show', [$family_made->id]) }}">{{$family_made->caption}}</a><br/>
+                @include ('family.partials._family_link', ['family' => $family_made])<br/>
 
             @endforeach
         @endif

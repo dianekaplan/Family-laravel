@@ -32,11 +32,13 @@ class PeopleController extends Controller
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
+//    @FIXME: still not showing families in order of sequence (see mom's page')
     public function get_made_family($person)
     {
         $made_family = Family::latest('created_at')
             ->Where('mother_id', $person->id)
             ->orWhere('father_id', $person->id)
+            ->orderBy('sequence', 'asc')
             ->get();
 
         return $made_family;
