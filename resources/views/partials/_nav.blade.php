@@ -19,6 +19,15 @@
             </ul>
 
             {{--@FIXME: come back and add logic in case nobody's logged in--}}
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/account">My Account</a></li>
+            </ul>
+
+
+
+
             {{--<ul class="nav navbar-nav navbar-right">--}}
 
                 {{--<li>{!! link_to_action('UpdateController@show', $latest->summary, [$latest->id]) !!}</li>--}}

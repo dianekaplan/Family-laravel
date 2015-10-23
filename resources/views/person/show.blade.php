@@ -16,9 +16,8 @@
         <div style="float: left; width: 33%;">
 
         Full Name: {{$person->first}} @if ($person->middle){{$person->middle}} @endif{{$person->last}}<br/>
-        Birthdate: @if ($person->birthdate) {{  $person->birthdate->toDateString() }} @endif
+        Birthdate: @if ($person->birthdate) {{ date('F d, Y', strtotime($person->birthdate)) }} @endif
         @if ($person->birthdate_note){{  $person->birthdate_note }} @endif  <br/>
-
 
         Born in: {{ $person->birthplace }}<br/>
 
@@ -51,7 +50,8 @@
         Work:  {{  $person->work }} <br/>
         Interests:   {{  $person->interests }}  <br/>
         Current location:  {{  $person->current_location }}  <br/>
-            Death date:
+            @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}} @endif
+            @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
             </div>
 
         @if ($made_family)
@@ -70,8 +70,8 @@
 
     <br/>
 
-    @if ($person->deathdate)Death Date: {{$person->deathdate}} @endif
-    @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
+
+
     <br/>
 
 

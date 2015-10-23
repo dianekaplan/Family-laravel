@@ -13,6 +13,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use App\Person;
 
 class HomeController extends Controller {
 
@@ -35,7 +36,19 @@ class HomeController extends Controller {
     public function home()
     {
         $user =  \Auth::user();
-        return view ('pages.home', compact('user'));
+        $person = Person::latest('created_at')
+            ->Where('id', $user->person_id)
+            ->first();
+
+
+        return view ('pages.home', compact('user', 'person'));
+    }
+
+    public function account()
+    {
+        $user =  \Auth::user();
+
+        return view ('pages.account', compact('user'));
     }
 
 }

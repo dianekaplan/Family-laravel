@@ -19,6 +19,7 @@ Route::get('contact', 'HomeController@contact');
 Route::get('landing', 'PeopleController@landing');
 //Route::get('home', 'HomeController@home');
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
+Route::get('account',  'HomeController@account');
 
 Route::get('image/{image}', 'ImageController@show');
 

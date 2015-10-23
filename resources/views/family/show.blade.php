@@ -8,15 +8,11 @@
 
     <div class="bottom">
 
-        {{--Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother_name}}</a><br/>--}}
 
         <div style="float: left; width: 33%;">
-        @if ($family->no_kids_bool)
-                Wife:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother->first}} {{$mother->last}}</a>
-        @else
-            Mother: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$mother->first}} {{$mother->last}}</a>
-        @endif
+             @include ('family.partials._parent_link', ['person' => $mother, 'gender'=>"female"])
         </div>
+
 
 
         <div style="float: left; vertical-align: bottom; width: 33%;">
@@ -35,7 +31,7 @@
                     Kids: <br/>
 
                     @foreach($kids as $kid)
-                        @include ('partials._person_link', ['person' => $kid])<br/>
+                        @include ('person.partials._person_link', ['person' => $kid])<br/>
                     @endforeach
 
                 @endunless
@@ -44,11 +40,7 @@
 
 
         <div style="float: left; width: 33%;">
-            @if ($family->no_kids_bool)
-                Husband:  <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$father->first}} {{$father->last}}</a>
-            @else
-                Father: <a href="{{ action('PeopleController@show', [$family->mother_id]) }}">{{$father->first}} {{$father->last}}</a>
-            @endif
+            @include ('family.partials._parent_link', ['person' => $father, 'gender'=>"male"])
         </div>
 
 
@@ -58,7 +50,11 @@
         <div style="float: left;width: 100%;">
 
         @if ($family->marriage_date)
-            Marriage date: {{  $family->marriage_date }} <br/>
+
+
+
+
+            Marriage date: {{ date('F d, Y', strtotime($family->marriage_date)) }} <br/>
             @elseif($family->marriage_date_note)
                 Marriage date: {{  $family->marriage_date_note }} <br/>
             {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}

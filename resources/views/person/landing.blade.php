@@ -23,6 +23,6 @@
     <br/><br/>
 
 
-    @include ('partials._people_list', ['person_group' => $people]);
+    @include ('person.partials._people_list', ['person_group' => $people]);
 
 @stop

@@ -38,6 +38,7 @@ class Person extends Model
         $query->where('hide_bool', '=', false);
     }
 
+//    @TODO same as in families- can this be a partial?
     public function scopeKaplans($query)
     {
         $query->where('kaplan_line', '=', 'true');
