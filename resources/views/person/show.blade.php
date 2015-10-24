@@ -49,7 +49,7 @@
             </div>
 
         @if ($made_family)
-            <h5>Made family:</h5>
+            Made family:
             @foreach($made_family as $family_made)
                 @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])<br/>
 
@@ -58,8 +58,19 @@
 
         <div style="float: left; width: 100%;">
 
-         {{--{{  $made_family }}--}}
 
+            @unless ($notes->isEmpty())
+
+                <div>
+                    @foreach($notes as $note)
+
+                        {{--I'd like to be able to do this, but it doesn't know it's a person--}}
+                        {{--@include ('person.partials._person_link', ['person' =>  $note->from_person])--}}
+                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a>
+                    note: {{$note->body}}<br/>
+                    @endforeach
+                </div>
+            @endunless
 
 
     <br/>
@@ -104,7 +115,7 @@
 
 
     <br/>
-    Whole record: {{$person}}
+    {{--Whole record: {{$person}}--}}
 
     <br/>
     <br/>

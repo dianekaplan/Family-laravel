@@ -84,5 +84,11 @@ class Person extends Model
         return $this->images->lists('id')->all();
     }
 
+    //get this person's notes-
+    //but when I do it this way it looks for notes.person_id (which doesn't exist) since notes can be about families too
+//    public function notes()
+//    {
+//        return $this->hasMany('App\Note');
+//    }
 
 }

@@ -6,6 +6,7 @@ use App\Person;
 use App\Tag;
 use App\Image;
 use App\Family;
+use App\Note;
 use App\Http\Requests;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
@@ -44,6 +45,18 @@ class PeopleController extends Controller
         return $made_family;
     }
 
+    public function get_notes_for_person($person)
+    {
+        $notes = Note::latest('created_at')
+            ->Where('type', 1)
+            ->Where('ref_id', $person->id)
+            ->Where('active', true)
+            ->orderBy('date', 'asc')
+            ->get();
+
+        return $notes;
+    }
+
 
     public function show(Person $person)
     {
@@ -60,14 +73,14 @@ class PeopleController extends Controller
             ->get();
 
         $made_family = PeopleController::get_made_family($person);
+        $notes = PeopleController::get_notes_for_person($person);
 
         $origin_family = Family::latest('created_at')
             ->Where('id', $person->family_of_origin)
             ->first();
 
-        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family'));
+        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family', 'notes'));
     }
-
 
 
     public function create()
@@ -107,7 +120,6 @@ class PeopleController extends Controller
 
     public function update(Person $person, SavePersonRequest $request)
     {
-
         $person->update($request->all());
         $this->syncTags($person, $request->input('tag_list'));
 
