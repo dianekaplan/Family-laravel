@@ -13,9 +13,11 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 {{--<li class="active"><a href="/people">People</a></li>--}}
-                <li><a href="/people">People</a></li>
                 <li><a href="/families">Families</a></li>
-                <li><a href="/people">My Page!</a></li>
+                <li><a href="/people">People</a></li>
+
+                {{--<li>{!! link_to_action('PeopleController@show', Auth::user()->name, [Auth::user()->Person_id]) !!}</li>--}}
+                <li>{!! link_to_action('PeopleController@show', "Me!", [Auth::user()->person_id]) !!}</li>
                 {{--<li><a href="/people/{{$user->person_id}}">My Page!</a></li>--}}
 
 
@@ -28,6 +30,7 @@
                 {{--<li><a href="/users">Users</a></li>--}}
                 {{--<li><a href="/updates">Updates</a></li>--}}
                 <li><a href="/account">My Account</a></li>
+                {{--<li>{!! link_to_action('UserController@show', Auth::user()->name, [Auth::user()->id]) !!}</li>--}}
             </ul>
 
 

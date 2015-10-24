@@ -51,7 +51,7 @@ class PeopleController extends Controller
             ->Where('type', 1)
             ->Where('ref_id', $person->id)
             ->Where('active', true)
-            ->orderBy('date', 'asc')
+            ->orderBy('author', 'desc', 'date', 'asc')
             ->get();
 
         return $notes;

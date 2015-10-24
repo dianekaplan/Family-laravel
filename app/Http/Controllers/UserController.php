@@ -13,6 +13,11 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+
+    public function showProfile(Request $request, $id)
+    {
+        $value = $request->session()->get('key');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -54,6 +59,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
+
     public function show(User $user)
     {
         return view ('user.show', compact('user'));

@@ -6,8 +6,8 @@
 
     <div class="bottom">
         <div style="float: left; width: 33%;">
-Logins: {{$user->logins}}
-
+Logins: {{$user->logins}}<br/>
+            Everything: {{$user}}<br/>
         </div>
 
         <div style="float: left; width: 33%;">

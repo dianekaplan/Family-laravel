@@ -1,7 +1,9 @@
 @extends('default')
 
 @section('content')
-    {{--<h3>Family Index</h3>--}}
+
+@include ('partials._title', ['user' => Auth::user()])</div>
+
 
     <br/><br/>
     <div class="bottom">

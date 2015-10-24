@@ -66,8 +66,10 @@
 
                         {{--I'd like to be able to do this, but it doesn't know it's a person--}}
                         {{--@include ('person.partials._person_link', ['person' =>  $note->from_person])--}}
-                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a>
-                    note: {{$note->body}}<br/>
+                    @if($note->author)
+                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a> note:
+                        @endif
+                    {{$note->body}}<br/><br/>
                     @endforeach
                 </div>
             @endunless
