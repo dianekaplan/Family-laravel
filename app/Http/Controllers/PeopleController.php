@@ -15,6 +15,13 @@ use Illuminate\Http\Request;
 
 class PeopleController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'landing']);
+    }
+
+
     public function index()
     {
         $people = Person::latest('created_at')

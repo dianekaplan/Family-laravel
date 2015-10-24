@@ -1,10 +1,18 @@
-{{--@extends('default')--}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laravel family tree</title>
+    <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
-@section('content')
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 
-    {{--@include ('auth.login');--}}
+</head>
 
+<body>
 
 
     <h3>Welcome!</h3>
@@ -25,4 +33,6 @@
 
     @include ('person.partials._people_list', ['person_group' => $people]);
 
-@stop
+</body>
+</html>
+

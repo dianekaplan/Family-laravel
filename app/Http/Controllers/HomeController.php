@@ -19,6 +19,13 @@ class HomeController extends Controller {
 
 //in the controller we'll return a view, or in a javascript application we could return a json response
 
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'landing']);
+        //$this->middleware('auth', ['only' => 'create']);
+    }
+
+
     public function index()
     {
         return view ('welcome');
