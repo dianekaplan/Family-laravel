@@ -64,35 +64,30 @@
         @endif
 
         <div style="float: left; width: 100%;">
-
-
-            @unless ($notes->isEmpty())
-
+            @if( $notes )
                 <div>
                     @foreach($notes as $note)
 
-                        {{--I'd like to be able to do this, but it doesn't know it's a person--}}
-                        {{--@include ('person.partials._person_link', ['person' =>  $note->from_person])--}}
+                        {{--I'd like to be able to do this, but it's an id not a person--}}
+                        {{--@include ('person.partials._person_link', ['person' =>  $note->author])--}}
+                    {{--Though the partial has stuff I don't need in this case, like default image if no face (anyone making note has face)--}}
+
                     @if($note->author)
-                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a> note:
+                               <img src="/faces/{{  $note->face  }}"/>
+
+                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a>:
                         @endif
                     {{$note->body}}<br/><br/>
                     @endforeach
                 </div>
-            @endunless
-
-
+            @endif
+    <br/>
     <br/>
 
 
-
-    <br/>
-
-
-    <h5>Pictures of {{$person->first}}:</h5>
+    {{--<h5>Pictures of {{$person->first}}:</h5>--}}
 
     @if ($solo_images)
-        <h5>Solo images:</h5>
         <ul>
             @foreach($solo_images as $image)
                 @include ('partials._image_link', ['image' => $image])
@@ -102,7 +97,7 @@
 
 
     @unless ($person->images->isEmpty())
-        <h5>Group images:</h5>
+        <h5>Group pictures:</h5>
             <div>
             @foreach($person->images as $image)
                     @include ('partials._image_link', ['image' => $image])
@@ -120,15 +115,8 @@
     @endunless
 </div>
 
-    </div>
 
-
-    <br/>
     {{--Whole record: {{$person}}--}}
-
-    <br/>
-    <br/>
 
     @stop
 
-    {{--{!! link_to_route('person.index', 'Back') !!}--}}

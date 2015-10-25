@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Update;
+use App\User;
 use App\Http\Requests\SaveUpdateRequest;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class UpdateController extends Controller
 {
@@ -20,6 +22,13 @@ class UpdateController extends Controller
         //$this->middleware('auth', ['only' => 'create']);
     }
 
+//
+//    public function get_author ($update)
+//    {
+//        $author = $update->user_id;
+//        return $author;
+//    }
+
 
     /**
      * Display a listing of the resource.
@@ -28,10 +37,10 @@ class UpdateController extends Controller
      */
     public function index()
     {
+        $updates = DB::table('updates')
+            ->join ('users', 'users.id', '=', 'updates.user_id')
+            ->get();
 
-//       return  \Auth::user()->name;
-
-        $updates = Update::latest('created_at')->get();
         return view('update.index', compact('updates'));
     }
 
@@ -42,7 +51,7 @@ class UpdateController extends Controller
         return view('update.index', compact('updates'));
     }
 
-    //@TODO come back and try again when not tired- episode 14, 12:17
+//    //@TODO come back and try again when not tired- episode 14, 12:17
 //    public function user_updates($user)
 //    {
 ////        return all updates suggested by the specified user
@@ -68,9 +77,6 @@ class UpdateController extends Controller
      */
     public function store(SaveUpdateRequest $request)
     {
-        //@TODO: once we do authentication will have something like:
-        //Auth::user();
-
         $update = new Update($request->all());
 
         \Auth::user()->updates()->save($update); //this line will save the logged in user for user_id

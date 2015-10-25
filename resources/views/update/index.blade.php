@@ -8,7 +8,8 @@
         @foreach ($updates as $update)
         <li><a href="{{ action('UpdateController@show', [$update->id]) }}">{{ $update->summary }}</a>
            -  Delete it
-            <a href="{{ action('UpdateController@destroy', [$update->id]) }}">here</a>,
+            <a href="{{ action('UpdateController@destroy', [$update->id]) }}">here</a>-
+            from: {{$update->name}}
             {{--- Mark as updated--}}
             {{--<a href="{{ action('UpdateController@setAdded', [$update->id]) }}">here</a>--}}
 

@@ -21,6 +21,7 @@ class CreateNotesTable extends Migration
             $table->date('date')->nullable();
             $table->integer('ref_id')->nullable();
             $table->boolean('active')->nullable();
+            $table->boolean('for_self')->default(false);
             $table->timestamps();
         });
     }

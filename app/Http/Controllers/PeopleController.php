@@ -11,6 +11,7 @@ use App\Http\Requests;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 
 class PeopleController extends Controller
@@ -54,12 +55,14 @@ class PeopleController extends Controller
 
     public function get_notes_for_person($person)
     {
-        $notes = Note::latest('created_at')
+        $notes = DB::table('notes')
+            ->leftjoin ('people', 'people.id', '=', 'notes.author')
             ->Where('type', 1)
             ->Where('ref_id', $person->id)
             ->Where('active', true)
-            ->orderBy('author', 'desc', 'date', 'asc')
+            ->orderBy('for_self', 'desc', 'date', 'asc')
             ->get();
+
 
         return $notes;
     }

@@ -30,11 +30,13 @@ Route::resource('people', 'PeopleController');
 Route::resource('families', 'FamilyController');
 Route::resource('users', 'UserController');
 
-Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
-
-
-//Route::get('updates/pending', 'UpdateController@pending');
 Route::resource('updates', 'UpdateController');
+Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
+//Route::get('updates/pending', 'UpdateController@pending');  //syntax without middleware
+
+
+//Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
+
 
 Route::get('tags/{tags}', 'TagsController@show');
 
