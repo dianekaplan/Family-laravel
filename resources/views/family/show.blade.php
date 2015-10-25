@@ -4,19 +4,15 @@
     <h3>{{$family->caption}}</h3>
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
-
-
     <div class="bottom">
 
 
         <div style="float: left; width: 33%;">
-             @include ('family.partials._parent_link', ['person' => $mother, 'gender'=>"female"])
+             @include ('family.partials._parent_link', ['person' => $mother, 'gender'=> "female"])
         </div>
 
 
-
         <div style="float: left; vertical-align: bottom; width: 33%;">
-
 
             @if ($featured_image)
                 @foreach($featured_image as $image)
@@ -24,10 +20,10 @@
                 @endforeach
             @endif
 
-                <br/>
+                <br/><br/>
 
                 @unless($family->no_kids_bool)
-                    <br/>
+
                     Kids: <br/>
 
                     @foreach($kids as $kid)
@@ -40,7 +36,7 @@
 
 
         <div style="float: left; width: 33%;">
-            @include ('family.partials._parent_link', ['person' => $father, 'gender'=>"male"])
+            @include ('family.partials._parent_link', ['person' => $father, 'gender'=> "male"])
         </div>
 
 
@@ -84,4 +80,3 @@
 
 @stop
 
-    {{--{!! link_to_route('person.index', 'Back') !!}--}}

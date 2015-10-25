@@ -5,15 +5,20 @@
     <title>Laravel family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
+    {{--<link rel="stylesheet" href="/css/style.css">--}}
+    {{--<link rel="stylesheet" href="//maccdn.bootstrapcdn.com/bootstrap/3.2.0/css//bootstrap.min.css">--}}
+    {{--<link rel="stylesheet" href="/css/app.css">--}}
+    {{--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/css/select2.min.css">--}}
 
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+<!--this page doesn't use the default page because that needs a logged in user-->
 
 
 </head>
 
 <body>
-
 
     <h3>Welcome!</h3>
 

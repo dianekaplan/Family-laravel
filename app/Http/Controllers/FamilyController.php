@@ -30,7 +30,6 @@ class FamilyController extends Controller
         $families = Family::all();
 //        $families = Family::latest('created_at')->get();
 
-
         $kaplan_families = Family::kaplans('created_at')->get();
         $keem_families = Family::keems('created_at')->get();
         $kemler_families = Family::kemlers('created_at')->get();

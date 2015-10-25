@@ -1,5 +1,5 @@
 
-@if ($gender = 'female')
+@if ($gender == 'female')
 
     @if ($family->no_kids_bool)
         Wife:
@@ -7,7 +7,7 @@
         Mother:
     @endif
 
-@elseif($gender = 'male')
+@elseif($gender == 'male')
 
     @if ($family->no_kids_bool)
         Husband:
@@ -17,4 +17,6 @@
 
     @endif
 
-    <a href="{{ action('PeopleController@show', [$person->id]) }}">{{$person->first}} {{$person->last}}</a>
+@include ('person.partials._person_link', ['person' => $person])
+
+    {{--<a href="{{ action('PeopleController@show', [$person->id]) }}">{{$person->first}} {{$person->last}}</a>--}}

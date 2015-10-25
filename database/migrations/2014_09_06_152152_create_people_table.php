@@ -32,6 +32,7 @@ class CreatePeopleTable extends Migration
             $table->boolean('kaplan_line');
             $table->boolean('adopted')->nullable();
             $table->boolean('direct_bool')->nullable();
+            $table->boolean('show_on_landing_page')->nullable();
             $table->boolean('hide_bool')->default(0);
             $table->text('interests')->nullable();
             $table->text('education')->nullable();

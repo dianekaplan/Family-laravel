@@ -116,7 +116,8 @@ class PeopleController extends Controller
 
     public function landing()
     {
-        $people = Person::latest('created_at')
+
+        $people = Person::ShowOnLandingPage('created_at')
             ->displayable()
             ->orderBy('last', 'asc', 'first', 'asc')
             ->get();

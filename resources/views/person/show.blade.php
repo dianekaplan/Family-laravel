@@ -1,7 +1,13 @@
 @extends('default')
 
 @section('content')
+
+@if ($person->nickname)
+    <h3>{{$person->nickname}} {{$person->last}}</h3>
+    @else
+
     <h3>{{$person->first}} {{$person->last}}</h3>
+    @endif
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
     @if ($person->birthdate)
@@ -11,11 +17,12 @@
     @endif
 
 
-
     <div class="bottom">
         <div style="float: left; width: 33%;">
 
-        Full Name: {{$person->first}} @if ($person->middle){{$person->middle}} @endif{{$person->last}}<br/>
+        Born:  {{$person->first}}
+            @if ($person->middle){{$person->middle}} @endif
+            @if ($person->maiden){{$person->maiden}} @else {{$person->last}} @endif <br/>
         Birthdate: @if ($person->birthdate) {{ date('F d, Y', strtotime($person->birthdate)) }} @endif
         @if ($person->birthdate_note){{  $person->birthdate_note }} @endif  <br/>
 

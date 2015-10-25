@@ -16,6 +16,7 @@ class RedirectIfNotSuperUser
     public function handle($request, Closure $next)
     {
         if ( ! $request->user()->isASuperUser())
+//            (shouldn't this be user()->super_admin?')
         {
             return redirect('home');
         }

@@ -38,6 +38,14 @@ class Person extends Model
         $query->where('hide_bool', '=', false);
     }
 
+//    Landing page is for people searching/google/etc- don't include those married in, ?'s, etc
+    public function scopeShowOnLandingPage($query)
+    {
+        $query->where('show_on_landing_page', '=', 'true');
+    }
+
+
+
 //    @TODO same as in families- can this be a partial?
     public function scopeKaplans($query)
     {
@@ -58,6 +66,9 @@ class Person extends Model
     {
         $query->where('husband_line', '=', 'true');
     }
+
+
+
 
 
     //get the tags associated with the given person
