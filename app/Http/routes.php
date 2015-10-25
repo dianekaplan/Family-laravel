@@ -34,6 +34,7 @@ Route::resource('updates', 'UpdateController');
 Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
 //Route::get('updates/pending', 'UpdateController@pending');  //syntax without middleware
 
+Route::get('auth/login', 'PeopleController@landing');
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
 

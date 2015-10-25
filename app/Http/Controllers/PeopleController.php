@@ -53,7 +53,7 @@ class PeopleController extends Controller
         return $made_family;
     }
 
-    public function get_notes_for_person($person)
+    public function get_notes_about_person($person)
     {
         $notes = DB::table('notes')
             ->leftjoin ('people', 'people.id', '=', 'notes.author')
@@ -63,9 +63,10 @@ class PeopleController extends Controller
             ->orderBy('for_self', 'desc', 'date', 'asc')
             ->get();
 
-
         return $notes;
     }
+
+
 
 
     public function show(Person $person)
@@ -83,7 +84,8 @@ class PeopleController extends Controller
             ->get();
 
         $made_family = PeopleController::get_made_family($person);
-        $notes = PeopleController::get_notes_for_person($person);
+        $notes = PeopleController::get_notes_about_person($person);
+
 
         $origin_family = Family::latest('created_at')
             ->Where('id', $person->family_of_origin)

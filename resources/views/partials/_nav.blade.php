@@ -30,6 +30,8 @@
                 {{--<li><a href="/users">Users</a></li>--}}
                 {{--<li><a href="/updates">Updates</a></li>--}}
                 <li><a href="/account">My Account</a></li>
+                <li><a href="/auth/logout">Log Out</a></li>
+                {{--<li>{!! link_to_action('AuthController@getLogout','Log Out') !!}</li>--}}
                 {{--<li>{!! link_to_action('UserController@show', Auth::user()->name, [Auth::user()->id]) !!}</li>--}}
             </ul>
 

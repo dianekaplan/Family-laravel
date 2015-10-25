@@ -6,7 +6,7 @@
     @if (count($updates))
 
         @foreach ($updates as $update)
-        <li><a href="{{ action('UpdateController@show', [$update->id]) }}">{{ $update->summary }}</a>
+        <li><a href="{{ action('UpdateController@show', [$update->id]) }}">{{ $update->update_summary }}</a>
            -  Delete it
             <a href="{{ action('UpdateController@destroy', [$update->id]) }}">here</a>-
             from: {{$update->name}}

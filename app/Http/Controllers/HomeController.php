@@ -8,12 +8,12 @@
 
 namespace App\Http\Controllers;
 
-//use App\Http\Controllers\Auth;
-
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Person;
+use App\Update;
+use DB;
 
 class HomeController extends Controller {
 
@@ -25,30 +25,52 @@ class HomeController extends Controller {
         //$this->middleware('auth', ['only' => 'create']);
     }
 
-
     public function index()
     {
         return view ('welcome');
     }
 
+    public function get_notes_added_by_person($person)
+    {
+        $notes = DB::table('notes')
+            ->Where('author', $person->id)
+            ->Where('active', true)
+            ->get();
 
-    public function contact()
-{
+        return $notes;
+    }
 
-    return view ('pages.contact');
-}
+    public function get_updates_from_user ($user)
+    {
+        $id = $user->id;
 
+        $suggested_updates = Update::latest('created_at')
+            ->Where('user_id', $user->id)
+            ->get();
+
+
+
+//        $suggested_updates = DB::table('updates')
+//            ->Where('user_id', $user->id)
+//            ->get();
+
+        return $suggested_updates;
+    }
 
 
     public function home()
     {
         $user =  \Auth::user();
-        $person = Person::latest('created_at')
+        $person = Person::all()
             ->Where('id', $user->person_id)
             ->first();
 
+        $notes_added = HomeController::get_notes_added_by_person($person);
 
-        return view ('pages.home', compact('user', 'person'));
+        $updates_suggested = HomeController::get_updates_from_user($user);
+
+
+        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
     }
 
     public function account()
@@ -56,6 +78,12 @@ class HomeController extends Controller {
         $user =  \Auth::user();
 
         return view ('pages.account', compact('user'));
+    }
+
+    public function contact()
+    {
+
+        return view ('pages.contact');
     }
 
 }
