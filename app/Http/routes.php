@@ -20,7 +20,7 @@ Route::get('landing', 'PeopleController@landing');
 //Route::get('home', 'HomeController@home');
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 Route::get('account',  'HomeController@account');
-
+Route::get('activity',  'HomeController@activity');
 Route::get('image/{image}', 'ImageController@show');
 
 Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);

@@ -61,6 +61,41 @@ class HomeController extends Controller {
     public function home()
     {
         $user =  \Auth::user();
+        //deciding where these should be, if in both places then should make one variable up top that they can both use
+        $person = Person::all()
+            ->Where('id', $user->person_id)
+            ->first();
+//
+//        $notes_added = HomeController::get_notes_added_by_person($person);
+//
+//        $updates_suggested = HomeController::get_updates_from_user($user);
+
+
+//        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
+        return view ('pages.home', compact('user', 'person'));
+    }
+
+    public function account()
+    {
+        $user =  \Auth::user();
+
+//        $person = Person::all()
+//            ->Where('id', $user->person_id)
+//            ->first();
+////
+//        $notes_added = HomeController::get_notes_added_by_person($person);
+//
+//        $updates_suggested = HomeController::get_updates_from_user($user);
+//
+
+        return view ('pages.account', compact('user'));
+//        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested'));
+    }
+
+    public function activity()
+    {
+        $user =  \Auth::user();
+
         $person = Person::all()
             ->Where('id', $user->person_id)
             ->first();
@@ -70,14 +105,7 @@ class HomeController extends Controller {
         $updates_suggested = HomeController::get_updates_from_user($user);
 
 
-        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
-    }
-
-    public function account()
-    {
-        $user =  \Auth::user();
-
-        return view ('pages.account', compact('user'));
+        return view ('pages.activity', compact('user', 'notes_added', 'updates_suggested'));
     }
 
     public function contact()
