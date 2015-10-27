@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSpecialInfoPersonTable extends Migration
+class CreateSpecialInfoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,18 @@ class CreateSpecialInfoPersonTable extends Migration
      */
     public function up()
     {
-        Schema::create('special_info_person', function (Blueprint $table) {
+        Schema::create('specialinfo', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description')->nullable();
+            $table->string('source')->nullable();
+            $table->string('image')->nullable();
+            $table->text('text');
+            $table->text('slug')->nullable();
+
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -25,6 +32,6 @@ class CreateSpecialInfoPersonTable extends Migration
      */
     public function down()
     {
-        Schema::drop('special_info_person');
+        Schema::drop('specialinfo');
     }
 }

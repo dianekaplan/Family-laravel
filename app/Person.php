@@ -68,9 +68,6 @@ class Person extends Model
     }
 
 
-
-
-
     //get the tags associated with the given person
     public function tags()
     {
@@ -83,23 +80,28 @@ class Person extends Model
         return $this->tags->lists('id')->all();
     }
 
+
     //get the images associated with the given person
     public function images()
     {
         return $this->belongsToMany('App\Image')->withTimestamps();
     }
 
-    //get list of tag IDs  associated with the given person
+    //get list of image IDs  associated with the given person
     public function getImageListAttribute()
     {
         return $this->images->lists('id')->all();
     }
 
-    //get this person's notes-
-    //but when I do it this way it looks for notes.person_id (which doesn't exist) since notes can be about families too
-//    public function notes()
-//    {
-//        return $this->hasMany('App\Note');
-//    }
+
+    public function specialinfo()
+    {
+        return $this->belongsToMany('App\Specialinfo')->withTimestamps();
+    }
+
+    public function getSpecialinfoListAttribute()
+    {
+        return $this->specialinfo->lists('id')->all();
+    }
 
 }

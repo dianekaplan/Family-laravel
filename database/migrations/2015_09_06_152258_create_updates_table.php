@@ -24,9 +24,9 @@ class CreateUpdatesTable extends Migration
             $table->date('note_date')->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users');
+//            $table->foreign('user_id')
+//                ->references('id')
+//                ->on('users');
         });
     }
 

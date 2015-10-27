@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagePersonTable extends Migration
+class CreatePersonSpecialInfoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,22 @@ class CreateImagePersonTable extends Migration
      */
     public function up()
     {
-        Schema::create('image_person', function (Blueprint $table) {
+        Schema::create('person_specialinfo', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('image_id');
-            $table->integer('person_id')->nullable();
             $table->timestamps();
+            $table->integer('specialinfo_id');
+            $table->integer('type');  //this will be deleted later when the data's in
+            $table->integer('person_id');
 
-//            $table->foreign('person_id')
+//            $table->foreign('info_id')
 //                ->references('id')
-//                ->on('people');
+//                ->on('special_info');
+
         });
     }
+
+
+
 
     /**
      * Reverse the migrations.
@@ -31,6 +36,6 @@ class CreateImagePersonTable extends Migration
      */
     public function down()
     {
-        Schema::drop('image_person');
+        Schema::drop('person_specialinfo');
     }
 }

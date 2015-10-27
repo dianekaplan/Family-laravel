@@ -23,6 +23,10 @@ class CreateImagesTable extends Migration
             $table->string('year')->nullable();
             $table->integer('family')->nullable();
             $table->timestamps();
+
+//            $table->foreign('family')
+//                ->references('id')
+//                ->on('families');
         });
     }
 

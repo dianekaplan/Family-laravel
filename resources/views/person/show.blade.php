@@ -105,6 +105,16 @@
             </div>
     @endunless
 
+                {{--@unless ($person->specialinfo->isEmpty())--}}
+                    {{--<h5>Special info:</h5>--}}
+                    {{--<div>--}}
+                        {{--@foreach($person->specialinfo as $info)--}}
+                            {{--{{$info->description}}--}}
+                        {{--@endforeach--}}
+                    {{--</div>--}}
+                {{--@endunless--}}
+
+
     @unless ($person->tags->isEmpty())
         <h5>Tags:</h5>
         <ul>

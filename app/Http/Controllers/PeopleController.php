@@ -67,8 +67,6 @@ class PeopleController extends Controller
     }
 
 
-
-
     public function show(Person $person)
     {
         $id = $person->id;

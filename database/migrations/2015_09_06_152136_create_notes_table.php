@@ -23,6 +23,10 @@ class CreateNotesTable extends Migration
             $table->boolean('active')->nullable();
             $table->boolean('for_self')->default(false);
             $table->timestamps();
+
+//            $table->foreign('author')
+//                ->references('id')
+//                ->on('people');
         });
     }
 
