@@ -94,14 +94,14 @@ class Person extends Model
     }
 
 
-    public function specialinfo()
+    public function stories()
     {
-        return $this->belongsToMany('App\Specialinfo')->withTimestamps();
+        return $this->belongsToMany('App\Story')->withTimestamps();
     }
 
-    public function getSpecialinfoListAttribute()
+    public function getStoryListAttribute()
     {
-        return $this->specialinfo->lists('id')->all();
+        return $this->stories->lists('id')->all();
     }
 
 }

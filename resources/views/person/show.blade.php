@@ -81,8 +81,11 @@
                     @endforeach
                 </div>
             @endif
-    <br/>
-    <br/>
+
+
+            @include ('partials._story_link', ['subject' => $person])
+
+
 
 
     {{--<h5>Pictures of {{$person->first}}:</h5>--}}
@@ -105,14 +108,6 @@
             </div>
     @endunless
 
-                {{--@unless ($person->specialinfo->isEmpty())--}}
-                    {{--<h5>Special info:</h5>--}}
-                    {{--<div>--}}
-                        {{--@foreach($person->specialinfo as $info)--}}
-                            {{--{{$info->description}}--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
-                {{--@endunless--}}
 
 
     @unless ($person->tags->isEmpty())

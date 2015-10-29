@@ -51,4 +51,16 @@ class Family extends Model
             ->where('show_on_branch_view', '=', 'true');
     }
 
+
+    public function stories()
+    {
+        return $this->belongsToMany('App\Story')->withTimestamps();
+    }
+
+    public function getStoryListAttribute()
+    {
+        return $this->stories->lists('id')->all();
+    }
+
+
 }

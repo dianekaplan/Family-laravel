@@ -62,6 +62,8 @@
         @if ($family->notes1) Notes 1: {{  $family->notes1 }} @endif  <br/>
         @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
 
+            @include ('partials._story_link', ['subject' => $family])
+
     <br/>
     Images:
     @foreach($images as $image)
