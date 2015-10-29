@@ -16,7 +16,7 @@ class CreateStoriesTable extends Migration
             $table->increments('id');
             $table->string('description');
             $table->string('image')->nullable();
-            $table->text('text')->nullable();
+            $table->text('intro')->nullable();
             $table->string('slug')->nullable();
             $table->string('source')->nullable();
             $table->timestamps();
