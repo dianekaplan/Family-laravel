@@ -20,43 +20,42 @@
     <div class="bottom">
         <div style="float: left; width: 33%;">
 
-        Born:  {{$person->first}}
+        <b>Born:</b>  {{$person->first}}
             @if ($person->middle){{$person->middle}} @endif
             @if ($person->maiden){{$person->maiden}} @else {{$person->last}} @endif <br/>
-        Birthdate: @if ($person->birthdate) {{ date('F d, Y', strtotime($person->birthdate)) }} @endif
+
+            <b>Birthdate:</b> @if ($person->birthdate) {{ date('F d, Y', strtotime($person->birthdate)) }} @endif
         @if ($person->birthdate_note){{  $person->birthdate_note }} @endif  <br/>
 
-        Born in: {{ $person->birthplace }}<br/>
+        <b>Born in:</b> {{ $person->birthplace }}<br/>
 
 
             @if ($origin_family)
-        Grew up in family:
+       <b> Grew up in family:</b>
+            {{--@TODO: add glyphicons: http://getbootstrap.com/components/--}}
+                {{--<span class= "glyphicon glyphicon-chevron-up" aria-hidden="true"></span>--}}
                 @include ('family.partials._family_link', ['family' => $origin_family, 'generation' => 'NA'])
                 @endif
             <br/>
 
-         National Origin:  {{  $person->origin }}  <br/>
+        <b> National Origin: </b> {{  $person->origin }}  <br/>
         </div>
+
         <div style="float: left; width: 33%;">
-
-
-        @if ($featured_image)
-                @foreach($featured_image as $image)
-                        <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
-                @endforeach
-        @endif
+            @include ('partials._featured_image', ['featured_image' => $featured_image])
         </div>
+
         <div style="float: left; width: 33%;">
-        Education:   {{  $person->education }}  <br/>
-        Work:  {{  $person->work }} <br/>
-        Interests:   {{  $person->interests }}  <br/>
-        Current location:  {{  $person->current_location }}  <br/>
+            <b> Education: </b>  {{  $person->education }}  <br/>
+            <b> Work: </b> {{  $person->work }} <br/>
+            <b> Interests: </b>  {{  $person->interests }}  <br/>
+            <b> Current location: </b> {{  $person->current_location }}  <br/>
             @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}} @endif
             @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
             </div>
 
         @if ($made_family)
-            Made family:
+            <b>  Made family:</b>
             @foreach($made_family as $family_made)
                 @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])<br/>
 
@@ -65,21 +64,7 @@
 
         <div style="float: left; width: 100%;">
             @if( $notes )
-                <div>
-                    @foreach($notes as $note)
-
-                        {{--I'd like to be able to do this, but it's an id not a person--}}
-                        {{--@include ('person.partials._person_link', ['person' =>  $note->author])--}}
-                    {{--Though the partial has stuff I don't need in this case, like default image if no face (anyone making note has face)--}}
-
-                    @if($note->author)
-                               <img src="/faces/{{  $note->face  }}"/>
-
-                        <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a>:
-                        @endif
-                    {{$note->body}}<br/><br/>
-                    @endforeach
-                </div>
+                    @include ('partials._notes', ['notes' => $notes])
             @endif
 
 
@@ -87,25 +72,28 @@
 
 
 
-
     {{--<h5>Pictures of {{$person->first}}:</h5>--}}
 
     @if ($solo_images)
-        <ul>
+        <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
+
             @foreach($solo_images as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
-        </ul>
-    @endif
 
+    @endif
+</div>
+
+
+
+                <div style="float: left; width: 100%;">
 
     @unless ($person->images->isEmpty())
-        <h5>Group pictures:</h5>
-            <div>
+                        <h4>Group pictures:</h4>
             @foreach($person->images as $image)
                     @include ('partials._image_link', ['image' => $image])
             @endforeach
-            </div>
+
     @endunless
 
 

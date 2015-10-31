@@ -2,17 +2,17 @@
 @if ($gender == 'female')
 
     @if ($family->no_kids_bool)
-        Wife:
+       <b> Wife:</b>
     @else
-        Mother:
+        <b> Mother:</b>
     @endif
 
 @elseif($gender == 'male')
 
     @if ($family->no_kids_bool)
-        Husband:
+        <b>Husband:</b>
     @else
-        Father:
+        <b>Father:</b>
     @endif
 
     @endif

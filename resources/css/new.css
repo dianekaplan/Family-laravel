@@ -1,0 +1,15 @@
+ul#gallery {
+    margin:0 auto;
+    padding:0;
+    list-style-type:none;
+    /*width:90%;*/
+    /*font-family: Monotype Corsiva, Harlow Solid Italic, serif;*/
+}
+ul#gallery li {
+    float: left;
+    margin:5px;
+}
+ul#gallery li p {
+    text-align: center;
+    margin:5px 0;
+}

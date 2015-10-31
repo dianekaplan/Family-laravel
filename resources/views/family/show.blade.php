@@ -14,17 +14,13 @@
 
         <div style="float: left; vertical-align: bottom; width: 33%;">
 
-            @if ($featured_image)
-                @foreach($featured_image as $image)
-                    <img src="http://newribbon.com/family/images/{{ $image->std_name  }}">
-                @endforeach
-            @endif
+            @include ('partials._featured_image', ['featured_image' => $featured_image])
 
                 <br/><br/>
 
                 @unless($family->no_kids_bool)
 
-                    Kids: <br/>
+                    <b>Kids: </b><br/>
 
                     @foreach($kids as $kid)
                         @include ('person.partials._person_link', ['person' => $kid])<br/>
@@ -44,12 +40,9 @@
 
         @if ($family->marriage_date)
 
-
-
-
-            Marriage date: {{ date('F d, Y', strtotime($family->marriage_date)) }} <br/>
+            <b>Marriage date:</b> {{ date('F d, Y', strtotime($family->marriage_date)) }} <br/>
             @elseif($family->marriage_date_note)
-                Marriage date: {{  $family->marriage_date_note }} <br/>
+               <b> Marriage date: </b>{{  $family->marriage_date_note }} <br/>
             {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
             {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
             {{--happy anniversary, {{ $family->caption }} !--}}

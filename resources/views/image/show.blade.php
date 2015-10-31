@@ -2,21 +2,17 @@
 
 @section('content')
 
-
-        <img src="http://newribbon.com/family/images/{{ $image->big_name  }}"> <br/>
+{{--@FIXME: no clue why the img-rounded style isn't being applied here but it works the exact same way in featured_image--}}
+    <img src="http://newribbon.com/family/images/{{ $image->big_name  }}" class="img-rounded"> <br/>
         {{ $image->caption  }}
     ({{ $image->year}})
 
 
-
-
-        {{--@TODO: look up imageperson for this image_id and do something like:--}}
-
+{{--List everybody who's in the picture--}}
         @foreach($image->people as $person)
 
-            <li><a href="/people/{{ $person->id  }}">{{$person->first }} {{$person->last}}</a></li>
+            <li>@include ('person.partials._person_link', ['person' => $person])</li>
+
             @endforeach
-
-
 
 @stop

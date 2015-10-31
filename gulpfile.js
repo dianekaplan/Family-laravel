@@ -28,7 +28,8 @@ elixir(function(mix) {
      'newribbon_styles.css',
      'libs/bootstrap.min.css',
      'app.css',
-     'libs/select2.min.css'
+     'libs/select2.min.css',
+     'new.css'
 
      ], 'public/css', 'resources/css');
 
