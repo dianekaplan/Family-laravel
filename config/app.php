@@ -148,6 +148,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        JD\Cloudder\CloudderServiceProvider::class,
 
     ],
 
@@ -200,7 +201,8 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
-        'Fbuilder'   => Illuminate\Html\FormBuilder::class, //added to figure out image stuff, may not need
+        'Fbuilder'  => Illuminate\Html\FormBuilder::class, //added to figure out image stuff, may not need
+        'Cloudder'   => JD\Cloudder\Facades\Cloudder::class,
     ],
 
 ];

@@ -12,6 +12,31 @@ use App\Http\Controllers\Controller;
 class StoryController extends Controller
 {
 
+
+    public function convert($string)
+    {
+
+        $conn = pg_connect('db connection string here');
+
+        $text = pg_escape_literal($conn, htmlentities('<html><head></head><body><em>test</em></body></html>'));
+
+        pg_query($conn, 'TRUNCATE TABLE test');
+        pg_query($conn, "INSERT INTO test VALUES ( {$text} )");
+
+        $result = pg_query($conn, 'SELECT * FROM test');
+
+        $row = pg_fetch_row($result);
+        pg_close($conn);
+
+        $string = $row[0];
+
+        echo html_entity_decode($string);
+    }
+
+
+
+
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -58,7 +83,9 @@ class StoryController extends Controller
     {
         $story = Story::find($id);
 
-        $content = htmlspecialchars_decode($story->text);
+//        $content = htmlspecialchars_decode($story->text);
+//        $content = StoryController::convert($story->text);
+        $content = ($story->text);
 //        htmlentities
 
 

@@ -24,6 +24,10 @@ Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 Route::get('account',  'HomeController@account');
 Route::get('activity',  'HomeController@activity');
 Route::get('image/{image}', 'ImageController@show');
+Route::get('images', 'ImageController@index');
+Route::get('image/cloudinary/{image}', 'ImageController@show_image_from_cloudinary');
+
+
 Route::get('stories/{story}', 'StoryController@show');
 
 Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
