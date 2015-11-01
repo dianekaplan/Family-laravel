@@ -16,7 +16,6 @@
         @endif
     @endif
 
-
     <div class="bottom">
         <div style="float: left; width: 33%;">
 
@@ -29,11 +28,12 @@
 
         <b>Born in:</b> {{ $person->birthplace }}<br/>
 
-
             @if ($origin_family)
+                <img  src="/icons/up.gif"/>
        <b> Grew up in family:</b>
-            {{--@TODO: add glyphicons: http://getbootstrap.com/components/--}}
-                {{--<span class= "glyphicon glyphicon-chevron-up" aria-hidden="true"></span>--}}
+            {{--@TODO: replace old images with glyphicons: http://getbootstrap.com/components/--}}
+                {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
+
                 @include ('family.partials._family_link', ['family' => $origin_family, 'generation' => 'NA'])
                 @endif
             <br/>
@@ -57,8 +57,13 @@
         @if ($made_family)
             <b>  Made family:</b>
             @foreach($made_family as $family_made)
-                @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])<br/>
-
+                @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])
+                @if ($family_made->no_kids_bool)
+                    <img  src="/icons/sideways.gif"/>
+                @else
+                    <img  src="/icons/down.gif"/>
+                @endif
+                <br/>
             @endforeach
         @endif
 
@@ -68,11 +73,8 @@
             @endif
 
 
-            @include ('partials._story_link', ['subject' => $person])
+            @include ('partials._stories', ['subject' => $person])
 
-
-
-    {{--<h5>Pictures of {{$person->first}}:</h5>--}}
 
     @if ($solo_images)
         <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
@@ -85,7 +87,6 @@
 </div>
 
 
-
                 <div style="float: left; width: 100%;">
 
     @unless ($person->images->isEmpty())
@@ -95,7 +96,6 @@
             @endforeach
 
     @endunless
-
 
 
     @unless ($person->tags->isEmpty())

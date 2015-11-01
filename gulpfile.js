@@ -25,11 +25,12 @@ elixir(function(mix) {
  //this uses app.css that's created above
  //it will make all.css
  mix.styles([
-     'newribbon_styles.css',
-     'libs/bootstrap.min.css',
-     'app.css',
-     'libs/select2.min.css',
-     'new.css'
+     //'newribbon_styles.css', //has newribbon colors
+     'libs/bootstrap.min.css',  //has navbar, rounded corners
+     'app.css', //has spacing at the top of the page, it also changed the display for h3 and has glyphicon stuff- more bootstrap
+     //'libs/select2.min.css', //this has the nicer styles for tag selection
+     'new.css', //has gallery styles for image display
+     'newribbon_styles.css' //has newribbon colors- having it last in the list makes it win conflicts
 
      ], 'public/css', 'resources/css');
 

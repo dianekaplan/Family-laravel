@@ -30,25 +30,29 @@ class Family extends Model
     public function scopeKaplans($query)
     {
         $query->where('kaplan_line', '=', 'true')
-            ->where('show_on_branch_view', '=', 'true');
+            ->where('show_on_branch_view', '=', 'true')
+            ->orderBy('branch_seq', 'asc');
     }
 
     public function scopeKemlers($query)
     {
         $query->where('kemler_line', '=', 'true')
-            ->where('show_on_branch_view', '=', 'true');
+            ->where('show_on_branch_view', '=', 'true')
+            ->orderBy('branch_seq', 'asc');
     }
 
     public function scopeKeems($query)
     {
         $query->where('keem_line', '=', 'true')
-            ->where('show_on_branch_view', '=', 'true');
+            ->where('show_on_branch_view', '=', 'true')
+            ->orderBy('branch_seq', 'asc');
     }
 
     public function scopeHusbands($query)
     {
         $query->where('husband_line', '=', 'true')
-            ->where('show_on_branch_view', '=', 'true');
+            ->where('show_on_branch_view', '=', 'true')
+            ->orderBy('branch_seq', 'asc');
     }
 
 

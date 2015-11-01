@@ -55,9 +55,12 @@
         @if ($family->notes1) Notes 1: {{  $family->notes1 }} @endif  <br/>
         @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
 
-            @include ('partials._story_link', ['subject' => $family])
+            @include ('partials._stories', ['subject' => $family])
 
-    <br/>
+
+
+            *Asterisk indicates the direct ancestors up from the four grandparents
+            <br/> <br/>
     Images:
     @foreach($images as $image)
             @include ('partials._image_link', ['image' => $image])

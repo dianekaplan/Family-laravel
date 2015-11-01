@@ -36,6 +36,7 @@ class FamilyController extends Controller
         $husband_families = Family::husbands('created_at')->get();
 
         return view('family.index', compact('families', 'kaplan_families', 'keem_families', 'kemler_families', 'husband_families'));
+
     }
 
     /**

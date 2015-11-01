@@ -3,13 +3,12 @@
     {{--I was considering including the person_link partial, but we have a person->id and not a person--}}
     {{--@include ('person.partials._person_link', ['person' =>  $note->author])--}}
     {{--Also the partial has stuff I don't need in this case, like default image if no face (anyone making a note has face)--}}
-    {{--If I do leave it as is, need to add the img-rounded class in there somehow with the media-object class-
-     I tried adding border-radius="6px" to that class, but it didn't take effect--}}
 
     @if($note->author)
         <div class="media">
             <div class= "media-left">
-                <img class="media-object"  src="/faces/{{  $note->face  }}"/>
+                {{--originally used class "media-object", but switched to rounded for corners, and the wrapping still works--}}
+                <img class="img-rounded"  src="/faces/{{  $note->face  }}"/>
             </div>
             <div class = "media-body">
 

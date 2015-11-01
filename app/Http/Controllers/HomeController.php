@@ -30,6 +30,11 @@ class HomeController extends Controller {
         return view ('welcome');
     }
 
+    public function branches()
+    {
+        return view ('pages.branch_explanation');
+    }
+
     public function get_notes_added_by_person($person)
     {
         $notes = DB::table('notes')

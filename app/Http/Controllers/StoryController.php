@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\Story;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -57,7 +58,11 @@ class StoryController extends Controller
     {
         $story = Story::find($id);
 
-        return view ('story/show',  compact('story'));
+        $content = htmlspecialchars_decode($story->text);
+//        htmlentities
+
+
+        return view ('story/show',  compact('story', 'content'));
     }
 
 

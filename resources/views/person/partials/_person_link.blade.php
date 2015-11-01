@@ -1,3 +1,6 @@
+
+
+
 @if($person->face)
         <img src="/faces/{{  $person->face  }}" class="img-rounded"/>
     @else
@@ -9,3 +12,9 @@
     @else
     <a href="{{ action('PeopleController@show', [$person->id]) }}">{{ $person->first }} {{ $person->last }}</a>
     @endif
+
+@if ( $person->direct_bool == true )
+    *
+@endif
+
+    {{--@endif--}}
