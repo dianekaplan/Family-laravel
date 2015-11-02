@@ -42,19 +42,6 @@ class ImageController extends Controller
 //
 //    }
 
-    public function show_image_from_cloudinary($image_name)
-    {
-//        $little_name = $image->little_name;
-////        \Cloudinary\Uploader::upload("http://newribbon.com/family/images/"($little_name));
-//        \Cloudinary\Uploader::upload("http://newribbon.com/family/images/2006gus.jpg");
-//        $last_image = Cloudder::getResult();
-
-        $cloud_name = 'hnyiprajv';
-
-        return cl_image_tag($image_name, array(  "cloud_name" => $cloud_name));
-
-    }
-
 //    public function clouder_upload()
 //    {
 //        $filename = test;
@@ -64,6 +51,16 @@ class ImageController extends Controller
 //
 //        Cloudder::upload($filename, $publicID, $options, $tags);
 //    }
+
+    public function show_image_from_cloudinary($image_name)
+    {
+        $cloud_name = 'hnyiprajv';
+
+        return cl_image_tag($image_name, array("cloud_name" => $cloud_name));
+
+    }
+
+
 
 
     /**

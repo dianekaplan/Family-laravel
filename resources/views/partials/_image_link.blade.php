@@ -2,7 +2,10 @@
 
 <li>
     <a href="/image/{{ $image->id  }}">
-    <img src="http://newribbon.com/family/images/{{ $image->little_name  }}" class="img-rounded">
+    {{--<img src="http://newribbon.com/family/images/{{ $image->little_name  }}" class="img-rounded">--}}
+        <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->little_name  }}" class="img-rounded">
+
+
 
         {{--<img src="{{ action('ImageController@show_image_from_cloudinary', [$image->little_name]) }}" class="img-rounded"/>--}}
 

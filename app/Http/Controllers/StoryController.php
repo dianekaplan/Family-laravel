@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Image;
 use App\Story;
 
+use Doctrine\DBAL\Portability\Connection;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,26 +16,8 @@ class StoryController extends Controller
 
     public function convert($string)
     {
-
-        $conn = pg_connect('db connection string here');
-
-        $text = pg_escape_literal($conn, htmlentities('<html><head></head><body><em>test</em></body></html>'));
-
-        pg_query($conn, 'TRUNCATE TABLE test');
-        pg_query($conn, "INSERT INTO test VALUES ( {$text} )");
-
-        $result = pg_query($conn, 'SELECT * FROM test');
-
-        $row = pg_fetch_row($result);
-        pg_close($conn);
-
-        $string = $row[0];
-
-        echo html_entity_decode($string);
+        echo (html_entity_decode($string));
     }
-
-
-
 
 
     public function __construct()
@@ -82,12 +65,10 @@ class StoryController extends Controller
     public function show($id)
     {
         $story = Story::find($id);
-
-//        $content = htmlspecialchars_decode($story->text);
-//        $content = StoryController::convert($story->text);
-        $content = ($story->text);
-//        htmlentities
-
+//
+//        $content = ($story->text);
+        $content = StoryController::convert($story->text);
+//        $content =  (html_entity_decode($story->text));
 
         return view ('story/show',  compact('story', 'content'));
     }
