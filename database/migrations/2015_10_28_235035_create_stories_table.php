@@ -19,7 +19,6 @@ class CreateStoriesTable extends Migration
             $table->text('intro')->nullable();
             $table->string('slug')->nullable();
             $table->string('source')->nullable();
-            $table->text('text')->nullable();
             $table->timestamps();
 
 

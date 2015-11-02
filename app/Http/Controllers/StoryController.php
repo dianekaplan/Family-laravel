@@ -67,10 +67,12 @@ class StoryController extends Controller
         $story = Story::find($id);
 //
 //        $content = ($story->text);
-        $content = StoryController::convert($story->text);
+//        $content = StoryController::convert($story->text);
 //        $content =  (html_entity_decode($story->text));
+        $partial_display_link = 'story.partials._';
+        $partial_display_link = $partial_display_link. ($story->slug);
 
-        return view ('story/show',  compact('story', 'content'));
+        return view ('story/show',  compact('story', 'partial_display_link'));
     }
 
 
