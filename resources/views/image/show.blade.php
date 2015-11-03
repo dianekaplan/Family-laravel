@@ -1,9 +1,11 @@
 @extends('default')
 
 @section('content')
+{{--<img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" class="img-rounded">--}}
+<?php echo cl_image_tag($image->big_name , array( "cloud_name" => "hnyiprajv", "class"=>"img-rounded" )); ?>
 
-{{--@FIXME: no clue why the img-rounded style isn't being applied here but it works the exact same way in featured_image--}}
-    <img src="http://newribbon.com/family/images/{{ $image->big_name  }}" class="img-rounded"> <br/>
+<br/>
+
         {{ $image->caption  }}
     ({{ $image->year}})
 

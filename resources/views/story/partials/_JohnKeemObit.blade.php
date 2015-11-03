@@ -16,3 +16,4 @@
     and <a href="{{ action('PeopleController@show', [243]) }}">Jacob Keem</a>, aged 76; also one sister,
     <a href="{{ action('PeopleController@show', [244]) }}">Mrs. Catherine Ess</a>, aged 72, proceded him in death. </p>
 <p>Funeral services were held from St. Cecilia's church, Sheldon, on Friday morning at 10 o'clock, the Rev Joseph A. Weisbecker officiating. </p>
+

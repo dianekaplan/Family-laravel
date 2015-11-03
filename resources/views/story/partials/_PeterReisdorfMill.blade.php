@@ -1,10 +1,9 @@
 <h2>Disastrous Fire in Strykersville</h2>
 
-<img src="http://www.newribbon.com/family/special/MReisdorf mill.jpg" align="left" class="img-rounded" />
+<img src="http://res.cloudinary.com/hnyiprajv/image/upload/MReisdorf_mill.jpg" align="left" class="img-rounded"/>
 
-
-<h2>
-    North Strykersville Mill</h2>
+<h3>
+    North Strykersville Mill</h3>
 <p><i>
         <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a> was born in Prussia on March 16, 1824. In 1847 in Buffalo, N.Y. he married
         <a href="{{ action('PeopleController@show', [251]) }}">Maria Glaser</a>, born May 8, 1830 in the same town. She was a sister of
@@ -20,4 +19,6 @@
     It was John's children that were responsible for the farming. They recalled being sent by their father to fetch a gallon pail of beer from the brewery for the workers.
     A pail of beer cost .35. In the early part of the 20th Century a flood wiped out the mill, and it was never rebuilt. The cooper shop was made into a small home for John's elderly mother in law, Elizabeth Petrie. She died in 1905
 </p>
+
+
 

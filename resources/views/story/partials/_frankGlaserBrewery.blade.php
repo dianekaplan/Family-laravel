@@ -1,7 +1,6 @@
 <h4>Disastrous Fire in Strykersville</h4>
 
-<img src="http://www.newribbon.com/family/special/M1-83 Stryerksville Brewery.jpg" align="left" class="img-rounded" />
-
+<img src="http://res.cloudinary.com/hnyiprajv/image/upload/M1-83_Stryerksville_Brewery.jpg" align="left" class="img-rounded">
 
 
 From the Aug. 20, 1909 Wyoming Co. Herald <br/>

@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac5fa5df-11f0-490a-9f47-236c2c009166" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_EmilyTuskObit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_FrankGlaserSoldier.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_JohnKeemObit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_MaryReisdorfObit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_10_28_235035_create_stories_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_10_28_235035_create_stories_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/story/partials/_JohnKeemObit.blade.php" afterPath="$PROJECT_DIR$/resources/views/story/partials/_JohnKeemObit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php" afterPath="$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php" afterPath="$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_image_link.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_image_link.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_stories.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_stories.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/image/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/image/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/story/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/story/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,69 +43,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-                <element signature="e#429#530#0#PHP" expanded="false" />
-                <element signature="e#587#696#0#PHP" expanded="false" />
-                <element signature="e#754#913#0#PHP" expanded="false" />
-                <element signature="e#986#1108#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/story/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_glazersCivilWar.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44270834">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_person_link.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/person/partials/_person_link.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="114" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.615383">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="9" />
-              <folding>
-                <element signature="e#1678#1710#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_image_link.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/_image_link.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="105" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
+              <caret line="4" column="100" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_featured_image.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11805555">
+              <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -133,9 +94,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_10_28_235101_create_person_story_table.php" />
         <option value="$PROJECT_DIR$/app/Person.php" />
         <option value="$PROJECT_DIR$/app/Story.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" />
         <option value="$PROJECT_DIR$/resources/css/new.css" />
-        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/_notes.php" />
         <option value="$PROJECT_DIR$/public/css/all.css" />
         <option value="$PROJECT_DIR$/resources/views/family/partials/_parent_link.blade.php" />
@@ -158,7 +117,6 @@
         <option value="$PROJECT_DIR$/resources/views/family/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/family/partials/_family_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/family/partials/_family_link.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/_stories.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -166,19 +124,22 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/person/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/_image_link.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/glazersCivilWar.html" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_test.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_28_235035_create_stories_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/story/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_FrankGlaserSoldier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_EmilyTuskObit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_MaryReisdorfObit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/story/partials/_JohnKeemObit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/_stories.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" />
+        <option value="$PROJECT_DIR$/resources/views/story/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/story/partials/_JohnKeemObit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/_image_link.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
       </list>
     </option>
   </component>
@@ -716,7 +677,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laravel/app/Http/routes.php" />
-    <property name="SearchEverywhereHistoryKey" value="flash&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/resources/views/partials/flash.blade.php&#10;getLogout&#9;null&#9;null&#10;&quot;keep commented out for sure&quot;&#9;null&#9;null&#10;pending&#9;null&#9;null&#10;scopePending&#9;null&#9;null&#10;style.css&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/css/style.css&#10;SaveUser&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Http/Requests/SaveUserRequest.php&#10;postReg&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Http/routes.php&#10;fileviewf&#9;null&#9;null&#10;workspace&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/.idea/workspace.xml&#10;getRegister&#9;null&#9;null&#10;postregister&#9;null&#9;null&#10;laravel.&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/storage/logs/laravel.log&#10;composer.j&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/composer.json&#10;composer.json&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/composer.json&#10;Person&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Person.php&#10;autoload&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/vendor/composer/autoload_classmap.php&#10;5432&#9;null&#9;null&#10;app.&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/config/app.php&#10;app.php&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/config/app.php&#10;&quot;Laravel 5&quot;&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="newribbon&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/resources/css/newribbon_styles.css&#10;flash&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/resources/views/partials/flash.blade.php&#10;getLogout&#9;null&#9;null&#10;&quot;keep commented out for sure&quot;&#9;null&#9;null&#10;pending&#9;null&#9;null&#10;scopePending&#9;null&#9;null&#10;style.css&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/css/style.css&#10;SaveUser&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Http/Requests/SaveUserRequest.php&#10;postReg&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Http/routes.php&#10;fileviewf&#9;null&#9;null&#10;workspace&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/.idea/workspace.xml&#10;getRegister&#9;null&#9;null&#10;postregister&#9;null&#9;null&#10;laravel.&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/storage/logs/laravel.log&#10;composer.j&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/composer.json&#10;composer.json&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/composer.json&#10;Person&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/app/Person.php&#10;autoload&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/vendor/composer/autoload_classmap.php&#10;5432&#9;null&#9;null&#10;app.&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/config/app.php&#10;app.php&#9;FILE&#9;file://C:/Users/Diane/Documents/GitHub/Homestead/Family-laravel/config/app.php&#10;&quot;Laravel 5&quot;&#9;null&#9;null" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -788,7 +749,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -890,22 +851,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/ExampleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/family/partials/_generation_key.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3601695">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -926,14 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.94278">
           <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/newribbon_styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52899575">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1188,66 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/_image_link.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="105" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.615383">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="9" />
-          <folding>
-            <element signature="e#1678#1710#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/_stories.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44270834">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.730769">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-            <element signature="e#429#530#0#PHP" expanded="false" />
-            <element signature="e#587#696#0#PHP" expanded="false" />
-            <element signature="e#754#913#0#PHP" expanded="false" />
-            <element signature="e#986#1108#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_28_235035_create_stories_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39583334">
           <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/person/partials/_person_link.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="114" />
           <folding />
         </state>
       </provider>
@@ -1260,6 +1141,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_MaryReisdorfObit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44270834">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/person/partials/_person_link.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2951389">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/_stories.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2361111">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44270834">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/newribbon_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5299003">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0329862">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_EmilyTuskObit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5607639">
@@ -1268,11 +1205,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_MaryReisdorfObit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44270834">
-          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+        <state vertical-scroll-proportion="1.4722222">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="9" />
+          <folding>
+            <element signature="e#1678#1710#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/story/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.265625">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8298611">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+            <element signature="e#338#439#0#PHP" expanded="false" />
+            <element signature="e#496#605#0#PHP" expanded="false" />
+            <element signature="e#663#822#0#PHP" expanded="false" />
+            <element signature="e#895#1017#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,34 +1245,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_PeterReisdorfMill.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41319445">
-          <caret line="14" column="109" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
+        <state vertical-scroll-proportion="-11.730769">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_frankGlaserBrewery.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/_image_link.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14756945">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="100" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/story/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="45" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_glazersCivilWar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44270834">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.11805555">
+          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
           <folding />
         </state>
       </provider>

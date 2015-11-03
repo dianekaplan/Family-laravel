@@ -12,13 +12,7 @@ use App\Http\Controllers\Controller;
 
 class StoryController extends Controller
 {
-
-
-    public function convert($string)
-    {
-        echo (html_entity_decode($string));
-    }
-
+    
 
     public function __construct()
     {
@@ -65,10 +59,6 @@ class StoryController extends Controller
     public function show($id)
     {
         $story = Story::find($id);
-//
-//        $content = ($story->text);
-//        $content = StoryController::convert($story->text);
-//        $content =  (html_entity_decode($story->text));
         $partial_display_link = 'story.partials._';
         $partial_display_link = $partial_display_link. ($story->slug);
 
