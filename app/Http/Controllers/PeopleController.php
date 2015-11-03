@@ -44,8 +44,7 @@ class PeopleController extends Controller
 //    @FIXME: still not showing families in order of sequence (see mom's page')
     public function get_made_family($person)
     {
-        $made_family = Family::latest('created_at')
-            ->Where('mother_id', $person->id)
+        $made_family = Family::where('mother_id', $person->id)
             ->orWhere('father_id', $person->id)
             ->orderBy('sequence', 'asc')
             ->get();
@@ -70,14 +69,12 @@ class PeopleController extends Controller
     public function show(Person $person)
     {
         $id = $person->id;
-        $solo_images =  Image::latest('created_at')
+        $solo_images =  Image::where('subject', $id)
             ->orderBy('year', 'asc')
-            ->Where('subject', $id)
             ->get();
 
-        $featured_image = Image::latest('created_at')
+        $featured_image = Image::where('subject', $id)
             ->orderBy('year', 'asc')
-            ->Where('subject', $id)
             ->Where ('featured', 1)
             ->get();
 
@@ -85,9 +82,7 @@ class PeopleController extends Controller
         $notes = PeopleController::get_notes_about_person($person);
 
 
-        $origin_family = Family::latest('created_at')
-            ->Where('id', $person->family_of_origin)
-            ->first();
+        $origin_family = Family::where('id', $person->family_of_origin)->first();
 
         return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family', 'notes'));
     }

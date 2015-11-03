@@ -8,13 +8,16 @@
 
     <h3>{{$person->first}} {{$person->last}}</h3>
     @endif
+
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
-    @if ($person->birthdate)
-        @if( $person->birthdate->month == \Carbon\Carbon::now()->month)
-            happy birthday, {{ $person->first }}! <br/>
-        @endif
-    @endif
+{{--<div style="float: right; width: 33%;">--}}
+    {{--@if ($person->birthdate)--}}
+        {{--@if( $person->birthdate->month == \Carbon\Carbon::now()->month)--}}
+            {{--Happy birthday, {{ $person->first }}!--}}
+        {{--@endif--}}
+    {{--@endif--}}
+ {{--</div>--}}
 
     <div class="bottom">
         <div style="float: left; width: 33%;">
@@ -54,7 +57,8 @@
             @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
             </div>
 
-        @if ($made_family)
+
+        @if (count($made_family))
             <b>  Made family:</b>
             @foreach($made_family as $family_made)
                 @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])
