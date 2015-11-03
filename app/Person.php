@@ -49,22 +49,22 @@ class Person extends Model
 //    @TODO same as in families- can this be a partial?
     public function scopeKaplans($query)
     {
-        $query->where('kaplan_line', '=', 'true');
+        $query->where('kaplan_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
     }
 
     public function scopeKemlers($query)
     {
-        $query->where('kemler_line', '=', 'true');
+        $query->where('kemler_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
     }
 
     public function scopeKeems($query)
     {
-        $query->where('keem_line', '=', 'true');
+        $query->where('keem_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
     }
 
     public function scopeHusbands($query)
     {
-        $query->where('husband_line', '=', 'true');
+        $query->where('husband_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
     }
 
 
@@ -84,7 +84,8 @@ class Person extends Model
     //get the images associated with the given person
     public function images()
     {
-        return $this->belongsToMany('App\Image')->withTimestamps();
+//        return $this->belongsToMany('App\Image')->withTimestamps();
+        return $this->belongsToMany('App\Image')->withTimestamps()->OrderBy('year', 'asc');
     }
 
     //get list of image IDs  associated with the given person

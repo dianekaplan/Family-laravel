@@ -6000,7 +6000,8 @@ button.close {
   color: blue; }
 
 body {
-  padding-top: 50px; }
+  padding-top: 50px;
+}
 
 body, label, .checkbox label {
   font-weight: 300; }
