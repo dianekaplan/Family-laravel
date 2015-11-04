@@ -58,8 +58,8 @@ public function get_birthday_people()
 {
     $birthday_people = Person::all()
 //        ->whereMonth('birthdate', '=', Carbon::now()->month)
-//        ->Where("date_trunc('month', birthdate)", "=", \Carbon\Carbon::now()->month)
-        ->where("extract(MONTH from birthdate)", "=", \Carbon\Carbon::now()->month)
+//        ->where("extract(MONTH from birthdate)", "=", \Carbon\Carbon::now()->month)
+        ->where ('birthdate', 'starts_with', '11')
 //        ->Where("extract('month', birthdate)", "=", \Carbon\Carbon::now()->month)
         ->Where('active', true)->first();
 

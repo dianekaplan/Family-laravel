@@ -16,5 +16,6 @@
 @if ( $person->direct_bool == true )
     *
 @endif
-
-    {{--@endif--}}
+@unless ($person->stories->isEmpty())
+    <img  src="/icons/book.png"/>
+    @endunless

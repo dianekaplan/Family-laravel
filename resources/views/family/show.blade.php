@@ -58,7 +58,7 @@
             @include ('partials._stories', ['subject' => $family])
 
 
-
+{{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
             *Asterisk indicates the direct ancestors up from the four grandparents
             <br/> <br/>
     Images:
