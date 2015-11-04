@@ -15,6 +15,7 @@ use App\Person;
 use App\Update;
 use DB;
 
+
 class HomeController extends Controller {
 
 //in the controller we'll return a view, or in a javascript application we could return a json response
@@ -45,6 +46,29 @@ class HomeController extends Controller {
         return $notes;
     }
 
+//    public function get_month_bit($date)
+//    {
+////        @FIXME: extract() expects parameter 1 to be array, string given
+//        $month_bit = extract('month', $date);
+//        return $month_bit;
+//    }
+
+
+public function get_birthday_people()
+{
+    $birthday_people = Person::all()
+//        ->whereMonth('birthdate', '=', Carbon::now()->month)
+//        ->Where("date_trunc('month', birthdate)", "=", \Carbon\Carbon::now()->month)
+        ->where("extract(MONTH from birthdate)", "=", \Carbon\Carbon::now()->month)
+//        ->Where("extract('month', birthdate)", "=", \Carbon\Carbon::now()->month)
+        ->Where('active', true)->first();
+
+
+    return $birthday_people;
+}
+
+
+
     public function get_updates_from_user ($user)
     {
         $id = $user->id;
@@ -52,12 +76,6 @@ class HomeController extends Controller {
         $suggested_updates = Update::latest('created_at')
             ->Where('user_id', $user->id)
             ->get();
-
-
-
-//        $suggested_updates = DB::table('updates')
-//            ->Where('user_id', $user->id)
-//            ->get();
 
         return $suggested_updates;
     }
@@ -72,12 +90,13 @@ class HomeController extends Controller {
             ->first();
 //
 //        $notes_added = HomeController::get_notes_added_by_person($person);
-//
 //        $updates_suggested = HomeController::get_updates_from_user($user);
 
+//        $month_bit = HomeController::get_month_bit($person->birthdate);
+        $birthday_people = HomeController::get_birthday_people();
 
 //        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
-        return view ('pages.home', compact('user', 'person'));
+        return view ('pages.home', compact('user', 'person', 'birthday_people'));
     }
 
     public function account()
