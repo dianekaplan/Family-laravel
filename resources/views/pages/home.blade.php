@@ -3,7 +3,7 @@
 @section('content')
 
 <br/>Welcome: {{$user->name}}! <br/><br/>
-<div style="float: right; width: 33%;">
+<div style="float: right; width: 26%;">
     @if ($person->birthdate)
         @if( $person->birthdate->month == \Carbon\Carbon::now()->month)
             Happy birthday!
@@ -18,25 +18,30 @@
 
     Me:   <br/>
 @include ('person.partials._person_link', ['person' => $person])
-<br/>
+<br/><br/>
+        My additions to the family tree: <a href="/activity">here</a>  <br/>
         </div>
 
-        <div style="float: left; width: 18%;" id="family_section">
+        <div style="float: left; width: 26%;" id="family_section">
 
-    My family history:<br/>
-    Chronolocial outline:<br/>
-    Celebrations this month:<br/>
+    My family history:<br/><br/>
+    Chronolocial outline:<br/><br/>
 
-            {{$birthday_people}}
+
+            {{--{{$birthday_people}}--}}
 
             @if (count($birthday_people))
-
+<b>Birthdays this month:</b>
                 @foreach ($birthday_people as $birthday_person)
                     <li>
-                        @include ('person.partials._person_link', ['person' => $birthday_person])
+                        @include ('person.partials._person_link', ['person' => $birthday_person])<br/>
+                        {{ date('F d, Y', strtotime($birthday_person->birthdate)) }}
                     </li>
                 @endforeach
             @endif
+            <br/>
+            <b>Anniversaries this month:</b>
+
 {{--Testing:--}}
             {{--Current month is {{Carbon\Carbon::now()->month}}--}}
             {{--My birth month is--}}
@@ -48,8 +53,8 @@
 
 </div>
 
-    <div style="float: left; width: 58%;" id="family_section">
-        <a href="/activity">My Additions to the family tree</a><br/>
+    <div style="float: left; width: 50%;" id="family_section">
+
 
         @unless ($new_pictures->isEmpty())
             New pics this week:

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Person extends Model
 {
@@ -66,6 +67,25 @@ class Person extends Model
         $query->where('husband_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
     }
 
+    public function scopeBirthdays($query)
+    {
+        return $query->where('birthdate', '=', '1947-11-09');
+//                return $query->where('birthdate', '=', Carbon::today());
+
+        // Syntax error: 7 ERROR: syntax error at or near "month"
+//        LINE 1: select * from "people" where 1 month("birthdate") = $1
+//    ^ (SQL: select * from "people" where 1 month("birthdate") = 11)
+//        return $query->whereMonth('birthdate','=', '11', true);
+
+        //still figuring out third argument:
+        //http://laravel.com/api/5.1/Illuminate/Database/Query/Builder.html#method_whereMonth
+//                return $query->whereMonth('birthdate', '=', Carbon::today()->month, true);
+
+        //this one gives me results but doesn't like displayable() and other Person stuff- doesn't know it's a person maybe
+//        return $query->whereRaw('extract(month from birthdate) = ?', ['11'])->get();
+
+
+    }
 
     //get the tags associated with the given person
     public function tags()

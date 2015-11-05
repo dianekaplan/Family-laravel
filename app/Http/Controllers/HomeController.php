@@ -15,6 +15,7 @@ use App\Person;
 use App\Image;
 use App\Update;
 use DB;
+use Carbon\Carbon;
 
 
 class HomeController extends Controller {
@@ -57,12 +58,13 @@ class HomeController extends Controller {
 
 public function get_birthday_people()
 {
-    $birthday_people = Person::all()
-//        ->whereMonth('birthdate', '=', Carbon::now()->month)
-//        ->where("extract(MONTH from birthdate)", "=", \Carbon\Carbon::now()->month)
-        ->where ('birthdate', 'starts_with', '11')
-//        ->Where("extract('month', birthdate)", "=", \Carbon\Carbon::now()->month)
-        ->Where('active', true)->first();
+//    $birthday_people = Person::birthdays('created_at')->displayable()->get();
+    $birthday_people = Person::birthdays('created_at')->get();
+//    $birthday_people = DB::table('people')->whereRaw('extract(month from birthdate) = ?', ['11'])->get();
+
+    //Undefined function: Month(date) does not exist
+//    $birthday_people =Person::where(DB::Raw('MONTH(birthdate)'), '=' , ['11'])->get();
+
 
 
     return $birthday_people;
@@ -84,7 +86,7 @@ public function get_birthday_people()
     public function get_recently_added_pictures ()
     {
         $new_pictures = Image::latest('created_at' )
-            ->Where('created_at', '>', \Carbon\Carbon::now()->subDays(7) )
+            ->Where('created_at', '>', Carbon::now()->subDays(7) )
             ->get();
 
         return $new_pictures;
