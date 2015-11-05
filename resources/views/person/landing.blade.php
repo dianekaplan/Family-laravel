@@ -5,11 +5,6 @@
     <title>Laravel family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
-    {{--<link rel="stylesheet" href="/css/style.css">--}}
-    {{--<link rel="stylesheet" href="//maccdn.bootstrapcdn.com/bootstrap/3.2.0/css//bootstrap.min.css">--}}
-    {{--<link rel="stylesheet" href="/css/app.css">--}}
-    {{--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/css/select2.min.css">--}}
-
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -36,7 +31,14 @@
     <br/><br/>
 
 
-    @include ('person.partials._people_list', ['person_group' => $people]);
+    {{--@include ('person.partials._people_list', ['person_group' => $people]);--}}
+    {{--@TODO: Decide what to do here- I had been just using the _people_list partial, but on the landing page I want the list items to display inline, --}}
+    {{--and I may exclude book icons, etc--}}
+    @foreach ($people as $person)
+        <li class="jumble">
+            @include ('person.partials._person_link', ['person' => $person])
+        </li>
+    @endforeach
 
 </body>
 </html>

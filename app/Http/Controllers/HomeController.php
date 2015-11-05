@@ -12,6 +12,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Person;
+use App\Image;
 use App\Update;
 use DB;
 
@@ -80,6 +81,15 @@ public function get_birthday_people()
         return $suggested_updates;
     }
 
+    public function get_recently_added_pictures ()
+    {
+        $new_pictures = Image::latest('created_at' )
+            ->Where('created_at', '>', \Carbon\Carbon::now()->subDays(7) )
+            ->get();
+
+        return $new_pictures;
+    }
+
 
     public function home()
     {
@@ -94,9 +104,10 @@ public function get_birthday_people()
 
 //        $month_bit = HomeController::get_month_bit($person->birthdate);
         $birthday_people = HomeController::get_birthday_people();
+        $new_pictures = HomeController::get_recently_added_pictures();
 
 //        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
-        return view ('pages.home', compact('user', 'person', 'birthday_people'));
+        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures'));
     }
 
     public function account()

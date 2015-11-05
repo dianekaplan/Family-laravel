@@ -32,7 +32,6 @@ class Person extends Model
 
     protected $dates = ['birthdate', 'deathdate'];
 
-
     public function scopeDisplayable($query)
     {
         $query->where('hide_bool', '=', false);

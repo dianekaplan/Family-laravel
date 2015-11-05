@@ -12,7 +12,7 @@
 </div>
 
 <div class="bottom">
-    <div style="float: left; width: 20%;">
+    <div style="float: left; width: 18%;" id="family_section">
 
 
 
@@ -21,7 +21,7 @@
 <br/>
         </div>
 
-        <div style="float: left; width: 20%;">
+        <div style="float: left; width: 18%;" id="family_section">
 
     My family history:<br/>
     Chronolocial outline:<br/>
@@ -48,10 +48,15 @@
 
 </div>
 
-    <div style="float: left; width: 60%;">
-        <a href="/activity">My Activity</a><br/>
-        Recent additions:
+    <div style="float: left; width: 58%;" id="family_section">
+        <a href="/activity">My Additions to the family tree</a><br/>
 
+        @unless ($new_pictures->isEmpty())
+            New pics this week:
+            @foreach($new_pictures as $image)
+                @include ('partials._image_link', ['image' => $image])
+            @endforeach
+        @endunless
 
        {{--<b>Notes I've added:</b> <br/>--}}
         {{--@foreach($notes_added as $note)--}}

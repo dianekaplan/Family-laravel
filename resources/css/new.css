@@ -13,3 +13,24 @@ ul#gallery li p {
     text-align: center;
     margin:5px 0;
 }
+
+#family_section {
+    border-radius: 25px;
+    border: 5px solid #99CC66;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+#list_section {
+    padding: 20px;
+    margin: 10px;
+
+}
+
+/*Added this one for the landing page, to show person list  as a big group together*/
+li.jumble
+{
+    display: inline;
+}
+

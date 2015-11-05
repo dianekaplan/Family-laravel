@@ -83,7 +83,6 @@
     @if ($solo_images)
         <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
 
-
             @foreach($solo_images as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach

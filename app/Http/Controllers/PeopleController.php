@@ -25,15 +25,15 @@ class PeopleController extends Controller
 
     public function index()
     {
-        $people = Person::latest('created_at')
-            ->displayable()
-            ->orderBy('last', 'asc', 'first', 'asc')
-            ->get();
+//        $people = Person::latest('created_at')
+//            ->displayable()
+//            ->orderBy('last', 'asc', 'first', 'asc')
+//            ->get();
 
-        $kaplans = Person::kaplans('created_at')->get();
-        $keems = Person::keems('created_at')->get();
-        $kemlers = Person::kemlers('created_at')->get();
-        $husbands = Person::husbands('created_at')->get();
+        $kaplans = Person::kaplans('created_at')->displayable()->get();
+        $keems = Person::keems('created_at')->displayable()->get();
+        $kemlers = Person::kemlers('created_at')->displayable()->get();
+        $husbands = Person::husbands('created_at')->displayable()->get();;
 
         return view('person.index', compact('people', 'kaplans', 'keems', 'husbands', 'kemlers'));
     }
@@ -80,7 +80,6 @@ class PeopleController extends Controller
 
         $made_family = PeopleController::get_made_family($person);
         $notes = PeopleController::get_notes_about_person($person);
-
 
         $origin_family = Family::where('id', $person->family_of_origin)->first();
 
