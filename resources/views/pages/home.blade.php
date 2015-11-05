@@ -34,7 +34,24 @@
 <b>Birthdays this month:</b>
                 @foreach ($birthday_people as $birthday_person)
                     <li>
-                        @include ('person.partials._person_link', ['person' => $birthday_person])<br/>
+{{--If I can get it working the right way I can just do this:--}}
+                        {{--@include ('person.partials._person_link', ['person' => $birthday_person])<br/>--}}
+
+                       {{--Otherwise I need this:--}}
+                        @if($birthday_person->face)
+                            <img src="/faces/{{  $birthday_person->face  }}" class="img-rounded"/>
+                        @else
+                            <img src="/faces/noimage.gif" border="0" height="50" class="img-rounded"/>
+                        @endif
+
+                        @if($birthday_person->nickname)
+                            <a href="{{ action('PeopleController@show', [$birthday_person->id]) }}">{{ $birthday_person->nickname }} {{ $birthday_person->last }}</a>
+                        @else
+                            <a href="{{ action('PeopleController@show', [$birthday_person->id]) }}">{{ $birthday_person->first }} {{ $birthday_person->last }}</a>
+                        @endif
+
+
+<br/>
                         {{ date('F d, Y', strtotime($birthday_person->birthdate)) }}
                     </li>
                 @endforeach

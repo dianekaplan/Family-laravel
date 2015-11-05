@@ -59,12 +59,11 @@ class HomeController extends Controller {
 public function get_birthday_people()
 {
 //    $birthday_people = Person::birthdays('created_at')->displayable()->get();
-    $birthday_people = Person::birthdays('created_at')->get();
-//    $birthday_people = DB::table('people')->whereRaw('extract(month from birthdate) = ?', ['11'])->get();
+//    $birthday_people = Person::birthdays('created_at')->get();
+    $birthday_people = DB::table('people')->whereRaw('extract(month from birthdate) = ?', ['11'])->get();
 
-    //Undefined function: Month(date) does not exist
+    //Undefined function: Month(date) does not exist- I think it's a sql function, not postgres
 //    $birthday_people =Person::where(DB::Raw('MONTH(birthdate)'), '=' , ['11'])->get();
-
 
 
     return $birthday_people;

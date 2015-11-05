@@ -69,7 +69,7 @@ class Person extends Model
 
     public function scopeBirthdays($query)
     {
-        return $query->where('birthdate', '=', '1947-11-09');
+//        return $query->where('birthdate', '=', '1947-11-09');
 //                return $query->where('birthdate', '=', Carbon::today());
 
         // Syntax error: 7 ERROR: syntax error at or near "month"
@@ -82,7 +82,7 @@ class Person extends Model
 //                return $query->whereMonth('birthdate', '=', Carbon::today()->month, true);
 
         //this one gives me results but doesn't like displayable() and other Person stuff- doesn't know it's a person maybe
-//        return $query->whereRaw('extract(month from birthdate) = ?', ['11'])->get();
+        return $query->whereRaw('extract(month from birthdate) = ?', ['11'])->orderBy ('birthdate', 'asc')->get();
 
 
     }
