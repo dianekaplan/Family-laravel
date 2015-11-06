@@ -11,13 +11,7 @@
 
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
-{{--<div style="float: right; width: 33%;">--}}
-    {{--@if ($person->birthdate)--}}
-        {{--@if( $person->birthdate->month == \Carbon\Carbon::now()->month)--}}
-            {{--Happy birthday, {{ $person->first }}!--}}
-        {{--@endif--}}
-    {{--@endif--}}
- {{--</div>--}}
+
 
     <div class="bottom">
         <div style="float: left; width: 33%;">
@@ -53,10 +47,8 @@
             <b> Work: </b> {{  $person->work }} <br/>
             <b> Interests: </b>  {{  $person->interests }}  <br/>
             <b> Current location: </b> {{  $person->current_location }}  <br/>
-            @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}} @endif
-            @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif
-            </div>
-
+            @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}} @endif<br/>
+            @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif<br/>
 
         @if (count($made_family))
             <b>  Made family:</b>
@@ -70,17 +62,18 @@
                 <br/>
             @endforeach
         @endif
+        </div>
+
 
         <div style="float: left; width: 100%;">
             @if( $notes )
                     @include ('partials._notes', ['notes' => $notes])
             @endif
 
-
             @include ('partials._stories', ['subject' => $person])
 
 
-    @if ($solo_images)
+                @if (count($solo_images))
         <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
 
             @foreach($solo_images as $image)

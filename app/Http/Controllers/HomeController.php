@@ -48,20 +48,11 @@ class HomeController extends Controller {
         return $notes;
     }
 
-//    public function get_month_bit($date)
-//    {
-////        @FIXME: extract() expects parameter 1 to be array, string given
-//        $month_bit = extract('month', $date);
-//        return $month_bit;
-//    }
-
-
 public function get_birthday_people()
 {
     $birthday_people = Person::birthdays('created_at')->displayable()->get();
     return $birthday_people;
 }
-
 
 
     public function get_updates_from_user ($user)
@@ -133,13 +124,17 @@ public function get_birthday_people()
 
         $updates_suggested = HomeController::get_updates_from_user($user);
 
-
         return view ('pages.activity', compact('user', 'notes_added', 'updates_suggested'));
+    }
+
+    public function history()
+    {
+        $user =  \Auth::user();
+        return view ('pages.history', compact('user'));
     }
 
     public function contact()
     {
-
         return view ('pages.contact');
     }
 
