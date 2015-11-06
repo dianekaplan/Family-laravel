@@ -1,7 +1,9 @@
 
 
-a       	{ font-size: 0.750em; text-decoration: underline;
-		color: #99CC66; background-color: #FFFFFF}
+a       	{ font-size: 0.750em;
+            text-decoration: underline;
+		    color: #99CC66;
+            background-color: #FFFFFF}
 .navbar { font-size: 0.750em; text-decoration: underline;  color: #8b8378; background-color: #FFFFFF}
 		
 .g3 { font-size: 12pt; text-decoration: underline;  color: #8b8378; background-color: #FFFFFF}

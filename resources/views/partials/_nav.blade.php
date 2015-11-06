@@ -15,9 +15,8 @@
                 {{--<li class="active"><a href="/people">People</a></li>--}}
                 <li><a href="/families">Families</a></li>
                 <li><a href="/people">People</a></li>
+                <li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>
 
-                {{--<li>{!! link_to_action('PeopleController@show', Auth::user()->name, [Auth::user()->Person_id]) !!}</li>--}}
-                <li>{!! link_to_action('PeopleController@show', "Me!", [Auth::user()->person_id]) !!}</li>
                 {{--<li><a href="/people/{{$user->person_id}}">My Page!</a></li>--}}
 
 
@@ -29,6 +28,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {{--<li><a href="/users">Users</a></li>--}}
                 {{--<li><a href="/updates">Updates</a></li>--}}
+
                 <li><a href="/account">My Account</a></li>
                 <li><a href="/auth/logout">Log Out</a></li>
                 {{--<li>{!! link_to_action('AuthController@getLogout','Log Out') !!}</li>--}}

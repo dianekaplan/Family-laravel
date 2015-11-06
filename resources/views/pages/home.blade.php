@@ -18,14 +18,15 @@
 
     Me:   <br/>
 @include ('person.partials._person_link', ['person' => $person])
-<br/><br/>
-        My additions to the family tree: <a href="/activity">here</a>  <br/>
+<br/>
+        <h3><a href="/history">My family history</a></h3>  <br/>
+        Chronolocial outline:(coming)<br/><br/>
+      <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
         </div>
 
         <div style="float: left; width: 28%;" id="family_section">
 
-    My family history:<br/><br/>
-    Chronolocial outline:<br/><br/>
+
 
 
             {{--{{$birthday_people}}--}}
@@ -41,16 +42,6 @@
                 @endforeach
             @endif
             <br/>
-
-
-{{--Testing:--}}
-            {{--Current month is {{Carbon\Carbon::now()->month}}--}}
-            {{--My birth month is--}}
-{{--My month_bit: {{$month_bit}}--}}
-            {{--<php $this_month = extract('month', $person.birthdate ></php>--}}
-
-
-
 
 </div>
 

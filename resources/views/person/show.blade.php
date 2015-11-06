@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <div style="float: left; width: 100%;">
 @if ($person->nickname)
     <h3>{{$person->nickname}} {{$person->last}}</h3>
     @else
@@ -11,6 +12,15 @@
 
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
+
+    <h4> <a href = "/people/{{$person->id}}/edit">
+@if ($logged_in_user->person_id == $person->id)
+Edit my page
+@else
+Add info for this person
+@endif
+    </a> </h4>
+</div>
 
 
     <div class="bottom">

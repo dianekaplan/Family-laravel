@@ -68,6 +68,8 @@ class PeopleController extends Controller
 
     public function show(Person $person)
     {
+        $logged_in_user =  \Auth::user();
+
         $id = $person->id;
         $solo_images =  Image::where('subject', $id)
             ->orderBy('year', 'asc')
@@ -83,7 +85,7 @@ class PeopleController extends Controller
 
         $origin_family = Family::where('id', $person->family_of_origin)->first();
 
-        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family', 'notes'));
+        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family', 'notes', 'logged_in_user'));
     }
 
 
