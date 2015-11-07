@@ -13,9 +13,9 @@
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
 
-    <h4> <a href = "/people/{{$person->id}}/edit">
+    <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/people/{{$person->id}}/edit">
 @if ($logged_in_user->person_id == $person->id)
-Edit my page
+Edit my info
 @else
 Add info for this person
 @endif
@@ -35,8 +35,12 @@ Add info for this person
 
         <b>Born in:</b> {{ $person->birthplace }}<br/>
 
+
+
             @if ($origin_family)
-                <img  src="/icons/up.gif"/>
+                {{--<img  src="/icons/up.gif"/>--}}
+                <a href="{{ action('FamilyController@show', [$origin_family]) }}" >
+                <img  src="/icons/northwest.png" height="25"/></a>
        <b> Grew up in family:</b>
             {{--@TODO: replace old images with glyphicons: http://getbootstrap.com/components/--}}
                 {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
@@ -57,17 +61,23 @@ Add info for this person
             <b> Work: </b> {{  $person->work }} <br/>
             <b> Interests: </b>  {{  $person->interests }}  <br/>
             <b> Current location: </b> {{  $person->current_location }}  <br/>
-            @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}} @endif<br/>
-            @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} @endif<br/>
+            @if ($person->deathdate)Death Date: {{ date('F d, Y', strtotime($person->deathdate))}}<br/> @endif
+            @if ($person->deathdate_note)Death Date: {{$person->deathdate_note}} <br/>@endif
 
         @if (count($made_family))
-            <b>  Made family:</b>
+
             @foreach($made_family as $family_made)
-                @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])
+
                 @if ($family_made->no_kids_bool)
-                    <img  src="/icons/sideways.gif"/>
+                        <b> Married:</b>
+                        @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])
+                    {{--<img  src="/icons/sideways.gif"/>--}}
+                        <img  src="/icons/right_arrow.svg" height="18"/>
                 @else
-                    <img  src="/icons/down.gif"/>
+                        <b> Raised family:</b>
+                        @include ('family.partials._family_link', ['family' => $family_made, 'generation' => 'NA'])
+                    {{--<img  src="/icons/down.gif"/>--}}
+                        <img  src="/icons/southeast.png" height="25"/>
                 @endif
                 <br/>
             @endforeach

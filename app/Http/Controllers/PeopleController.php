@@ -128,7 +128,7 @@ class PeopleController extends Controller
     public function update(Person $person, SavePersonRequest $request)
     {
         $person->update($request->all());
-        $this->syncTags($person, $request->input('tag_list'));
+//        $this->syncTags($person, $request->input('tag_list'));
 
         flash()->success('Your edit has been saved');
 
@@ -140,7 +140,7 @@ class PeopleController extends Controller
     {
         $person = Person::create($request->all());
 
-        $this->syncTags($person, $request->input('tag_list'));
+//        $this->syncTags($person, $request->input('tag_list'));
         return $person;
     }
 

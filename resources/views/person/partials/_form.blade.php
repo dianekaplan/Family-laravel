@@ -23,6 +23,11 @@
     {!! Form::text('maiden', null, ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('nickname','Name you go by: (if different- optional)') !!}
+    {!! Form::text('nickname', null, ['class' => 'form-control']) !!}
+</div>
+
 {{--//TODO:  make it default to the current value--}}
 {{--//FIXME: it doesn't let you skip birthdate (because it tries saving the default string--}}
 <div class="form-group">
@@ -30,19 +35,55 @@
     {!! Form::input('date', 'birthdate', null, ['class' => 'form-control']) !!}
 </div>
 
-{{--//TODO:  make it default to the current value--}}
 <div class="form-group">
-    {!! Form::label('gender','Gender:') !!}
-
-    {!! Form::label('gender','Female:') !!}
-    {!! Form::radio('gender', 'F') !!}
-    {!! Form::label('gender','Male:') !!}
-    {!! Form::radio('gender', 'M') !!}
+    {!! Form::label('birthplace','Place of birth: (optional)') !!}
+    {!! Form::text( 'birthplace', null, ['class' => 'form-control']) !!}
 </div>
+
+<div class="form-group">
+    {!! Form::label('origin','National origin: (optional)') !!}
+    {!! Form::text('origin', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('education','Education: (optional)') !!}
+    {!! Form::text('education', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('work','Work: (optional)') !!}
+    {!! Form::text('work', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('interests','Interests: (optional)') !!}
+    {!! Form::text('interests', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('current_location','Current location: (optional)') !!}
+    {!! Form::text('current_location', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('deathdate','Death date: (optional)') !!}
+    {!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}
+</div>
+
+
+{{--//TODO:  make it default to the current value--}}
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('gender','Gender:') !!}--}}
+
+    {{--{!! Form::label('gender','Female:') !!}--}}
+    {{--{!! Form::radio('gender', 'F') !!}--}}
+    {{--{!! Form::label('gender','Male:') !!}--}}
+    {{--{!! Form::radio('gender', 'M') !!}--}}
+{{--</div>--}}
 
 {{--//@FIXME:  make it default to the current value, now showing false even when true in db--}}
 
-@include ('partials._family_bools')
+{{--@include ('partials._family_bools')--}}
 
 
 
@@ -52,11 +93,11 @@
     {{--<!--name of the select element, the defaults, the selected option in the list, additional attributes-->--}}
 {{--</div>--}}
 
-<div class="form-group">
-    {!! Form::label('tag_list','Tags:') !!}
-    {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
-            <!--name of the select element, the defaults, the selected option in the list, additional attributes-->
-</div>
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('tag_list','Tags:') !!}--}}
+    {{--{!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}--}}
+            {{--<!--name of the select element, the defaults, the selected option in the list, additional attributes-->--}}
+{{--</div>--}}
 
 
 <div class="form-group">

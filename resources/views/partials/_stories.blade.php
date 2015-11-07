@@ -2,8 +2,10 @@
     <div>
 <!--@TODO: add book icon-->
         @foreach($subject->stories as $story)
-            <img  src="/icons/book.png"/>
-            <a href= "/stories/{{$story->id}}" target="_blank">{{$story->description}}</a>:
+
+            <a href= "/stories/{{$story->id}}" target="_blank">
+                <img  src="/icons/book.png" height="50"/>
+                {{$story->description}}</a>:
             {{$story->intro}}...<a href= "/stories/{{$story->id}}"  target="_blank">Read More</a>
         @endforeach
         <br/>

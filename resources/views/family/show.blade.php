@@ -59,6 +59,7 @@
 
 
 {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
+            <br/> <br/>
             *Asterisk indicates the direct ancestors up from the four grandparents
             <br/> <br/>
     Images:
