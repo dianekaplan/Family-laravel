@@ -19,8 +19,9 @@
     Me:   <br/>
 @include ('person.partials._person_link', ['person' => $person])
 <br/>
-        <h3><a href="/history">My family history</a></h3>  <br/>
-        Chronolocial outline:(coming)<br/><br/>
+        <h3><a href="/history">My family history</a></h3>
+        <h3><a href="/images">My family album</a></h3><br/>
+        Chronolocial outline:(coming)<br/>
       <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
         </div>
 

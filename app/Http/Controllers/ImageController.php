@@ -24,9 +24,14 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
+//        $images = Image::all();
+        $images = Image::where('id', '>', '0')
+            ->orderBy('year', 'asc')
+            ->get();
+
         return view ('image/index',  compact('images'));
     }
+
 
 //    public function cloudinary_upload_from_newribbon($little_name)
 //    {

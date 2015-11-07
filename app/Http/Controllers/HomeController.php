@@ -70,6 +70,7 @@ public function get_birthday_people()
     {
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(7) )
+            ->take(10)
             ->get();
 
         return $new_pictures;
