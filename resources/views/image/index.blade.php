@@ -1,7 +1,9 @@
 @extends('default')
 
 @section('content')
-    <h3>Family album</h3>
+    <h3 align="center">
+        Family Album
+    </h3>
 
     @if (count($images))
 
