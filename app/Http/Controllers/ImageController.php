@@ -24,11 +24,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-//        $images = Image::all();
-        $images = Image::where('id', '>', '0')
-            ->orderBy('year', 'asc')
-            ->get();
-
+        $images = Image::orderBy('year', 'asc')->get();
         return view ('image/index',  compact('images'));
     }
 
