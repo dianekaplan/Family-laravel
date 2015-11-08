@@ -15,6 +15,7 @@ use App\Person;
 use App\Image;
 use App\Update;
 use DB;
+use App\Family;
 use Carbon\Carbon;
 
 
@@ -123,6 +124,18 @@ public function get_birthday_people()
 
         return view ('pages.account', compact('user'));
 //        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested'));
+    }
+
+    public function outline()
+    {
+        $user = \Auth::user();
+//        $original_families = Family::original('created_at')->get();
+        $original_keems = Family::keems('created_at')->original()->get();
+        $original_husbands = Family::husbands('created_at')->original()->get();
+        $original_kemlers = Family::kemlers('created_at')->original()->get();
+        $original_kaplans = Family::kaplans('created_at')->original()->get();
+
+        return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers', 'original_kaplans'));
     }
 
     public function activity()

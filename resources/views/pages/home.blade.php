@@ -21,7 +21,7 @@
 <br/>
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/images">My family album</a></h3><br/>
-        Chronolocial outline:(coming)<br/>
+        <h3><a href="/outline">Chronological Outline</a></h3><br/>
       <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
         </div>
 

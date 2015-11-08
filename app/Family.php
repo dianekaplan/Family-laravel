@@ -55,6 +55,10 @@ class Family extends Model
             ->orderBy('branch_seq', 'asc');
     }
 
+    public function scopeOriginal($query)
+    {
+        $query->where('original_family', '=', true);
+    }
 
     public function stories()
     {
