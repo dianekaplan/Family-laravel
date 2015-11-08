@@ -3,12 +3,6 @@
 <li>
     <a href="/image/{{ $image->id  }}">
 
-    {{--@FIXME: figure out why this stopped working properly--}}
-        <?
-{{--        php echo cl_image_tag($image->big_name , array( "cloud_name" => "hnyiprajv", "height" => 100,--}}
-{{--                "class"=>"img-rounded" )); --}}
-        ?>
-
         {{--They all show up when I do this: --}}
         <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" height = "100" class="img-rounded">
         <p>
