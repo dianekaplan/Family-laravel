@@ -16,7 +16,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('contact', 'HomeController@contact');
-Route::get('landing', 'PeopleController@landing');
+Route::get('landing', 'HomeController@landing');
 //Route::get('home', 'HomeController@home');
 Route::get('branches', 'HomeController@branches');
 

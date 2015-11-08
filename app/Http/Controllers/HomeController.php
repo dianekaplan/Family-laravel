@@ -28,6 +28,18 @@ class HomeController extends Controller {
         //$this->middleware('auth', ['only' => 'create']);
     }
 
+    public function landing()
+    {
+
+        $people = Person::ShowOnLandingPage('created_at')
+            ->displayable()
+            ->orderBy('last', 'asc', 'first', 'asc')
+            ->get();
+
+        return view ('pages.landing', compact('people'));
+    }
+
+
     public function index()
     {
         return view ('welcome');

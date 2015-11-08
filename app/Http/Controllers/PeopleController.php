@@ -113,16 +113,16 @@ class PeopleController extends Controller
     }
 
 
-    public function landing()
-    {
-
-        $people = Person::ShowOnLandingPage('created_at')
-            ->displayable()
-            ->orderBy('last', 'asc', 'first', 'asc')
-            ->get();
-
-        return view ('person.landing', compact('people'));
-    }
+//    public function landing()
+//    {
+//
+//        $people = Person::ShowOnLandingPage('created_at')
+//            ->displayable()
+//            ->orderBy('last', 'asc', 'first', 'asc')
+//            ->get();
+//
+//        return view ('person.landing', compact('people'));
+//    }
 
 
     public function update(Person $person, SavePersonRequest $request)
