@@ -20,3 +20,4 @@
     <a href="{{ action('PeopleController@show', [813]) }}">Matthias</a> (16) killed by snipers on the way to the battle of Gettysburg, Pennsylvania.  He had to step over their bodies and could only return after the battle to bury them under a tree.
     His mother died 3 months later.  He himself got a bullet wound in the leg and had to be hospitalized for a long time.
     He got home just in time to reclaim his fiance, who was about to get married to someone else.  </p>
+
