@@ -83,7 +83,7 @@ public function get_birthday_people()
     {
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(7) )
-            ->take(10)
+            ->take(11)
             ->get();
 
         return $new_pictures;
@@ -97,15 +97,10 @@ public function get_birthday_people()
         $person = Person::all()
             ->Where('id', $user->person_id)
             ->first();
-//
-//        $notes_added = HomeController::get_notes_added_by_person($person);
-//        $updates_suggested = HomeController::get_updates_from_user($user);
 
-//        $month_bit = HomeController::get_month_bit($person->birthdate);
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
 
-//        return view ('pages.home', compact('user', 'person', 'notes_added', 'updates_suggested'));
         return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures'));
     }
 
@@ -118,10 +113,8 @@ public function get_birthday_people()
 //            ->first();
 ////
 //        $notes_added = HomeController::get_notes_added_by_person($person);
-//
 //        $updates_suggested = HomeController::get_updates_from_user($user);
 //
-
         return view ('pages.account', compact('user'));
 //        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested'));
     }

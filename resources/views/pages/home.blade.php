@@ -12,7 +12,7 @@
 </div>
 
 <div class="bottom">
-    <div style="float: left; width: 18%;" id="family_section">
+    <div style="float: left; width: 23%;" id="family_section">
 
 
 
@@ -46,11 +46,11 @@
 
 </div>
 
-    <div style="float: left; width: 48%;" id="family_section">
+    <div style="float: left; width: 43%;" id="family_section">
 
 
         @unless ($new_pictures->isEmpty())
-            New pics this week:
+            Recent pics added:
             @foreach($new_pictures as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
