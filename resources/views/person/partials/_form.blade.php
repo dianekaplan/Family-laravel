@@ -65,10 +65,10 @@
     {!! Form::text('current_location', null, ['class' => 'form-control']) !!}
 </div>
 
-<div class="form-group">
-    {!! Form::label('deathdate','Death date: (optional)') !!}
-    {!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}
-</div>
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('deathdate','Death date: (optional)') !!}--}}
+    {{--{!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
 
 
 {{--//TODO:  make it default to the current value--}}
