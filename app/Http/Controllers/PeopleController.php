@@ -112,19 +112,6 @@ class PeopleController extends Controller
         return view('person.edit', compact('person', 'tags'));
     }
 
-
-//    public function landing()
-//    {
-//
-//        $people = Person::ShowOnLandingPage('created_at')
-//            ->displayable()
-//            ->orderBy('last', 'asc', 'first', 'asc')
-//            ->get();
-//
-//        return view ('person.landing', compact('people'));
-//    }
-
-
     public function update(Person $person, SavePersonRequest $request)
     {
         $person->update($request->all());
@@ -149,9 +136,6 @@ class PeopleController extends Controller
         $person->delete();
         return redirect()->route('person.index');
     }
-
-//
-//        Image::latest('created_at')->where('subject', '=', '$person->id')->get();
 
 
     private function syncTags(Person $person, array $tags)

@@ -19,7 +19,6 @@ class FamilyController extends Controller
         $this->middleware('auth');
     }
 
-
     /**
      * Display a listing of the resource.
      *
@@ -50,7 +49,6 @@ class FamilyController extends Controller
         return view ('family.create');
     }
 
-
     private function createFamily(SaveFamilyRequest $request)
     {
         $family = Family::create($request->all());
@@ -74,6 +72,15 @@ class FamilyController extends Controller
         return redirect('families');
     }
 
+    public function get_kids_of_family($family)
+    {
+        $kids = Person::where('family_of_origin', $family->id)
+            ->orderBy('sibling_seq')
+            ->get();
+        return $kids;
+    }
+
+
     /**
      * Display the specified resource.
      *
@@ -87,14 +94,10 @@ class FamilyController extends Controller
         $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->first();
         $father =  Person::latest('created_at') ->where('id', '=', $family->father_id)->first();
 
-       $kids = Person::latest('created_at')
-           ->where('family_of_origin', '=', $id)
-           ->orderBy('sibling_seq')
-           ->get();
+        $kids = FamilyController::get_kids_of_family($family);
 
-        $images = Image::latest('created_at')
-            ->where('family', '=', $id)
-            ->orderBy('year')
+        $images = Image::where('family', $id)
+            ->orderBy('year', 'asc')
             ->get();
 
         $featured_image = Image::latest('created_at')
