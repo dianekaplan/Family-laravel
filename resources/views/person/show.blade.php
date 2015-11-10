@@ -91,15 +91,16 @@ Add info for this person
             @endif
 
             @include ('partials._stories', ['subject' => $person])
+        </div>
 
-
+        <div style="float: left; width: 100%;">
                 @if (count($solo_images))
+
         <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
 
             @foreach($solo_images as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
-
     @endif
 </div>
 

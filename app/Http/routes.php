@@ -11,6 +11,7 @@
 |
 */
 //
+use App\Person;
 //Route::get('/', function () {
 //    return view('welcome');
 
@@ -46,6 +47,7 @@ Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateControl
 Route::get('auth/login', 'HomeController@landing');
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
+
 
 
 Route::get('tags/{tags}', 'TagsController@show');
