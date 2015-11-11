@@ -32,7 +32,7 @@ class HomeController extends Controller {
     public function landing()
     {
 
-        $people = Person::ShowOnLandingPage('created_at')
+        $people = Person::ShowOnLandingPage()
             ->displayable()
             ->orderBy('last', 'asc', 'first', 'asc')
             ->get();
