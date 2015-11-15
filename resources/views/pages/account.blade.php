@@ -2,23 +2,24 @@
 
 @section('content')
 
-    <br/>Account info {{$user->name}}! <br/><br/>
+    <br/>Account info for {{$user->name}} <br/><br/>
 
     <div class="bottom">
-        <div style="float: left; width: 33%;">
-Logins: {{$user->logins}}<br/>
-            Everything: {{$user}}<br/>
+        <div style="float: left; width: 50%;">
+
+            Created at: {{$user->created_at}}<br/>
+            Email: {{$user->email}}<br/>
+            Logins: {{$user->logins}}<br/>
+            <h4><a href="/activity">My Activity</a></h4>
+            {{--Everything: {{$user}}<br/>--}}
         </div>
 
-        <div style="float: left; width: 33%;">
-
+        <div style="float: left; width: 50%;">
 Reset password link
 
         </div>
 
-        <div style="float: left; width: 33%;">
-            <a href="/activity">My Activity</a>
-        </div>
+
 
         {{--<div style="float: left; width: 100%;">--}}
             {{--<b>Notes I've added:</b> <br/>--}}
@@ -61,5 +62,5 @@ Reset password link
 
 
 @section('footer')
-    Footer info
+
 @stop
