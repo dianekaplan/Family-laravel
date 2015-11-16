@@ -10,6 +10,7 @@
             Created at: {{$user->created_at}}<br/>
             Email: {{$user->email}}<br/>
             Logins: {{$user->logins}}<br/>
+            Password: {{$user->password}}<br/>
             <h4><a href="/activity">My Activity</a></h4>
             {{--Everything: {{$user}}<br/>--}}
         </div>

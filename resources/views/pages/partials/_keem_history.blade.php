@@ -7,11 +7,19 @@ The Keem/Reisdorf side:
                 they were married and came to the US together <b>around 1830</b>. They had a son named
                 <a href="{{ action('PeopleController@show', [51]) }}">Nicholas</a>. </li>
 
-            <li>Mary Reisdorf (born Mary Glaser) came this this country from <b>Germany</b> with
-                <a href="{{ action('FamilyController@show', [80]) }}">her family</a> in <b>1838</b> at the age of 8.  She married
-                <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b> and came to the states sometime <b>between 1824 and 1845</b>. Mary and Peter Reisdorf (5 generations back)
-                had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine.</a>  Note: Mary Glaser's family may have already been in the US generations before!
-                Her great-great grandmother was Maria Kuhn, and based on other matching trees on ancestry.com, Maria's parents, grandparents, and all 4 sets of great-grandparents had come to the US together in the early 1700's.
+            <li>Mary Glaser came this this country from <b>Germany</b> with
+                <a href="{{ action('FamilyController@show', [80]) }}">her parents</a> in <b>1838</b> at the age of 8.
+                Around the age of 17, she married
+                <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b> and came to the states sometime <b>between 1824 and 1845</b>.
+                Mary & Peter Reisdorf (5 generations back)
+                had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine.</a>
+
+                We can actually go way back on Mary's side, back into a set of her paternal great great great grandparents:  <a href="{{ action('FamilyController@show', [218]) }}">Mathias & Maria  Zohler</a>,
+                in Germany in the <b>1600's</b>.
+
+                Another note:  Mary Glaser's family may have already been in the US generations before! Her great-great grandmother was Maria Kuhn,
+                and based on other matching trees on ancestry.com, Maria's parents, grandparents, and all 4 sets of great-grandparents had come to the
+                US together in the early 1700's.
                 They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived and died in the US)- this data needs to be verified.</li>
 
             <li>Connection: Catherine Reisdorf married Nicholas Keem. Nicholas and Catherine Keem had a son named

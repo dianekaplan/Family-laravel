@@ -2,7 +2,7 @@
 
 @section('content')
 
-<br/>Welcome: {{$user->name}}! <br/><br/>
+<br/>Welcome, {{$user->name}}! <br/><br/>
 <div style="float: right; width: 26%;">
     @if ($person->birthdate)
         @if( $person->birthdate->month == \Carbon\Carbon::now()->month)
@@ -22,6 +22,8 @@
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/images">My family album</a></h3>
         <h3><a href="/outline">Chronological Outline</a></h3><br/>
+
+
       <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
         </div>
 
