@@ -119,6 +119,13 @@ public function get_birthday_people()
 //        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested'));
     }
 
+    public function help()
+    {
+        $user =  \Auth::user();
+
+        return view ('pages.help', compact('user'));
+    }
+
     public function outline()
     {
         $user = \Auth::user();

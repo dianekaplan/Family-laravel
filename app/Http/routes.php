@@ -26,6 +26,7 @@ Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 Route::get('account',  'HomeController@account');
 Route::get('activity',  'HomeController@activity');
 Route::get('history', 'HomeController@history');
+Route::get('help', 'HomeController@help');
 Route::get('image/{image}', 'ImageController@show');
 Route::get('images', 'ImageController@index');
 //Route::get('image/cloudinary/{image}', 'ImageController@show_image_from_cloudinary');
