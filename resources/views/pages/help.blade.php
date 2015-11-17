@@ -7,7 +7,7 @@
     </h3>
 
 
-    <h1>What can I do on the site? </h1>
+    <h3>What can I do on the site? </h3>
 <ul><b>A lot!</b>
     <li>First, check out your page and fill in what's missing- everyone's updates go a long way. </li>
     <li>Click Home in the navbar to see explore your family history, album, and more. </li>
@@ -19,14 +19,7 @@
     <li>Use the footer link to spread the word to any relatives who'd be interested in having a look (so they know where to request a login).  </li>
 </ul>
 
-<h1>What's coming next? </h1>
-<ul><b>I have a lot of improvements in the works:</b>
-    <li>The ability to add new people/families (currently done via email). </li>
-    <li>The ability to add notes to families (not just people). </li>
-    <li>Any suggestions?  Let me know what you'd like to see <a href="http://newribbon.com/Family/account/giveFeedback.asp">here</a>.
-</ul>
-
-<h1>Need help? </h1></center>
+<h3>Need help? </h3></center>
 
 <ul>
     <li><b>Sometimes I need to give my password and sometimes I don't- why is that? </b>  When you log in, your computer saves your
@@ -43,6 +36,15 @@
 
 </ul>
 
+
+    <h3>What's coming next? </h3>
+    <ul><b>Some improvements on the horizon:</b>
+        <li>Being able to add pictures directly (instead of emailing to me) </li>
+        <li>Being able to add notes to families (not just people). </li>
+        <li>Being able to add new people/families (instead of emailing to me) </li>
+
+        <li>Other ideas? <a href="mailto:dianekaplan@gmail.com">Let me know</a> what you'd like to see.
+    </ul>
 
 
 
