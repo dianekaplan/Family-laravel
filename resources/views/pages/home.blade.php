@@ -27,7 +27,7 @@
       <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
         </div>
 
-        <div style="float: left; width: 28%;" id="family_section">
+        <div style="float: left; width: 29%;" id="family_section">
 
 
 
@@ -48,7 +48,7 @@
 
 </div>
 
-    <div style="float: left; width: 43%;" id="family_section">
+    <div style="float: left; width: 42%;" id="family_section">
 
 
         @unless ($new_pictures->isEmpty())
@@ -61,8 +61,6 @@
     </div>
 
     <div style="float: left; width: 100%;">
-
-
 
 
 

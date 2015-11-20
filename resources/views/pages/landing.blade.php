@@ -5,10 +5,11 @@
     <title>Laravel family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
+    {{--@TODO: add these into gulpfile.js, unless there's a reason for them to be separate--}}
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-<!--this page doesn't use the default page because that needs a logged in user-->
+<!--this page doesn't include the default page because that needs a logged in user-->
 
 
 </head>
@@ -31,9 +32,6 @@
     <br/><br/>
 
 
-    {{--@include ('person.partials._people_list', ['person_group' => $people]);--}}
-    {{--@TODO: Decide what to do here- I had been just using the _people_list partial, but on the landing page I want the list items to display inline, --}}
-    {{--and I may exclude book icons, etc--}}
     @foreach ($people as $person)
         <li class="jumble">
             @include ('person.partials._person_link', ['person' => $person])

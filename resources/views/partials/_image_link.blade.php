@@ -6,7 +6,11 @@
 {{--        php echo cl_image_tag($image->big_name , array( "cloud_name" => "hnyiprajv", "height" => 100, "class"=>"img-rounded" ));?>--}}
 
         {{--They all show up when I do this: --}}
+        @if ($image->little_name)
+        <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->little_name  }}" height = "100" class="img-rounded">
+        @else
         <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" height = "100" class="img-rounded">
+        @endif
         <p>
     {{ $image->caption  }}
 

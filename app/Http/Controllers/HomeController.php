@@ -82,7 +82,7 @@ public function get_birthday_people()
     public function get_recently_added_pictures ()
     {
         $new_pictures = Image::latest('created_at' )
-            ->Where('created_at', '>', Carbon::now()->subDays(7) )
+            ->Where('created_at', '>', Carbon::now()->subDays(30) )
             ->take(11)
             ->get();
 
