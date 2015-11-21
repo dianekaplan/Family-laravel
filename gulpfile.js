@@ -29,6 +29,7 @@ elixir(function(mix) {
      'libs/bootstrap.min.css',  //has navbar, rounded corners
      'app.css', //has spacing at the top of the page, it also changed the display for h3 and has glyphicon stuff- more bootstrap
      //'libs/select2.min.css', //this has the nicer styles for tag selection
+
      'new.css', //has gallery styles for image display
      'newribbon_styles.css' //has newribbon colors- having it last in the list makes it win conflicts
 
@@ -43,7 +44,6 @@ elixir(function(mix) {
         'libs/jquery.js',
         'libs/select2.min.js',
         'libs/bootstrap.min.js',
-        'libs/lazyload.js',
         //'libs/jquery.min.js'  //from cloudflare, but including it made a bug during 24
     ], 'public/js', 'resources/js');
 

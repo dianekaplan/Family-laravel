@@ -88,6 +88,21 @@ public function get_birthday_people()
 
         return $new_pictures;
     }
+//
+//    public function test2()
+//    {
+//        $images = Image::orderBy('year', 'asc')->get();
+//
+//        $people = Person::ShowOnLandingPage()
+//            ->displayable()
+//            ->orderBy('last', 'asc', 'first', 'asc')
+//            ->get();
+//
+//        return view ('pages/test2',  compact('images', 'people'));
+//
+//
+//    }
+
 
 
     public function home()

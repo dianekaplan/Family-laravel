@@ -28,11 +28,11 @@ class ImageController extends Controller
         return view ('image/index',  compact('images'));
     }
 
-    public function test()
-    {
-        $images = Image::orderBy('year', 'asc')->get();
-        return view ('pages/test',  compact('images'));
-    }
+//    public function test()
+//    {
+//        $images = Image::orderBy('year', 'asc')->get();
+//        return view ('pages/test',  compact('images'));
+//    }
 
 
 //    public function cloudinary_upload_from_newribbon($little_name)

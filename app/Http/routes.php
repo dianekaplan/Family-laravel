@@ -30,7 +30,8 @@ Route::get('help', 'HomeController@help');
 Route::get('image/{image}', 'ImageController@show');
 Route::get('images', 'ImageController@index');
 //Route::get('image/cloudinary/{image}', 'ImageController@show_image_from_cloudinary');
-Route::get('test', 'ImageController@test');
+//Route::get('test2', 'HomeController@test2');
+//Route::get('test', 'ImageController@test');
 
 Route::get('stories/{story}', 'StoryController@show');
 

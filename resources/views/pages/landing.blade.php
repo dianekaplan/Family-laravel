@@ -31,12 +31,16 @@
     @include ('auth._login_partial');
     <br/><br/>
 
+    @if (count($people))
 
     @foreach ($people as $person)
         <li class="jumble">
-            @include ('person.partials._person_link', ['person' => $person])
+            {{--@include ('person.partials._person_link', ['person' => $person])--}}
+            @include ('person.partials._person_link_without_book', ['person' => $person])
         </li>
     @endforeach
+
+        @endif
 
 </body>
 </html>
