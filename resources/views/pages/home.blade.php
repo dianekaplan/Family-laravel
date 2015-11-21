@@ -15,9 +15,10 @@
     <div style="float: left; width: 23%;" id="family_section">
 
 
-
     Me:   <br/>
-@include ('person.partials._person_link', ['person' => $person])
+        @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])
+
+
 <br/>
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/images">My family album</a></h3>
@@ -38,9 +39,8 @@
 <b>Birthdays this month:</b>
                 @foreach ($birthday_people as $birthday_person)
                     <li>
-                        @include ('person.partials._person_link', ['person' => $birthday_person]):
+                        @include ('person.partials._person_link', ['person' => $birthday_person, 'show_flag'=>'N', 'show_book'=>'N']):
                         {{ date('M d, Y', strtotime($birthday_person->birthdate)) }}
-
                     </li>
                 @endforeach
             @endif

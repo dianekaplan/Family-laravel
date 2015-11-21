@@ -35,8 +35,8 @@
 
     @foreach ($people as $person)
         <li class="jumble">
-            {{--@include ('person.partials._person_link', ['person' => $person])--}}
-            @include ('person.partials._person_link_without_book', ['person' => $person])
+            @include ('person.partials._person_link_simple', ['person' => $person])
+
         </li>
     @endforeach
 

@@ -16,7 +16,7 @@
         <li class="jumble">
 
 
-            @include ('person.partials._person_link_without_book', ['person' => $person])
+            @include ('_person_link_without_book.blade.php', ['person' => $person])
         </li>
     @endforeach
 

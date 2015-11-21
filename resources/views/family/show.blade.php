@@ -23,7 +23,8 @@
                     <b>Kids: </b><br/>
 
                     @foreach($kids as $kid)
-                        @include ('person.partials._person_link', ['person' => $kid])<br/>
+                        {{--@include ('person.partials._person_link', ['person' => $kid])<br/>--}}
+                        @include ('person.partials._person_link', ['person' => $kid, 'show_flag'=>'N', 'show_book'=>'Y'])<br/>
                     @endforeach
 
                 @endunless

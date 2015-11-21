@@ -15,7 +15,7 @@
 {{--List everybody who's in the picture--}}
         @foreach($image->people as $person)
 
-            <li>@include ('person.partials._person_link', ['person' => $person])</li>
+            <li>@include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])</li>
 
             @endforeach
 

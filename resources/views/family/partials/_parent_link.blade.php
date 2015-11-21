@@ -17,6 +17,6 @@
 
     @endif
 
-@include ('person.partials._person_link', ['person' => $person])
+@include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])<br/>
 
     {{--<a href="{{ action('PeopleController@show', [$person->id]) }}">{{$person->first}} {{$person->last}}</a>--}}
