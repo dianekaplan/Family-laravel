@@ -29,4 +29,34 @@ class PasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+//
+//    public function password()
+//    {
+//        $this->middleware('guest');
+//        return view ('auth.password');
+//    }
+
+//
+//    // Password reset link request methods
+//    public function getEmail()
+//    {
+//
+//    }
+//
+//    public function postEmail()
+//    {
+//
+//    }
+//
+//    // Password reset methods
+//    public function getReset()
+//    {
+//
+//    }
+//
+//    public function postReset()
+//    {
+//
+//    }
 }
