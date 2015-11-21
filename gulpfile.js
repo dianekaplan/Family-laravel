@@ -42,7 +42,8 @@ elixir(function(mix) {
     mix.scripts([
         'libs/jquery.js',
         'libs/select2.min.js',
-        'libs/bootstrap.min.js'
+        'libs/bootstrap.min.js',
+        'libs/lazyload.js',
         //'libs/jquery.min.js'  //from cloudflare, but including it made a bug during 24
     ], 'public/js', 'resources/js');
 
