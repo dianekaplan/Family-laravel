@@ -16,7 +16,7 @@
 
 
     Me:   <br/>
-        @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])
+        @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])
 
 
 <br/>
