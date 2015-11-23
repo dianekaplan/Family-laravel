@@ -1,4 +1,4 @@
-<h4> <img src="/faces/27Gert.jpg" class="img-rounded"/> Gert Kemler's family: </h4>
+<h4> <img src="/faces/27gert.jpg" class="img-rounded"/> Gert Kemler's family: </h4>
 
 The Kemler side:
         <ul>

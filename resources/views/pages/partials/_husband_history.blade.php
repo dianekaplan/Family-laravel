@@ -1,4 +1,4 @@
-<h4> <img src="/faces/75Bob.jpg" class="img-rounded"/> Bob Husband's family: </h4>
+<h4> <img src="/faces/75bob.jpg" class="img-rounded"/> Bob Husband's family: </h4>
 
         The Husband side:
         <ul><li><a href="{{ action('FamilyController@show', [172]) }}">Thomas and Elanor Husband</a> were born in <b>Scotland</b> and moved to Canada sometime before 1835.  They started their family in Canada before <b>moving to the US in the mid 1830's</b>.
