@@ -3,7 +3,7 @@
 
     @foreach ($person_group as $person)
         <li>
-            @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'Y', 'show_book'=>'N'])
+            @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'Y', 'show_book'=>'Y'])
         </li>
     @endforeach
 @endif

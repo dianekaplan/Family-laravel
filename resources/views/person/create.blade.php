@@ -7,7 +7,9 @@
     {{--{!! Form::open( ['route' => ['person.store']]) !!}--}}
 
     @include ('errors.list')
+    @include ('person.partials._admin_fields')
     @include ('person.partials._form', ['submitButtonText' => 'Add Person'])
+
 
     {!! Form::close() !!}
 
