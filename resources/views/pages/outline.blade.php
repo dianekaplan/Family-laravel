@@ -6,14 +6,15 @@
         Our Family Tree : Outline
     </h3>
 
-(Outline part to be done still)
 
     @if (count($original_keems)&&($user->keem_access))
-        <div style="float: left; width:95%;" id="family_section"><h4 align="center">The Keem Family:</h4>
+        <div style="float: left; width:95%;" id="family_section"><h4 align="center">The Keems- original families:</h4>
         @foreach ($original_keems as $family)
-            @include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq])-
-                then show the kids from that family, and for each of them the families they made<br/>
+            @include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq])<br/>
         @endforeach
+
+            <br/>
+            Outline:
             </div>
     @endif
 

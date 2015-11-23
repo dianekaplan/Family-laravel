@@ -75,7 +75,7 @@ class FamilyController extends Controller
     public function get_kids_of_family($family)
     {
         $kids = Person::where('family_of_origin', $family->id)
-            ->orderBy('sibling_seq')
+            ->orderBy('sibling_seq', 'asc')
             ->get();
         return $kids;
     }

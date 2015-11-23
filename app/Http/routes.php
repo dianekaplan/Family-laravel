@@ -15,7 +15,7 @@ use App\Person;
 //Route::get('/', function () {
 //    return view('welcome');
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@home');
 Route::get('contact', 'HomeController@contact');
 Route::get('landing', 'HomeController@landing');
 Route::get('outline', 'HomeController@outline');

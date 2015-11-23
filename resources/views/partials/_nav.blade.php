@@ -18,10 +18,9 @@
                 <li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>
 
                 {{--<li><a href="/people/{{$user->person_id}}">My Page!</a></li>--}}
-
-
                 {{--<li> @include ('person.partials._person_link', ['person' => $person])</li>--}}
             </ul>
+
 
             {{--@FIXME: come back and add logic in case nobody's logged in--}}
 
@@ -35,17 +34,6 @@
                 {{--<li>{!! link_to_action('UserController@show', Auth::user()->name, [Auth::user()->id]) !!}</li>--}}
             </ul>
 
-
-
-
-            {{--<ul class="nav navbar-nav navbar-right">--}}
-
-                {{--<li>{!! link_to_action('UpdateController@show', $latest->summary, [$latest->id]) !!}</li>--}}
-            {{--</ul>--}}
-
-            {{--<ul class="nav navbar-nav navbar-right">--}}
-                {{--<li>{!! link_to_action('UserController@show', Auth::user()->name, [Auth::user()->id]) !!}</li>--}}
-            {{--</ul>--}}
 
         </div><!--/.nav-collapse -->
     </div>

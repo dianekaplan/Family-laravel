@@ -36,7 +36,9 @@
 
 
 
-@yield('footer')
+    @include ('partials._footer', ['user'=> \Auth::user()])
+
+{{--@yield('footer')--}}
 </div>
 </body>
 </html>

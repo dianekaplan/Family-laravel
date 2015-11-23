@@ -1,10 +1,11 @@
 
 
-a       	{ font-size: 0.750em;
+a       	{ font-size: 1em;
+	/*font-size: 0.750em;*/
             text-decoration: underline;
 		    color: #99CC66;
             background-color: #FFFFFF}
-.navbar { font-size: 0.750em; text-decoration: underline;  color: #8b8378; background-color: #FFFFFF}
+.navbar { font-size: 1em; text-decoration: underline;  color: #8b8378; background-color: #FFFFFF}
 		
 .g3 { font-size: 12pt; text-decoration: underline;  color: #8b8378; background-color: #FFFFFF}
 .g4 { font-size: 12pt; text-decoration: underline;  color: #FFCC66; background-color: #FFFFFF}

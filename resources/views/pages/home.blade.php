@@ -21,17 +21,13 @@
 
 <br/>
         <h3><a href="/history">My family history</a></h3>
-        <h3><a href="/images">My family album</a></h3>
-        <h3><a href="/outline">Chronological Outline</a></h3><br/>
+        <h3><a href="/images">My family album</a></h3><br/>
 
-
-      <h4> <a href="/activity"> My additions to the family tree</a></h4> <br/>
+        <a href="/outline">Chronological Outline</a><br/><br/>
+      <a href="/activity"> My additions to the family tree</a> <br/>
         </div>
 
-        <div style="float: left; width: 29%;" id="family_section">
-
-
-
+        <div style="float: left; width: 33%;" id="family_section">
 
             {{--{{$birthday_people}}--}}
 
@@ -48,7 +44,7 @@
 
 </div>
 
-    <div style="float: left; width: 42%;" id="family_section">
+    <div style="float: left; width: 38%;" id="family_section">
 
 
         @unless ($new_pictures->isEmpty())
@@ -69,6 +65,6 @@
 </div>
 @stop
 
-@section('footer')
-    Footer info
-@stop
+{{--@section('footer')--}}
+    {{--@include ('pages.partials._footer', ['user' => $user])--}}
+{{--@stop--}}
