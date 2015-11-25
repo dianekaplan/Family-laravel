@@ -17,12 +17,11 @@
 
     Me:   <br/>
         @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])
-
-
 <br/>
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/images">My family album</a></h3><br/>
 
+        My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
         <a href="/outline">Chronological Outline</a><br/><br/>
       <a href="/activity"> My additions to the family tree</a> <br/>
         </div>
@@ -65,6 +64,3 @@
 </div>
 @stop
 
-{{--@section('footer')--}}
-    {{--@include ('pages.partials._footer', ['user' => $user])--}}
-{{--@stop--}}
