@@ -50,6 +50,15 @@ Route::get('auth/login', 'HomeController@landing');
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
 
+Route::get('mail', function()
+{
+    $data = [];
+Mail::send('emails.welcome', $data, function($message)
+    {
+    $message->to('ok4mee@hotmail.com')->subject('Welcome!');
+    });
+});
+
 
 
 Route::get('tags/{tags}', 'TagsController@show');
