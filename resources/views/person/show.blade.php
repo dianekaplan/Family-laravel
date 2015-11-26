@@ -58,11 +58,11 @@ Add info for this person
 
         <div style="float: left; width: 33%;">
             <b> Education: </b>  {{  $person->education }}  <br/>
-            <b> Work: </b> {{  $person->work }} <br/>
+            <b> Work: </b> {!!    $person->work !!}<br/>
             <b> Interests: </b>  {{  $person->interests }}  <br/>
             <b> Current location: </b> {{  $person->current_location }}  <br/>
             @if ($person->deathdate)<b>Death Date: </b> {{ date('F d, Y', strtotime($person->deathdate))}}<br/> @endif
-            @if ($person->deathdate_note)<bDeath Date: </b> {{$person->deathdate_note}} <br/>@endif
+            @if ($person->deathdate_note)<b>Death Date: </b> {{$person->deathdate_note}} <br/>@endif
 
         @if (count($made_family))
 
@@ -86,6 +86,10 @@ Add info for this person
 
 
         <div style="float: left; width: 100%;">
+             {{  $person->notes1 }} <br/>
+            {{  $person->notes2 }} <br/>
+            {{  $person->notes3 }} <br/>
+
             @if( $notes )
                     @include ('partials._notes', ['notes' => $notes])
             @endif

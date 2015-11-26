@@ -18,7 +18,7 @@
                     @endif
 
                     @endif
-                {{$note->body}}
+                {!! $note->body !!}
             </div>
         </div>
         @endforeach
