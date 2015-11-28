@@ -22,6 +22,11 @@ class Update extends Model implements AuthenticatableContract,
      * @var string
      */
     protected $table = 'updates';
+    protected $casts =[
+        'before' =>'jsonb',
+        'after' =>'jsonb'
+
+    ];
 
     /**
      * The attributes that are mass assignable.

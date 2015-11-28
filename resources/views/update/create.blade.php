@@ -7,7 +7,8 @@
     {{--{!! Form::open( ['route' => ['person.store']]) !!}--}}
 
     @include ('errors.list')
-    @include ('update._form', ['submitButtonText' => 'Add Suggested Update'])
+    @include ('update._form', ['submitButtonText' => 'Add Update'])
+
 
     {!! Form::close() !!}
 

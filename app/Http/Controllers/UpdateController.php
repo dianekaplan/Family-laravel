@@ -8,6 +8,7 @@ use App\Update;
 use App\User;
 use App\Http\Requests\SaveUpdateRequest;
 use App\Http\Requests;
+use App\Http\Requests\SavePersonRequest;
 use App\Http\Controllers\Controller;
 use DB;
 use Acme\Mailers\UserMailer as Mailer;
@@ -79,7 +80,10 @@ class UpdateController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(SaveUpdateRequest $request)
+
+
+        public function store(SaveUpdateRequest $request)
+
     {
         $update = new Update($request->all());
 
@@ -91,9 +95,36 @@ class UpdateController extends Controller
         $this->mailer->update_notify($diane_user, $update, $user_who_made_update);
         $this->mailer->update_thankyou($user_who_made_update, $update);
 
-//        Update::create($request->all());
         return redirect('updates');
     }
+
+
+////    public function store( Update $update)
+//        public function store(SavePersonRequest $request)
+//
+//    {
+////        $update = new Update($request->all());
+//        $user_who_made_update =  \Auth::user();
+//
+////        $update = new Update;
+////
+////        $update->after = $person_request;
+//        $update->user_id = $user_who_made_update->id;
+//        $update->person_id = $person_request->id;
+//        $update->summary = 'test summary';
+//        $update->after = 'test after';
+////        $update->after = $person_request;
+//
+//
+//        $user_who_made_update->updates()->save($update); //save the update for the user that's logged in
+//
+//        $diane_user = User::find(1);
+//
+//        $this->mailer->update_notify($diane_user, $update, $user_who_made_update);
+//        $this->mailer->update_thankyou($user_who_made_update, $update);
+//
+//        return redirect('updates');
+//    }
     /**
      * Display the specified resource.
      *

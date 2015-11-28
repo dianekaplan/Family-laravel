@@ -15,17 +15,22 @@ use App\Http\Controllers\Controller;
 use DB;
 use Acme\Mailers\UserMailer as Mailer;
 
+use App\Update;
+
 
 class PeopleController extends Controller
 {
 
     protected $mailer;
+    protected $updated_person;
+//    protected $save_person_request;
 
-    public function __construct(Mailer $mailer)
+    public function __construct(Mailer $mailer, Person $updated_person)
     {
         $this->middleware('auth');
 
         $this->mailer= $mailer;
+        $this->updated_person= $updated_person;
     }
 
 
@@ -130,6 +135,16 @@ class PeopleController extends Controller
         $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);
         $this->mailer->person_update_thankyou($user_who_made_update, $request, $updated_person);
 
+//then have it call UpdateController::store and pass along the SavePersonRequest
+        //but this is calling it statically, so I need to instantiate an (update? request?) object first
+//        $update = new Update;
+//        $update->user_id = $user_who_made_update->id;
+//        $update->person_id = $request->id;
+//        $update->summary = 'test summary';
+//        $update->after = 'test after';
+//        $update->save();
+
+//        $this->updated_person->store($request);
 
         flash()->success('Your edit has been saved');
 

@@ -41,7 +41,7 @@ Route::get('images', 'ImageController@index');
 
 Route::get('stories/{story}', 'StoryController@show');
 
-Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
+//Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
 
 Route::resource('people', 'PeopleController');
 

@@ -24,7 +24,7 @@ class SaveUpdateRequest extends Request
     public function rules()
     {
         $rules = [
-            'update_summary' => 'required',
+//            'update_summary' => 'required',
         ];
         return $rules;
 

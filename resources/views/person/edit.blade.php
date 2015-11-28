@@ -10,6 +10,7 @@ fine on the index page--}}
     {!! Form::model($person, ['route' => ['people.update', $person->id], 'method' => 'PATCH']) !!}
     {{--//alternative to using route is: 'action' => ['PeopleController@update', $person->id]]) --}}
     @include ('errors.list')
+
     @include ('person.partials._form', ['submitButtonText' => 'Update Person'])
 
     {!! Form::close() !!}
