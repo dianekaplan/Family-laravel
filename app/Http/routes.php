@@ -12,6 +12,12 @@
 */
 //
 use App\Person;
+
+//these are for mail testing:
+use App\User;
+use Acme\Mailers\UserMailer as Mailer;
+
+
 //Route::get('/', function () {
 //    return view('welcome');
 
@@ -40,7 +46,11 @@ Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
 Route::resource('people', 'PeopleController');
 
 Route::resource('families', 'FamilyController');
+
+Route::get('users/store', 'UserController@store');
 Route::resource('users', 'UserController');
+
+
 
 Route::resource('updates', 'UpdateController');
 Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
@@ -49,15 +59,15 @@ Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateControl
 Route::get('auth/login', 'HomeController@landing');
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
-
-Route::get('mail', function()
-{
-    $data = [];
-Mail::send('emails.welcome', $data, function($message)
-    {
-    $message->to('ok4mee@hotmail.com')->subject('Welcome!');
-    });
-});
+//
+//Route::get('mail', function()
+//{
+//    $data = [];
+//Mail::send('emails.welcome', $data, function($message)
+//    {
+//    $message->to('ok4mee@hotmail.com')->subject('Welcome!');
+//    });
+//});
 
 
 

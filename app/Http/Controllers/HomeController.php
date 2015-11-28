@@ -103,16 +103,19 @@ public function get_birthday_people()
 //
 //    }
 
+public function get_person_from_user($user)
+{
+    $person = Person::findOrNew($user->person_id);
 
+    return $person;
+
+}
 
     public function home()
     {
         $user =  \Auth::user();
-        //deciding where these should be, if in both places then should make one variable up top that they can both use
-        $person = Person::all()
-            ->Where('id', $user->person_id)
-            ->first();
 
+        $person = HomeController::get_person_from_user($user);
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
 

@@ -2,24 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Person;
 use App\Tag;
 use App\Image;
 use App\Family;
 use App\Note;
-use App\Http\Requests;
+use App\User;
 use App\Http\Requests\SavePersonRequest;
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use DB;
+use Acme\Mailers\UserMailer as Mailer;
 
 
 class PeopleController extends Controller
 {
 
-    public function __construct()
+    protected $mailer;
+
+    public function __construct(Mailer $mailer)
     {
-        $this->middleware('auth', ['except' => 'landing']);
+        $this->middleware('auth');
+
+        $this->mailer= $mailer;
     }
 
 
@@ -112,10 +118,18 @@ class PeopleController extends Controller
         return view('person.edit', compact('person', 'tags'));
     }
 
-    public function update(Person $person, SavePersonRequest $request)
+    public function update(Person $updated_person, SavePersonRequest $request)
     {
-        $person->update($request->all());
+        $updated_person->update($request->all());
 //        $this->syncTags($person, $request->input('tag_list'));
+
+        $user_who_made_update =  \Auth::user();
+
+        $diane_user = User::find(1);
+
+        $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);
+        $this->mailer->person_update_thankyou($user_who_made_update, $request, $updated_person);
+
 
         flash()->success('Your edit has been saved');
 

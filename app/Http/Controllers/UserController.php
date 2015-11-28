@@ -11,8 +11,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+
 class UserController extends Controller
 {
+
 
 
     public function __construct()
@@ -54,9 +56,11 @@ class UserController extends Controller
      */
     public function store(SaveUserRequest $request)
     {
+
         User::create($request->all());
         //@TODO: somewhere I'll want to hash or bcrypt the password they're giving me and save THAT instead
         //not sure where that goes
+
         return redirect('users');
     }
 

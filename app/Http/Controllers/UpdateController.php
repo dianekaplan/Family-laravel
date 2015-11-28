@@ -7,19 +7,23 @@ use Illuminate\Http\Request;
 use App\Update;
 use App\User;
 use App\Http\Requests\SaveUpdateRequest;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use Acme\Mailers\UserMailer as Mailer;
 
 class UpdateController extends Controller
 {
 
-    public function __construct()
+    protected $mailer;
+
+    public function __construct(Mailer $mailer)
     {
         $this->middleware('auth');
 //        $this->middleware('auth', ['except' => 'index']);
         //$this->middleware('auth', ['only' => 'create']);
+
+        $this->mailer= $mailer;
     }
 
 //
@@ -79,7 +83,14 @@ class UpdateController extends Controller
     {
         $update = new Update($request->all());
 
-        \Auth::user()->updates()->save($update); //this line will save the logged in user for user_id
+        $user_who_made_update =  \Auth::user();
+        $user_who_made_update->updates()->save($update); //save the update for the user that's logged in
+
+        $diane_user = User::find(1);
+
+        $this->mailer->update_notify($diane_user, $update, $user_who_made_update);
+        $this->mailer->update_thankyou($user_who_made_update, $update);
+
 //        Update::create($request->all());
         return redirect('updates');
     }

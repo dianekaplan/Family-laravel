@@ -96,7 +96,7 @@ return [
     */
 
 //    'password' => env('MAIL_PASSWORD'),
-    'password' => 'apple4KEEM',
+    'password' => "apple4KEEM",
 
     /*
     |--------------------------------------------------------------------------

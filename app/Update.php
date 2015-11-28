@@ -28,7 +28,7 @@ class Update extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'person_id', 'family_id', 'summary'];
+    protected $fillable = ['user_id', 'person_id', 'family_id', 'update_summary'];
     //user_id is temporary- we'll be able to take that out once we have auth set up
 
     public function scopePending($query)
