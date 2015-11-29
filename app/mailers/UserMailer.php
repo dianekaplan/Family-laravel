@@ -2,8 +2,10 @@
 
 use App\User;
 use App\Person;
+use App\Family;
 use App\Update;
 use App\Http\Requests\SavePersonRequest;
+use App\Http\Requests\SaveFamilyRequest;
 
 class UserMailer extends Mailer {
 
@@ -56,7 +58,7 @@ class UserMailer extends Mailer {
             'interests' => $request->interests,
             'location' => $request->current_location
         ];
-        $subject= 'An update has been made';
+        $subject= 'A person has been updated';
 
         return $this->sendTo($diane_user, $subject, $view, $data);
     }
@@ -82,10 +84,53 @@ class UserMailer extends Mailer {
             'location' => $request->current_location
 
         ];
-        $subject= 'Thanks for the update';
+        $subject= 'Thanks for the person update';
 
         return $this->sendTo($user, $subject, $view, $data);
     }
+
+    public function family_update_notify(User $diane_user, SaveFamilyRequest $request, User $user_who_made_update, Family $family)
+    {
+        //in this one the email recipient user should always be me
+        $view = 'emails.family_update_notify';
+        $data = [
+//            'summary'=> $update->update_summary,
+            'updater'=> $user_who_made_update->name,
+            'caption' => $family->caption,
+            'mother_id' => $family->mother_id,
+            'father_id' => $family->father_id,
+            'marriage_date' => $family->marriage_date,
+            'notes1' => $family->notes1,
+            'notes2' => $family->notes2,
+        ];
+        $subject= 'A family has been updated';
+
+        return $this->sendTo($diane_user, $subject, $view, $data);
+    }
+
+    public function family_update_thankyou(User $user, SaveFamilyRequest $request,  Family $family)
+    {
+        $view = 'emails.family_update_thankyou';
+        $data = [
+            'updater'=> $user->name,
+            'caption' => $family->caption,
+            'mother_id' => $family->mother_id,
+            'father_id' => $family->father_id,
+            'marriage_date' => $family->marriage_date,
+            'notes1' => $family->notes1,
+            'notes2' => $family->notes2,
+
+        ];
+        $subject= 'Thanks for the family update';
+
+        return $this->sendTo($user, $subject, $view, $data);
+    }
+
+
+
+
+
+
 
 
     public function update_notify(User $user, Update $update, User $user_who_made_update)

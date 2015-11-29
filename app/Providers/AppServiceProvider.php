@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('partials._nav', function($view)
         {
-            $view->with('latest', \App\Update::latest()->first());
+//            $view->with('latest', \App\Update::latest()->first());
         });
     }
 
@@ -26,8 +26,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
     public function register()
     {
-        //
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+        }
     }
 }

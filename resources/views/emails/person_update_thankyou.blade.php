@@ -6,7 +6,7 @@
 <body>
 
 Hello {{$name}}, <br/>
-Thank you so much for making an update someone on our family tree:  {{$updated_person_first}} {{$updated_person_last}}: <br/><br/>
+Thank you so much for making an update to someone on our family tree:  {{$updated_person_first}} {{$updated_person_last}}: <br/><br/>
 
 Here's the updated record: <br/>
 <b>First</b>: {{$first}}<br/>

@@ -20,7 +20,18 @@
     {!! Form::input('date', 'marriage_date', null, ['class' => 'form-control']) !!}
 </div>
 
-@include ('partials._family_bools')
+<div class="form-group">
+    {!! Form::label('notes1','Notes field 1: (optional)') !!}
+    {!! Form::text( 'notes1', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('notes2','Notes field 2: (optional)') !!}
+    {!! Form::text( 'notes2', null, ['class' => 'form-control']) !!}
+</div>
+
+
+{{--@include ('partials._family_bools')--}}
 
 
 <div class="form-group">

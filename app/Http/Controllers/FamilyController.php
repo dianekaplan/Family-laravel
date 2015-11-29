@@ -10,13 +10,19 @@ use App\Http\Requests;
 use App\Http\Requests\SaveFamilyRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Acme\Mailers\UserMailer as Mailer;
+use App\User;
 
 class FamilyController extends Controller
 {
 
-    public function __construct()
+    protected $mailer;
+
+    public function __construct(Mailer $mailer)
     {
         $this->middleware('auth');
+
+        $this->mailer= $mailer;
     }
 
     /**
@@ -131,6 +137,13 @@ class FamilyController extends Controller
     {
 
         $family->update($request->all());
+
+        $user_who_made_update =  \Auth::user();
+
+        $diane_user = User::find(1);
+
+        $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
+        $this->mailer->family_update_thankyou($user_who_made_update, $request, $family);
 
         flash()->success('Your edit has been saved');
 

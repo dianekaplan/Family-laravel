@@ -30,7 +30,7 @@ class PeopleController extends Controller
         $this->middleware('auth');
 
         $this->mailer= $mailer;
-        $this->updated_person= $updated_person;
+        $this->updated_person= $updated_person; //not sure if I'm still using this
     }
 
 

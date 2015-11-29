@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Family extends Model
 {
+
+    use RecordsActivity;
+//    protected static $recordEvents = ['created'];  //if you only wanted to record for one type, specify like this
+
     protected $fillable = [
         'caption',
         'mother_id',

@@ -2,7 +2,13 @@
 
 @section('content')
     <h3>{{$family->caption}}</h3>
-    {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
+
+    <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/families/{{$family->id}}/edit">
+            @if (true)  <!--but later check permissions-->
+                Edit info for this family
+            @endif
+        </a> </h4>
+
 
     <div class="bottom">
 

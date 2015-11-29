@@ -7,6 +7,9 @@ use Carbon\Carbon;
 
 class Person extends Model
 {
+
+    use RecordsActivity;
+
     protected $fillable = [
 
         'first',
