@@ -7,19 +7,28 @@ trait RecordsActivity
 {
     //This was all thanks to this: https://laracasts.com/lessons/build-an-activity-feed-in-laravel
 
+    protected static function bootRecordsActivity()
+    {
+        foreach (static::getModelEvents() as $event) {
+            static::$event(function ($model)  use ($event) {
+                $model->recordActivity($event);
+            });
+        }
+    }
+
     protected static function boot()
     {
         parent::boot();
 
         foreach (static::getModelEvents() as $event) {
             static::$event(function ($model)  use ($event) {
-            $model->addActivity($event);
+            $model->recordActivity($event);
             });
         }
     }
 
 
-    protected function addActivity($event){
+    public function recordActivity($event){  //because it's public, we can do $person->recordActivity('favorited')
 
         Activity::create([
             'subject_id' => $this->id,

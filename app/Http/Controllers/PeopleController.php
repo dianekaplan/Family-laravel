@@ -36,24 +36,20 @@ class PeopleController extends Controller
 
     public function index()
     {
-//        $people = Person::latest('created_at')
-//            ->displayable()
-//            ->orderBy('last', 'asc', 'first', 'asc')
-//            ->get();
+        $kaplans = Person::kaplans()->displayable()->get();
+        $keems = Person::keems()->displayable()->get();
+        $kemlers = Person::kemlers()->displayable()->get();
+        $husbands = Person::husbands()->displayable()->get();
+//        $husbands = Person::husbands('created_at')->displayable()->get();
 
-        $kaplans = Person::kaplans('created_at')->displayable()->get();
-        $keems = Person::keems('created_at')->displayable()->get();
-        $kemlers = Person::kemlers('created_at')->displayable()->get();
-        $husbands = Person::husbands('created_at')->displayable()->get();;
-
-        return view('person.index', compact('people', 'kaplans', 'keems', 'husbands', 'kemlers'));
+        return view('person.index', compact( 'kaplans', 'keems', 'husbands', 'kemlers'));
     }
 
 
     //TODO: update doc blocks (everywhere) when things have solidified
 
 //    @FIXME: still not showing families in order of sequence (see mom's page')
-    public function get_made_family($person)
+    protected function get_made_family($person)
     {
         $made_family = Family::where('mother_id', $person->id)
             ->orWhere('father_id', $person->id)
@@ -63,7 +59,7 @@ class PeopleController extends Controller
         return $made_family;
     }
 
-    public function get_notes_about_person($person)
+    protected function get_notes_about_person($person)
     {
         $notes = DB::table('notes')
             ->leftjoin ('people', 'people.id', '=', 'notes.author')
@@ -134,17 +130,6 @@ class PeopleController extends Controller
 
         $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);
         $this->mailer->person_update_thankyou($user_who_made_update, $request, $updated_person);
-
-//then have it call UpdateController::store and pass along the SavePersonRequest
-        //but this is calling it statically, so I need to instantiate an (update? request?) object first
-//        $update = new Update;
-//        $update->user_id = $user_who_made_update->id;
-//        $update->person_id = $request->id;
-//        $update->summary = 'test summary';
-//        $update->after = 'test after';
-//        $update->save();
-
-//        $this->updated_person->store($request);
 
         flash()->success('Your edit has been saved');
 

@@ -5,7 +5,7 @@
 
     <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/families/{{$family->id}}/edit">
             @if (true)  <!--but later check permissions-->
-                Edit info for this family
+                Update info for this family
             @endif
         </a> </h4>
 

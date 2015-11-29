@@ -15,9 +15,9 @@
 
     <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/people/{{$person->id}}/edit">
 @if ($logged_in_user->person_id == $person->id)
-Edit my info
+Update my info
 @else
-Add info for this person
+Update info for this person
 @endif
     </a> </h4>
 </div>

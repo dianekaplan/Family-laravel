@@ -33,12 +33,11 @@ class FamilyController extends Controller
     public function index()
     {
         $families = Family::all();
-//        $families = Family::latest('created_at')->get();
 
-        $kaplan_families = Family::kaplans('created_at')->get();
-        $keem_families = Family::keems('created_at')->get();
-        $kemler_families = Family::kemlers('created_at')->get();
-        $husband_families = Family::husbands('created_at')->get();
+        $kaplan_families = Family::kaplans()->get();
+        $keem_families = Family::keems()->get();
+        $kemler_families = Family::kemlers()->get();
+        $husband_families = Family::husbands()->get();
 
         return view('family.index', compact('families', 'kaplan_families', 'keem_families', 'kemler_families', 'husband_families'));
 
@@ -58,7 +57,6 @@ class FamilyController extends Controller
     private function createFamily(SaveFamilyRequest $request)
     {
         $family = Family::create($request->all());
-
         return $family;
     }
 
@@ -78,7 +76,7 @@ class FamilyController extends Controller
         return redirect('families');
     }
 
-    public function get_kids_of_family($family)
+    protected function get_kids_of_family($family)
     {
         $kids = Person::where('family_of_origin', $family->id)
             ->orderBy('sibling_seq', 'asc')
@@ -135,11 +133,9 @@ class FamilyController extends Controller
      */
     public function update(Family $family, SaveFamilyRequest $request)
     {
-
         $family->update($request->all());
 
         $user_who_made_update =  \Auth::user();
-
         $diane_user = User::find(1);
 
         $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
