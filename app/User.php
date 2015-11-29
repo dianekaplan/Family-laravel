@@ -51,6 +51,19 @@ class User extends Model implements AuthenticatableContract,
         return true;
     }
 
+    public function activity()
+    {
+//            return $this->hasMany('App\Activity');
+        return $this->hasMany('App\Activity')->with(['user', 'subject'])->latest();
+    }
+
+    public function notes()
+    {
+//            return $this->hasMany('App\Activity');
+        return $this->hasMany('App\Note');
+    }
+
+
 //    public function setPasswordAttribute($password)
 //    {
 //        $this->attributes['password'] = mcrypt($password);

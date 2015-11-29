@@ -23,10 +23,17 @@
         </div>
 
         <div style="float: left; width: 100%;" id="family_section">
+            <b>New activities:</b> <br/>
+            <ul class="list-group">
+                @include ('activity.partials._list')
+            </ul>
+        </div>
 
-            <b>Updates suggested:</b> <br/>
 
 
+        <div style="float: left; width: 100%;" id="family_section">
+
+            <b>Old-style updates given:</b> <br/>
 
             @foreach($updates_suggested as $update)
 
@@ -41,8 +48,10 @@
                 {{$update->update_summary}}<br/><br/>
             @endforeach
 
-
         </div>
+
+
+
         @stop
 
 

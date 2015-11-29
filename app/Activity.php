@@ -15,4 +15,15 @@ class Activity extends Model
         'user_id',
         'name',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
+    public function subject()
+    {
+        return $this->morphTo();  //this is like belongsTo, but it's polymorphic
+    }
 }

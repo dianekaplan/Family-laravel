@@ -41,7 +41,6 @@ trait RecordsActivity
 
     protected static function getActivityName($model, $action)
     {
-
        $name = strtolower((new ReflectionClass($model))->getShortName());
         return "{$action}_{$name}";
     }
@@ -54,8 +53,7 @@ trait RecordsActivity
         }
 
         return [
-            'created', 'deleted', 'updated'
-            //some others are updating/creating (the moment before) and saved
+            'created', 'deleted', 'updated' //some others are: updating/creating (the moment before) and saved
         ];
     }
 

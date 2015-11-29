@@ -99,32 +99,6 @@ class UpdateController extends Controller
     }
 
 
-////    public function store( Update $update)
-//        public function store(SavePersonRequest $request)
-//
-//    {
-////        $update = new Update($request->all());
-//        $user_who_made_update =  \Auth::user();
-//
-////        $update = new Update;
-////
-////        $update->after = $person_request;
-//        $update->user_id = $user_who_made_update->id;
-//        $update->person_id = $person_request->id;
-//        $update->summary = 'test summary';
-//        $update->after = 'test after';
-////        $update->after = $person_request;
-//
-//
-//        $user_who_made_update->updates()->save($update); //save the update for the user that's logged in
-//
-//        $diane_user = User::find(1);
-//
-//        $this->mailer->update_notify($diane_user, $update, $user_who_made_update);
-//        $this->mailer->update_thankyou($user_who_made_update, $update);
-//
-//        return redirect('updates');
-//    }
     /**
      * Display the specified resource.
      *
@@ -157,7 +131,6 @@ class UpdateController extends Controller
     public function update(SaveUpdateRequest $request, Update $update)
     {
         $update->Update($request->all());
-
         return redirect('updates');
     }
 
@@ -167,7 +140,6 @@ class UpdateController extends Controller
     public function setAdded(Update $update)
     {
         $update->setAddedAttribute($update);
-
         return redirect('updates');
     }
 

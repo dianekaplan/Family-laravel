@@ -40,15 +40,10 @@ class PeopleController extends Controller
         $keems = Person::keems()->displayable()->get();
         $kemlers = Person::kemlers()->displayable()->get();
         $husbands = Person::husbands()->displayable()->get();
-//        $husbands = Person::husbands('created_at')->displayable()->get();
 
         return view('person.index', compact( 'kaplans', 'keems', 'husbands', 'kemlers'));
     }
 
-
-    //TODO: update doc blocks (everywhere) when things have solidified
-
-//    @FIXME: still not showing families in order of sequence (see mom's page')
     protected function get_made_family($person)
     {
         $made_family = Family::where('mother_id', $person->id)
@@ -61,9 +56,8 @@ class PeopleController extends Controller
 
     protected function get_notes_about_person($person)
     {
-        $notes = DB::table('notes')
+        $notes = Note::Where('type', 1)
             ->leftjoin ('people', 'people.id', '=', 'notes.author')
-            ->Where('type', 1)
             ->Where('ref_id', $person->id)
             ->Where('active', true)
             ->orderBy('for_self', 'desc', 'date', 'asc')
@@ -71,7 +65,6 @@ class PeopleController extends Controller
 
         return $notes;
     }
-
 
     public function show(Person $person)
     {

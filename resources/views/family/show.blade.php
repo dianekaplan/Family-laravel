@@ -64,8 +64,14 @@
 
             @include ('partials._stories', ['subject' => $family])
 
+            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'family', 'id' => $family->id, 'name'=>$family->caption])<br/>
 
-{{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
+            @if( $notes )
+                @include ('partials._notes', ['notes' => $notes])
+            @endif
+
+
+            {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
             <br/> <br/>
             *Asterisk indicates the direct ancestors up from the four grandparents
             <br/> <br/>

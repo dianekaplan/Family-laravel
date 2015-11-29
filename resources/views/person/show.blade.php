@@ -86,9 +86,14 @@ Update info for this person
 
 
         <div style="float: left; width: 100%;">
-             {{  $person->notes1 }} <br/>
-            {{  $person->notes2 }} <br/>
-            {{  $person->notes3 }} <br/>
+             {!!   $person->notes1 !!} <br/>
+            {!!  $person->notes2 !!} <br/>
+            {!!  $person->notes3 !!} <br/>
+
+
+            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'person', 'id' => $person->id, 'name'=>$person->first])<br/>
+
+
 
             @if( $notes )
                     @include ('partials._notes', ['notes' => $notes])

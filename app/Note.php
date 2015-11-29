@@ -10,6 +10,10 @@ class Note extends Model
         'ref_id', 'type','from_person', 'body', 'from_name', 'date', 'active'
     ];
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
 
 

@@ -17,6 +17,8 @@ use App\Update;
 use DB;
 use App\Family;
 use Carbon\Carbon;
+use App\User;
+use App\Activity;
 
 
 class HomeController extends Controller {
@@ -26,12 +28,11 @@ class HomeController extends Controller {
     public function __construct()
     {
         $this->middleware('auth', ['except' => 'landing']);
-        //$this->middleware('auth', ['only' => 'create']);
+        $this->middleware('super', ['only' => 'admin']);
     }
 
     public function landing()
     {
-
         $people = Person::ShowOnLandingPage()
             ->displayable()
             ->orderBy('last', 'asc', 'first', 'asc')
@@ -51,7 +52,7 @@ class HomeController extends Controller {
         return view ('pages.branch_explanation');
     }
 
-    public function get_notes_added_by_person($person)
+    public function get_notes_added_by_person(Person $person)
     {
         $notes = DB::table('notes')
             ->Where('author', $person->id)
@@ -68,10 +69,8 @@ public function get_birthday_people()
 }
 
 
-    public function get_updates_from_user ($user)
+    public function get_updates_from_user (User $user)
     {
-        $id = $user->id;
-
         $suggested_updates = Update::latest('created_at')
             ->Where('user_id', $user->id)
             ->get();
@@ -103,12 +102,10 @@ public function get_birthday_people()
 //
 //    }
 
-public function get_person_from_user($user)
+public function get_person_from_user(User $user)
 {
     $person = Person::findOrNew($user->person_id);
-
     return $person;
-
 }
 
     public function home()
@@ -140,8 +137,14 @@ public function get_person_from_user($user)
     public function help()
     {
         $user =  \Auth::user();
-
         return view ('pages.help', compact('user'));
+    }
+
+    public function admin()
+    {
+        $user =  \Auth::user();
+
+        return view ('pages.admin', compact('user'));
     }
 
     public function outline()
@@ -165,10 +168,10 @@ public function get_person_from_user($user)
             ->first();
 
         $notes_added = HomeController::get_notes_added_by_person($person);
-
         $updates_suggested = HomeController::get_updates_from_user($user);
+        $activity = $user->activity()->with(['user', 'subject'])->latest()->get();
 
-        return view ('pages.activity', compact('user', 'notes_added', 'updates_suggested'));
+        return view ('pages.activity', compact('user', 'notes_added', 'updates_suggested', 'activity'));
     }
 
     public function history()

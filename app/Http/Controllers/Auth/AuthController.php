@@ -38,6 +38,7 @@ class AuthController extends Controller
     public function __construct(Mailer $mailer)
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+//        $this->middleware('super', ['only' => 'register']);  //worked fine in HomeController
         $this->mailer= $mailer;
     }
 
@@ -63,21 +64,6 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-//    protected function create(array $data)
-//    {
-//        return User::create([
-//            'name' => $data['name'],
-//            'email' => $data['email'],
-//            'password' => bcrypt($data['password']),
-//            'person_id' => $data['person_id'],
-//            'connection_notes' => $data['connection_notes'],
-//            'keem_access' => $data['keem_access'],
-//            'husband_access' => $data['husband_access'],
-//            'kemler_access' => $data['kemler_access'],
-//            'kaplan_access' => $data['kaplan_access'],
-//
-//        ]);
-//    }
 
     protected function create(array $data)
     {
@@ -91,12 +77,9 @@ class AuthController extends Controller
             'husband_access' => $data['husband_access'],
             'kemler_access' => $data['kemler_access'],
             'kaplan_access' => $data['kaplan_access'],
-
         ]);
 
         $person = Person::findOrNew($user->person_id);
-
-//        $this->mailer->welcome($user);
         $this->mailer->welcome($user, $person);
 
         return $user;

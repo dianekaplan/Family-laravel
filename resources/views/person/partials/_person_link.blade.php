@@ -11,3 +11,6 @@
 @include ('person.partials._person_flag', ['person' => $person])
 @endif
 
+@if ( $person->direct_bool == true )
+    *
+@endif

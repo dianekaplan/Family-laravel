@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Acme\Mailers\UserMailer as Mailer;
 use App\User;
+use App\Note;
 
 class FamilyController extends Controller
 {
@@ -84,6 +85,17 @@ class FamilyController extends Controller
         return $kids;
     }
 
+    protected function get_notes_about_family($family)
+    {
+        $notes = Note::Where('type', 2)
+            ->leftjoin ('people', 'people.id', '=', 'notes.author')
+            ->Where('ref_id', $family->id)
+            ->orderBy('for_self', 'desc', 'date', 'asc')
+            ->get();
+
+        return $notes;
+    }
+
 
     /**
      * Display the specified resource.
@@ -100,6 +112,8 @@ class FamilyController extends Controller
 
         $kids = FamilyController::get_kids_of_family($family);
 
+        $notes = FamilyController::get_notes_about_family($family);
+
         $images = Image::where('family', $id)
             ->orderBy('year', 'asc')
             ->get();
@@ -110,7 +124,7 @@ class FamilyController extends Controller
             ->Where ('featured', 1)
             ->get();
 
-        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image'));
+        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image', 'notes'));
     }
 
     /**

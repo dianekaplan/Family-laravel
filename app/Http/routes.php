@@ -48,15 +48,23 @@ Route::resource('people', 'PeopleController');
 Route::resource('families', 'FamilyController');
 
 Route::get('users/store', 'UserController@store');
+
+//Route::get('users/{user}/activity', 'ActivitiesController@show');
+Route::get('activities', 'ActivitiesController@index');
+Route::get('admin', 'HomeController@admin');
+
 Route::resource('users', 'UserController');
-
-
-
 Route::resource('updates', 'UpdateController');
+
+
 Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
 //Route::get('updates/pending', 'UpdateController@pending');  //syntax without middleware
 
 Route::get('auth/login', 'HomeController@landing');
+Route::get('add_note/{type}/{id}/{name}', 'NotesController@add_note');
+
+Route::post('add_note/save', 'NotesController@store');
+
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
 //
@@ -77,7 +85,7 @@ Route::get('tags/{tags}', 'TagsController@show');
 ////name the route so you can refer to it later and not have to hard code a url$router
 //ex: http://family.app/updates/user/1
 //Route::get('updates/user/test',function(){return 'user updates'; }); //is found
-Route::get('updates/user/{$user}',function(){return 'user updates'; }); //NotFoundHttpException in RouteCollection.php line 143:
+//Route::get('updates/user/{$user}',function(){return 'user updates'; }); //NotFoundHttpException in RouteCollection.php line 143:
 //Route::get('updates/user/{$user}',['as' =>'user_updates', 'uses'=> 'UpdateController@user_updates'] );
 
 //$router->bind('people', function($id)

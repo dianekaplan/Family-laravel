@@ -15,13 +15,10 @@ use App\Http\Controllers\Controller;
 class UserController extends Controller
 {
 
-
-
     public function __construct()
     {
         $this->middleware('auth');
     }
-
 
     public function showProfile(Request $request, $id)
     {
@@ -56,11 +53,7 @@ class UserController extends Controller
      */
     public function store(SaveUserRequest $request)
     {
-
         User::create($request->all());
-        //@TODO: somewhere I'll want to hash or bcrypt the password they're giving me and save THAT instead
-        //not sure where that goes
-
         return redirect('users');
     }
 
@@ -97,7 +90,6 @@ class UserController extends Controller
     public function update(SaveUserRequest $request, User $user)
     {
         $user->update($request->all());
-
         return redirect('users');
     }
 
