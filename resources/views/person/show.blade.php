@@ -91,7 +91,7 @@ Update info for this person
             {!!  $person->notes3 !!} <br/>
 
 
-            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'person', 'id' => $person->id, 'name'=>$person->first])<br/>
+            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'people', 'id' => $person->id, 'name'=>$person->first])<br/>
 
 
 

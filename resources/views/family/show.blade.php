@@ -62,13 +62,14 @@
         @if ($family->notes1) Notes 1: {{  $family->notes1 }} @endif  <br/>
         @if ($family->notes2) Notes 2: {{  $family->notes2 }} @endif  <br/>
 
-            @include ('partials._stories', ['subject' => $family])
-
-            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'family', 'id' => $family->id, 'name'=>$family->caption])<br/>
+            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'families', 'id' => $family->id, 'name'=>$family->caption])<br/>
 
             @if( $notes )
                 @include ('partials._notes', ['notes' => $notes])
             @endif
+
+            @include ('partials._stories', ['subject' => $family])
+
 
 
             {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
@@ -86,7 +87,7 @@
     <br/>
 
         </div>
-    <div style="float: left;width: 100%;">
+
 
     {{--Here's everything: {{$family}}--}}
 </div>

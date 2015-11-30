@@ -1,1 +1,1 @@
-{{ $event->user->name }} added a note {{ $event->created_at->diffForHumans() }}
+{{ $event->user->name }} added a note {{ $event->created_at->diffForHumans() }} 

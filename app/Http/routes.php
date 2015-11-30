@@ -35,13 +35,8 @@ Route::get('history', 'HomeController@history');
 Route::get('help', 'HomeController@help');
 Route::get('image/{image}', 'ImageController@show');
 Route::get('images', 'ImageController@index');
-//Route::get('image/cloudinary/{image}', 'ImageController@show_image_from_cloudinary');
-//Route::get('test2', 'HomeController@test2');
-//Route::get('test', 'ImageController@test');
 
 Route::get('stories/{story}', 'StoryController@show');
-
-//Route::get('people/kaplans', ['uses' => 'PeopleController@get_kaplans']);
 
 Route::resource('people', 'PeopleController');
 
@@ -94,8 +89,6 @@ Route::get('tags/{tags}', 'TagsController@show');
 //    return App\Person::whereId($id)->first();
 //});
 
-
-
 Route::controllers ([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
@@ -110,9 +103,9 @@ Route::controllers ([
 //Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 //Route::post('password/reset', 'Auth\PasswordController@postReset');
 //
-
 //Route::get('foo', ['middleware' => 'super', function()
 //{
 //    return 'this page may only be viewed by super users';
 //}]);
+
 

@@ -126,8 +126,34 @@ class UserMailer extends Mailer {
         return $this->sendTo($user, $subject, $view, $data);
     }
 
+    public function note_notify(User $user, User $user_who_added_note, $entity_with_new_note, $body, $redirect_url)
+    {
+        //in this one the email recipient user should always be me
+        $view = 'emails.note_notify';
+        $data = [
+            'updater'=> $user_who_added_note->name,
+            'body'=> $body,
+            'entity_with_new_note'=> $entity_with_new_note,
+            'redirect_url'=> $redirect_url,
+        ];
+        $subject= 'A note has been added';
 
+        return $this->sendTo($user, $subject, $view, $data);
+    }
 
+    public function note_thankyou(User $user_who_added_note, $entity_with_new_note, $body, $redirect_url)
+    {
+        $view = 'emails.note_thankyou';
+        $data = [
+            'updater'=> $user_who_added_note->name,
+            'body'=> $body,
+            'entity_with_new_note'=> $entity_with_new_note,
+            'redirect_url'=> $redirect_url,
+        ];
+        $subject= 'Thanks for adding your note';
+
+        return $this->sendTo($user_who_added_note, $subject, $view, $data);
+    }
 
 
 
