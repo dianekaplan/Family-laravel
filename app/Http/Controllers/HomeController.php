@@ -82,7 +82,7 @@ public function get_birthday_people()
     {
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(30) )
-            ->take(11)
+            ->take(5)
             ->get();
 
         return $new_pictures;
@@ -116,7 +116,11 @@ public function get_person_from_user(User $user)
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
 
-        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures'));
+        $activity = $user->activity()->with(['user', 'subject'])->latest()
+        ->Where('created_at', '>', Carbon::now()->subDays(30) )
+        ->take(10)->get();
+
+        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity'));
     }
 
     public function account()

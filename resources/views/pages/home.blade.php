@@ -26,16 +26,18 @@
       <a href="/activity"> My additions to the family tree</a> <br/>
         </div>
 
-        <div style="float: left; width: 33%;" id="family_section">
 
-            {{--{{$birthday_people}}--}}
+        <div style="float: left; width: 30%;" id="family_section">
+
+            {{--32% is where nov birthdays don't wrap--}}
 
             @if (count($birthday_people))
 <b>Birthdays this month:</b>
                 @foreach ($birthday_people as $birthday_person)
                     <li>
-                        @include ('person.partials._person_link', ['person' => $birthday_person, 'show_flag'=>'N', 'show_book'=>'N']):
+                        @include ('person.partials._person_link', ['person' => $birthday_person, 'show_flag'=>'N', 'show_book'=>'N'])
                         {{ date('M d, Y', strtotime($birthday_person->birthdate)) }}
+                        {{--{{ date('m/j/Y', strtotime($birthday_person->birthdate)) }}--}}
                     </li>
                 @endforeach
             @endif
@@ -43,11 +45,10 @@
 
 </div>
 
-    <div style="float: left; width: 38%;" id="family_section">
-
+    <div style="float: left; width: 41%;" id="family_section">
 
         @unless ($new_pictures->isEmpty())
-            Recent pics added:
+            Recent pics:
             @foreach($new_pictures as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
@@ -55,11 +56,16 @@
 
     </div>
 
-    <div style="float: left; width: 100%;">
+    <div style="float: left; width: 41%;" id="family_section">
 
+        Recent updates:
+        <ul class="list-group">
+            @include ('activity.partials._list', [ 'hide_types' => [] ])
+        </ul>
 
 
     </div>
+
 
 </div>
 @stop
