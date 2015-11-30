@@ -7,7 +7,7 @@
     <div class="bottom">
         
         <div style="float: left; width: 100%;" id="family_section">
-            <b>Notes added:</b> <br/>
+            <b>Notes/memories shared:</b> <br/>
             @foreach($notes_added as $note)
 
                 {{--might be nice to do person link and family link partials, but will have same problem as on person show with notes--}}
@@ -23,9 +23,9 @@
         </div>
 
         <div style="float: left; width: 100%;" id="family_section">
-            <b>New activities:</b> <br/>
+            <b>Updates made:</b> <br/>
             <ul class="list-group">
-                @include ('activity.partials._list')
+                @include ('activity.partials._list', ['hide'=>'notes'])
             </ul>
         </div>
 
@@ -33,7 +33,7 @@
 
         <div style="float: left; width: 100%;" id="family_section">
 
-            <b>Old-style updates given:</b> <br/>
+            <b>Updates made on old site:</b> <br/>
 
             @foreach($updates_suggested as $update)
 

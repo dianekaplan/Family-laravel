@@ -9,11 +9,12 @@
 
     <div class=container">
    <ul class="list-group">
-       @include ('activity.partials._list')
+       @include ('activity.partials._list', ['hide'=>'none'])
+
+
    </ul>
 
         </div>
 
-        @section('footer')
-            Footer info
+
 @stop
