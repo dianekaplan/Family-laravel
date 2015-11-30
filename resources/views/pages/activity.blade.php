@@ -25,7 +25,7 @@
         <div style="float: left; width: 100%;" id="family_section">
             <b>Updates made:</b> <br/>
             <ul class="list-group">
-                @include ('activity.partials._list', ['hide'=>'notes'])
+                @include ('activity.partials._list', [ 'hide_types' => ['App\Note'] ])
             </ul>
         </div>
 
