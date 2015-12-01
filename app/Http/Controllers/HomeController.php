@@ -82,25 +82,12 @@ public function get_birthday_people()
     {
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(30) )
-            ->take(5)
-            ->get();
+            ->SimplePaginate(5);
+//            ->take(5)
+//            ->get();
 
         return $new_pictures;
     }
-//
-//    public function test2()
-//    {
-//        $images = Image::orderBy('year', 'asc')->get();
-//
-//        $people = Person::ShowOnLandingPage()
-//            ->displayable()
-//            ->orderBy('last', 'asc', 'first', 'asc')
-//            ->get();
-//
-//        return view ('pages/test2',  compact('images', 'people'));
-//
-//
-//    }
 
 public function get_person_from_user(User $user)
 {
@@ -118,7 +105,10 @@ public function get_person_from_user(User $user)
 
         $activity = $user->activity()->with(['user', 'subject'])->latest()
         ->Where('created_at', '>', Carbon::now()->subDays(30) )
-        ->take(10)->get();
+            ->SimplePaginate(10);
+//        ->take(10)->get();
+
+
 
         return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity'));
     }
@@ -173,7 +163,12 @@ public function get_person_from_user(User $user)
 
         $notes_added = HomeController::get_notes_added_by_person($person);
         $updates_suggested = HomeController::get_updates_from_user($user);
-        $activity = $user->activity()->with(['user', 'subject'])->latest()->get();
+//        $activity = $user->activity()->with(['user', 'subject'])->latest()->get();
+//        $activity = $user->activity()->with(['user', 'subject'])->SimplePaginate(10);
+
+        $activity = $user->activity()->with(['user', 'subject'])->latest()
+            ->Where('created_at', '>', Carbon::now()->subDays(30) )
+            ->SimplePaginate(10);
 
         return view ('pages.activity', compact('user', 'notes_added', 'updates_suggested', 'activity'));
     }

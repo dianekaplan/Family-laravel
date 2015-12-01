@@ -20,7 +20,9 @@ class ActivitiesController extends Controller
 
     public function index()
     {
-        $activity =  Activity::orderBy('created_at', 'desc')->with(['user', 'subject'])->get();
+//        $activity =  Activity::orderBy('created_at', 'desc')->with(['user', 'subject'])->get();
+        $activity =  Activity::orderBy('created_at', 'desc')->with(['user', 'subject'])->Paginate(15);
+
         return view ('activity.show', compact('activity'));
     }
 }

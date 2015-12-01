@@ -53,6 +53,7 @@
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
         @endunless
+            {!! $new_pictures->render() !!}
 
     </div>
 

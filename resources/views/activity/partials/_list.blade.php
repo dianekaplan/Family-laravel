@@ -5,7 +5,7 @@
         </li>
     @endunless
 @endforeach
-
+{!! $activity->render() !!}
 
 
 
