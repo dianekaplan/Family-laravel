@@ -48,7 +48,7 @@
     <div style="float: left; width: 41%;" id="family_section">
 
         @unless ($new_pictures->isEmpty())
-            Recent pics:
+            Recent pics added:
             @foreach($new_pictures as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
@@ -59,7 +59,7 @@
 
     <div style="float: left; width: 41%;" id="family_section">
 
-        Recent updates:
+        Recent updates made:
         <ul class="list-group">
             @include ('activity.partials._list', [ 'hide_types' => [] ])
         </ul>

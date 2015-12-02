@@ -103,30 +103,31 @@ public function get_person_from_user(User $user)
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
 
-        $activity = $user->activity()->with(['user', 'subject'])->latest()
-        ->Where('created_at', '>', Carbon::now()->subDays(30) )
-            ->SimplePaginate(10);
-//        ->take(10)->get();
 
+        $activity =  Activity::orderBy('created_at', 'desc')->with(['user', 'subject'])
+            ->Where('created_at', '>', Carbon::now()->subDays(30) )
+            ->SimplePaginate(10);
 
 
         return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity'));
     }
 
+
     public function account()
     {
         $user =  \Auth::user();
 
-//        $person = Person::all()
-//            ->Where('id', $user->person_id)
-//            ->first();
-////
-//        $notes_added = HomeController::get_notes_added_by_person($person);
-//        $updates_suggested = HomeController::get_updates_from_user($user);
-//
-        return view ('pages.account', compact('user'));
-//        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested'));
+        $person = Person::all()
+            ->Where('id', $user->person_id)
+            ->first();
+
+        $notes_added = HomeController::get_notes_added_by_person($person);
+        $updates_suggested = HomeController::get_updates_from_user($user);
+        $activity = $user->activity()->with(['user', 'subject'])->SimplePaginate(10);
+
+        return view ('pages.account', compact('user', 'notes_added', 'updates_suggested', 'activity', 'person'));
     }
+
 
     public function help()
     {
