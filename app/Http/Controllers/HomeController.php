@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Collection;
 use App\Person;
 use App\Image;
 use App\Update;
@@ -62,28 +63,22 @@ class HomeController extends Controller {
         return $notes;
     }
 
-public function get_birthday_people()
-{
-    $user =  \Auth::user();
+    public function get_birthday_people()
+    {
+        $user =  \Auth::user();
 
-//    if($user->keem_access) {
-//        $birthday_keems = Person::birthdays('created_at')->displayable()->keems()->get();
-//    }
-// else{$birthday_keems=NULL;}
-    $birthday_keems = Person::birthdays()->displayable()->keems()->get();
-    $birthday_husbands = Person::birthdays()->displayable()->husbands()->get();
-    $birthday_kemlers = Person::birthdays()->displayable()->kemlers()->get();
-    $birthday_kaplans = Person::birthdays()->displayable()->kaplans()->get();
+        $birthday_people = new Collection;
 
-    $birthday_people  = $birthday_keems
-        ->merge($birthday_husbands)
-        ->merge($birthday_kemlers)
-        ->merge($birthday_kaplans);
+        if($user->keem_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->keems()->get());}
+        if($user->husband_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->husbands()->get());}
+        if($user->kemler_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->kemlers()->get());}
+        if($user->kaplan_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->kaplans()->get());}
 
-    $birthday_people = $birthday_people->sortBy('birthdate');
+        $birthday_people = $birthday_people->sortBy('birthdate');
 
-    return $birthday_people;
-}
+        return $birthday_people;
+    }
+
 
 
     public function get_updates_from_user (User $user)

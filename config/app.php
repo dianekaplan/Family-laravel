@@ -139,6 +139,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
+        Illuminate\Support\Collection::class,
        // Bestmomo\Scafold\ScafoldServiceProvider::class,
 
         /*
