@@ -30,7 +30,7 @@ Route::get('branches', 'HomeController@branches');
 
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 Route::get('account',  'HomeController@account');
-Route::get('activity',  'HomeController@activity');
+//Route::get('activity',  'HomeController@activity');
 Route::get('history', 'HomeController@history');
 Route::get('help', 'HomeController@help');
 Route::get('image/{image}', 'ImageController@show');

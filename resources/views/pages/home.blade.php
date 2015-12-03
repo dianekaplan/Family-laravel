@@ -23,7 +23,7 @@
 
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
         <a href="/outline">Chronological Outline</a><br/><br/>
-      <a href="/activity"> My additions to the family tree</a> <br/>
+      <a href="/account"> My additions to the family tree</a> <br/>
         </div>
 
 
