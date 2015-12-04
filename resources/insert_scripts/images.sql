@@ -32,7 +32,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (516, 'jack_nitkin.jpg', 'Mjack_nitkin.jpg', 'Tjack_nitkin.jpg', NULL, 172, 1, NULL, 0, '2005-08-29', now());
 
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (517, 'sonny_howard.jpg', NULL, 'Tsonny_howard.jpg', NULL, 0, 0, NULL, 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (518, 'sonny.jpg', 'Msonny.jpg', 'Tsonny.jpg', NULL, 171, 1, NULL, 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (518, 'sonny.jpg', 'Msonny.jpg', 'Tsonny.jpg', NULL, 171, 1, '1940ish?', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (519, 'dolphs.jpg', 'Mdolphs.jpg', 'Tdolphs.jpg', NULL, 0, 1, '2007', 8, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (520, 'elaine2007.JPG', 'Melaine2007.JPG', 'Telaine2007.JPG', NULL, 37, 1, '2007', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (521, 'jim2007.JPG', NULL, 'Tjim2007.JPG', NULL, 38, 0, '2007', 0, '2005-08-29', now());
@@ -141,7 +141,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (72, '1962grandma.jpg', 'M1962grandma.jpg', 'T1962grandma.jpg', 'Kens graduation', 27, 1, '1962', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (73, '1984_andy.jpg', 'M1984_andy.jpg', 'T1984_andy.jpg', NULL, 39, 1, '1984', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (74, '1984_Laurie.jpg', NULL, 'T1984_Laurie.jpg', NULL, 40, 0, '1984', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (75, '1957elaine&grandma&dad.jpg', 'M1957elaine&grandma&dad.jpg', 'T1957elaine&grandma&dad.jpg', NULL, 0, 1, '1957', 7, '2005-08-29', now());
+
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (76, '1958dad.jpg', NULL, 'T1958dad.jpg', NULL, 36, 0, '1958', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (77, '1960karen+michael+andrew.jpg', NULL, 'T1960karen+michael+andrew.jpg', NULL, 0, 0, '1960', 0, '2005-08-29', now());
 
@@ -241,7 +241,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (212, 'Tommy.jpg', 'Mtommy.jpg', 'Ttommy.jpg', NULL, 104, 0, '2003?', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (213, 'mom check year 1.jpg', NULL, 'Tmom check year 1.jpg', NULL, 81, 0, '1950?', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (214, 'mom check year 2.jpg', NULL, 'Tmom check year 2.jpg', NULL, 81, 0, '1953?', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (216, 'ward I think.jpg', 'Mward I think.jpg', 'Tward I think.jpg', NULL, 78, 1, NULL, 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (216, 'ward_I_think.jpg', 'Mward_I_think.jpg', 'Tward I think.jpg', NULL, 78, 1, NULL, 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (217, '1921 grandpa.jpg', NULL, 'T1921 grandpa.jpg', NULL, 75, 0, '1921', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (218, '1979 or so Diane.jpg', NULL, 'T1979 or so Diane.jpg', NULL, 86, 0, '1978', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (219, 'grandpa and war buddies.jpg', NULL, 'Tgrandpa and war buddies.jpg', NULL, 75, 0, '1940s', 0, '2005-08-29', now());
@@ -325,12 +325,12 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (297, '1934 stanley.jpg', NULL, 'T1934 stanley.jpg', NULL, 23, 0, '1934', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (298, '1935 norman washington trip.jpg', NULL, 'T1935 norman washington trip.jpg', 'Washington trip', 24, 0, '1935', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (299, '1939 eleanor.jpg', NULL, 'T1939 eleanor.jpg', NULL, 114, 0, '1939', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (300, '1945 bessie.jpg', 'M1945 bessie.jpg', 'T1945 bessie.jpg', NULL, 15, 1, '1945', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (300, '1945_bessie.jpg', 'M1945_bessie.jpg', 'T1945 bessie.jpg', NULL, 15, 1, '1945', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (301, '1945 louis.jpg', 'M1945 louis.jpg', 'T1945 louis.jpg', NULL, 18, 1, '1945', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (302, '1946 jackie.jpg', NULL, 'T1946  jackie.jpg', NULL, 172, 0, '1946', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (302, '1946_jackie.jpg', NULL, 'T1946_jackie.jpg', NULL, 172, NULL, '1946', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (303, '1946 etta.jpg', 'M1946 etta.jpg', 'T1946 etta.jpg', NULL, 14, 1, '1946', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (304, '1946 judy.jpg', NULL, 'T1946 judy.jpg', NULL, 173, 0, '1946', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (305, '1946 ruthie.jpg', 'M1946 ruthie.jpg', 'T1946 ruthie.jpg', NULL, 170, 1, '1946', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (305, '1946_ruthie.jpg', 'M1946_ruthie.jpg', 'T1946_ruthie.jpg', NULL, 170, 1, '1946', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (306, '1947 stanley.jpg', NULL, 'T1947 stanley.jpg', NULL, 23, 0, '1947', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (307, 'barnett.jpg', NULL, 'Tbarnett.jpg', NULL, 11, 0, NULL, 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (308, 'etta.jpg', NULL, 'Tetta.jpg', NULL, 14, 0, NULL, 0, '2005-08-29', now());
@@ -717,7 +717,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (756, 'Teleia&Brody Farrell.jpg', ' ', 'TTeleia&Brody Farrell.jpg', ' ', 0, 0, NULL, 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (757, 'Dora Fox.jpg', 'MDora Fox.jpg', 'TDora Fox.jpg', ' ', 333, 1, NULL, 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (758, 'Sam Fox.jpg', 'MSam Fox.jpg', 'TSam Fox.jpg', ' ', 710, 1, NULL, 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (759, 'Nathans family.JPG', ' ', 'TNathans family.JPG', ' ', 0, 0, '1900s', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (759, 'Nathans_family.JPG', NULL, 'TNathans_family.JPG', ' ', 0, 0, '1900s', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (760, 'Nathans family.JPG', 'MSam.jpg', 'TSam.jpg', ' ', 321, 1, '1900s', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (762, 'Nathans family.JPG', 'MToly.jpg', 'TToly.jpg', ' ', 322, 1, '1900s', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (763, '1900_Nathan.jpg', 'M1900_Nathan.jpg', 'T1900_Nathan.jpg', ' ', 312, 1, '1900', 0, '2005-08-29', now());
@@ -730,7 +730,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (770, 'Bethcape2010.jpg', ' ', 'TBethcape2010.jpg', ' ', 106, 0, '2010', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (771, 'elaine smiling march 2010.jpg', ' ', 'Telaine smiling march 2010.jpg', 'Elaine, toasting!', 37, 0, '2010', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (772, 'Janet, Tom, Pat, John, Teresa.jpg', 'MTeresa.jpg', 'TTeresa.jpg', 'Teresa', 808, 1, '2010', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (773, 'Janet, Tom, Pat, John, Teresa.jpg', ' ', 'TJanet, Tom, Pat, John, Teresa.jpg', 'Teresa, Pat, John, Tom, Janet', 0, 0, '2010', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (773, 'Janet_Tom_Pat_John_Teresa.jpg', NULL, 'TJanet_Tom_Pat_John_Teresa.jpg', 'Teresa, Pat, John, Tom, Janet', 0, 0, '2010', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (774, 'Janet, Tom, Pat, John, Teresa.jpg', 'MTom.jpg ', 'TTom.jpg', 'Tom Dwyer', 134, 1, '2010', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (775, 'Janet, Tom, Pat, John, Teresa.jpg', 'MJanet.jpg', 'TJanet.jpg', 'Janet Dwyer', 64, 1, '2010', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (776, 'Janet, Tom, Pat, John, Teresa.jpg', 'MPatty.jpg', 'TPatty.jpg', 'Patty George', 66, 1, '2010', 0, '2005-08-29', now());
@@ -767,7 +767,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 
 
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (813, 'Jessica2009.jpg', 'MJessica2009.jpg', 'TJessica2009.jpg', ' ', 855, 1, '2009', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (815, 'AnnieKaplan.jpg', ' MAnnieKaplan.jpg', 'TAnnieKaplan.jpg', 'Annie Kaplan ', 28, 1, ' ', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (815, 'AnnieKaplan.jpg', 'MAnnieKaplan.jpg', 'TAnnieKaplan.jpg', 'Annie Kaplan ', 28, 1, ' ', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (6, '1984xmaskaplans.jpg', 'M1984xmaskaplans.jpg', 'T1984xmaskaplans.jpg', 'Christmas', 0, 1, '1984', 17, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (8, '1988kaplansquebec.jpg', NULL, 'T1988kaplansquebec.jpg', 'Quebec City', 0, 0, '1988', 17, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (11, '1984 xmas diane and dad.jpg', NULL, 'T1984 xmas diane and dad.jpg', 'Christmas', 0, 0, '1984', 0, '2005-08-29', now());
@@ -789,11 +789,11 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (822, 'Danielle___Mike.jpg', NULL, NULL, 1, '2015', 264, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (576, 'grandma_mom_robby_grandpa.jpg', NULL, 'Tgrandma_mom_robby_grandpa.jpg', NULL, 0, 0, '1953 or so', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (78, '1962dad_at_compound.jpg', NULL, 'T1962dad@compound.jpg', NULL, 36, 0, '1962', 0, '2005-08-29', now());
-
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (75, '1957elaine&grandma&dad.jpg', 'M1957elaine&grandma&dad.jpg', 'T1957elaine&grandma&dad.jpg', NULL, 0, 1, '1957', 7, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (823, 'violet_calm.jpg', NULL, NULL, NULL, 859, 0, '2014', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (824, 'violet_dress.jpg', NULL, NULL, NULL, 859, 1, '2015', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (825, 'mom_paris_2014.jpg', NULL, NULL, NULL, 81, 0, '2014', 0, now(), now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (826, 'Larry_Jess_2010_or_so.jpg', NULL, NULL, NULL, NULL, 1, '2010', 261, now(), now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (826, 'Larry_Jess_2010_or_so.jpg', NULL, NULL, NULL, NULL, 0, '2010', 261, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (827, 'Izzy_child.jpg', NULL, NULL, NULL, 146, 0, '1910s', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (828, 'Izzy_highschool.jpg', NULL, NULL, NULL, 146, 0, '1920s', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (829, 'violet_Stella.jpg', NULL, NULL, 'Violet & Stella', NULL, 0, '2015', 0, now(), now());
@@ -801,28 +801,11 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (831, 'Larry_Violet_smiles.JPG', NULL, NULL, 'Big smiles', NULL, 0, '2015', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (832, 'dad_gal_neurofeedback_2014', NULL, NULL, 'Neurofeedback practice!', NULL, 0, '2014', 0, now(), now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (811, 'Larry_Jess_wedding.jpg', NULL, NULL, 'Wedding day', 0, 0, '2011', 261, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (809, 'Larry_Jess2011.jpg', NULL, NULL, 'Honeymoon!', 0, 1, '2011', 261, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (809, 'Larry_Jess2011.jpg', NULL, NULL, 'Honeymoon!', 0, 0, '2011', 261, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (812, 'jess_diane2011.jpg', NULL, NULL, 'Jess & Diane', 0, 0, '2011', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (381, 'izzy_mom_sarah_slide.jpg', NULL, NULL, 'Izzy, Susie,  & Sarah', 0, 0, '1950 or so', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (383, '1953ish_grandma_mom_robby_sarah.jpg', NULL, NULL, NULL, 0, 0, '1953 or so', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (352, '1959_patty_robby_johnny_mom.jpg', NULL, NULL, 'Patty, Robby, Johnny, Susie', 0, 0, '1959', 0, '2005-08-29', now());
-
-
-deleted, and need to delete rows in script for image_person:
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (412, '1979ish robby + diane.jpg', NULL, 'T1979ish robby + diane.jpg', 'Robby & Diane', 0, 0, '1979', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (126, '2005_diane_+_ken.jpg', NULL, 'T2005_diane_+_ken.jpg', 'Diane & dad', 0, 0, '2005, march', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (784, 'Larry, dad, me 2010.jpg', ' ', 'TLarry, dad, me 2010.jpg', 'Larry, Ken, Diane', 0, 0, '2010', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (400, '1984ish mom + mystery cousin.jpg', NULL, 'T1984ish mom + mystery cousin.jpg', 'Susie & Patty', 0, 0, '1948 or so', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (177, '1950s_mom_&_robby.jpg', NULL, 'T1950s_mom_&_robby.jpg', 'Susie & Robby', 0, 0, '1954 or so', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (180, '1960_mom_&_debbie.jpg', NULL, 'T1960_mom_&_debbie.jpg', 'Susie & Debbie', 0, 0, '1960', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (563, 'Mom&Mikechristmas.jpg', NULL, 'TMom&Mikechristmas.jpg', NULL, 0, 0, '2009', 87, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (56, '1940 louie+dad.jpg', NULL, 'T1940_louie_+dad.jpg', 'Louie + dad', 0, 0, '1940', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (65, '1948dad+eleanor.jpg', NULL, 'T1948dad+eleanor.jpg', 'Eleanor + Kenny!', 0, 0, '1948', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (66, '1950s_evelyn+dad.jpg', NULL, 'T1950s_evelyn+dad.jpg', 'Evenlyn + Ken', 0, 0, '1950s', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (80, '1966dad+elaine in switzerland.jpg', NULL, 'T1966dad+elaine in switzerland.jpg', 'Ken + Elaine in switzerland', 0, 0, '1966', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (103, '1950dad&beth&eleanor&barry&robert&elaine.jpg', NULL, 'T1950dad&beth&eleanor&barry&robert&elaine.jpg', NULL, 0, 0, '1950', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (365, '1947 louis + dad.jpg', NULL, 'T1947 louis + dad.jpg', 'Louis & Kenny', 0, 0, '1947', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (320, '1945 larry.jpg', 'M1945 larry.jpg', 'T1945 larry.jpg', NULL, 30, 1, '1945', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (833, 'mom2012Napa.jpg', NULL, 81, 0, '2012', 0, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (834, 'gal_stadium_2014.jpg', NULL, 86, 0, '2014', 0, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (835, '2011_mom_mike.JPG', NULL, NULL, 1, '2011', 87, now(), now());
@@ -833,8 +816,7 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (840, 'Deb_violet_2015.jpg', NULL, NULL, 0, '2015', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (841, 'gal_tom_terry_2013.jpg', NULL, NULL, 0, '2013', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (842, 'husbands_2014_xmas.jpg', NULL, NULL, 1, '2014', 24, now(), now());
-INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (843, '
-Rob_Tom_2015.jpg', 'Enjoying the great outdoors!', NULL, NULL, '2015', NULL, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (843, 'Rob_Tom_2015.jpg', 'Enjoying the great outdoors!', NULL, NULL, '2015', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (844, 'Tom_grad_2015.jpg', NULL, NULL, 1, '2014', 24, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (845, 'Tom_and_bear.jpg', NULL, 104, 1, '2015', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (846, 'joey_graduation_2015.jpg', 'Joey graduates!', NULL, NULL, '2015', NULL, now(), now());
@@ -852,19 +834,32 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (858, 'Jess_violet_restaurant.jpg', NULL, NULL, NULL, '2015', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (859, 'kemler_kids.jpg', NULL, NULL, NULL, '2014', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (860, 'diane_elaine_2013.jpg', NULL, NULL, NULL, '2013', NULL, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (861, 'nitkin_family_2015.jpg', NULL, NULL, 1, '2015', 117, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (862, 'sonny_nitkin_military.jpg', NULL, 171, NULL, '1950s?', NULL, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (863, 'Michael_2010.jpg', NULL, 549, 1, '2010', NULL, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (864, 'Nolan_family_2015.jpg', NULL, NULL, 1, '2015', 164, now(), now());
 
 
-
-
-delete from images where id in (56, 65, 66, 80, 103, 365);
+delete from images where id in (56, 65, 66, 80, 103, 365, 75);
 delete from image_person where image_id in (56, 65, 66, 80, 103, 365);
 
 
 
 update images set big_name= replace( big_name, ' ', '_');
+update images set std_name= replace( std_name, ' ', '_');
+update images set little_name= replace( little_name, ' ', '_');
+
+
 update images set big_name= replace( big_name, '_&_', '_') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
 update images set big_name= replace( big_name, '_+_', '_') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
 update images set big_name= replace( big_name, ' ,', '_') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
+update images set big_name= replace( big_name, ',', '') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
 update images set big_name= replace( big_name, '&', '_') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
 update images set big_name= replace( big_name, '+', '_') where id in (106, 801, 64, 320, 312, 329, 235, 71, 102, 227, 157, 229, 230, 75, 23, 60, 231, 92, 93, 225, 94, 95, 98, 17, 77, 67, 99, 20, 68, 161, 454, 24, 165, 286, 748, 498, 500, 795, 774, 773, 772, 808, 767, 749, 676, 766, 776, 777, 791, 775, 794, 284, 142, 742, 744, 754, 755, 756);
+
+update images set little_name = NULL where id not in (759,760,762, 733, 734, 735, 736, 737, 687, 688, 705);
+
+
+
+
 

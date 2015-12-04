@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/faces/Thumbs.db" afterPath="$PROJECT_DIR$/public/faces/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/image/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/image/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\Diane\Documents\GitHub\Homestead\Family-laravel\resources\insert_scripts\people_populate - setting ID.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Diane\Documents\GitHub\Homestead\Family-laravel\resources\insert_scripts\people_populate_small.sql" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/families.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/families.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/image_person.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/image_person.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/images.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/images.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/notes.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/notes.sql" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +54,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11805555">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.265625">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -598,7 +601,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -878,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11805555">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.265625">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
