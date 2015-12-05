@@ -3,8 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+use App\MyBaseModel;
 
-class Family extends Model
+class Family extends MyBaseModel
 {
 
     use RecordsActivity;
@@ -33,7 +35,7 @@ class Family extends Model
 
     public function setMarriage_dateAttribute($marriage_date)
     {
-        $this->attributes['marriage_date'] = trim($marriage_date) !== '' ? $marriage_date : null;
+        $this->attributes['marriage_date'] = $this->nullIfBlank($marriage_date);
     }
 
 

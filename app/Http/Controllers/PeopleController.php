@@ -126,7 +126,9 @@ class PeopleController extends Controller
 
         flash()->success('Your edit has been saved');
 
-        return redirect('people');
+//        return redirect('people');
+//        return redirect()->back();
+        return redirect()->route('people.show', [$updated_person]);
     }
 
 

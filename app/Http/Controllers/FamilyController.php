@@ -157,7 +157,11 @@ class FamilyController extends Controller
 
         flash()->success('Your edit has been saved');
 
-        return redirect('families');
+        //        return redirect('people');
+//        return redirect()->back();
+        return redirect()->route('families.show', [$family]);
+
+//        return redirect('families');
     }
 
     /**

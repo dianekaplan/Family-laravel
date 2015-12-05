@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\MyBaseModel;
 
-class Person extends Model
+class Person extends MyBaseModel
 {
 
     use RecordsActivity;
@@ -36,9 +37,14 @@ class Person extends Model
 
     protected $dates = ['birthdate', 'deathdate'];
 
+//    public function setBirthdateAttribute($birthdate)
+//    {
+//        $this->attributes['birthdate'] = trim($birthdate) !== '' ? $birthdate : null;
+//    }
+
     public function setBirthdateAttribute($birthdate)
     {
-        $this->attributes['birthdate'] = trim($birthdate) !== '' ? $birthdate : null;
+        $this->attributes['birthdate'] = $this->nullIfBlank($birthdate);
     }
 
     public function scopeDisplayable($query)
