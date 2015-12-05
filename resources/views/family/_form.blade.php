@@ -15,10 +15,15 @@
     {!! Form::text('father_id', null, ['class' => 'form-control']) !!}
 </div>
 
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('marriage_date','Date of marriage: (optional)') !!}--}}
+    {{--{!! Form::input('date', 'marriage_date', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
+
 <div class="form-group">
-    {!! Form::label('marriage_date','Date of marriage: (optional)') !!}
-    {!! Form::input('date', 'marriage_date', null, ['class' => 'form-control']) !!}
-</div>
+    {!! Form::label('marriage_date','Date of marriage, in format YYYY-MM-DD: (optional)') !!}
+    {!! Form::text( 'marriage_date', null, ['class' => 'form-control']) !!}
+    </div>
 
 <div class="form-group">
     {!! Form::label('notes1','Notes field 1: (optional)') !!}

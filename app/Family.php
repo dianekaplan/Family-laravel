@@ -29,7 +29,13 @@ class Family extends Model
         'flag2',
     ];
 
-    protected $dates = ['birthdate'];
+    protected $dates = ['marriage_date'];
+
+    public function setMarriage_dateAttribute($marriage_date)
+    {
+        $this->attributes['marriage_date'] = trim($marriage_date) !== '' ? $marriage_date : null;
+    }
+
 
     public function scopeKaplans($query)
     {

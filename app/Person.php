@@ -36,6 +36,11 @@ class Person extends Model
 
     protected $dates = ['birthdate', 'deathdate'];
 
+    public function setBirthdateAttribute($birthdate)
+    {
+        $this->attributes['birthdate'] = trim($birthdate) !== '' ? $birthdate : null;
+    }
+
     public function scopeDisplayable($query)
     {
         $query->where('hide_bool', '=', false);
