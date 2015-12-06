@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Diane
+ * Date: 12/6/2015
+ * Time: 8:40 AM
+ */
+
+namespace App\Events;
+
+
+class UpdateLoginInfo
+{
+
+    public function handle($user) {
+            $user->last_login_at = Carbon::now();
+//            $UserTable->increment('logins');
+            $user->logins = ( $user->logins + 1);
+            $user->save();
+    }
+
+}

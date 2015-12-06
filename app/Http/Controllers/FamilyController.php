@@ -159,9 +159,8 @@ class FamilyController extends Controller
 
         //        return redirect('people');
 //        return redirect()->back();
+//                return redirect('families');
         return redirect()->route('families.show', [$family]);
-
-//        return redirect('families');
     }
 
     /**

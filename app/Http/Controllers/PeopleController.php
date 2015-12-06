@@ -118,7 +118,6 @@ class PeopleController extends Controller
 //        $this->syncTags($person, $request->input('tag_list'));
 
         $user_who_made_update =  \Auth::user();
-
         $diane_user = User::find(1);
 
         $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);

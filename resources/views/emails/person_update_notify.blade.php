@@ -23,6 +23,6 @@ Here's the updated record: <br/>
 
 
 <br/> <br/>
-Go make the update!
+Have a great day :)
 </body>
 </html>

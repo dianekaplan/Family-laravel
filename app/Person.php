@@ -37,10 +37,6 @@ class Person extends MyBaseModel
 
     protected $dates = ['birthdate', 'deathdate'];
 
-//    public function setBirthdateAttribute($birthdate)
-//    {
-//        $this->attributes['birthdate'] = trim($birthdate) !== '' ? $birthdate : null;
-//    }
 
     public function setBirthdateAttribute($birthdate)
     {

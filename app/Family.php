@@ -33,7 +33,7 @@ class Family extends MyBaseModel
 
     protected $dates = ['marriage_date'];
 
-    public function setMarriage_dateAttribute($marriage_date)
+    public function setMarriagedateAttribute($marriage_date)
     {
         $this->attributes['marriage_date'] = $this->nullIfBlank($marriage_date);
     }

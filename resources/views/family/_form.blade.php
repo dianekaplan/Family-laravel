@@ -15,11 +15,6 @@
     {!! Form::text('father_id', null, ['class' => 'form-control']) !!}
 </div>
 
-{{--<div class="form-group">--}}
-    {{--{!! Form::label('marriage_date','Date of marriage: (optional)') !!}--}}
-    {{--{!! Form::input('date', 'marriage_date', null, ['class' => 'form-control']) !!}--}}
-{{--</div>--}}
-
 <div class="form-group">
     {!! Form::label('marriage_date','Date of marriage, in format YYYY-MM-DD: (optional)') !!}
     {!! Form::text( 'marriage_date', null, ['class' => 'form-control']) !!}
@@ -34,9 +29,6 @@
     {!! Form::label('notes2','Notes field 2: (optional)') !!}
     {!! Form::text( 'notes2', null, ['class' => 'form-control']) !!}
 </div>
-
-
-{{--@include ('partials._family_bools')--}}
 
 
 <div class="form-group">

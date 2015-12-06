@@ -17,6 +17,6 @@ Here's the updated record: <br/>
 <b>Notes 2</b>: {{$notes2}}<br/>
 
 <br/> <br/>
-Go make the update!
+Have a great day :)
 </body>
 </html>
