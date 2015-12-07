@@ -39,6 +39,8 @@ class HomeController extends Controller {
             ->orderBy('last', 'asc', 'first', 'asc')
             ->get();
 
+        dd(\App::environment());
+
         return view ('pages.landing', compact('people'));
     }
 

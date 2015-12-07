@@ -15,8 +15,7 @@ class UpdateLoginInfo
 
     public function handle($user) {
 
-        if (\App::environment('local')) {
-            // The environment is local
+        if (\App::environment('production')) {
         }
             $user->last_login = Carbon::now();
             $user->logins = ( $user->logins + 1);
