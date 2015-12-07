@@ -71,7 +71,6 @@ class FamilyController extends Controller
     {
         $this->createFamily($request);
 
-//        flash()->success('You successfully added a person');
         flash()->overlay('You successfully added a family', 'Thank you');
 
         return redirect('families');
@@ -109,9 +108,7 @@ class FamilyController extends Controller
 
         $mother =  Person::latest('created_at') ->where('id', '=', $family->mother_id)->first();
         $father =  Person::latest('created_at') ->where('id', '=', $family->father_id)->first();
-
         $kids = FamilyController::get_kids_of_family($family);
-
         $notes = FamilyController::get_notes_about_family($family);
 
         $images = Image::where('family', $id)

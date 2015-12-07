@@ -35,6 +35,7 @@ trait RecordsActivity
             'subject_type' => get_class($this),
             'user_id' => \Auth::id(),  //or could use $this->user_id
             'name' => $this->getActivityName($this, $event),
+//            'summary'=>$request->summary,
         ]);
     }
 

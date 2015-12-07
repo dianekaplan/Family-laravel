@@ -7,14 +7,14 @@
  */
 
 namespace App\Events;
+use Carbon\Carbon;
 
 
 class UpdateLoginInfo
 {
 
     public function handle($user) {
-            $user->last_login_at = Carbon::now();
-//            $UserTable->increment('logins');
+            $user->last_login = Carbon::now();
             $user->logins = ( $user->logins + 1);
             $user->save();
     }

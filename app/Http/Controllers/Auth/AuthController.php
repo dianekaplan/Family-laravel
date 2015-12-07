@@ -43,15 +43,6 @@ class AuthController extends Controller
     }
 
 
-//    //adding this to keep track of logins count and last login date
-//    public function UpdateLoginInfo ($user)
-// {
-//            $user->last_login_at = Carbon::now();
-////            $UserTable->increment('logins');
-//            $user->logins = ( $user->logins + 1);
-//            $user->save();
-//    }
-
     /**
      * Get a validator for an incoming registration request.
      *

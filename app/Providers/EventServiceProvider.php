@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use App\Events\UpdateLoginInfo;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,9 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SomeEvent' => [
             'App\Listeners\EventListener',
         ],
-//        'auth.login' => [
-//            'UpdateLoginInfo::class',
-//        ]
+        'auth.login' => [
+            'App\Events\UpdateLoginInfo',
+        ],
     ];
 
 
