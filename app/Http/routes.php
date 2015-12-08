@@ -33,6 +33,9 @@ Route::get('account',  'HomeController@account');
 //Route::get('activity',  'HomeController@activity');
 Route::get('history', 'HomeController@history');
 Route::get('help', 'HomeController@help');
+Route::get('register', 'RegistrationController@register');
+Route::post('register', 'RegistrationController@create');
+
 Route::get('image/{image}', 'ImageController@show');
 Route::get('images', 'ImageController@index');
 
@@ -45,19 +48,18 @@ Route::resource('families', 'FamilyController');
 Route::get('users/store', 'UserController@store');
 
 //Route::get('users/{user}/activity', 'ActivitiesController@show');
-Route::get('activities', 'ActivitiesController@index');
-Route::get('admin', 'HomeController@admin');
+
 
 Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');
+Route::get('activities', 'ActivitiesController@index');
+Route::get('admin', 'HomeController@admin');
 
-
-Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
+//Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
 //Route::get('updates/pending', 'UpdateController@pending');  //syntax without middleware
 
 Route::get('auth/login', 'HomeController@landing');
 Route::get('add_note/{type}/{id}/{name}', 'NotesController@add_note');
-
 Route::post('add_note/save', 'NotesController@store');
 
 
@@ -71,7 +73,6 @@ Route::post('add_note/save', 'NotesController@store');
 //    $message->to('ok4mee@hotmail.com')->subject('Welcome!');
 //    });
 //});
-
 
 
 Route::get('tags/{tags}', 'TagsController@show');

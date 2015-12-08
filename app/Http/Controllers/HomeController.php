@@ -28,7 +28,7 @@ class HomeController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'landing']);
+        $this->middleware('auth', ['except' => ['landing', 'register']]);
         $this->middleware('super', ['only' => 'admin']);
     }
 
@@ -39,8 +39,6 @@ class HomeController extends Controller {
             ->orderBy('last', 'asc', 'first', 'asc')
             ->get();
 
-//        dd(\App::environment());
-
         return view ('pages.landing', compact('people'));
     }
 
@@ -49,6 +47,7 @@ class HomeController extends Controller {
     {
         return view ('welcome');
     }
+
 
     public function branches()
     {
@@ -178,5 +177,26 @@ public function get_person_from_user(User $user)
     {
         return view ('pages.contact');
     }
+
+//    public function register()
+//    {
+//        return view ('pages.register');
+//    }
+//
+//    public function process_registration_request($request)
+//    {
+//
+//        $request_info = ($request->all());
+//
+//
+//        $user_who_made_update =  \Auth::user();
+//        $diane_user = User::find(1);
+//
+//        $this->mailer->registration_request_notify($diane_user, $request_info);
+//
+//        flash()->success('Your request has been sent, check email for response');
+//
+//        return redirect('landing');
+//    }
 
 }

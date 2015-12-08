@@ -6,6 +6,7 @@ use App\Family;
 use App\Update;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Requests\SaveFamilyRequest;
+use App\Http\Requests\RegistrationRequest;
 
 class UserMailer extends Mailer {
 
@@ -156,9 +157,6 @@ class UserMailer extends Mailer {
     }
 
 
-
-
-
     public function update_notify(User $user, Update $update, User $user_who_made_update)
     {
         //in this one the email recipient user should always be me
@@ -184,5 +182,18 @@ class UserMailer extends Mailer {
         return $this->sendTo($user, $subject, $view, $data);
     }
 
+    public function registration_request_notify (User $user,  $request)
+    {
+        //in this one the email recipient user should always be me
+        $view = 'emails.registration_request_notify';
+        $data = [
+                'name'=> $request['name'],
+                'email'=> $request['email'],
+                'related'=> $request['related'],
+        ];
+        $subject= 'There is a new account request!';
+
+        return $this->sendTo($user, $subject, $view, $data);
+    }
 }
 
