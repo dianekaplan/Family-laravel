@@ -2,7 +2,7 @@
 
         The Husband side:
         <ul><li><a href="{{ action('FamilyController@show', [172]) }}">Thomas and Elanor Husband</a> were born in <b>Scotland</b> and moved to Canada sometime before 1835.  They started their family in Canada before <b>moving to the US in the mid 1830's</b>.
-                Their oldest son <a href="{{ action('FamilyController@show', [86]) }}">Andrew married a woman named Mary</a> (born in the US, unknown origin before that), and their son
+                Their oldest son <a href="{{ action('FamilyController@show', [86]) }}">Andrew married a woman named Mary</a> (who was born in the US), and their son
                 <a href="{{ action('PeopleController@show', [74]) }}">Thomas</a> was
                 <a href="{{ action('PeopleController@show', [75]) }}">Bob</a>'s father. </li></ul>
 

@@ -37,10 +37,9 @@ The Keem/Reisdorf side:
 
             <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from <b>France</b> in <b>1833</b> when Emily Pochel was an infant. </li>
             <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country (6 generations back-
-                Stephen from <b>Luxembourg</b>, Anna Maria unknown).
-                They had a son named John Smith. </li>
+                Stephen from <b>Luxembourg</b>, Anna Maria unknown) with their son John Smith.(need to confirm that they moved too vs whether he came on his own) </li>
             <li>Connection: <a href="{{ action('FamilyController@show', [81]) }}">John & Emily </a>were married in 1852 (5 generations back).  They had a daughter named Helen Smith. </li>
-            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob and Rosa Suttell</a> (5 generations back) came to the US from <b>France</b> sometime <b>between 1824 and 1849</b>.  They had a son named Amos Suttell. </li>
+            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back) both came to the US from <b>Alsace</b>, Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824 and 1849.  They had a son named Amos Suttell. </li>
             <li>Connection: Helen Smith married Amos Suttell.  <a href="{{ action('FamilyController@show', [9]) }}">Helen and Amos Suttell</a> had a daugher named
                 <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother. </li>
 
