@@ -36,7 +36,8 @@ The Keem/Reisdorf side:
         <ul>
 
             <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from <b>France</b> in <b>1833</b> when Emily Pochel was an infant. </li>
-            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country (6 generations back- Stephen from <b>Luxembourg</b>, Anna Maria unknown).
+            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country (6 generations back-
+                Stephen from <b>Luxembourg</b>, Anna Maria unknown).
                 They had a son named John Smith. </li>
             <li>Connection: <a href="{{ action('FamilyController@show', [81]) }}">John & Emily </a>were married in 1852 (5 generations back).  They had a daughter named Helen Smith. </li>
             <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob and Rosa Suttell</a> (5 generations back) came to the US from <b>France</b> sometime <b>between 1824 and 1849</b>.  They had a son named Amos Suttell. </li>
