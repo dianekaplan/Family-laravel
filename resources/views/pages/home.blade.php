@@ -58,7 +58,7 @@
     </div>
 
     <div style="float: left; width: 41%;" id="family_section">
-        
+
         Recent updates made:
         <ul class="list-group">
             @include ('activity.partials._list', [ 'hide_types' => [] ])
