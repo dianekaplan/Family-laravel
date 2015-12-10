@@ -7,7 +7,7 @@
     <div class="bottom">
         <div style="float: left; width: 50%;">
             <b>Email: </b>{{$user->email}}<br/>
-            <b>Account since:</b> {{$user->created_at}}<br/>
+            <b>Account since:</b> {{ date('F d, Y', strtotime($user->created_at)) }} <br/>
             <b>Last login:</b> {{$user->last_login}}<br/>
             <b>Times logging in:</b> {{$user->logins}}<br/>
 
