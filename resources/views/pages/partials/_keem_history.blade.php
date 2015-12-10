@@ -14,8 +14,9 @@ The Keem/Reisdorf side:
                 with
                 <a href="{{ action('FamilyController@show', [80]) }}">her parents</a> in <b>1838</b> at the age of 8.
                 Around the age of 17, she married
-                <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b> and came to the states sometime <b>between 1824 and 1845</b>.
-                <img src="/flags/prussia.gif" />
+                <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b>
+                <img src="/flags/prussia.gif" /> and came to the states sometime <b>between 1824 and 1845</b>.
+
                 Mary & Peter Reisdorf (5 generations back)
                 had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine.</a>
 
@@ -39,10 +40,13 @@ The Keem/Reisdorf side:
 
         <ul>
 
-            <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from <b>France</b> in <b>1833</b> when Emily Pochel was an infant. </li>
-            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country from the area that would become <b>Luxembourg</b> (6 generations back) with their son John Smith.(need to confirm that they moved too vs whether he came on his own) </li>
+            <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from <b>France</b>
+                <img src="/flags/fr.gif" /> in <b>1833</b> when Emily Pochel was an infant. </li>
+            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country from the area that would become
+                <b>Luxembourg</b> <img src="/flags/lu.gif" /> (6 generations back) with their son John Smith.(need to confirm that they moved too vs whether he came on his own) </li>
             <li>Connection: <a href="{{ action('FamilyController@show', [81]) }}">John & Emily </a>were married in 1852 (5 generations back).  They had a daughter named Helen Smith. </li>
-            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back) both came to the US from <b>Alsace</b>, Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824 and 1849.  They had a son named Amos Suttell. </li>
+            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back) both came to the US from
+                <b>Alsace</b> <img src="/flags/alsace.gif" /> , Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824 and 1849.  They had a son named Amos Suttell. </li>
             <li>Connection: Helen Smith married Amos Suttell.  <a href="{{ action('FamilyController@show', [9]) }}">Helen and Amos Suttell</a> had a daugher named
                 <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother. </li>
 
