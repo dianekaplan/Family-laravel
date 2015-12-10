@@ -6,10 +6,11 @@
 
     <div class="bottom">
         <div style="float: left; width: 50%;">
-
+            <b>Email: </b>{{$user->email}}<br/>
             <b>Account since:</b> {{$user->created_at}}<br/>
-                <b> Email: </b>{{$user->email}}<br/>
-                    <b>Logins:</b> {{$user->logins}}<br/>
+            <b>Last login:</b> {{$user->last_login}}<br/>
+            <b>Times logging in:</b> {{$user->logins}}<br/>
+
                         {{--<h4><a href="/activity">My Activity</a></h4>--}}
         </div>
 
