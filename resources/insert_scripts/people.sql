@@ -933,13 +933,46 @@ INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq
 update people set work = 'Dominican nun on the island of Cuba- 18 until 73' where id = 55;
 update people set notes1 = NULL where id = 55;
 update people set birthplace= 'New York' where id in (240);
+update people set birthplace= 'Massachusetts' where id in (1, 2, 4, 13, 93, 176, 177, 290, 820, 821, 822, 22, 174);
+
 
 update people set flag1 = 'us' where id in (239, 244, 241, 242, 240, 51, 243, 245, 125, 25, 122, 58, 218, 216, 233, 183, 399, 400, 401, 402, 836, 421, 426, 427);
 update people set flag1 = 'us' where id in (405, 406, 407, 57, 55, 287, 52, 53, 56, 54);
 update people set flag1 = 'prussia' where id in (250, 251, 269, 268, 271, 270, 284, 283, 285, 286);
-update people set flag1 = 'de' where id in (696, 705, 697, 781, 782);
+update people set flag1 = 'de' where id in (770, 783, 768, 779, 780, 784, 790, 832, 831, 751, 739, 760, 697, 
+737, 782, 752, 738, 749, 756, 750, 545, 759, 755, 748, 766, 781, 771, 758, 769, 776, 775, 778, 777, 696, 705, 
+706, 789, 828, 827, 829, 830, 757, 177, 767, 747); 
+update people set flag1 = 'fr' where id in (272, 382, 732, 733, 381, 383, 380);
+update people set flag1 = 'gb' where id in (32, 765, 763, 578, 581, 474, 473, 477, 472, 582, 844);
+update people set flag1 = 'ie' where id in (764, 201);
+update people set flag1 = 'il' where id in (711);
+update people set flag1 = 'in' where id in (357, 358, 356);
+update people set flag1 = 'jp' where id in (364);
+update people set flag1 = 'scotland' where id in (628, 629);
+update people set flag1 = 'lt' where id in (311, 28, 11, 10, 319);
+update people set flag1 = 'lu' where id in (367, 368);
+update people set flag1 = 'alsace' where id in (852, 305, 849, 304, 850, 238, 485, 523, 496, 851, 237);
+update people set flag1 = 'au' where id in (716);
+update people set flag1 = 'br' where id in (785, 786);
+update people set flag1 = 'ca' where id in (293,563);
+update people set flag1 = 'ch' where id in (613,612, 615, 614);
 
-update people set flag2 = 'us' where id in (250, 251, 269, 268, 271, 270, 252, 50, 255, 256, 257, 258, 259, 260, 261, 262, 263, 266, 267, 814, 697);
+update people set flag2 = 'au' where id in (714);
+update people set flag2 = 'us' where id in (311, 250, 251, 269, 268, 271, 270, 252, 50, 255, 256, 257, 258, 259, 260, 261, 262, 263, 266, 267, 814, 697);
 update people set flag2 = 'cuba' where id in (55);
+update people set flag2 = 'ca' where id in (628, 629, 353, 47, 562, 561);
+update people set flag2 = 'ch' where id in (347);
+update people set flag2 = 'de' where id in (785, 786);
+update people set flag2 = 'gb' where id in (471, 467, 465, 463, 580, 462, 579, 464);
 
+update people set flag3 = 'us' where id in (628, 629);
+update people set flag3 = 'za' where id in (311);
+
+update people set hide_bool = true where id in (135, 140, 141, 142, 143, 144, 145, 154, 109, 190, 193, 131, 227, 246, 264, 518, 522, 809, 610, 617, 619);
+update people set hide_bool = true where id in (620, 621, 622, 623, 837, 640, 457, 835, 833, 765, 815, 845, 150, 151, 152, 295, 393, 394, 395, 155, 153, 223, 396, 403);
+
+update people set show_on_landing_page = false where id in (118, 132, 135, 140, 141, 142, 143, 144, 145, 154, 156, 157, 158, 159, 160, 109, 180, 190, 193);
+update people set show_on_landing_page = false where id in (194, 202, 221, 131, 7, 9, 227, 246, 264, 369, 436, 441, 447, 448, 518, 522, 530, 809, 643, 607);
+update people set show_on_landing_page = false where id in (616, 617, 619, 620, 621, 622, 623, 624, 625, 837, 640, 641, 659, 667, 679, 833, 765, 795, 808,
+800, 807, 815, 845, 150, 151, 152, 295, 393, 394, 395, 155, 153, 223, 396, 403, 419);
 

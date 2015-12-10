@@ -4,14 +4,18 @@
 The Keem/Reisdorf side:
         <ul>
             <li><a href="{{ action('FamilyController@show', [76]) }}">Martin & Catherine Keem</a> (5 generations back) were both born in
-                <b><a href="https://en.wikipedia.org/wiki/Alsace" target="_blank">Alsace</a> (Gunstett and Schaenenburg, respectively)</b>, and
+                <b><a href="https://en.wikipedia.org/wiki/Alsace" target="_blank">Alsace</a>
+                    <img src="/flags/alsace.gif" />
+                    (Gunstett and Schaenenburg, respectively)</b>, and
                 they were married and came to the US together <b>around 1830</b>. They had a son named
                 <a href="{{ action('PeopleController@show', [51]) }}">Nicholas</a>. </li>
 
-            <li>Mary Glaser came to this country from <b>Germany</b> with
+            <li>Mary Glaser came to this country from <b>Germany</b>  <img src="/flags/de.gif" />
+                with
                 <a href="{{ action('FamilyController@show', [80]) }}">her parents</a> in <b>1838</b> at the age of 8.
                 Around the age of 17, she married
                 <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b> and came to the states sometime <b>between 1824 and 1845</b>.
+                <img src="/flags/prussia.gif" />
                 Mary & Peter Reisdorf (5 generations back)
                 had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine.</a>
 

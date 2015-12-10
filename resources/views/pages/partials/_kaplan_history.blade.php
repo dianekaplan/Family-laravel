@@ -3,16 +3,17 @@
 The Kobrin side:
         <ul>
             <li>Larry's father <a href="{{ action('PeopleController@show', [29]) }}">Kal Kobrin</a> (3 generations back)
-                <b>came to the US from Lithuania</b> in <b>1896</b> at the age of 20.
-                (And several of his siblings settled in South Africa around the same time).  When he immigrated, his surname was changed from Kobrin to Kaplan. (Kalman's mother
+                <b>came to the US from Lithuania</b> <img src="/flags/lt.gif" /> in <b>1896</b> at the age of 20.
+                (And several of his siblings settled in South Africa <img src="/flags/za.gif" /> around the same time).  When he immigrated, his surname was changed from Kobrin to Kaplan. (Kalman's mother
                 <a href="{{ action('PeopleController@show', [311]) }}">Rochel</a> had come to the US in 1894, and then went to South Africa afterward and died in Johannesburg.
                </li>
         </ul>
 
 
 The Shapiro side:
-        <ul><li><a href="{{ action('FamilyController@show', [119]) }}">Toba & Max Shapiro</a> (4 generations back) moved from Russia to Johannesburg, South Africa.  Their daughter Annie was born in <b>Lithuania</b> in 1876,
-                moved with them to <b>South Africa</b>, and came to the <b>US sometime between 1876 and 1896</b>.
+        <ul><li><a href="{{ action('FamilyController@show', [119]) }}">Toba & Max Shapiro</a> (4 generations back) moved from Russia
+                <img src="/flags/ru.gif" /> to Johannesburg, South Africa.  Their daughter Annie was born in <b>Lithuania</b> <img src="/flags/lt.gif" />in 1876,
+                moved with them to <b>South Africa</b> <img src="/flags/za.gif" />, and came to the <b>US sometime between 1876 and 1896</b>.
                 <a href="{{ action('PeopleController@show', [28]) }}">Annie</a> was
                 <a href="{{ action('PeopleController@show', [30]) }}">Larry</a>'s mother. </li></ul>
 
