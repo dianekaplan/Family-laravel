@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/partials/_keem_history.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_keem_history.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/people.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/people.sql" />
     </list>
     <ignored path="Family-laravel.iws" />
@@ -55,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_MaryReisdorfObit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_MaryReisdorfObit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/story/partials/_MaryReisdorfObit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_kaplan_history.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20659722">
+              <caret line="7" column="174" selection-start-line="7" selection-start-column="174" selection-end-line="7" selection-end-column="174" />
               <folding />
             </state>
           </provider>
@@ -127,6 +137,7 @@
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/person/partials/_person_flag.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/partials/_keem_history.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" />
       </list>
     </option>
   </component>
@@ -980,7 +991,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1020,13 +1031,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/password.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/UpdateLoginInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5607639">
@@ -1405,6 +1409,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20659722">
+          <caret line="7" column="174" selection-start-line="7" selection-start-column="174" selection-end-line="7" selection-end-column="174" />
           <folding />
         </state>
       </provider>

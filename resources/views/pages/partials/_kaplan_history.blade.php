@@ -5,7 +5,7 @@ The Kobrin side:
             <li>Larry's father <a href="{{ action('PeopleController@show', [29]) }}">Kal Kobrin</a> (3 generations back)
                 <b>came to the US from Lithuania</b> in <b>1896</b> at the age of 20.
                 (And several of his siblings settled in South Africa around the same time).  When he immigrated, his surname was changed from Kobrin to Kaplan. (Kalman's mother
-                <a href="{{ action('PeopleController@show', [311]) }}">Rochel</a> had come to the US in 1894, but may have gone to South Africa afterward- need to confirm).
+                <a href="{{ action('PeopleController@show', [311]) }}">Rochel</a> had come to the US in 1894, and then went to South Africa afterward and died in Johannesburg.
                </li>
         </ul>
 
