@@ -10,6 +10,9 @@
         Add a <a href="/families/create">family</a><br/>
     </div>
 
+    <div style="float: left; width: 23%;" id="family_section">
+        Configure an <a href="/images">image</a><br/>
+    </div>
 
 
     <div class="bottom">

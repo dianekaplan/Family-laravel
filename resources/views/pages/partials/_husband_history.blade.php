@@ -13,7 +13,8 @@
 
         The Manning side:
         <ul><li>William Fitzpatrick came to the US from <b>Ireland</b> <img src="/flags/ie.gif" /> in 1847.
-                        His wife Sarah O'Brien was born in the US, her father from <b>England</b> <img src="/flags/gb.gif" /> and her mother from <b>Ireland</b><img src="/flags/ie.gif" /> .
+                        His wife Sarah O'Brien was born in the US, her father from <b>England</b> <img src="/flags/gb.gif" /> and her mother from
+                <b>Ireland </b> <img src="/flags/ie.gif" /> .
                 <a href="{{ action('FamilyController@show', [62]) }}">Together</a>, they had a daughter named Grace, and she had Bob's mother
                 <a href="{{ action('PeopleController@show', [73]) }}">Sarah Manning</a> in 1883.</li></ul>
 

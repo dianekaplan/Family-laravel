@@ -36,8 +36,12 @@ Route::get('help', 'HomeController@help');
 Route::get('register', 'RegistrationController@register');
 Route::post('register', 'RegistrationController@create');
 
+Route::resource('images', 'ImageController');
+
 Route::get('image/{image}', 'ImageController@show');
+Route::get('configure/{image}', 'ImageController@configure');
 Route::get('images', 'ImageController@index');
+Route::get('album', 'ImageController@index');
 
 Route::get('stories/{story}', 'StoryController@show');
 

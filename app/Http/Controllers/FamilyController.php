@@ -9,7 +9,7 @@ use App\Image;
 use App\Http\Requests;
 use App\Http\Requests\SaveFamilyRequest;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;  //not sure if this is being used, PeopleController doesn't have it
 use Acme\Mailers\UserMailer as Mailer;
 use App\User;
 use App\Note;

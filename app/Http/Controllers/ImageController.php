@@ -12,10 +12,12 @@ use App\Http\Controllers\Controller;
 class ImageController extends Controller
 {
 
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
 
     /**
      * Display a listing of the resource.
@@ -28,46 +30,11 @@ class ImageController extends Controller
         return view ('image/index',  compact('images'));
     }
 
-//    public function test()
-//    {
-//        $images = Image::orderBy('year', 'asc')->get();
-//        return view ('pages/test',  compact('images'));
-//    }
-
-
-//    public function cloudinary_upload_from_newribbon($little_name)
-//    {
-////        $little_name = $image->little_name;
-//////        \Cloudinary\Uploader::upload("http://newribbon.com/family/images/"($little_name));
-////        \Cloudinary\Uploader::upload("http://newribbon.com/family/images/2006gus.jpg");
-////        $last_image = Cloudder::getResult();
-//
-//        $image_name = "1900_Nathan.jpg";
-//        $cloud_name = 'hnyiprajv';
-//
-//    echo cl_image_tag($image_name, array( "alt"   => "Sample Image" , "cloud_name" => $cloud_name));
-//
-//    }
-
-//    public function clouder_upload()
-//    {
-//        $filename = test;
-//        $publicID = test;
-//        $options = test;
-//        $tags = test;
-//
-//        Cloudder::upload($filename, $publicID, $options, $tags);
-//    }
-
-    public function show_image_from_cloudinary($image_name)
+    public function album()
     {
-        $cloud_name = 'hnyiprajv';
-
-        return cl_image_tag($image_name, array("cloud_name" => $cloud_name));
-
+        $images = Image::orderBy('year', 'asc')->get();
+        return view ('image/album',  compact('images'));
     }
-
-
 
 
     /**
@@ -106,6 +73,15 @@ class ImageController extends Controller
 
 
 
+    public function configure($id)
+    {
+        $image = Image::find($id);
+
+        return view ('image/configure',  compact('image'));
+    }
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -124,10 +100,19 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Image $image, Request $request)
     {
+        $image->update($request->all());
+        $user_who_made_update =  \Auth::user();
+        $diane_user = User::find(1);
+        flash()->success('Your edit has been saved');
+
+//        return redirect('people');
+//        return redirect()->back();
+        return redirect()->route('image.configure', [$image]);
         //
     }
+
 
     /**
      * Remove the specified resource from storage.

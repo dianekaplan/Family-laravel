@@ -34,3 +34,5 @@
     {!! Form::label('kaplan_line','False:') !!}
     {!! Form::radio('kaplan_line', 'False') !!}
 </div>
+
+

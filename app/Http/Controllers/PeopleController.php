@@ -22,7 +22,7 @@ class PeopleController extends Controller
 {
 
     protected $mailer;
-    protected $updated_person;
+//    protected $updated_person;  //not sure if still using this
 //    protected $save_person_request;
 
     public function __construct(Mailer $mailer, Person $updated_person)
@@ -30,7 +30,7 @@ class PeopleController extends Controller
         $this->middleware('auth');
 
         $this->mailer= $mailer;
-        $this->updated_person= $updated_person; //not sure if I'm still using this
+//        $this->updated_person= $updated_person; //not sure if I'm still using this
     }
 
 
