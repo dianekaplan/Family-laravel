@@ -56,8 +56,7 @@
             {{--@endif--}}
         @endif
 
-        {{--Marriage Date: @if ($family->marriage_date) {{ $family->marriage_date->toDateString() }} @endif--}}
-        @if ($family->marriage_date_note){!!   $family->marriage_date_note !!} @endif  <br/>
+<br/><br/>
 
         @if ($family->notes1) Notes 1: {!! $family->notes1 !!} @endif  <br/>
         @if ($family->notes2) Notes 2: {!!   $family->notes2  !!}  @endif  <br/>
