@@ -41,7 +41,7 @@ Route::resource('images', 'ImageController');
 Route::get('image/{image}', 'ImageController@show');
 Route::get('configure/{image}', 'ImageController@configure');
 Route::get('images', 'ImageController@index');
-Route::get('album', 'ImageController@index');
+Route::get('album', 'ImageController@album');
 
 Route::get('stories/{story}', 'StoryController@show');
 
