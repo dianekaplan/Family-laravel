@@ -3,18 +3,17 @@
 @section('content')
 
     <h3 align="center">
-        Our Family Tree : Outline
+        Our Family Tree : Outline [need to build]
     </h3>
 
 
     @if (count($original_keems)&&($user->keem_access))
         <div style="float: left; width:95%;" id="family_section"><h4 align="center">The Keems- original families:</h4>
         @foreach ($original_keems as $family)
-            @include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq])<br/>
+            @include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq]) <br/>
+                <li>(Then show family's kids, and those kids' families, etc)</li>
         @endforeach
 
-            <br/>
-            Outline:
             </div>
     @endif
 
