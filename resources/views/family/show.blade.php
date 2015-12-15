@@ -82,7 +82,7 @@
         @endif
         </div>
 
-        <br/> 
+        <br/>
         {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
         <div style="float: left;width: 100%;">
         *Asterisk indicates the direct ancestors up from the four grandparents

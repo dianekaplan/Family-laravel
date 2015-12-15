@@ -21,26 +21,24 @@
 
 <h3>Need help? </h3></center>
 
-<ul>
-    <li><b>Sometimes I need to give my password and sometimes I don't- why is that? </b>  When you log in, your computer saves your
-        password for 5 days (so when you return the next day you can do directly in to your home page).
-        If you don't want the password saved, just click the "Log Out" link when you're done and it'll be cleared out.
-        Then you'll be automatically prompted for your password the next time you come to the site. <br/></li>
-
+    <ul>
     <li><b>I see an error!</b>  Please <A HREF="mailto:dianekaplan@gmail.com">let me know</A> so I can fix it- thank you! <br/></li>
 
     <li><b>I see a mistake in the info here, what do I do?</b>  I appreciate all the help I can get-
         if you find a mistake or have any information/pictures to add,  click the "Update this page" link on
-        the page, or if it's a page without this link, <a href="mailto:dianekaplan@gmail.com">let me know</a> and
+        the page, or <a href="mailto:dianekaplan@gmail.com">email me</a> and
         I'll make the update <br/></li>
 
-</ul>
+    <li><b>Sometimes I need to give my password and sometimes I don't- how come? </b>  When you log in, your computer saves your
+        password for 5 days (so when you come back you go directly to the home page). If you don't want the password saved,  click "Log Out" link when you're done-
+        that'll clear it out and you'll be prompted for your password the next time you visit. <br/></li>
 
+    </ul>
 
     <h3>What's coming next? </h3>
-    <ul><b>Some improvements on the horizon:</b>
+    <ul>
         <li>Being able to add pictures directly (instead of emailing to me) </li>
-        <li>Being able to add notes to families (not just people). </li>
+        <li>Choronological outline view (like the old family tree had) </li>
         <li>Being able to add new people/families (instead of emailing to me) </li>
 
         <li>Other ideas? <a href="mailto:dianekaplan@gmail.com">Let me know</a> what you'd like to see.

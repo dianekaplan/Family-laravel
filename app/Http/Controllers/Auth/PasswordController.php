@@ -31,11 +31,11 @@ class PasswordController extends Controller
     }
 
 //
-//    public function password()
-//    {
-//        $this->middleware('guest');
-//        return view ('auth.password');
-//    }
+    public function password()
+    {
+        $this->middleware('guest');
+        return view ('auth.password');
+    }
 
 //
 //    // Password reset link request methods
@@ -43,12 +43,12 @@ class PasswordController extends Controller
 //    {
 //
 //    }
-//
+////
 //    public function postEmail()
 //    {
 //
 //    }
-//
+////
 //    // Password reset methods
 //    public function getReset()
 //    {
