@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->integer('person_id')->unsigned();
             $table->boolean('super_admin')->default(false);
-            $table->date('last_login')->nullable();
+            $table->dateTime('last_login')->nullable();
             $table->tinyInteger('logins')->nullable();
             $table->date('last_pestered')->nullable();
             $table->boolean('active_bool')->default(true);
