@@ -7,6 +7,7 @@ use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Collection;
 
 
 class ImageController extends Controller
@@ -32,6 +33,19 @@ class ImageController extends Controller
 
     public function album()
     {
+        $user =  \Auth::user();
+
+        $images = new Collection;
+
+        if($user->keem_access) {$images = $images->merge(Image::keems()->get());}
+        if($user->husband_access) {$images = $images->merge(Image::husbands()->get());}
+        if($user->kemler_access){$images = $images->merge(Image::kemlers()->get());}
+        if($user->kaplan_access) {$images = $images->merge(Image::kaplans()->get());}
+
+        $images = $images->sortBy('year');
+//@FIXME: in progress on using bools- current issue is collection isn't deduping like birthday list does
+
+        //comment this one out when you're ready to use the bools:
         $images = Image::orderBy('year', 'asc')->get();
         return view ('image/album',  compact('images'));
     }

@@ -56,7 +56,7 @@ class Person extends MyBaseModel
 
 
 
-//    @TODO same as in families- can this be a partial?
+//    @TODO same as in families- can this be a partial or a trait?
     public function scopeKaplans($query)
     {
         $query->where('kaplan_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
