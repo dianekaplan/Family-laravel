@@ -9,6 +9,7 @@ Hello there, Diane! <br/><br/>
 {{$updater}} has suggested an update for {{$updated_person_first}} {{$updated_person_last}}: <br/>
 
 Here's the updated record: <br/>
+<b>Id</b>: {{$id}}<br/>
 <b>First</b>: {{$first}}<br/>
 <b>Middle</b>: {{$middle}}<br/>
 <b>Last</b>: {{$last}}<br/>

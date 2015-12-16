@@ -9,7 +9,8 @@ The Kemler side:
                 the back of a bakery), and Solomon came to NYC by himself to earn money to bring his family to America.
                 <a href="{{ action('PeopleController@show', [16]) }}">Ida</a>  stayed in Russia <img src="/flags/ru.gif" />
                 with at least one other child (most likely both Rose and Joseph) until Solomon could send for them.
-                Louis left England from Liverpool and came to NYC as a stowaway on a ship, and the others joined within a few years 1904 and 1908
+                Louis left England from Liverpool and came to NYC as a stowaway on a ship, and the others joined within a few years, sometime
+                between 1904 and 1908
                 (Charlie was born in Russia around 1904, and Molly was born in Massachusetts in 1908).
 
             </li>
@@ -21,5 +22,7 @@ The Kemler side:
 The Kaplan side:
         <ul><li>Bessie's parents <a href="{{ action('FamilyController@show', [3]) }}">Ida & Barnett Kaplan</a> (four generations back)
                 were  the generation that came here (from <b>Lithuania</b> <img src="/flags/lt.gif" /> .
-                They started in NYC (where Bessie was born in August of 1888), and had moved to Massachusetts by 1893 when her sister Gertrude was born.</li></ul>
+                They started in NYC (where Bessie was born in August of 1888), and had moved to Massachusetts by 1893 when her
+                sister Gertrude was born. <a href="{{ action('PeopleController@show', [15]) }}">Bessie</a> married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
+                together they had <a href="{{ action('PeopleController@show', [27]) }}">Gert</a>. </li></ul>
 

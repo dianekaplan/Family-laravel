@@ -9,6 +9,7 @@ Hello there, Diane! <br/><br/>
 {{$updater}} has suggested an update for {{$caption}}: <br/>
 
 Here's the updated record: <br/>
+<b>Id</b>: {{$id}}<br/>
 <b>Caption</b>: {{$caption}}<br/>
 <b>Mother ID</b>: {{$mother_id}}<br/>
 <b>Father ID</b>: {{$father_id}}<br/>

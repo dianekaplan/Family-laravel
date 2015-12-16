@@ -11,10 +11,10 @@ The Kobrin side:
 
 
 The Shapiro side:
-        <ul><li><a href="{{ action('FamilyController@show', [119]) }}">Toba & Max Shapiro</a> (4 generations back) moved from Russia
-                <img src="/flags/ru.gif" /> to Johannesburg, South Africa.  Their daughter Annie was born in <b>Lithuania</b> 
-                <img src="/flags/lt.gif" /> in 1876,
-                moved with them to <b>South Africa</b> <img src="/flags/za.gif" />, and came to the <b>US sometime between 1876 and 1896</b>.
+        <ul><li><a href="{{ action('FamilyController@show', [119]) }}">Toba & Max Shapiro</a> (4 generations back) lived in
+                <b>Lithuania</b> <img src="/flags/lt.gif" /> and their daughter Annie was born there in 1876. They moved
+                together to <b>South Africa</b> <img src="/flags/za.gif" />, and Annie came to the
+                <b>US sometime between 1876 and 1896</b>. (Need to confirm whether her parents did too).
                 <a href="{{ action('PeopleController@show', [28]) }}">Annie</a> was
                 <a href="{{ action('PeopleController@show', [30]) }}">Larry</a>'s mother. </li></ul>
 

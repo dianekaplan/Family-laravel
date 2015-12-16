@@ -46,6 +46,7 @@ class UserMailer extends Mailer {
             'updater'=> $user_who_made_update->name,
             'updated_person_first' => $updated_person->first,
             'updated_person_last' => $updated_person->last,
+            'id' => $updated_person->id,
             'first' => $request->first,
             'middle' => $request->middle,
             'last' => $request->last,
@@ -97,6 +98,7 @@ class UserMailer extends Mailer {
         $data = [
 //            'summary'=> $update->update_summary,
             'updater'=> $user_who_made_update->name,
+            'id' => $family->id,
             'caption' => $family->caption,
             'mother_id' => $family->mother_id,
             'father_id' => $family->father_id,
