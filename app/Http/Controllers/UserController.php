@@ -64,10 +64,21 @@ class UserController extends Controller
      * @return Response
      */
 
-    public function show(User $user)
+//    public function show(User $user)
+//    {
+//        return view ('user.show', compact('user'));
+//    }
+
+//TODO: at some point figure out why the above way didn't work (for users, and images)
+
+
+    public function show($id)
     {
+        $user = User::find($id);
         return view ('user.show', compact('user'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
