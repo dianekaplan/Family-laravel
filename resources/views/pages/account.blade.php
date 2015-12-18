@@ -10,8 +10,6 @@
             <b>Account since:</b> {{ date('F d, Y', strtotime($user->created_at)) }} <br/>
             <b>Last login:</b> {{ date('F d, Y', strtotime($user->last_login)) }}<br/>
             <b>Times logging in:</b> {{$user->logins}}<br/>
-
-                        {{--<h4><a href="/activity">My Activity</a></h4>--}}
         </div>
 
         <div style="float: left; width: 50%;">
@@ -25,7 +23,7 @@
             <div style="float: left; width: 100%;" id="family_section">
                 <b>Notes/memories shared:</b> <br/><br/>
 
-                @if (count($activity))
+                @if (count($notes_added))
                     @foreach($notes_added as $note)
 
                         {{--might be nice to do person link and family link partials, but will have same problem as on person show with notes--}}
