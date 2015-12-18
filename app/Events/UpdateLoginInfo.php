@@ -16,10 +16,11 @@ class UpdateLoginInfo
     public function handle($user) {
 
         if (\App::environment('production')) {
-        }
+
             $user->last_login = Carbon::now();
             $user->logins = ( $user->logins + 1);
             $user->save();
+        }
     }
 
 }

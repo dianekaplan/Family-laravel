@@ -44,7 +44,7 @@ class ImageController extends Controller
 
         $images= $images->unique();
         $images = $images->sortBy('year');
-        
+
         return view ('image/album',  compact('images'));
     }
 

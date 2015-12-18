@@ -11,18 +11,20 @@
 <br/>
 
 <p>
-   I've researched the families of my 4 grandparents, and connected with a lot of relatives far and wide.  This family tree spans 14 generations,
-    more than 650 people, and 175 families!
+   I've collected a bunch of info going back and forward from my 4 grandparents, and I've connected with a lot of relatives far and wide.
+    The data is  pretty vast (spanning 14 generations, more than 800 people, and 250 families). Not everything's
+    relevant to everyone visiting the site depending on how you're related, so on the different views I try to just show you the folks
+    you're connected with.</p>
 
-    Folks visiting this site are often only related to only one or two, so I try to just show you the ones you're connected with.  It works like this:
-</p>
+
+    The family list is filtered that way too, and also we've got:
+
 
 <ul>
-<li>Generations are represented by color (see the color key beneath the families list), and my great-grandparents are in red.  </li>
-    <li> For generations earlier than that, I only list direct lines back (their parents, grandparents, etc)
-        and you can navigate to siblings' families from there.</li>
-    <li>   For later generations I display all of the descendents' families. </li>
-
+<li>Generations represented by color (see the color key beneath the families list); my great-grandparents are in red, and the later
+    descendents' families are all displayed underneath.  </li>
+    <li> For generations earlier than that, I only list direct lines back (their parents/grandparents/etc) and not siblings' families,
+        but from those family pages you can click siblings to get to their family info. </li>
 
 
 @stop
