@@ -42,11 +42,9 @@ class ImageController extends Controller
         if($user->kemler_access){$images = $images->merge(Image::kemlers()->get());}
         if($user->kaplan_access) {$images = $images->merge(Image::kaplans()->get());}
 
+        $images= $images->unique();
         $images = $images->sortBy('year');
-//@FIXME: in progress on using bools- current issue is collection isn't deduping like birthday list does
-
-        //comment this one out when you're ready to use the bools:
-        $images = Image::orderBy('year', 'asc')->get();
+        
         return view ('image/album',  compact('images'));
     }
 

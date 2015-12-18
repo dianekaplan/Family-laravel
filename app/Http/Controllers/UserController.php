@@ -31,7 +31,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::latest('created_at')->get();
+        $users = User::latest('last_login')->get();
         return view('user.index', compact('users'));
     }
 

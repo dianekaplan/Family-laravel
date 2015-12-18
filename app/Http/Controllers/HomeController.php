@@ -75,6 +75,7 @@ class HomeController extends Controller {
         if($user->kemler_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->kemlers()->get());}
         if($user->kaplan_access) {$birthday_people = $birthday_people->merge(Person::birthdays()->displayable()->kaplans()->get());}
 
+        $birthday_people= $birthday_people->unique();
         $birthday_people = $birthday_people->sortBy('birthdate');
 
         return $birthday_people;
