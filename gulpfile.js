@@ -31,6 +31,7 @@ elixir(function(mix) {
      //'libs/select2.min.css', //this has the nicer styles for tag selection
 
      'new.css', //has gallery styles for image display
+     'navbar_styles.css', //has my custom navbar
      'newribbon_styles.css' //has newribbon colors- having it last in the list makes it win conflicts
 
      ], 'public/css', 'resources/css');
