@@ -22,7 +22,7 @@
         <h3><a href="/album">My family album</a></h3><br/>
 
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
-        <a href="/outline">Chronological Outline</a><br/><br/>
+        <a href="/outline">Chronological Outline</a> (coming)<br/><br/>
       <a href="/account"> My additions to the family tree</a> <br/>
         </div>
 

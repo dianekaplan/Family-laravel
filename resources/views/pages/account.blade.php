@@ -13,7 +13,7 @@
         </div>
 
         <div style="float: left; width: 50%;">
-<a href = "/password/email">Reset password</a>
+<a href = "/password/email">Reset password</a> (need to fix)
 
         </div>
 
@@ -34,7 +34,7 @@
                             <a href="/families/{{$note->ref_id}}">View here</a>
                         @endif
 
-                        {{$note->body}}<br/><br/>
+                        {!!$note->body!!}<br/><br/>
                     @endforeach
                 @else
                     None yet.

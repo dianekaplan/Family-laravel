@@ -6,7 +6,6 @@
         Our Family Tree : request account
     </h3>
 
-
     {{--{!! Form::open(['url' => 'landing']) !!}--}}
     {!! Form::open(['url' => 'register']) !!}
     {{--{!! Form::open(array('action' => 'RegistrationController@create')) !!}--}}

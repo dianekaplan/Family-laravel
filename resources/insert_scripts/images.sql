@@ -838,6 +838,11 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (862, 'sonny_nitkin_military.jpg', NULL, 171, NULL, '1950s?', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (863, 'Michael_2010.jpg', NULL, 549, 1, '2010', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (864, 'Nolan_family_2015.jpg', NULL, NULL, 1, '2015', 164, now(), now());
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (865, '2015_Paul_Barbara.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), true, true, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (866, '2015_Joey.jpg', NULL, 84, 0, '2015', NULL, now(), now(), true, true, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (867, '2015_kaplans_at_anniversary_party.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, true, true);
+
+
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);
@@ -895,3 +900,6 @@ update images set year= '2009' where id in (712, 713, 672, 673, 674, 657, 658, 6
 update images set year= '2010?' where id in (704, 667, 744, 754, 755, 756, 686, 687, 688);
 update images set year= '2011 or so?' where id in (702, 703);
 update images set year= '2014' where id in (822);
+
+
+update images set featured = 0 where id in (55, 842, 619, 570);

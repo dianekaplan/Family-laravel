@@ -1114,7 +1114,13 @@ INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUE
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2036, 864, 607, now(), now());
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2037, 864, 842, now(), now());
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2038, 864, 865, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2039, 865, 82, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2040, 865, 157, now(), now());
 
-
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2041, 867, 86, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2042, 867, 37, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2043, 867, 36, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2044, 867, 38, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2045, 867, 648, now(), now());
 
 

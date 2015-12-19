@@ -12,24 +12,36 @@ The Keem/Reisdorf side:
 
             <li>Mary Glaser came to this country from <b>Germany</b>  <img src="/flags/de.gif" />
                 with
-                <a href="{{ action('FamilyController@show', [80]) }}">her parents</a> in <b>1838</b> at the age of 8.
+                <a href="{{ action('FamilyController@show', [80]) }}">her parents</a> and widowed grandmother
+                <a href="{{ action('PeopleController@show', [697]) }}">Gertrude Simon Glaser</a> in
+                <b>1838</b>, at the age of 8.
                 Around the age of 17, she married
                 <a href="{{ action('PeopleController@show', [250]) }}">Peter Reisdorf</a>, who was born in <b>Rheinland, Prussia</b>
                 <img src="/flags/prussia.gif" /> and came to the states sometime <b>between 1824 and 1845</b>.
 
                 Mary & Peter Reisdorf (5 generations back)
-                had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine.</a>
+                had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine Reisdorf.</a>
 
-                We can actually go way back on Mary's side, back into a set of her paternal great great great grandparents:  <a href="{{ action('FamilyController@show', [218]) }}">Mathias & Maria  Zohler</a>,
-                in Germany in the <b>1600's</b>.
-
-                Another note:  Mary Glaser's family may have already been in the US generations before! Her great-great grandmother was Maria Kuhn,
+                <p>A little more history:
+            In the 1860's, three of Mary's younger brothers <a href="http://family.app/stories/797">fought in the civil war</a>, click around
+                    in that family's pages for some interesting history.  Also we've traced back furthest on Mary's side on
+                    a set of her paternal great great great grandparents:
+                    <a href="{{ action('FamilyController@show', [218]) }}">Mathias & Maria  Zohler</a>,
+                    in Germany in the <b>1600's</b>. </p>
+                    <p>Mary Glaser's family may also have been in the US generations beforehand. Her great-great grandmother was Maria Kuhn,
                 and based on other matching trees on ancestry.com, Maria's parents, grandparents, and all 4 sets of great-grandparents had come to the
-                US together in the early 1700's.
-                They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived and died in the US)- this data needs to be verified.</li>
+                US together in the early 1700's. They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived and died in the US)- this data needs to be verified.
+            </li>
+                </p>
+
+            </li>
+
+
+
 
             <li>Connection: Catherine Reisdorf married Nicholas Keem. Nicholas and Catherine Keem had a son named
-                <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s father. </li>
+                <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s father.
+            </li>
 
         </ul>
 
