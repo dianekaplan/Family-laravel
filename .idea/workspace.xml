@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FamilyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FamilyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_featured_image.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/new.css" afterPath="$PROJECT_DIR$/resources/css/new.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/family/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/family/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/person/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/person/show.blade.php" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,13 +47,17 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/family/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7673611">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.3246528">
+              <caret line="49" column="81" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
               <folding>
                 <element signature="e#356#388#0#HTML" expanded="true" />
                 <element signature="e#519#575#0#HTML" expanded="true" />
-                <element signature="e#1195#1227#0#HTML" expanded="true" />
-                <element signature="e#1355#1387#0#HTML" expanded="true" />
+                <element signature="e#878#910#0#HTML" expanded="true" />
+                <element signature="e#1038#1070#0#HTML" expanded="true" />
+                <element signature="e#1090#1121#0#HTML" expanded="true" />
+                <element signature="e#1943#1974#0#HTML" expanded="true" />
+                <element signature="e#2345#2377#0#HTML" expanded="true" />
+                <element signature="e#3251#3283#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -983,7 +983,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1404,13 +1404,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/family/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7673611">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.3246528">
+          <caret line="49" column="81" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
           <folding>
             <element signature="e#356#388#0#HTML" expanded="true" />
             <element signature="e#519#575#0#HTML" expanded="true" />
-            <element signature="e#1195#1227#0#HTML" expanded="true" />
-            <element signature="e#1355#1387#0#HTML" expanded="true" />
+            <element signature="e#878#910#0#HTML" expanded="true" />
+            <element signature="e#1038#1070#0#HTML" expanded="true" />
+            <element signature="e#1090#1121#0#HTML" expanded="true" />
+            <element signature="e#1943#1974#0#HTML" expanded="true" />
+            <element signature="e#2345#2377#0#HTML" expanded="true" />
+            <element signature="e#3251#3283#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

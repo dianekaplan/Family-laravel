@@ -30,14 +30,7 @@
 
                 <br/><br/>
 
-                @unless($family->no_kids_bool)
 
-                    <b>Kids: </b><br/>
-                    @foreach($kids as $kid)
-                        @include ('person.partials._person_link', ['person' => $kid, 'show_flag'=>'N', 'show_book'=>'Y'])<br/>
-                    @endforeach
-
-                @endunless
 
         </div>
 
@@ -49,23 +42,43 @@
 
         <div style="float: left;width: 100%;">
 
-        @if ($family->marriage_date)
+            <div style="float: left;width: 31%;">
+            @if ($family->marriage_date)
+                    <b>Marriage date:</b>
+                {{ date('F d, Y', strtotime($family->marriage_date)) }}<br/>
+                @elseif($family->marriage_date_note)
+                   <b> Marriage date: </b>{{  $family->marriage_date_note }}<br/>
 
-            <b>Marriage date:</b> {{ date('F d, Y', strtotime($family->marriage_date)) }} <br/>
-            @elseif($family->marriage_date_note)
-               <b> Marriage date: </b>{{  $family->marriage_date_note }} <br/>
-            {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
-            {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
-            {{--happy anniversary, {{ $family->caption }} !--}}
-            {{--@endif--}}
-        @endif
+                {{--@FIXME- this is the part that makes the non-object error when I make a new record in the app (with date)--}}
+                {{--@if( $family->marriage_date->month == \Carbon\Carbon::now()->month)--}}
+                {{--happy anniversary, {{ $family->caption }} !--}}
+                {{--@endif--}}
+            @endif
+                @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'families', 'id' => $family->id, 'name'=>$family->caption])<br/>
 
-<br/><br/>
+            </div>
+
+            <div style="float: left;width: 38%;">
+
+                @unless($family->no_kids_bool)
+
+                    <b>Kids: </b><br/>
+                    @foreach($kids as $kid)
+                        @include ('person.partials._person_link', ['person' => $kid, 'show_flag'=>'N', 'show_book'=>'Y'])<br/>
+                    @endforeach
+
+                @endunless
+            </div>
+
+
+
+        </div>
+        <div style="float: left;width: 100%;">
 
         @if ($family->notes1) Notes 1: {!! $family->notes1 !!} @endif  <br/>
         @if ($family->notes2) Notes 2: {!!   $family->notes2  !!}  @endif  <br/>
 
-            @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'families', 'id' => $family->id, 'name'=>$family->caption])<br/>
+            {{--@include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'families', 'id' => $family->id, 'name'=>$family->caption])<br/>--}}
 
             @if( $notes )
                 @include ('partials._notes', ['notes' => $notes])
