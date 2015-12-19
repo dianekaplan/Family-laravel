@@ -13,23 +13,27 @@
     <div class="bottom">
 
 
-        <div style="float: left; width: 33%;">
+        <div style="float: left; width: 31%;">
              @include ('family.partials._parent_link', ['person' => $mother, 'gender'=> "female"])
         </div>
 
 
-        <div style="float: left; vertical-align: bottom; width: 33%;">
+        <div style="float: left; vertical-align: bottom; width: 38%;">
+            @if (count($featured_image))
 
-            @include ('partials._featured_image', ['featured_image' => $featured_image])
+                @foreach($featured_image as $image)
+                    @include ('partials._featured_image', ['featured_image' => $featured_image])
+                @endforeach
+
+            @endif
+
 
                 <br/><br/>
 
                 @unless($family->no_kids_bool)
 
                     <b>Kids: </b><br/>
-
                     @foreach($kids as $kid)
-                        {{--@include ('person.partials._person_link', ['person' => $kid])<br/>--}}
                         @include ('person.partials._person_link', ['person' => $kid, 'show_flag'=>'N', 'show_book'=>'Y'])<br/>
                     @endforeach
 
@@ -38,7 +42,7 @@
         </div>
 
 
-        <div style="float: left; width: 33%;">
+        <div style="float: left; width: 31%;">
             @include ('family.partials._parent_link', ['person' => $father, 'gender'=> "male"])
         </div>
 
@@ -75,11 +79,12 @@
             <br/> <br/>
 
             @if (count($images))
-    Images:
-    @foreach($images as $image)
-            @include ('partials._image_link', ['image' => $image])
-    @endforeach
-        @endif
+            Images:
+                @foreach($images as $image)
+                    @include ('partials._image_link', ['image' => $image])
+                @endforeach
+            @endif
+
         </div>
 
         <br/>

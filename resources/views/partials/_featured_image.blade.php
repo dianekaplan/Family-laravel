@@ -1,12 +1,17 @@
-@if ($featured_image)
-    @foreach($featured_image as $image)
+
+<ul id="gallery">
+    <li>
 
         @if ($image->std_name)
-            <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->std_name  }}" height = "200" class="img-rounded">
+            <?php echo cl_image_tag($image->std_name , array( "cloud_name" => "hnyiprajv", "height"=> "200", "class"=>"img-rounded" ));
+            ?>
+            {{--Needed this format when the tag stopped working:--}}
+            {{--<img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->std_name  }}" height = "200" class="img-rounded">--}}
         @else
-
-        {{--@FIXME: same as image_link- need to figure out why this stopped working--}}
-        <img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" height = "200" class="img-rounded">
+                 <?php echo cl_image_tag($image->big_name , array( "cloud_name" => "hnyiprajv", "height"=> "200", "class"=>"img-rounded" ));
+            ?>
         @endif
-    @endforeach
-@endif
+
+
+    </li>
+</ul>

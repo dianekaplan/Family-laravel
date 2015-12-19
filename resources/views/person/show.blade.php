@@ -53,8 +53,14 @@ Update info for this person
         </div>
 
         <div style="float: left; width: 33%;">
-            @include ('partials._featured_image', ['featured_image' => $featured_image])
+            @if (count($featured_image))
+                @foreach($featured_image as $image)
+                    @include ('partials._featured_image', ['featured_image' => $featured_image])
+                @endforeach
+            @endif
         </div>
+
+
 
         <div style="float: left; width: 33%;">
             <b> Education: </b>  {{  $person->education }}  <br/>
