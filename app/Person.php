@@ -33,6 +33,10 @@ class Person extends MyBaseModel
         'husband_line',
         'kemler_line',
         'kaplan_line',
+        'current_location',
+        'notes1',
+        'notes2',
+        'notes3'
     ];
 
     protected $dates = ['birthdate', 'deathdate'];
