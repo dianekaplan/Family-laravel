@@ -139,7 +139,7 @@ INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featu
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (70, '1949allfour.jpg', 'M1949allfour.jpg', 'T1949allfour.jpg', NULL, 0, 1, '1949', 7, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (71, '1950s_irving+evelyn.jpg', 'M1950s_irving+evelyn.jpg', 'T1950s_irving+evelyn.jpg', NULL, 0, 1, '1950s', 33, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (72, '1962grandma.jpg', 'M1962grandma.jpg', 'T1962grandma.jpg', 'Kens graduation', 27, 1, '1962', 0, '2005-08-29', now());
-INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (73, '1984_andy.jpg', 'M1984_andy.jpg', 'T1984_andy.jpg', NULL, 39, 1, '1984', 0, '2005-08-29', now());
+INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (73, '1984_andy.jpg', 'M1984_andy.jpg', 'T1984_andy.jpg', NULL, 39, 0, '1984', 0, '2005-08-29', now());
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (74, '1984_Laurie.jpg', NULL, 'T1984_Laurie.jpg', NULL, 40, 0, '1984', 0, '2005-08-29', now());
 
 INSERT INTO images (id, big_name, std_name, little_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (76, '1958dad.jpg', NULL, 'T1958dad.jpg', NULL, 36, 0, '1958', 0, '2005-08-29', now());
@@ -845,6 +845,14 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (869, '1950ish_elaine_gertrude_dad.jpg', NULL, NULL, 1, '1950ish', 7, now(), now(), false, false, true, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (870, '2013_gus.jpg', NULL, 111, 0, '2013', NULL, now(), now(), false, false, true, false);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (871, '2015_Stella_Jess.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), true, true, true, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (872, '2011_Andy.jpg', NULL, 39, 1, '2011', NULL, now(), now(), false, false, true, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (873, '2013_David_Nitkin.jpg', NULL, 420, 1, '2013', NULL, now(), now(), false, false, true, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (874, '2013_Anita.jpg', NULL, 72, 1, '2013', NULL, now(), now(), true, false, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (875, '1980s_Anita_Tony', NULL, NULL, 0, '1980s?', NULL, now(), now(), true, false, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (876, '2014_Karen_Nitkin.jpg', NULL, 422, 1, '2014', NULL, now(), now(), false, false, true, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (877, '2015_Danielle_Ed_Beth.jpg', NULL, NULL, 1, '2015', 27, now(), now(), false, false, true, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (878, '1949ish_cousins.jpg', NULL, NULL, 0, '1949ish?', NULL, now(), now(), false, false, true, false);
+
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);
