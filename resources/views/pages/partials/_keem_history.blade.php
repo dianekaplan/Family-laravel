@@ -60,7 +60,7 @@ The Keem/Reisdorf side:
             <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back) both came to the US from
                 <b>Alsace</b> <img src="/flags/alsace.gif" /> , Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824 and 1849.  They had a son named Amos Suttell. </li>
             <li>Connection: Helen Smith married Amos Suttell.  <a href="{{ action('FamilyController@show', [9]) }}">Helen and Amos Suttell</a> had a daugher named
-                <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother. </li>
+                <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother.  </li>
 
         </ul>
 

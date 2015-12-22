@@ -22,7 +22,7 @@ $column_width = (100/$access_tally) - 2;
     @endif
 </p>
 
-    @if($user->keem_access)
+    @if($user->husband_access)
         <div style="float: left; width:{{$column_width}}%;" id="family_section"><h4 align="center">The Husband Family:</h4>
             @if ($type == 'Families')
                 @include ('family.partials._family_list', ['family_group' => $husband_families])

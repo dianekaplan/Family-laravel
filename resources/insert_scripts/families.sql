@@ -285,4 +285,4 @@ INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (259, 'The Kühns (Christophore & Ursula)', 852, 851, false, '01/17/1702', '11 children according to Ceal McCoys letter                      ', NULL, false, false, 0, 0, '05', true,false, false, false, true,NULL, NULL, '2012-01-26 21:21:51', now());
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (260, 'The Stephans (Anton & Barbara)', 854, 853, false, NULL, NULL, NULL, false, false, 0, 0, '08', true,false, false, false, true,NULL, NULL, '2005-08-29', now());
 
-
+update families set caption = 'Anita Gorruso & Anthony Scudiero' where id = 73; 

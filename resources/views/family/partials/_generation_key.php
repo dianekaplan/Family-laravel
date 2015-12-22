@@ -1,4 +1,6 @@
-<u> Key: </u><br/>
+<p>
+    <u> Key: </u><br/>
+
 <font color = "#8b8378">Gray: twelve generations back</font><br/>
 <font color = "#FFCC66">Yellow: eleven generations back</font><br/>
 <font color = "#FF66CC">Hot Pink: ten generations back</font><br/>
@@ -13,3 +15,4 @@
 <font color = "#CC9933">Orange: one generation back</font><br/>
 <font color = "#5C8A73">Green: newest generation</font><br/>
 <font color = "#CC99B3">Pink: next generation</font><br/>
+</p>
