@@ -18,6 +18,7 @@
     Logins:{{$user->logins}}<br/>
     last login:{{$user->last_login}}<br/>
     Email:{{$user->email}}<br/>
+    Encrypted password:{{$user->password}}<br/>
     <br/>
 
     Active: {{$user->active}}<br/>

@@ -15,12 +15,15 @@ Here's the updated record: <br/>
 <b>Last</b>: {{$last}}<br/>
 <b>Maiden Name</b>: {{$maiden}}<br/>
 <b>Nickname</b>: {{$nickname}}<br/>
-<b>Birthdate</b>: {{$birthdate}}<br/>
+<b>Birthdate</b>: {{$birthdate}} {{$birthdate_note}}<br/>
 <b>Birth place</b>: {{$birthplace}}<br/>
 <b>Education</b>: {{$education}}<br/>
 <b>Work</b>: {{$work}}<br/>
 <b>Interests</b>: {{$interests}}<br/>
-<b>Current Location</b>: {{$location}}
+<b>Location</b>: {{$location}}<br/>
+<b>Notes 1</b>: {{$notes1}}<br/>
+<b>Notes 2</b>: {{$notes2}}<br/>
+<b>Notes 3</b>: {{$notes3}}<br/>
 
 
 <br/> <br/>

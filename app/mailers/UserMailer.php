@@ -53,12 +53,17 @@ class UserMailer extends Mailer {
             'maiden' => $request->maiden,
             'nickname' => $request->nickname,
             'birthdate' => $request->birthdate,
+            'birthdate_note' => $request->birthdate_note,
             'birthplace' => $request->birthplace,
             'origin' => $request->origin,
             'education' => $request->education,
             'work' => $request->work,
             'interests' => $request->interests,
-            'location' => $request->current_location
+            'location' => $request->current_location,
+            'notes1' => $request->notes1,
+            'notes2' => $request->notes2,
+            'notes3' => $request->notes3
+
         ];
         $subject= 'A person has been updated';
 
@@ -78,12 +83,16 @@ class UserMailer extends Mailer {
             'maiden' => $request->maiden,
             'nickname' => $request->nickname,
             'birthdate' => $request->birthdate,
+            'birthdate_note' => $request->birthdate_note,
             'birthplace' => $request->birthplace,
             'origin' => $request->origin,
             'education' => $request->education,
             'work' => $request->work,
             'interests' => $request->interests,
-            'location' => $request->current_location
+            'location' => $request->current_location,
+            'notes1' => $request->notes1,
+            'notes2' => $request->notes2,
+            'notes3' => $request->notes3
 
         ];
         $subject= 'Thanks for the person update';
