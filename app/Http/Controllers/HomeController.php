@@ -94,9 +94,24 @@ class HomeController extends Controller {
 
     public function get_recently_added_pictures ()
     {
+
+
+
+        $user =  \Auth::user();
+
+        $new_pictures = new Collection;
+
+//        if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->SimplePaginate(5));}
+//        if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->get());}
+//        if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->get());}
+//        if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->get());}
+
+
+//
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(30) )
             ->SimplePaginate(5);
+
 //            ->take(5)
 //            ->get();
 

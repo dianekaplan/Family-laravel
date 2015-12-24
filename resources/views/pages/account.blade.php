@@ -14,7 +14,7 @@
 
         <div style="float: left; width: 50%;">
 <a href = "/password/email">Reset password</a> (need to fix)<br/>
-            In the meantime click 'Log Out', 'Forgot Your Password', and set a new one that way 
+            In the meantime click 'Log Out', 'Forgot Your Password', and set a new one that way
 
         </div>
 
