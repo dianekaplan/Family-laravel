@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/UserMailer.php" afterPath="$PROJECT_DIR$/app/mailers/UserMailer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/person_update_notify.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/person_update_notify.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/person_update_thankyou.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/person_update_thankyou.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" />
-    </list>
+    <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="" />
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
