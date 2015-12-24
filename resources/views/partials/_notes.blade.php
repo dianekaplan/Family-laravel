@@ -16,9 +16,12 @@
                 @if ($note->author_name)
                 <a href="{{ action('PeopleController@show', [$note->author]) }}">{{$note->author_name}}</a>:
                     @endif
+                @else
+                    <br/>
+                @endif
 
-                    @endif
                 {!! $note->body !!}
+
             </div>
         </div>
         @endforeach
