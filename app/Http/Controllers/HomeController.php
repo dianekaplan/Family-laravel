@@ -99,15 +99,20 @@ class HomeController extends Controller {
 
         $user =  \Auth::user();
 
+//       @TODO:  I'd like to use a collection so I can only show based on permissions, but the view uses render and paginate, which are
+//        for eloguent and not collections.  Could consider staying with eloquent and adding a scope for recent
         $new_pictures = new Collection;
 
-//        if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->SimplePaginate(5));}
+//       if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->get());}
 //        if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->get());}
 //        if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->get());}
 //        if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->get());}
-
-
 //
+//        $new_pictures = $new_pictures->Where('created_at', '>', Carbon::now()->subDays(30) )
+//            ->perPage(5);
+////
+
+
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(30) )
             ->SimplePaginate(5);
