@@ -893,13 +893,30 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (913, '2015_joe_kobrin.jpg', NULL, 464, 1, '2015', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (914, '2010_tracy.jpg', NULL, 471, 1, '2010', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (915, '2015_sharon_kerry_christine.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, false, true);
-INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (916, '2015_grant_kerry_christine.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (916, '2015_grant_kerry.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (917, '2015_christine.jpg', NULL, 472, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (918, '2015_alexander.jpg', NULL, 473, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (919, '2015_edward.jpg', NULL, 578, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (920, '2015_Rose.jpg', NULL, 96, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (921, '2015_teagan.jpg', NULL, 865, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (922, '2015_sophia.jpg', NULL, 842, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (923, '2013_miriam.jpg', NULL, 318, 1, '2013', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (924, '2010_rose_miriam.jpg', NULL, NULL, NULL, '2010', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (925, '2010_miriam_richard.jpg', NULL, NULL, 1, '2010', 165, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (926, '2010_jeff_schultz_elizabeth.jpg', NULL, NULL, 1, '2010', 22, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (927, '2013_elizabeth.jpg', NULL, 95, 1, '2013', NULL, now(), now(), false, false, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (928, '2010_jeff.jpg', NULL, 94, 1, '2010', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (929, '2010_rose_jeff.jpg', NULL, NULL, NULL, '2010', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (930, '2015_joe_rose.jpg', NULL, NULL, NULL, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (931, '2012_joe_schultz.jpg', NULL, 97, 1, '2012', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, std_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (932, '2015_chuck_schultz.jpg', 'M2015_chuck_schultz.jpg', NULL, 195, 1, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (933, '2015_chuck_lily.jpg', NULL, NULL, 1, '2015', 266, now(), now(), false, false, false, true);
 
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);
 delete from image_person where image_id in (56, 65, 66, 80, 103, 365);
-update images set featured = 0 where id in (670, 681);
+update images set featured = 0 where id in (670, 681, 667, 807);
 
 
 update images set big_name= replace( big_name, ' ', '_');

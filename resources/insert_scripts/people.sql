@@ -934,6 +934,9 @@ INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (867, 'Celia', NULL, 'Nitkin', NULL, NULL, NULL, 3,false,false, true,false, NULL, NULL, NULL, NULL, NULL, NULL, '1906', 'Warsaw', NULL, 'F', NULL, 123, NULL,false,false, true, NULL, 'pl', 'us', now(), now(), false);
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (868, 'Reuben', NULL, 'Nitkin', NULL, NULL, NULL, 4,false,false, true,false, NULL, NULL, NULL, NULL, NULL, NULL, '1906', 'Warsaw', NULL, 'M', NULL, 123, NULL,false,false, true, NULL, 'pl', 'us', now(), now(), false);
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (869, 'Andrew', NULL, 'Johnson', NULL, NULL, NULL, NULL,false,false, false,false, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'M', NULL, NULL, NULL,false,false, true, NULL, NULL, NULL, now(), now(), false);
+INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (870, 'Lily', NULL, 'Schultz', 'Zatony', NULL, NULL, NULL,false, false, false,false, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'M', NULL, NULL, NULL,false,false, true, NULL, NULL, NULL, now(), now(), false);
+
+
 
 update people set last = 'O''Brien' where last = 'OBrien';
 
@@ -959,6 +962,12 @@ update people set face = '845Kirsten.jpg' where id = 845;
 update people set face = '846Kahlan.jpg' where id = 846;
 update people set face = '580kerry.jpg' where id = 580;
 update people set face = '465grant.jpg' where id = 465;
+update people set face = '608richard.jpg' where id = 608;
+update people set face = '195chuck.jpg' where id = 195;
+update people set face = '870lily.jpg' where id = 870;
+
+
+
 
 update people set flag1 = 'us' where id in (239, 244, 241, 242, 240, 51, 243, 245, 125, 25, 122, 58, 218, 216, 233, 183, 399, 400, 401, 402, 836, 421, 426, 427);
 update people set flag1 = 'us' where id in (405, 406, 407, 57, 55, 287, 52, 53, 56, 54, 229, 230, 231, 59, 197, 182, 146, 147, 148, 149, 369, 761, 404, 198, 
