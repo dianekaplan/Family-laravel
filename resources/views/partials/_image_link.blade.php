@@ -13,7 +13,7 @@
                 {{--<img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" height = "100" class="img-rounded">--}}
         @endif
         <p>
-    {{ $image->caption  }}
+    {!!  $image->caption   !!}
 
 @if ($image->year)
 ({{ $image->year}})

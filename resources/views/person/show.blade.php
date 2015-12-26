@@ -66,7 +66,7 @@ Update info for this person
             <b> Education: </b>  {{  $person->education }}  <br/>
             <b> Work: </b> {!!    $person->work !!}<br/>
             <b> Interests: </b>  {{  $person->interests }}  <br/>
-            <b> Current location: </b> {{  $person->current_location }}  <br/>
+            <b> Location: </b> {{  $person->current_location }}  <br/>
             @if ($person->deathdate)<b>Death Date: </b> {{ date('F d, Y', strtotime($person->deathdate))}}<br/> @endif
             @if ($person->deathdate_note)<b>Death Date: </b> {{$person->deathdate_note}} <br/>@endif
 

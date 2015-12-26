@@ -164,7 +164,7 @@ INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (97, 'Joseph', 'Richard', 'Schultz', NULL, 'Joe', '97joe.jpg', NULL,false,false,false, true, NULL, NULL, NULL, NULL, NULL, NULL, '3/17/1984', 'Lynn, MA', NULL, 'M', NULL, 91, NULL,false,false,false, NULL, 'us', NULL, '2005-08-29', now(), true);
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (98, 'Audrey', 'Nina', 'Kobrin', 'Weiss', NULL, '98audrey.jpg', NULL,false,false,false, true, NULL, NULL, NULL, 'parents: Mark Weiss & Eva Kane            ', NULL, NULL, '7/25/1927', 'Boston, MA', NULL, 'F', NULL,NULL, NULL,false,false,false, '2010-08-21 17:22:48', 'us', NULL, '2005-08-29', now(), true);
 
-INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (108, 'Andrea', NULL, 'Kemler', NULL, NULL, '108andrea.jpg', NULL,false,false, true,false, NULL, NULL, '<a href=\"http://www.andreakemler.com\" target=\"_blank\">see website</a>', NULL, NULL, NULL, '12/27/1949', NULL, NULL, 'F', NULL, 25, 'Newton, MA',false,false,false, NULL, 'us', NULL, '2005-08-29', now(), true);
+INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (108, 'Andrea', NULL, 'Kemler', NULL, NULL, '108andrea.jpg', NULL,false,false, true,false, NULL, NULL, '<a href="http://www.andreakemler.com\" target=\"_blank\">see website</a>', NULL, NULL, NULL, '12/27/1949', NULL, NULL, 'F', NULL, 25, 'Newton, MA',false,false,false, NULL, 'us', NULL, '2005-08-29', now(), true);
 
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (106, 'Beth', NULL, 'Kemler', NULL, NULL, '106beth.jpg', NULL,false,false, true,false, NULL, NULL, 'Ph.D social worker', NULL, NULL, NULL, '12/10/1944', NULL, NULL, 'F', NULL, 25, 'Newton, MA',false,false,false, NULL, 'us', NULL, '2005-08-29', now(), true);
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (107, 'Barry', NULL, 'Kemler', NULL, NULL, '107barry.jpg', NULL,false,false, true,false, NULL, 'University of Vermont', 'Gastroenterologist', NULL, NULL, NULL, NULL, NULL, NULL, 'M', NULL, 25, 'CT',false,false,false, NULL, 'us', NULL, '2005-08-29', now(), true);
@@ -968,15 +968,13 @@ update people set face = '870lily.jpg' where id = 870;
 
 
 
-
-update people set flag1 = 'us' where id in (239, 244, 241, 242, 240, 51, 243, 245, 125, 25, 122, 58, 218, 216, 233, 183, 399, 400, 401, 402, 836, 421, 426, 427);
 update people set flag1 = 'us' where id in (405, 406, 407, 57, 55, 287, 52, 53, 56, 54, 229, 230, 231, 59, 197, 182, 146, 147, 148, 149, 369, 761, 404, 198, 
 762, 126, 176, 626, 22, 123, 124, 127, 128, 129, 130, 173, 627, 458, 459, 460, 424, 171, 172, 423, 372, 632, 631, 633, 634, 635, 370, 371, 224, 225, 192, 228, 
 514, 292, 136, 137, 138, 139, 134, 253, 50, 252, 255, 262, 263, 266, 267, 261, 258, 256, 257, 259, 260, 808, 247, 
 247, 248, 249, 517, 519, 520, 521, 411, 412, 413, 414, 415, 416, 417, 418, 605, 601, 602, 603, 604, 606, 611, 729, 
 222, 510, 511, 540, 541, 542, 514, 384, 857, 856, 41, 274, 275, 276, 279, 280, 277, 278, 281, 297, 595, 596, 597, 598, 
 599, 593, 385, 386, 584, 591, 592, 593, 584, 585, 586, 587, 588, 589, 591, 265, 252, 298, 299, 300, 301, 302, 
-303, 375, 306, 307, 308, 42, 374, 375, 378, 379, 377, 5);
+303, 375, 306, 307, 308, 42, 374, 375, 378, 379, 377, 5, 239, 244, 241, 242, 240, 51, 243, 245, 125, 25, 122, 58, 218, 216, 233, 183, 399, 400, 401, 402, 836, 421, 426, 427, 230, 231);
 
 update people set flag1 = 'prussia' where id in (250, 251, 269, 268, 271, 270, 284, 283, 285, 286, 544);
 update people set flag1 = 'de' where id in (770, 783, 768, 779, 780, 784, 790, 832, 831, 751, 739, 760, 697, 
@@ -1018,13 +1016,15 @@ update people set flag3 = 'za' where id in (311);
 
 update people set hide_bool = true where id in (135, 140, 141, 142, 143, 144, 145, 154, 109, 190, 193, 131, 227, 246, 264, 518, 522, 809, 610, 617, 619);
 update people set hide_bool = true where id in (620, 621, 622, 623, 837, 640, 457, 835, 833, 765, 815, 845, 150, 151, 152, 295, 393, 394, 395, 155, 153, 223, 396, 403, 
-456, 419, 425, 223, 530, 543, 232, 515, 410, 609, 509, 594, 583, 512, 590, 600, 102, 376, 373, 740, 722, 719, 324);
+456, 419, 425, 223, 530, 543, 232, 515, 410, 609, 509, 594, 583, 512, 590, 600, 102, 376, 373, 740, 722, 719, 324, 203, 204, 399, 804, 763, 671, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 723, 675, 453, 452);
 
 update people set show_on_landing_page = false where id in (118, 132, 135, 140, 141, 142, 143, 144, 145, 154, 156, 157, 158, 159, 160, 109, 180, 190, 193);
 update people set show_on_landing_page = false where id in (194, 202, 221, 131, 7, 9, 227, 246, 264, 369, 436, 441, 447, 448, 518, 522, 530, 809, 643, 607);
 update people set show_on_landing_page = false where id in (616, 617, 619, 620, 621, 622, 623, 624, 625, 837, 640, 641, 659, 667, 679, 833, 765, 795, 808,
 800, 807, 815, 845, 150, 151, 152, 295, 393, 394, 395, 155, 153, 223, 396, 403, 419, 456, 419, 425, 178, 223, 530, 543, 292, 
-232, 515, 410, 609, 509, 594, 583, 512, 590, 600, 102, 376, 373, 740, 722, 719, 324);
+232, 515, 410, 609, 509, 594, 583, 512, 590, 600, 102, 376, 373, 740, 722, 719, 324, 203, 204, 804, 399, 763, 671, 676, 820, 219, 134, 687, 354, 576, 561, 186, 345, 408, 468, 477, 692, 612, 579, 560, 361, 663, 666, 651, 649, 162, 476, 95, 433, 550, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 723, 409, 683, 675, 453, 452, 707);
+
+
 
 update people set direct_bool = true  where id in (747, 696, 706, 705, 751, 750, 749);
 

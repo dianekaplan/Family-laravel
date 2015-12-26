@@ -290,3 +290,5 @@ INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date
 update families set caption = 'Anita Gorruso & Anthony Scudiero' where id = 73; 
 update families set caption= replace( caption, 'OBrien', 'O''Brien') where id in (50, 181, 182, 225);
 update families set notes1 = 'Living in Raleigh, NC (as of 12/2015) ' where id = 265;
+
+update families set caption = 'Andrea Kemler & Bob Svikhart' where id = 26; 
