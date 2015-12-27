@@ -21,7 +21,7 @@
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/album">My family album</a></h3><br/>
 
-        <h4><a href="/videos">Home movies</a> </h4> (coming soon)<br/><br/>
+        <h4><a href="/videos">Home movies</a> </h4> <br/>
 
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
         <a href="/outline">Chronological Outline</a> (coming)<br/><br/>
