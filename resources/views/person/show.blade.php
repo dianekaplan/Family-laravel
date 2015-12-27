@@ -106,7 +106,7 @@ Update info for this person
             @endif
 
             @include ('partials._stories', ['subject' => $person]) <br/>
-            @include ('partials._videos', ['subject' => $person])
+            @include ('video.partials._person_videos', ['subject' => $person])
 
         </div>
 

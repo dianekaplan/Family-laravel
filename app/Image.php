@@ -22,7 +22,7 @@ class Image extends Model
         return $this->people->lists('id')->all();
     }
 
-//    @TODO same as in families & people- can this be a partial or a trait?
+//    @TODO same as in families & people & videos- can this be a partial or a trait?
     public function scopeKaplans($query)
     {
         $query->where('kaplan_line', '=', 'true')->orderBy('year', 'asc') ;

@@ -43,6 +43,8 @@ Route::get('configure/{image}', 'ImageController@configure');
 Route::get('images', 'ImageController@index');
 Route::get('album', 'ImageController@album');
 
+Route::get('videos', 'VideoController@album');
+Route::get('video/{video}', 'VideoController@show');
 Route::get('videotest', 'HomeController@test');
 
 
