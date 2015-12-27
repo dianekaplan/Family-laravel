@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Video;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -28,7 +29,7 @@ class HomeController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['landing', 'register']]);
+        $this->middleware('auth', ['except' => ['landing', 'register', 'test']]);
         $this->middleware('super', ['only' => 'admin']);
     }
 
@@ -197,6 +198,12 @@ public function get_person_from_user(User $user)
     public function contact()
     {
         return view ('pages.contact');
+    }
+
+    public function test()
+    {
+        $videos = Video::all();
+        return view ('pages.test', compact('videos'));
     }
 
 //    public function register()

@@ -1,28 +1,17 @@
-<h3 align="center">
-    Family Album
-</h3>
 
-@if (count($images))
+<div>
+    <h4>Videos:</h4>
+    @foreach($videos as $video)
 
-    @foreach ($images as $image)
+        <?php echo cl_video_tag($video->name , array( "cloud_name" => "hnyiprajv", "height"=> "150", "class"=>"img-rounded" ));
+        ?>
 
-        <ul id="gallery">
-
-            <li>
-                <a href="/image/{{ $image->id  }}">
-                    <?php echo cl_image_tag($image->big_name , array( "cloud_name" => "hnyiprajv", "height" => 100, "class"=>"img-rounded" ));?>
-                    {{--They all show up when I do this: --}}
-                    {{--<img src="http://res.cloudinary.com/hnyiprajv/image/upload/{{ $image->big_name  }}" height = "100" class="img-rounded">--}}
-                    <p>
-                        {{ $image->caption  }}
-
-                        @if ($image->year)
-                            ({{ $image->year}})
-                    @endif
-                </a></p>
-            </li>
-        </ul>
-
+        {{--<a href= "/stories/{{$story->id}}" target="_blank">--}}
+        {{--<img  src="/icons/book.png" height="50"/>--}}
+        {{--{{$story->description}}</a>:--}}
+        {{--{{$story->intro}}...<a href= "/stories/{{$story->id}}"  target="_blank">Read More</a>--}}
     @endforeach
-@endif
+    <br/>
+
+</div>
 

@@ -105,7 +105,9 @@ Update info for this person
                     @include ('partials._notes', ['notes' => $notes])
             @endif
 
-            @include ('partials._stories', ['subject' => $person])
+            @include ('partials._stories', ['subject' => $person]) <br/>
+            @include ('partials._videos', ['subject' => $person])
+
         </div>
 
         <div style="float: left; width: 100%;">

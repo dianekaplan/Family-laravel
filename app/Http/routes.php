@@ -43,6 +43,9 @@ Route::get('configure/{image}', 'ImageController@configure');
 Route::get('images', 'ImageController@index');
 Route::get('album', 'ImageController@album');
 
+Route::get('videotest', 'HomeController@test');
+
+
 Route::get('stories/{story}', 'StoryController@show');
 
 Route::resource('people', 'PeopleController');

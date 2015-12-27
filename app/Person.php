@@ -106,11 +106,26 @@ class Person extends MyBaseModel
         return $this->belongsToMany('App\Image')->withTimestamps()->OrderBy('year', 'asc');
     }
 
-    //get list of image IDs  associated with the given person
+    //get list of image IDs associated with the given person
     public function getImageListAttribute()
     {
         return $this->images->lists('id')->all();
     }
+
+
+
+    //get the videos associated with the given person
+    public function videos()
+    {
+        return $this->belongsToMany('App\Video')->withTimestamps()->OrderBy('year', 'asc');
+    }
+
+    //get list of video IDs associated with the given person
+    public function getVideoListAttribute()
+    {
+        return $this->videos->lists('id')->all();
+    }
+
 
 
     public function stories()
