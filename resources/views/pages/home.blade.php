@@ -19,8 +19,9 @@
         @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])
 <br/>
         <h3><a href="/history">My family history</a></h3>
-        <h3><a href="/album">My family album</a></h3>
-        <h4><a href="/videos">Home movies</a> (coming soon)</h4> <br/><br/>
+        <h3><a href="/album">My family album</a></h3><br/>
+
+        <h4><a href="/videos">Home movies</a> </h4> (coming soon)<br/><br/>
 
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
         <a href="/outline">Chronological Outline</a> (coming)<br/><br/>
