@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/person/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/person/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/flags/Thumbs.db" afterPath="$PROJECT_DIR$/public/flags/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/history.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/history.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/users.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/users.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="UserMailer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/UserMailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="56" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
                 <element signature="e#31#44#0#PHP" expanded="true" />
               </folding>
@@ -36,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
+      <file leaf-file-name="history.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/history.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30084747">
-              <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.5762712">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.7272725">
+              <caret line="193" column="31" selection-start-line="193" selection-start-column="31" selection-end-line="193" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -61,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2015_12_09_132928_create_videos_table.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/partials/_kemler_history.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
@@ -112,6 +124,7 @@
         <option value="$PROJECT_DIR$/resources/views/emails/family_update_notify.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/family_update_thankyou.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/person/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/history.blade.php" />
       </list>
     </option>
   </component>
@@ -1051,13 +1064,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/family/partials/_family_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1171,16 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6242938">
-          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
-          <folding>
-            <element signature="e#122#136#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
@@ -1200,13 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/_index_page_columns.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17231639">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1250,6 +1239,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4081921">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1258,7 +1248,7 @@
         <state vertical-scroll-proportion="0.5762712">
           <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1380,7 +1370,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#40#85#0#PHP" expanded="true" />
+            <element signature="e#40#85#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1390,7 +1380,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1400,7 +1390,7 @@
         <state vertical-scroll-proportion="-0.92727274">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="8" />
           <folding>
-            <element signature="e#71#86#0#PHP" expanded="true" />
+            <element signature="e#71#86#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1429,20 +1419,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2810733">
+          <caret line="95" column="75" selection-start-line="95" selection-start-column="75" selection-end-line="95" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/UserMailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="56" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <element signature="e#31#44#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/_index_page_columns.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30084747">
-          <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.48022598">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.7272725">
+          <caret line="193" column="31" selection-start-line="193" selection-start-column="31" selection-end-line="193" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/history.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5762712">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding />
         </state>
       </provider>
