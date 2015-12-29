@@ -15,17 +15,17 @@ trait RecordsActivity
             });
         }
     }
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        foreach (static::getModelEvents() as $event) {
-            static::$event(function ($model)  use ($event) {
-            $model->recordActivity($event);
-            });
-        }
-    }
+//Had this originally but not needed anymore because of the specific one above (and leaving it makes 2 recordActivity events)
+//    protected static function boot()
+//    {
+//        parent::boot();
+//
+//        foreach (static::getModelEvents() as $event) {
+//            static::$event(function ($model)  use ($event) {
+//            $model->recordActivity($event);
+//            });
+//        }
+//    }
 
 
     public function recordActivity($event){  //because it's public, we can do $person->recordActivity('favorited')

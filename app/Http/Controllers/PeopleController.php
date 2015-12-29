@@ -72,11 +72,11 @@ class PeopleController extends Controller
 
         $id = $person->id;
         $solo_images =  Image::where('subject', $id)
-            ->orderBy('year', 'asc')
+            ->orderBy('year', 'asc', 'created_at', 'asc')
             ->get();
 
         $featured_image = Image::where('subject', $id)
-            ->orderBy('year', 'asc')
+            ->orderBy('year', 'asc', 'created_at', 'asc')
             ->Where ('featured', 1)
             ->get();
 
