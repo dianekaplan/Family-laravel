@@ -92,10 +92,9 @@ Update info for this person
 
 
         <div style="float: left; width: 100%;">
-             {!!   $person->notes1 !!} <br/>
-            {!!  $person->notes2 !!} <br/>
-            {!!  $person->notes3 !!} <br/>
-
+            @if( $person->notes1 )  {!!   $person->notes1 !!} <br/> @endif
+                @if( $person->notes2 ) {!!  $person->notes2 !!} <br/>@endif
+                @if( $person->notes3 ){!!  $person->notes3 !!} <br/>@endif
 
             @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'people', 'id' => $person->id, 'name'=>$person->first])<br/>
 

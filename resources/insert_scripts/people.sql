@@ -970,6 +970,7 @@ update people set face = '465grant.jpg' where id = 465;
 update people set face = '608richard.jpg' where id = 608;
 update people set face = '195chuck.jpg' where id = 195;
 update people set face = '870lily.jpg' where id = 870;
+update people set face = '570Carol.jpg' where id = 570;
 
 
 
