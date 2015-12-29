@@ -7,6 +7,9 @@ use App\Update;
 use App\Http\Requests\SavePersonRequest;
 use App\Http\Requests\SaveFamilyRequest;
 use App\Http\Requests\RegistrationRequest;
+use Carbon\Carbon;
+
+
 
 class UserMailer extends Mailer {
 
@@ -104,6 +107,12 @@ class UserMailer extends Mailer {
     {
         //in this one the email recipient user should always be me
         $view = 'emails.family_update_notify';
+
+        //Had an issue with marriage_date: when I saved it like the others I got an expected string, array given error, because carbon date has date, timezone_type, timezone
+        //However when I tried accessing the array element I got an error that I can't treat a Carbon object like an array,
+        // and when I tried Carbon::parse it said I can't use that on an array
+        //
+
         $data = [
 //            'summary'=> $update->update_summary,
             'updater'=> $user_who_made_update->name,
@@ -111,7 +120,7 @@ class UserMailer extends Mailer {
             'caption' => $family->caption,
             'mother_id' => $family->mother_id,
             'father_id' => $family->father_id,
-            'marriage_date' => $family->marriage_date,
+//            'marriage_date' => $family->marriage_date,
             'notes1' => $family->notes1,
             'notes2' => $family->notes2,
         ];
@@ -128,7 +137,7 @@ class UserMailer extends Mailer {
             'caption' => $family->caption,
             'mother_id' => $family->mother_id,
             'father_id' => $family->father_id,
-            'marriage_date' => $family->marriage_date,
+//            'marriage_date' => $family->marriage_date,
             'notes1' => $family->notes1,
             'notes2' => $family->notes2,
 

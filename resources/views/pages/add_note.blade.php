@@ -8,7 +8,7 @@
 
 {{--{{$flag}}--}}
 
-    Add your note for {{$name}}:
+    Add a note for {{$name}}!
 
     {!! Form::open(['url' => 'add_note/save']) !!}
 
@@ -28,6 +28,7 @@
 
 
 </div>
+
 
 @section('footer')
 

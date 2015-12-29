@@ -148,8 +148,9 @@ class FamilyController extends Controller
         $user_who_made_update =  \Auth::user();
         $diane_user = User::find(1);
 
-        $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
-        $this->mailer->family_update_thankyou($user_who_made_update, $request, $family);
+          $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
+//        $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
+//        $this->mailer->family_update_thankyou($user_who_made_update, $request, $family);
 
         flash()->success('Your edit has been saved');
 
