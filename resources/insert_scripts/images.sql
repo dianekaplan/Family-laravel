@@ -831,7 +831,7 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (855, 'kaplans2015.jpg', NULL, NULL, 1, '2015', 261, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (856, 'gal_mom_2014.jpg', NULL, NULL, NULL, '2014', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (857, 'Anita_Ashley_1987_or_1988.jpg', 'Anita & Ashley', NULL, NULL, '1987 or 1988', NULL, now(), now());
-INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (858, 'Jess_violet_restaurant.jpg', NULL, NULL, NULL, '2015', NULL, now(), now());
+
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (859, 'kemler_kids.jpg', NULL, NULL, NULL, '2014', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (860, 'diane_elaine_2013.jpg', NULL, NULL, NULL, '2013', NULL, now(), now());
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at) VALUES (861, 'nitkin_family_2015.jpg', NULL, NULL, 1, '2015', 117, now(), now());
@@ -934,14 +934,15 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (954, '2015_mom_violet_jess.jpg', 'Violet turns 2!', NULL, NULL, '2015', NULL, now(), now(), true, true, false, false);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (955, '2014_paul_deb_joe.jpg', 'Posing with Gen.<br/> Bartlett', NULL, NULL, '2014', NULL, now(), now(), true, true, false, false);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (956, '2015_xmas_group', NULL, NULL, NULL, '2015', NULL, now(), now(), true, true, false, false);
-
-
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (957, '2014_Rutherfords', NULL, NULL, 1, '2014', 156, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (958, '2014_andrew_rutherford', NULL, 873, 1, '2014', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (959, '2015_Stella_smile.jpg', NULL, 860, 1, '2015', NULL, now(), now(), true, true, true, true);
 
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);
 delete from image_person where image_id in (56, 65, 66, 80, 103, 365);
-update images set featured = 0 where id in (670, 681, 667, 807, 689, 695, 659);
+update images set featured = 0 where id in (670, 681, 667, 807, 689, 695, 659, 686, 820);
 
 update images set subject = NULL where id = 692;
 update images set family = 263 where id = 692;

@@ -1217,6 +1217,6 @@ INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUE
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2138, 956, 859, now(), now());
 
 
-
+delete from image_person where image_id = 858;
 
 

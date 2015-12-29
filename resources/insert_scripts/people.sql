@@ -940,6 +940,8 @@ INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq
 
 INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (872, 'Finn', NULL, 'O''Brien', NULL, NULL, NULL, NULL,false, false, false, true, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'M', NULL, 182, NULL, false, false, true, NULL, 'us', NULL, now(), now(), true);
 
+INSERT INTO people (id, first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line, interests, education, work, notes1, notes2, notes3, birthdate_note, birthplace, deathdate, gender, origin, family_of_origin, current_location, adopted,direct_bool, hide_bool, last_modified, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES (873, 'Andrew', NULL, 'Rutherford', NULL, NULL, '873andrew.jpg', NULL,false, false, false, true, NULL, NULL, NULL, NULL, NULL, NULL, 'Around June, 2014', NULL, NULL, 'M', NULL, 156, NULL, false, false, true, NULL, 'us', NULL, now(), now(), true);
+
 
 update people set last = 'O''Brien' where last = 'OBrien';
 
