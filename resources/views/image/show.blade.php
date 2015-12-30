@@ -6,7 +6,7 @@
 ?>
 <br/>
 
-        {{ $image->caption  }}
+        {!!  $image->caption  !!}
     ({{ $image->year}})
 
 {{--List everybody who's in the picture (for group pictures--}}

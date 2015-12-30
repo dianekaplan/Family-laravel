@@ -88,9 +88,6 @@
 
 
 
-
-            <br/> <br/>
-
             @if (count($images))
             Images:
                 @foreach($images as $image)
@@ -103,6 +100,7 @@
         <br/>
         {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
         <div style="float: left;width: 100%;">
+            <br/>
         *Asterisk indicates the direct ancestors up from the four grandparents
         </div>
 
