@@ -38,7 +38,7 @@ class HomeController extends Controller {
         $people = Person::ShowOnLandingPage()
             ->displayable()
             ->orderBy( 'last', 'asc')
-            ->orderBy( 'first', 'asc') 
+            ->orderBy( 'first', 'asc')
             ->get();
 
         return view ('pages.landing', compact('people'));
@@ -84,7 +84,6 @@ class HomeController extends Controller {
     }
 
 
-
     public function get_updates_from_user (User $user)
     {
         $suggested_updates = Update::latest('created_at')
@@ -96,9 +95,6 @@ class HomeController extends Controller {
 
     public function get_recently_added_pictures ()
     {
-
-
-
         $user =  \Auth::user();
 
 //       @TODO:  I'd like to use a collection so I can only show based on permissions, but the view uses render and paginate, which are
@@ -196,10 +192,6 @@ public function get_person_from_user(User $user)
         return view ('pages.history', compact('user'));
     }
 
-    public function contact()
-    {
-        return view ('pages.contact');
-    }
 
     public function test()
     {

@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use Acme\Mailers\UserMailer as Mailer;
+use App\Person;
 
 class RegistrationController extends Controller
 {
@@ -52,7 +53,14 @@ class RegistrationController extends Controller
 
     public function register()
     {
-        return view ('pages.register');
+        $people = Person::ShowOnLandingPage()
+            ->displayable()
+            ->orderBy( 'last', 'asc')
+            ->orderBy( 'first', 'asc')
+            ->get();
+
+
+        return view ('pages.register', compact('people'));
     }
 
 

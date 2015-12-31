@@ -22,7 +22,6 @@ use Acme\Mailers\UserMailer as Mailer;
 //    return view('welcome');
 
 Route::get('/', 'HomeController@home');
-Route::get('contact', 'HomeController@contact');
 Route::get('landing', 'HomeController@landing');
 Route::get('outline', 'HomeController@outline');
 //Route::get('home', 'HomeController@home');

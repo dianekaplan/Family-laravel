@@ -14,8 +14,8 @@
 
 
 <div class="form-group">
-    {!! Form::label('related','Who did you see in the list that you are related to?  How are you related?') !!}
-    {!! Form::textarea('related', null, ['class' => 'form-control']) !!}
+    {!! Form::label('related','Who did you see in this list that you are related to?  How are you related?') !!}
+    {!! Form::text('related', null, ['class' => 'form-control']) !!}
     {{--{!! $errors->name('related', '<span class="help-block">:message</span>') !!}--}}
 </div>
 
