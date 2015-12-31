@@ -63,22 +63,23 @@ class Person extends MyBaseModel
 //    @TODO same as in families- can this be a partial or a trait?
     public function scopeKaplans($query)
     {
-        $query->where('kaplan_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
+//        $query->where('kaplan_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
+        $query->where('kaplan_line', '=', 'true')->orderBy( 'last', 'asc')->orderBy( 'first', 'asc') ;
     }
 
     public function scopeKemlers($query)
     {
-        $query->where('kemler_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
+        $query->where('kemler_line', '=', 'true')->orderBy( 'last', 'asc')->orderBy( 'first', 'asc') ;
     }
 
     public function scopeKeems($query)
     {
-        $query->where('keem_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
+        $query->where('keem_line', '=', 'true')->orderBy( 'last', 'asc')->orderBy( 'first', 'asc') ;
     }
 
     public function scopeHusbands($query)
     {
-        $query->where('husband_line', '=', 'true')->orderBy('last', 'asc', 'first', 'asc') ;
+        $query->where('husband_line', '=', 'true')->orderBy( 'last', 'asc')->orderBy( 'first', 'asc') ;
     }
 
     public function scopeBirthdays($query)

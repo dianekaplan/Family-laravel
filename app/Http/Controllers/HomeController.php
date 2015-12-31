@@ -37,7 +37,8 @@ class HomeController extends Controller {
     {
         $people = Person::ShowOnLandingPage()
             ->displayable()
-            ->orderBy('last', 'asc', 'first', 'asc')
+            ->orderBy( 'last', 'asc')
+            ->orderBy( 'first', 'asc') 
             ->get();
 
         return view ('pages.landing', compact('people'));
