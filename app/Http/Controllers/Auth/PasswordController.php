@@ -27,7 +27,10 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'email']);
+//        $this->middleware('guest', ['except' => 'email']);
+        $this->middleware('auth', ['except' => 'email']);
+
+
     }
 
 //

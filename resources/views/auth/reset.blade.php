@@ -18,7 +18,15 @@
                             </div>
                         @endif
 
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
+
+                            <?php
+                            $email = isset($_GET["email"]) ? $_GET["email"] : 'not set';
+                            ?>
+
+                            {{--@TODO: I want to pass the email along in the querystring, but doing so at the end breaks the reset token--}}
+                            {{--If/when I figure out a better way, update below to prefill with the $email value--}}
+
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
                             {!! csrf_field() !!}
                             <input type="hidden" name="token" value="{{ $token }}">
 
