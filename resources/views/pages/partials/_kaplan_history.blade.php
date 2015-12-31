@@ -4,12 +4,21 @@ The Kobrin side:
         <ul>
             <li>In <b>1896</b>, </b><a href="{{ action('FamilyController@show', [90]) }}">Aaron & Rochel Kobrin</a> left Russia in (the area that's now
                 Lithuania <img src="/flags/lt.gif" />)
-                with their children, and settled in South Africa <img src="/flags/za.gif" /> and the US <img src="/flags/us.gif" />  around the same time .
+                with their children, and settled in South Africa <img src="/flags/za.gif" /> and the US <img src="/flags/us.gif" />  around the same time.
                 <a href="{{ action('PeopleController@show', [29]) }}">Kal Kobrin</a> (Larry's father, 3 generations back) was 20 years old-  settled in the US, and when
                 he immigrated his surname was changed from Kobrin to Kaplan. Kalman's mother
                 <a href="{{ action('PeopleController@show', [311]) }}">Rochel</a> had come to the US in 1894, and then she went to South Africa afterward and died in
                 Johannesburg.
-               </li>
+
+                <ul>
+                    <li>Kalman's descendants include the Kaplans, the Klopers, the Schultzes, the Almans, the Marcuses, and some Kobrins.  </li>
+                    <li>Nathan's descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  </li>
+                    <li>Annie's descendants are the Slonimskys and the Slons.  </li>
+                    <li>Yetta's descendants are the Blochs and the Foxes.  </li>
+                    <li>Solomon's descendants include the Melmans, the Robertsons, and some Kobrins. </li>
+                    <li>Beila's descendants include the Sneags and the Fittinghoffs. </li>
+                </ul>
+            </li>
         </ul>
 
 
