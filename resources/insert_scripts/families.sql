@@ -286,6 +286,10 @@ INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (266, 'The Schultzes (Chuck & Lily)', 870, 195, false, NULL, NULL, NULL, false, true, 0, 4, '15', false, false, false, true, true, NULL, NULL, now(), now());
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (267, 'The Kramers (Sherri & JP)', 289, 874, false, NULL, NULL, NULL, false, false, 0, 0, '16', false, false, false, true, true, NULL, NULL, now(), now());
 
+INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (268, 'The Sneags (Wayne & Mia)', 877, 746, false, NULL, NULL, NULL, false, false, 0, 0, '16', false, false, false, true, true, NULL, NULL, now(), now());
+
+
+
 update families set no_kids_bool = false where id in (156, 182);
 update families set caption = 'The Schultzes (Jeff & Miriam)' where id = 91;
 update families set caption = 'Anita Gorruso & Anthony Scudiero' where id = 73; 
