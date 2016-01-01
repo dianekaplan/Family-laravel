@@ -1020,6 +1020,9 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1040, '2008_jonathan.jpg', NULL, 561, 1, '2008', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1041, '2015_davina_baby.jpg', NULL, 577, 0, '2015', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1042, '2015_kobrin_kids.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1043, '2014_teagan_willow.jpg', NULL, NULL, 0, '2014', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1044, '2011_finn.jpg', NULL, 872, 1, '2011', NULL, now(), now(), false, false, false, true);
+
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);

@@ -11,7 +11,7 @@ The Kobrin side:
                 Johannesburg.
 
                 <ul>
-                    <li>Kalman's descendants include the Kaplans, the Klopers, the Schultzes, the Almans, the Marcuses, and some Kobrins.  </li>
+                    <li>Kalman's descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins.  </li>
                     <li>Nathan's descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  </li>
                     <li>Annie's descendants are the Slonimskys and the Slons.  </li>
                     <li>Yetta's descendants are the Blochs and the Foxes.  </li>

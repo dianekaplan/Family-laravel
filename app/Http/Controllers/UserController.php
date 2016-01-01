@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Requests\SaveUserRequest;
-
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -35,8 +35,12 @@ class UserController extends Controller
             ->orderBy('last_login', 'desc')
             ->get();
 
+        $recent_visitors = User::where('last_login', '>', Carbon::now()->subDays(30) )
+            ->orderBy('last_login', 'desc')
+            ->get();
 
-        return view('user.index', compact('users'));
+
+        return view('user.index', compact('users', 'recent_visitors'));
     }
 
     /**
