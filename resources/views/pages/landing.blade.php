@@ -9,9 +9,7 @@
 </head>
 <body>
 
-
-
-{{--//Considered extending 'app', but the alternate navbar doesn't really make sense on the landing page--}}
+{{--//Considered extending 'app', but the alternate navbar doesn't make sense on the landing page--}}
 
 
 <h3>Welcome!</h3>
@@ -32,16 +30,8 @@ Diane Kaplan (Cambridge, MA USA)
 @include ('auth._login_partial');
 <br/><br/>
 
-@if (count($people))
+@include ('person.partials._people_list_simple');
 
-    @foreach ($people as $person)
-        <li class="jumble">
-            @include ('person.partials._person_link_simple', ['person' => $person])
-
-        </li>
-    @endforeach
-
-@endif
 
 </body>
 </html>
