@@ -73,9 +73,10 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (54, 'Jacob Alman', 'Sportsfan5390@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-11-26 16:21:46', 674, '2010-07-05 00:00:00', '2010-08-18 00:00:00', false, false, false, true, 9, true, 'See ''Kobrin side''; Kalman Kaplan is your paternal great great grandpfather (via Steven Alman, Harvey Alman, Sarah Alman). ', false, 'Great great great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (85, 'Caren Adams', 'CarenA4GT@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2011-09-11 19:20:07', 183, '2011-07-21 15:55:42', NULL, false, true, false, false, 3, true, 'This is the history of your paternal grandparents (via James Husband, Bob''s brother)', false, ' Great great grandparents (father''s father''s side): <br/><a href=/family/family.asp?familyid=172>Thomas & Elanor Husband</a>', now());
 
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
-done: 38
+done: 39
 
 update users set last_pestered = '2015-12-14' where id in (2, 3, 4);
 update users set last_pestered = '2015-12-19' where id in (7, 6, 5);
@@ -88,12 +89,12 @@ update users set last_pestered = '2015-12-29' where id in (48);
 update users set last_pestered = '2015-12-30' where id in (23, 19, 24, 40);
 update users set last_pestered = '2015-12-31' where id in (24);
 update users set last_pestered = '2016-01-01' where id in (40, 57);
-update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 43, 39, 49, 56, 76, 54);
+update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 43, 39, 49, 56, 76, 54, 85);
 
 ===left off:
 
 
----remaining kobrins (emailed):
+---remaining kobrins (8, emailed):
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (52, 'bsneag@ibi.co.za', false, 'password', '2010-07-13 08:37:04', 680, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 10, true, 'Brian is dad''s second cousin, he came down through Beila', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
@@ -110,7 +111,6 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (84, 'Neville Kobrin', 'stanchait12@gmail.com', false, 'NKpassword', NULL, 350, '2011-05-19 07:17:29', NULL, false, false, false, true, false, true, 'Neville comes from Nathan Kobrin via Toly ', false, ' Great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (87, 'allan_marcus@student.uml.edu', false, 'AMpassword', NULL, 857, '2012-01-17 21:59:40', NULL, false, false, false, true, false, true, 'Great-grandson of Sarah Alman', false, ' Great great great great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>',  now());
-
 
 
 ---remaining kemlers & zorns (15):
@@ -144,7 +144,8 @@ INSERT INTO users (id, email, shared_account, password, last_login, person_id, c
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (80, 'thezorns@gmail.com', true, 'ppj462', NULL, 7, '2010-08-22 23:13:20', '2010-08-22 00:00:00', false, false, true, false, false, true, '', false, '', now());
 
----remaining keems (3): 
+
+---remaining keems (3, emailed): 
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (25, 'ansuincg@buffalostate.edu', false, 'password', NULL, 70, NULL, '2010-10-25 00:00:00', true, false, false, false, false, true, NULL, false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
 
@@ -152,10 +153,11 @@ INSERT INTO users (id, email, shared_account, password, last_login, person_id, c
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (71, 'ansuini.c@law.wlu.edu', false, 'password', NULL, 218, '2010-07-21 00:05:00', '2010-10-25 00:00:00', true, false, false, false, false, true, 'Cathy\'s daughter', false, '5 sets of great great great great great great great great grandparents (mother\'\'s mother\'\'s side): <br/>see hot pink families <a href=/family/history.asp?displaybranch=y>here</a>', now());
 
----remaining husbands (2):
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (85, 'Caren Adams', 'CarenA4GT@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2011-09-11 19:20:07', 183, '2011-07-21 15:55:42', NULL, false, true, false, false, 3, true, 'mom''s cousin', false, ' Great great grandparents (father''s father''s side): <br/><a href=/family/family.asp?familyid=172>Thomas & Elanor Husband</a>', now());
+facebook messaged Ashley Johnson, Anthony (jr), Cathy, and Tony Gorruso
 
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (28, 'Kevin Husband', 'khusband@realtyusa.com', false, 'password', NULL, 182, NULL, NULL, false, true, false, false, false, true, NULL, false, 'Great great grandparents (father\'s father\'s side): <br/><a href=\"/family/family.asp?familyid=172\">Thomas & Elanor Husband</a>', now());
+---remaining husbands (1):
+Messaged Kara Husband on myheritage.com
+Can try Caren Adams that way too if she doesn't respond on email
 
 
 
@@ -173,3 +175,6 @@ won't this time:
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (11, 'b.svikhart@comcast.net', false, 'password', NULL, 109, '2005-08-29', NULL, false, false, true, false,0, false, NULL, false, NULL, now());
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (30, 'eghart@msn.com', false, 'joannbarbara', '2009-11-30 22:13:38', 452, NULL, '2010-03-16 00:00:00', false, false, true, false, 2, true, '', false, NULL, now());
+
+(email got sent back)
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (28, 'Kevin Husband', 'khusband@realtyusa.com', false, 'password', NULL, 182, NULL, NULL, false, true, false, false, false, true, NULL, false, 'Great great grandparents (father''s father''s side): <br/><a href=\"/family/family.asp?familyid=172\">Thomas & Elanor Husband</a>', now());
