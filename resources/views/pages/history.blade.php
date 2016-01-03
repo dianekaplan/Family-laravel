@@ -28,23 +28,23 @@ if ($user->kaplan_access)  $access_tally +=1;
     @if($user->keem_access)
         <div style="float: left; width:100}%;" id="family_section">
         @include ('pages.partials._keem_history')
-            </div>
+            </div><br/>
     @endif
-<br/>
+
 
     @if($user->husband_access)
         <div style="float: left; width:100}%;" id="family_section">
         @include ('pages.partials._husband_history')
-        </div>
+        </div>    <br/>
     @endif
-    <br/>
+
 
     @if($user->kemler_access)
                 <div style="float: left; width:100}%;" id="family_section">
         @include ('pages.partials._kemler_history')
-                </div>
+                </div>    <br/>
     @endif
-    <br/>
+
 
     @if($user->kaplan_access)
                         <div style="float: left; width:100}%;" id="family_section">
