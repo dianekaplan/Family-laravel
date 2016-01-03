@@ -19,6 +19,9 @@ class FamilyController extends Controller
 
     protected $mailer;
 
+    /**
+     * @param Mailer $mailer
+     */
     public function __construct(Mailer $mailer)
     {
         $this->middleware('auth');
@@ -55,6 +58,10 @@ class FamilyController extends Controller
         return view ('family.create');
     }
 
+    /**
+     * @param SaveFamilyRequest $request
+     * @return static
+     */
     private function createFamily(SaveFamilyRequest $request)
     {
         $family = Family::create($request->all());
@@ -76,6 +83,10 @@ class FamilyController extends Controller
         return redirect('families');
     }
 
+    /**
+     * @param $family
+     * @return mixed
+     */
     protected function get_kids_of_family($family)
     {
         $kids = Person::where('family_of_origin', $family->id)
@@ -84,6 +95,10 @@ class FamilyController extends Controller
         return $kids;
     }
 
+    /**
+     * @param $family
+     * @return mixed
+     */
     protected function get_notes_about_family($family)
     {
         $notes = Note::Where('type', 2)
@@ -97,10 +112,8 @@ class FamilyController extends Controller
 
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Family $family
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(Family $family)
     {
@@ -124,10 +137,8 @@ class FamilyController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Family $family
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit(Family $family)
     {
@@ -135,11 +146,9 @@ class FamilyController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Family $family
+     * @param SaveFamilyRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Family $family, SaveFamilyRequest $request)
     {
