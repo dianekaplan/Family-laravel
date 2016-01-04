@@ -13,7 +13,6 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                {{--<li class="active"><a href="/people">People</a></li>--}}
                 <li><a href="/families">Families</a></li>
                 <li><a href="/people">People</a></li>
                 <li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>
@@ -22,17 +21,13 @@
                 {{--<li> @include ('person.partials._person_link', ['person' => $person])</li>--}}
             </ul>
 
-
-            {{--@FIXME: come back and add logic in case nobody's logged in--}}
-
             <ul class="nav navbar-nav navbar-right">
-                {{--<li><a href="/users">Users</a></li>--}}
-                {{--<li><a href="/updates">Updates</a></li>--}}
+                @if($user->super_admin)
+                <li><a href="/admin">Admin</a></li>
+                @endif
 
                 <li><a href="/account">My Account</a></li>
                 <li><a href="/auth/logout">Log Out</a></li>
-                {{--<li>{!! link_to_action('AuthController@getLogout','Log Out') !!}</li>--}}
-                {{--<li>{!! link_to_action('UserController@show', Auth::user()->name, [Auth::user()->id]) !!}</li>--}}
             </ul>
 
 
