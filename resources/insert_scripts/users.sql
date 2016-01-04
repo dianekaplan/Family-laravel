@@ -55,7 +55,7 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (40, 'Sandie Mechanic', 'damech@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 548, '2010-05-11 00:00:00', '2010-07-06 00:00:00', false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your maternal great great grandparents (via Evelyn Kobrin, Noah Kobrin and Nathan Kobrin).', false, 'Great great great grandparents (mother''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (57, 'Martin Slon', 'martinslon@verizon.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-12 22:40:28', 715, '2010-07-07 00:00:00', '2010-09-21 00:00:00', false, false, false, true, 1, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your maternal great grandparents (via Hymie Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (57, 'Martin Slon', 'martinslon@verizon.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-12 22:40:28', 715, '2010-07-07 00:00:00', '2010-09-21 00:00:00', false, false, false, true, 1, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Hymie Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (82, 'Bertha Slon', 'berthas@bigpond.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 714, '2010-09-21 08:02:02', '2010-09-21 00:00:00', false, false, false, true, 0, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin were Hymie''s maternal grandparents (via Annie Slonimsky).', false, 'Hymie Slon''s great grandparents (mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
@@ -75,8 +75,14 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (85, 'Caren Adams', 'CarenA4GT@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2011-09-11 19:20:07', 183, '2011-07-21 15:55:42', NULL, false, true, false, false, 3, true, 'This is the history of your paternal grandparents (via James Husband, Bob''s brother)', false, ' Great great grandparents (father''s father''s side): <br/><a href=/family/family.asp?familyid=172>Thomas & Elanor Husband</a>', now());
 
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (88, 'Ashley Johnson', 'acs0918d1@yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 229, now(), '2016-01-03 00:00:00', true, false, false, false, 0, true, 'This is the history of your mom''s mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
+
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (58, 'Barry Slon', 'barry.slon@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 716, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Hymie Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (89, 'Tony Gorruso', 'Tony   @yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 71, now(), now(), true, false, false, false, NULL, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
+
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
-done: 39
+done: 41
 
 update users set last_pestered = '2015-12-14' where id in (2, 3, 4);
 update users set last_pestered = '2015-12-19' where id in (7, 6, 5);
@@ -90,6 +96,8 @@ update users set last_pestered = '2015-12-30' where id in (23, 19, 24, 40);
 update users set last_pestered = '2015-12-31' where id in (24);
 update users set last_pestered = '2016-01-01' where id in (40, 57);
 update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 43, 39, 49, 56, 76, 54, 85);
+update users set last_pestered = '2016-01-03' where id in (58);
+
 
 ===left off:
 
@@ -100,7 +108,7 @@ INSERT INTO users (id, email, shared_account, password, last_login, person_id, c
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (68, 'gsneag@pacbell.net', false, 'garden01', '2010-07-14 12:04:17', 741, '2010-07-14 08:44:08', '2010-08-23 00:00:00', false, false, false, true, true, true, 'Gary/Maurice/Beila Kobrin', false, ' Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (58, 'barry.slon@gmail.com', false, 'password', NULL, 716, '2010-07-07 00:00:00', NULL, false, false, false, true, false, true, 'Aaron/Annie/Hymie/Barry', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (53, 'Doreen Fittinghoff', 'mfitt@global.co.za', false, 'password', '2010-07-08 14:25:27', 682, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 2, true, 'Doreen is dad\'s second cousin, he came down through Beila', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
