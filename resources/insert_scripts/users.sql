@@ -81,6 +81,10 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (89, 'Tony Gorruso', 'Tony   @yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 71, now(), now(), true, false, false, false, NULL, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
 
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon-Meersand', 'dslon08@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Abe Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+
+
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
 done: 41
 
@@ -97,6 +101,7 @@ update users set last_pestered = '2015-12-31' where id in (24);
 update users set last_pestered = '2016-01-01' where id in (40, 57);
 update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 43, 39, 49, 56, 76, 54, 85);
 update users set last_pestered = '2016-01-03' where id in (58);
+update users set last_pestered = '2016-01-04' where id in (49, 59);
 
 
 ===left off:
@@ -112,7 +117,7 @@ INSERT INTO users (id, email, shared_account, password, last_login, person_id, c
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (53, 'Doreen Fittinghoff', 'mfitt@global.co.za', false, 'password', '2010-07-08 14:25:27', 682, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 2, true, 'Doreen is dad\'s second cousin, he came down through Beila', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon-Meersand', 'editordan2002@yahoo.com', false, 'password', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, false, true, 'Aaron/Annie/Abe/Daniella', false, 'Great great grandparents (father\'s mother\'s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (81, 'Dennis Kobrin', 'denvic35@orange.fr', false, 'DKpassword', NULL, 347, '2010-09-19 09:54:09', '2010-09-19 00:00:00', false, false, false, true, false, true, 'Nathan/Sam/Dennis', false, ' Great great great grandparents (father\'s father\'s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 

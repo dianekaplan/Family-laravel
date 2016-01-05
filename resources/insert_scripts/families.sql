@@ -288,7 +288,7 @@ INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date
 
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (268, 'The Sneags (Wayne & Mia)', 877, 746, false, NULL, NULL, NULL, false, false, 0, 0, '16', false, false, false, true, true, NULL, NULL, now(), now());
 
-
+INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (269, 'The Almans (Patrick & Brie)', 882, 656, false, '9/27/2015', NULL, NULL, false, true, 0, 0, '16', false, false, false, true, true, NULL, NULL, now(), now());
 
 update families set no_kids_bool = false where id in (156, 182);
 update families set caption = 'The Schultzes (Jeff & Miriam)' where id = 91;
@@ -298,6 +298,6 @@ update families set notes1 = 'Living in Raleigh, NC (as of 12/2015) ' where id =
 update families set caption = 'Caren Adams & Carl Adams' where id = 111;
 update families set caption = 'Kevin Husband & Carol Husband' where id = 110; 
 update families set caption = 'Andrea Kemler & Bob Svikhart' where id = 26; 
-
+update families set notes1 = 'They were married in Natick, MA, together until 2006' where id = 100;
 
 
