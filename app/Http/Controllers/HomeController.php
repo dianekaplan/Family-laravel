@@ -21,6 +21,7 @@ use App\Family;
 use Carbon\Carbon;
 use App\User;
 use App\Activity;
+use App\Login;
 
 
 class HomeController extends Controller {
@@ -164,6 +165,13 @@ public function get_person_from_user(User $user)
     {
         $user =  \Auth::user();
         return view ('pages.help', compact('user'));
+    }
+
+    public function logins()
+    {
+        $logins = Login::orderBy('created_at', desc)->get();
+
+        return view ('pages.logins', logins);
     }
 
     public function admin()

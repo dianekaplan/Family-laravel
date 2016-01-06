@@ -59,6 +59,7 @@ Route::get('users/store', 'UserController@store');
 Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');
 Route::get('activities', 'ActivitiesController@index');
+Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
 
 //Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);

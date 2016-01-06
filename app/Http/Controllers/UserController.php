@@ -95,7 +95,13 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view ('user.show', compact('user'));
+
+        $logins = $user->logins()->get();
+//        $activity = $user->activity()->with(['user', 'subject'])->SimplePaginate(5);
+
+        return view ('user.show', compact('user', 'logins'));
+
+
     }
 
 
