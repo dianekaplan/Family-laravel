@@ -57,6 +57,12 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Activity')->with(['user', 'subject'])->latest();
     }
 
+    public function logins()
+    {
+        return $this->hasMany('App\Login');
+    }
+
+
     public function notes()
     {
 //            return $this->hasMany('App\Activity');

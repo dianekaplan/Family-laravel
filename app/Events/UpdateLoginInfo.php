@@ -8,6 +8,7 @@
 
 namespace App\Events;
 use Carbon\Carbon;
+use App\Login;
 
 
 class UpdateLoginInfo
@@ -16,10 +17,13 @@ class UpdateLoginInfo
     public function handle($user) {
 
         if (\App::environment('production')) {
-
             $user->last_login = Carbon::now();
             $user->logins = ( $user->logins + 1);
             $user->save();
+
+                Login::create([
+                    'user_id' => $user->id
+                ]);
         }
     }
 
