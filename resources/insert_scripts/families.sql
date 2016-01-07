@@ -299,5 +299,7 @@ update families set caption = 'Caren Adams & Carl Adams' where id = 111;
 update families set caption = 'Kevin Husband & Carol Husband' where id = 110; 
 update families set caption = 'Andrea Kemler & Bob Svikhart' where id = 26; 
 update families set notes1 = 'They were married in Natick, MA, together until 2006' where id = 100;
-
+update families set caption = 'Daniella Slon & Ronald Meersand' where id = 202;
+update families set show_on_branch_view = false where id = 202;
+delete from families where id = 202;
 

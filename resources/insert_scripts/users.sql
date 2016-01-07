@@ -81,12 +81,13 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (89, 'Tony Gorruso', 'Tony   @yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 71, now(), now(), true, false, false, false, NULL, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
 
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon-Meersand', 'dslon08@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Abe Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon', 'dslon08@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Abe Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (52, 'Brian Sneag', 'bsneag@ibi.co.za', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-13 08:37:04', 680, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 10, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Louis Sneag and Beila Sneag).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
 
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
-done: 41
+done: 42
 
 update users set last_pestered = '2015-12-14' where id in (2, 3, 4);
 update users set last_pestered = '2015-12-19' where id in (7, 6, 5);
@@ -109,7 +110,7 @@ update users set last_pestered = '2016-01-04' where id in (49, 59);
 
 ---remaining kobrins (8, emailed):
 
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (52, 'bsneag@ibi.co.za', false, 'password', '2010-07-13 08:37:04', 680, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 10, true, 'Brian is dad''s second cousin, he came down through Beila', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (68, 'gsneag@pacbell.net', false, 'garden01', '2010-07-14 12:04:17', 741, '2010-07-14 08:44:08', '2010-08-23 00:00:00', false, false, false, true, true, true, 'Gary/Maurice/Beila Kobrin', false, ' Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 

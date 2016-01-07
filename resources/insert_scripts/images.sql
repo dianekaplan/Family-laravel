@@ -1024,6 +1024,8 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1044, '2011_finn.jpg', NULL, 872, 1, '2011', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1045, '1971_gert_dad.jpg', NULL, NULL, NULL, '1971', NULL, now(), now(), false, false, true, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1046, '2011_Tony_trumpet.jpg', 'Dan Levinson <br/>Jazz Sextet', 71, NULL, '2011', NULL, now(), now(), true, false, false, false);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1047, '2014_Daniella.jpg', NULL, 717, 1, '2014', NULL, now(), now(), false, false, false, true);
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1048, '1970_slon_siblings.jpg', NULL, NULL, NULL, '1970ish', NULL, now(), now(), false, false, false, true);
 
 
 delete from images where id in (56, 65, 66, 80, 103, 365, 75);
