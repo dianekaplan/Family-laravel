@@ -2,11 +2,11 @@
 
 @section('content')
 
-<br/>Welcome, {{$user->name}}! <br/><br/>
+<br/>Welcome, {{$user->name}}! <br/>
 <div style="float: right; width: 26%;">
     @if ($person->birthdate)
         @if( $person->birthdate->month == \Carbon\Carbon::now()->month)
-            Happy birthday!
+            <br/>Happy birthday!
         @endif
     @endif
 </div>
@@ -16,7 +16,6 @@
     <div style="float: left; width: 23%;" id="family_section">
 
 
-    Me:   <br/>
         @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])
 <br/>
         <h3><a href="/history">My family history</a></h3>

@@ -169,9 +169,9 @@ public function get_person_from_user(User $user)
 
     public function logins()
     {
-        $logins = Login::orderBy('created_at', desc)->get();
+        $logins = Login::orderBy('created_at', 'desc')->with(['user'])->get();
 
-        return view ('pages.logins', logins);
+        return view ('pages.logins', compact('logins'));
     }
 
     public function admin()
