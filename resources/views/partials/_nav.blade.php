@@ -27,6 +27,7 @@
                 @endif
 
                 <li><a href="/account">My Account</a></li>
+                    <li><a href="/help">FAQs</a></li>
                 <li><a href="/auth/logout">Log Out</a></li>
             </ul>
 
