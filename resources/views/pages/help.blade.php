@@ -28,19 +28,22 @@
 
     <ul>
         <li>Family info is extremely sensitive, so it's a fundamental concern with any family tree.
-            The public websites handle it by having everything private/hidden for people still alive unless you explicitly
-            grant permission to share your tree with somebody.  Similarly for the site I'm making, this is only explicitly shared
-            with known people.  The only people able to see any info are known family members who are on the tree already. </li>
+            The public websites handle it by having everything private/hidden for people still alive, unless you explicitly
+            grant permission to share your tree with somebody.  Similarly for the site I'm making, the only people able to see any
+            info are known family members who are on the tree already, where I've explicitly created an account for that person.
+        </li>
 
         <li> Further, each account is created based on how that person is related, so you're only shown people from the side of the family
             we have in common.  That way what you see is more relevant, and also it doesn't cast the net any wider than needed.</li>
 
             <li>Then once the website is live (for now I'm still building) the only part anyone could potentially find in a search
             engine will be the <a href="landing">login page</a>. That page does have names and thumbnails on it, so that a potential
-            relative researching an ancestor will be able to find it and connect.  On the old version of this site that only
-            happened a couple times (since geneology is a pretty narrow interest). When that does happen, I make the person answer
-                some questions about our ancestors to prove they're really 'them' (since we haven't met).  Obviously this wouldn't be
-                bulletproof if a potential identity thief took the time to research our ancestors somehow, but it is unlikely.
+            relative researching an ancestor will be able to find it and email me.  On the previous version of this site I was contacted a
+                couple times by relatives who searched ancestor's names and found that page
+                (it's rare since geneology is a pretty narrow interest). When that happens, I make the person answer
+                some questions about our ancestors to prove they're really 'them' (since we haven't met).  This isn't
+                bulletproof if a potential identity thief took the time to research our ancestors, but it's a much higher
+                barrier to fraud than a public website like Facebook.
         </li>
 
     </ul>
