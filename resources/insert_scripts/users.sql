@@ -104,7 +104,7 @@ update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 4
 update users set last_pestered = '2016-01-03' where id in (58);
 update users set last_pestered = '2016-01-04' where id in (49, 59);
 update users set last_pestered = '2016-01-08' where id in (89, 22, 48, 76, 52, 40, 49, 88);
-
+update users set last_pestered = '2016-01-09' where id in (82, 58, 57);
 
 ===left off:
 

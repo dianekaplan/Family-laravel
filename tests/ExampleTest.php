@@ -11,11 +11,11 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-//    public function testBasicExample()
-//    {
-//        $this->visit('/')
-//             ->see('Laravel 5');
-//    }
+    public function testBasicExample()
+    {
+        $this->visit('/landing')
+             ->see('Welcome!');
+    }
 
     public function copied_from_laracast_19()
     {

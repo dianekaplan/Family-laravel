@@ -968,9 +968,31 @@ update people set sibling_seq = 3 where id = 357;
 update people set sibling_seq = 4 where id = 359;
 update people set sibling_seq = 5 where id = 360;
 
---daniella stuff:
+--daniella slon stuff:
 update people set show_on_landing_page = false where id in (719, 720, 721);
 update people set hide_bool = true where id in (719, 720, 721);
+update people set show_on_landing_page = false where id = 328;
+
+update people set deathdate_note = 
+'May have died around 1940, based on family page note from Daniella'
+where id = 324;
+
+update people set current_location = 'Tel Aviv' where id = 721;
+update people set current_location = 'South Africa' where id in (720, 719);
+
+update people set sibling_seq = 1 where id = 325;
+update people set sibling_seq = 2 where id = 326;
+update people set sibling_seq = 3 where id = 327;
+update people set sibling_seq = 4 where id = 328;
+update people set sibling_seq = 5 where id = 329;
+
+update people set notes1 = 'Saul has children: Noa and Rachelli Slon.  Rachel''s baby Talor was born in May 2015' where id = 721;
+
+other from Daniella: 
+Dora had a fall out when Annette was a few years old and we never saw her again - I never knew of Annette.  I only met Lily and Minnie a few times as a child. Never met Dora. Dad and Hymie were very close - Hymie died very young of cancer in his mid 40's when Barry was about 13.
+
+Me and my niece Noa both have congenital muscular dystrophy of a very rare type that thankfully is a lot milder than most dystrophys (we are both mobile etc, live pretty normal lives) - but we can find no trace of anyone else to have anything like this. It is definitely genetic and it needs to be carried by both parents. Where did it come from and was anyone at any time in our history affected? If there were, they would probably not have lived very long lives as it mainly affects lungs and breathing and requires intervention/support. There are only about 50 people known to have this type in all of the USA. 
+
 
 update people set deathdate = '9/18/1968' where id = 186;
 update people set last = 'O''Brien' where last = 'OBrien';
@@ -982,6 +1004,8 @@ update people set birthplace= 'Massachusetts' where id in (1, 2, 4, 13, 93, 176,
 
 update people set maiden = 'Schultz' where id = 291;
 update people set last= 'Davis' where id = 291;
+
+
 
 update people set education = 'Graduated from East Carolina University in 2008' where id = 229;
 update people set work= 'Working for GSI' where id = 229;

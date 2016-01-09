@@ -303,3 +303,5 @@ update families set caption = 'Daniella Slon & Ronald Meersand' where id = 202;
 update families set show_on_branch_view = false where id = 202;
 delete from families where id = 202;
 
+
+update families set notes1 =  'From Abe''s daughter Daniella: I understood my dad''s mom to be PollyAnna, and her husband was Baruch Moshe, who died when Abe was 16. (need to follow up on Hebrew names and nicknames vs second marriage)' where id = 93;
