@@ -79,7 +79,7 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (58, 'Barry Slon', 'barry.slon@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 716, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Hymie Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (89, 'Tony Gorruso', 'Tony   @yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 71, now(), now(), true, false, false, false, NULL, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (89, 'Tony Gorruso', 'Ttrumpetguy@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 71, now(), now(), true, false, false, false, NULL, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon', 'dslon08@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Abe Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
@@ -103,6 +103,7 @@ update users set last_pestered = '2016-01-01' where id in (40, 57);
 update users set last_pestered = '2016-01-02' where id in (82, 22, 4, 21, 103, 43, 39, 49, 56, 76, 54, 85);
 update users set last_pestered = '2016-01-03' where id in (58);
 update users set last_pestered = '2016-01-04' where id in (49, 59);
+update users set last_pestered = '2016-01-08' where id in (89, 22, 48, 76, 52, 40, 49, 88);
 
 
 ===left off:

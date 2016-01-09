@@ -24,7 +24,8 @@ The Keem/Reisdorf side:
 
                 <p>A little more history:
             In the 1860's, three of Mary's younger brothers <a href="http://family.app/stories/797">fought in the civil war</a>, click around
-                    in that family's pages for some interesting history.  Also we've traced back furthest on Mary's side on
+                    in <a href="{{ action('FamilyController@show', [80]) }}">that family's pages</a> for some interesting history
+                    (see book icons).  Also, we've traced back on Mary's side to
                     a set of her paternal great great great grandparents:
                     <a href="{{ action('FamilyController@show', [218]) }}">Mathias & Maria  Zohler</a>,
                     in Germany in the <b>1600's</b>. </p>

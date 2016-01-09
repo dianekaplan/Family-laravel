@@ -8,8 +8,8 @@
 
         @foreach ($recent_visitors as $user)
             <li><a href="{{ action('UserController@show', [$user]) }}">{{ $user->name}}</a>
-                - last login: {{ $user->last_login }},
-                last pestered: {{ $user->last_pestered }}
+                - last login: {{ $user->last_login }}
+                (last nudged: {{ $user->last_pestered }})
 
                 <br/>
                 @endforeach
@@ -46,14 +46,14 @@
                                 <td>    Never:        @if (count($never_seen))
                                         @foreach ($never_seen as $user)
                                             <li><a href="{{ action('UserController@show', [$user]) }}">{{ $user->name}}</a>
-                                                - last bugged: {{date('m/d/Y', strtotime( $user->last_pestered)) }}
+                                                - last nudged: {{date('m/d/Y', strtotime( $user->last_pestered)) }}
                                         @endforeach
                                     @endif
                                 <br/><br/>
                                                 Old site only: @if (count($users_on_old_site_only))
                                                 @foreach ($users_on_old_site_only as $user)
                                                     <li><a href="{{ action('UserController@show', [$user]) }}">{{ $user->name}}</a>
-                                                        - last bugged: {{ $user->last_pestered }}
+                                                        - last nudged: {{ $user->last_pestered }}
                                                 @endforeach
                                             @endif
 

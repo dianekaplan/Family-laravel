@@ -1300,7 +1300,20 @@ INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUE
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2221, 1057, 717, now(), now());
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2222, 1057, 720, now(), now());
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2223, 1057, 721, now(), now());
-
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2224, 1058, 118, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2225, 1058, 119, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2226, 1058, 120, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2227, 1058, 861, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2228, 1058, 863, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2229, 1058, 133, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2230, 1058, 111, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2231, 1060, 86, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2232, 1060, 79, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2233, 1060, 296, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2234, 1060, 103, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2235, 1060, 104, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2236, 1061, 81, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2237, 1061, 79, now(), now());
 
 delete from image_person where image_id = 858;
 

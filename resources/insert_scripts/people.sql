@@ -968,8 +968,9 @@ update people set sibling_seq = 3 where id = 357;
 update people set sibling_seq = 4 where id = 359;
 update people set sibling_seq = 5 where id = 360;
 
-
-
+--daniella stuff:
+update people set show_on_landing_page = false where id in (719, 720, 721);
+update people set hide_bool = true where id in (719, 720, 721);
 
 update people set deathdate = '9/18/1968' where id = 186;
 update people set last = 'O''Brien' where last = 'OBrien';
