@@ -8,15 +8,17 @@ The Kobrin side:
                 <a href="{{ action('PeopleController@show', [29]) }}">Kal Kobrin</a> (Larry's father, 3 generations back) was 20 years old-  settled in the US, and when
                 he immigrated his surname was changed from Kobrin to Kaplan. Kalman's mother
                 <a href="{{ action('PeopleController@show', [311]) }}">Rochel</a> had come to the US in 1894, and then she went to South Africa afterward and died in
-                Johannesburg.
+                Johannesburg. Six of Aaron & Rochel's children had families of their own:
 
                 <ul>
-                    <li>Kalman's descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins.  </li>
-                    <li>Nathan's descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  </li>
-                    <li>Annie's descendants are the Slonimskys and the Slons.  </li>
-                    <li>Yetta's descendants are the Blochs and the Foxes.  </li>
-                    <li>Solomon's descendants include the Melmans, the Robertsons, and some Kobrins. </li>
-                    <li>Beila's descendants include the Sneags and the Fittinghoffs. </li>
+                    <li>Kalman's descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins. <img src="/flags/us.gif" /> </li>
+                    <li>Nathan's descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
+                        </li>
+                    <li>Annie's descendants are the Slonimskys and the Slons. <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> <img src="/flags/il.gif" /> </li>
+                    <li>Yetta's descendants are the Blochs and the Foxes <img src="/flags/za.gif" /> <img src="/flags/us.gif" />  </li>
+                    <li>Solomon's descendants include the Melmans, the Robertsons, and some Kobrins. <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
+                        <img src="/flags/zw.gif" alt="Zimbabwe" /> <img src="/flags/gb.gif" /></li>
+                    <li>Beila's descendants include the Sneags and the Fittinghoffs <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> </li>
                 </ul>
             </li>
         </ul>
