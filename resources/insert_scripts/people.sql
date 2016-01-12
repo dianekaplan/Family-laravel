@@ -1054,7 +1054,10 @@ update people set face = '719rivette.jpg' where id = 719;
 update people set face = '720brian.jpg' where id = 720;
 update people set face = '721saul.jpg' where id = 721;
 update people set face = '328abe.jpg' where id = 328;
-
+update people set face = '680brian.jpg' where id = 680;
+update people set face = '683brenda.jpg' where id = 683;
+update people set face = '686michelle.jpg' where id = 686;
+update people set face = '685jodi.jpg' where id = 685;
 
 
 

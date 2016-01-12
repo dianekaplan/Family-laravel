@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="48bd4071-cb94-4632-a322-e8d6cd0ecf5c" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Diane\Documents\GitHub\Homestead\Family-laravel\public\build\css\all-7c436dcec6.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/flags/Thumbs.db" afterPath="$PROJECT_DIR$/public/flags/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/notes.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/notes.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/people.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/people.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/insert_scripts/users.sql" afterPath="$PROJECT_DIR$/resources/insert_scripts/users.sql" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +60,7 @@
       <file leaf-file-name="_kaplan_history.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4562147">
+            <state vertical-scroll-proportion="0.5607639">
               <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding />
             </state>
@@ -153,10 +153,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1108,11 +1108,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1481,7 +1481,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
           <folding>
-            <element signature="e#122#136#0#PHP" expanded="true" />
+            <element signature="e#122#136#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1525,7 +1525,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_kaplan_history.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4562147">
+        <state vertical-scroll-proportion="0.5607639">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding />
         </state>

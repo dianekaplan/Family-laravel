@@ -83,6 +83,7 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (59, 'Daniella Slon', 'dslon08@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 717, '2010-07-07 00:00:00', NULL, false, false, false, true, NULL, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Abe Slon and Annie Slonimsky).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
+--and sent facebook request 1/12
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (52, 'Brian Sneag', 'bsneag@ibi.co.za', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-13 08:37:04', 680, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 10, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Louis Sneag and Beila Sneag).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
 
@@ -111,15 +112,11 @@ update users set last_pestered = '2016-01-09' where id in (82, 58, 57);
 
 ---remaining kobrins (8, emailed):
 
-
-
+--facebook messaged 1/12
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (68, 'gsneag@pacbell.net', false, 'garden01', '2010-07-14 12:04:17', 741, '2010-07-14 08:44:08', '2010-08-23 00:00:00', false, false, false, true, true, true, 'Gary/Maurice/Beila Kobrin', false, ' Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
-
-
+--she's on facebook, but private so haven't reached out yet
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (53, 'Doreen Fittinghoff', 'mfitt@global.co.za', false, 'password', '2010-07-08 14:25:27', 682, '2010-07-02 00:00:00', '2010-08-20 00:00:00', false, false, false, true, 2, true, 'Doreen is dad\'s second cousin, he came down through Beila', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
-
-
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (81, 'Dennis Kobrin', 'denvic35@orange.fr', false, 'DKpassword', NULL, 347, '2010-09-19 09:54:09', '2010-09-19 00:00:00', false, false, false, true, false, true, 'Nathan/Sam/Dennis', false, ' Great great great grandparents (father\'s father\'s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
