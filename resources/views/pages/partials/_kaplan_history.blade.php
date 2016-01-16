@@ -11,14 +11,14 @@ The Kobrin side:
                 Johannesburg. Six of Aaron & Rochel's children had families of their own:
 
                 <ul>
-                    <li>Kalman's descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins. <img src="/flags/us.gif" /> </li>
-                    <li>Nathan's descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
+                    <li><a href="{{ action('PeopleController@show', [29]) }}">Kalman</a>'s descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins. <img src="/flags/us.gif" /> </li>
+                    <li><a href="{{ action('PeopleController@show', [312]) }}">Nathan</a>'s descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  <img src="/flags/us.gif" /> <img src="/flags/za.gif" /> <img src="/flags/ch.gif" />
                         </li>
-                    <li>Annie's descendants are the Slonimskys and the Slons. <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> <img src="/flags/il.gif" /> </li>
-                    <li>Yetta's descendants are the Blochs and the Foxes <img src="/flags/za.gif" /> <img src="/flags/us.gif" />  </li>
-                    <li>Solomon's descendants include the Melmans, the Robertsons, and some Kobrins. <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
+                    <li><a href="{{ action('PeopleController@show', [313]) }}">Annie</a>'s descendants are the Slonimskys and the Slons. <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> <img src="/flags/il.gif" /> </li>
+                    <li><a href="{{ action('PeopleController@show', [314]) }}">Yetta</a>'s descendants are the Blochs and the Foxes <img src="/flags/za.gif" /> <img src="/flags/us.gif" />  </li>
+                    <li><a href="{{ action('PeopleController@show', [316]) }}">Solomon</a>'s descendants include the Melmans, the Robertsons, and some Kobrins. <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
                         <img src="/flags/zw.gif" alt="Zimbabwe" /> <img src="/flags/gb.gif" /></li>
-                    <li>Beila's descendants include the Sneags and the Fittinghoffs <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> </li>
+                    <li><a href="{{ action('PeopleController@show', [317]) }}">Beila</a>'s descendants include the Sneags and the Fittinghoffs <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> </li>
                 </ul>
             </li>
         </ul>
@@ -36,12 +36,16 @@ Background for both families:
 <ul><li>
 Lithuania had been struggling with  oppression under the Russian empire and famine in 1867-1868, and according to
 <a href="https://en.wikipedia.org/wiki/History_of_Lithuania">wikipedia</a> between 1868 and 1914, approximately 635,000 people
-(almost 20 percent of the population) left Lithuania. Toba & Max Shapiro moved from Russia to Johannesburg, South Africa. Their daughters
+(almost 20 percent of the population) left Lithuania. </li>
+    <li>Toba & Max Shapiro moved from Russia to Johannesburg, South Africa. Their daughters
         <a href="{{ action('PeopleController@show', [28]) }}">Annie</a> +
         <a href="{{ action('PeopleController@show', [336]) }}">Rebecca</a> Shapiro (sisters) married
         <a href="{{ action('PeopleController@show', [29]) }}">Kalman</a> and
         <a href="{{ action('PeopleController@show', [316]) }}">Solomon</a> Kobrin (brothers).
-        Annie & Kalman in the US (they were married in Boston June 15, 1896), and Rebecca & Solomon stayed in South Africa.  (Add something about when those relatives immigrated)
+        Annie & Kalman in the US (they were married in Boston June 15, 1896), and Rebecca & Solomon stayed in South Africa.
+        There is still a large part of the family in South Africa, and over the years various folks have migrated to
+        the US and the UK, and we have a couple families in Switzerland, Israel and Zimbabwe.
+
 
     </li></ul>
 
