@@ -10,7 +10,7 @@
     @if (count($videos))
 
         @foreach ($videos as $video)
-                @include ('video.partials._video_link', ['video' => $video])<br/>
+                @include ('video.partials._video_link', ['video' => $video])
 
         @endforeach
     @endif

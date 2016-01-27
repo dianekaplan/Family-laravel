@@ -290,6 +290,14 @@ INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date
 
 INSERT INTO families (id, caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES (269, 'The Almans (Patrick & Brie)', 882, 656, false, '9/27/2015', NULL, NULL, false, true, 0, 0, '16', false, false, false, true, true, NULL, NULL, now(), now());
 
+INSERT INTO families ( caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES ( 'The Markses (Terri & Steve)', 689, 890, false, NULL, NULL, NULL, false, false, 0, 4, '15', false, false, false, true, true, NULL, NULL, now(), now());
+
+INSERT INTO families ( caption, mother_id, father_id, divorced, marriage_date_note, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES ( 'The Friedmans (Dora & Max)', 327, 894, false, 'April, 1951', NULL, NULL, false, false, 0, 4, '14', false, false, false, true, true, NULL, NULL, now(), now());
+
+INSERT INTO families ( caption, mother_id, father_id, divorced, marriage_date, Notes1, Notes2, original_family, no_kids_bool, junk, branch, branch_seq, keem_line, husband_line, kemler_line, kaplan_line, show_on_branch_view, flag1, flag2, created_at, updated_at) VALUES ( 'The Rosses (Annette & Jeffrey)', 895, 896, false, '1980-10-26', 'Emigrated to Sydney in 1981', NULL, false, false, 0, 4, '15', false, false, false, true, true, NULL, NULL, now(), now());
+
+
+
 update families set no_kids_bool = false where id in (156, 182);
 update families set caption = 'The Schultzes (Jeff & Miriam)' where id = 91;
 update families set caption = 'Anita Gorruso & Anthony Scudiero' where id = 73; 
@@ -303,5 +311,6 @@ update families set caption = 'Daniella Slon & Ronald Meersand' where id = 202;
 update families set show_on_branch_view = false where id = 202;
 delete from families where id = 202;
 
+update families set marriage_date = '1906-06-19' where id = 11;
 
 update families set notes1 =  'From Abe''s daughter Daniella: I understood my dad''s mom to be PollyAnna, and her husband was Baruch Moshe, who died when Abe was 16. (need to follow up on Hebrew names and nicknames vs second marriage)' where id = 93;

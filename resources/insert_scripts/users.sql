@@ -88,6 +88,10 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (53, 'Doreen Fittinghoff', 'mfitt@global.co.za', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-08 14:25:27', 682, '2010-07-02 00:00:00', '2016-01-16 00:00:00', false, false, false, true, 2, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Louis Sneag and Beila Sneag).', false, 'Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
 
+
+INSERT INTO users ( name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Annette Ross', 'rossyann7@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2016-01-25', 895, now(), NULL, false, false, false, true, 1, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your maternal great grandparents (via Dora Slominsky and Annie Kobrin).', false, 'Great great grandparents (mother''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
 done: 42
 
