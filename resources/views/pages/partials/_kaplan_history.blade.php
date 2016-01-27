@@ -14,7 +14,7 @@ The Kobrin side:
                     <li><a href="{{ action('PeopleController@show', [29]) }}">Kalman</a>'s descendants include the Klopers, the Schultzes, the Almans, the Kaplans, the Dolphs, the Marcuses, and some Kobrins. <img src="/flags/us.gif" /> </li>
                     <li><a href="{{ action('PeopleController@show', [312]) }}">Nathan</a>'s descendants include the Rothschilds, the Joffees, the Goldsteins, and some Kobrins.  <img src="/flags/us.gif" /> <img src="/flags/za.gif" /> <img src="/flags/ch.gif" />
                         </li>
-                    <li><a href="{{ action('PeopleController@show', [313]) }}">Annie</a>'s descendants are the Slonimskys and the Slons. <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> <img src="/flags/il.gif" /> </li>
+                    <li><a href="{{ action('PeopleController@show', [313]) }}">Annie</a>'s descendants are the Slonimskys, the Slons, and the Rosses. <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> <img src="/flags/il.gif" /> </li>
                     <li><a href="{{ action('PeopleController@show', [314]) }}">Yetta</a>'s descendants are the Blochs and the Foxes <img src="/flags/za.gif" /> <img src="/flags/us.gif" />  </li>
                     <li><a href="{{ action('PeopleController@show', [316]) }}">Solomon</a>'s descendants include the Melmans, the Robertsons, and some Kobrins. <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
                         <img src="/flags/zw.gif" alt="Zimbabwe" /> <img src="/flags/gb.gif" /></li>
