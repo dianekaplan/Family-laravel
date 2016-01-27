@@ -1,15 +1,20 @@
+<ul id="gallery">
 
-<a href="/video/{{ $video->id  }}">
+    <li>
 
-<?php echo cl_video_tag($video->name , array( "cloud_name" => "hnyiprajv", "height"=> "150", "class"=>"img-rounded","controls"=>"true" ));
-?>
-<br/>
-    @if ($video->caption)
-        ({{ $video->caption}})<br/>
-    @endif
+        <a href="/video/{{ $video->id  }}">
 
-    @if ($video->year)
-        ({{ $video->year}})<br/>
-        @endif
+            <?php echo cl_video_tag($video->name , array( "cloud_name" => "hnyiprajv", "height"=> "150", "class"=>"img-rounded","controls"=>"true" ));
+            ?>
+            <br/>
+            @if ($video->caption)
+                ({{ $video->caption}})<br/>
+            @endif
 
-</a>
+            @if ($video->year)
+                ({{ $video->year}})<br/>
+            @endif
+
+        </a>
+    </li>
+</ul>

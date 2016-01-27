@@ -11,6 +11,16 @@
     </div>
 
     <div style="float: left; width: 23%;" id="family_section">
+        Update a <a href="/person_admin_fields">person</a> (add /id at the end)<br/>
+        Update a <a href="/family_admin_fields">family</a> (add /id at the end)<br/>
+        {{--{!! Form::open(array('url' => 'person_admin_fields')) !!}--}}
+
+        {{--{!! Form::label('person_id','Update person ID:') !!}--}}
+        {{--{!! Form::text('number', null, ['class' => 'form-control']) !!}--}}
+
+        {{--{!! Form::submit('Go') !!}--}}
+        {{--{!! Form::close() !!}--}}
+
         Configure an <a href="/images">image</a><br/>
     </div>
 
@@ -23,6 +33,6 @@
         </div>
 
 
-    @section('footer')
+        @section('footer')
             Footer info
 @stop

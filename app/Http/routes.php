@@ -62,6 +62,10 @@ Route::get('activities', 'ActivitiesController@index');
 Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
 
+
+Route::get('person_admin_fields/{id}', 'AdminController@admin_edit_person');
+Route::get('family_admin_fields/{id}', 'AdminController@admin_edit_family');
+
 //Route::get('updates/pending', ['middleware' => 'super', 'uses' => 'UpdateController@pending']);
 //Route::get('updates/pending', 'UpdateController@pending');  //syntax without middleware
 
