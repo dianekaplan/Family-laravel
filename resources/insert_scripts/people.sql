@@ -1082,6 +1082,12 @@ update people set face = '689terri.jpg' where id = 689;
 update people set face = '890steve.jpg' where id = 890;
 update people set face = '891amy.jpg' where id = 891;
 update people set face = '892aaron.jpg' where id = 892;
+update people set face = '714bertha.jpg' where id = 714;
+update people set face = '329hymie.jpg' where id = 329;
+
+
+
+
 
 update people set flag1 = 'us' where id in (405, 406, 407, 57, 55, 287, 52, 53, 56, 54, 229, 230, 231, 59, 197, 182, 146, 147, 148, 149, 369, 761, 404, 198, 
 762, 126, 176, 626, 22, 123, 124, 127, 128, 129, 130, 173, 627, 458, 459, 460, 424, 171, 172, 423, 372, 632, 631, 633, 634, 635, 370, 371, 224, 225, 192, 228, 

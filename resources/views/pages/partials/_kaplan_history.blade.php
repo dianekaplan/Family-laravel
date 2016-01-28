@@ -18,7 +18,7 @@ The Kobrin side:
                     <li><a href="{{ action('PeopleController@show', [314]) }}">Yetta</a>'s descendants are the Blochs and the Foxes <img src="/flags/za.gif" /> <img src="/flags/us.gif" />  </li>
                     <li><a href="{{ action('PeopleController@show', [316]) }}">Solomon</a>'s descendants include the Melmans, the Robertsons, and some Kobrins. <img src="/flags/us.gif" /> <img src="/flags/za.gif" />
                         <img src="/flags/zw.gif" alt="Zimbabwe" /> <img src="/flags/gb.gif" /></li>
-                    <li><a href="{{ action('PeopleController@show', [317]) }}">Beila</a>'s descendants include the Sneags and the Fittinghoffs <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> </li>
+                    <li><a href="{{ action('PeopleController@show', [317]) }}">Beila</a>'s descendants include the Sneags, the Fittinghoffs, and the Markses <img src="/flags/za.gif" /> <img src="/flags/us.gif" /> </li>
                 </ul>
             </li>
         </ul>
