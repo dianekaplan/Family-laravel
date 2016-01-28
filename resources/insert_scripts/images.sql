@@ -1043,6 +1043,11 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1064, '2012_jess_larry.jpg', NULL, NULL, 0, '2012', NULL, now(), now(), true, true, true, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1065, '2012_belize_me.jpg', NULL, 86, 0, '2012', NULL, now(), now(), true, true, true, true);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1066, '1960ish_bertha_hymie.jpg', NULL, NULL, 0, '1958?', NULL, now(), now(), false, false, false, true);
+
+
+
+
 
 
 

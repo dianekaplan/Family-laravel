@@ -1085,6 +1085,13 @@ update people set face = '892aaron.jpg' where id = 892;
 update people set face = '714bertha.jpg' where id = 714;
 update people set face = '329hymie.jpg' where id = 329;
 
+update people set face = '896jeff.jpg' where id = 896;
+update people set face = '897michael.jpg' where id = 897;
+update people set face = '898carla.jpg' where id = 898;
+update people set face = '899josh.jpg' where id = 899;
+
+
+
 
 
 
