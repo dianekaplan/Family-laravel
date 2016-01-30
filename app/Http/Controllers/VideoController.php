@@ -34,7 +34,12 @@ class VideoController extends Controller
         if($user->kaplan_access) {$videos = $videos->merge(Video::kaplans()->get());}
 
         $videos= $videos->unique();
-        $videos = $videos->sortBy('year');
+//        $videos = $videos->sortBy('year');
+        //Collections only have sortBy for one thing, so I got this idea from here:
+        //http://stackoverflow.com/questions/25451019/what-is-the-syntax-for-sorting-an-eloquent-collection-by-multiple-columns?rq=1
+        $videos = $videos->sortBy(function($sort) {
+            return sprintf('%-12s%s', $sort->year, $sort->caption);
+        });
 
         return view ('video/album',  compact('videos'));
     }

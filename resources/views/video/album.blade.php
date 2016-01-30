@@ -5,8 +5,6 @@
         Home Movies
     </h3>
 
-    <p>(coming soon)<br/><br/>
-
     @if (count($videos))
 
         @foreach ($videos as $video)
