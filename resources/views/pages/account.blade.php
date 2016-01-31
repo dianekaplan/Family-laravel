@@ -119,7 +119,7 @@
 
 
         {{--</div>--}}
-@stop
+{{--@stop--}}
 
 
 @section('footer')
