@@ -24,3 +24,17 @@ INSERT INTO videos(name, caption, year, keem_line, husband_line, kemler_line, ka
 
 INSERT INTO videos(name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES ('1953_guests_4.mp4', 'Ken''s bar mitzvah: guests #4', '1953', false, false, true, true, now(), now());
 
+INSERT INTO videos(name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES ('1994_joey_danny_balloons.mp4', 'Joey & Danny balloons', '1994', true, true, false, false, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (16, '1994_danny_joey_playground.mp4', 'Danny & Joey playground', '1994', true, true, false, false, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (17, '1994_playground2.mp4', 'Danny & Joey playground #2', '1994', true, true, false, false, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (18, '1994_post_party.mp4', 'Hanging out', '1994', true, true, false, false, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (19, '1991_beach', 'At the beach!', '1991', true, true, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (20, '1993_beach', 'At the beach!', '1993', true, true, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (21, '1989_pre_thanksgiving2.mp4', 'Thanksgiving#2', '1989', false, false, true, true, now(), now());
+

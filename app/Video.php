@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+//use App\Person;
 
 class Video extends Model
 {
@@ -10,10 +11,12 @@ class Video extends Model
         'name', 'caption', 'subject', 'year', 'start', 'stop'
     ];
 
-    //get the people associated with the given tag
     public function people()
     {
-        return $this->belongsToMany('App\Person');
+//        return $this->belongsToMany('App\Person', 'person_video');
+        return $this->belongsToMany('App\Person', 'person_video')->withPivot('description');
+        //when I add description, the whole collection seems to go empty
+//        return $this->belongsToMany('App\Person', 'person_video', 'description');
     }
 
 

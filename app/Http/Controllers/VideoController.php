@@ -9,6 +9,7 @@ use App\Video;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Collection;
+use DB;
 
 class VideoController extends Controller
 {
@@ -75,7 +76,7 @@ class VideoController extends Controller
     {
         $video = Video::find($id);
 
-        return view ('video/show',  compact('video'));
+        return view ('video/show',  compact('video', 'appearance_notes'));
     }
 
     /**
