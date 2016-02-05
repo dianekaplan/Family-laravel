@@ -13,8 +13,7 @@
     ?>
    </div>
 
-<div style="float: left; width: 10;" >
-    </div>
+{{--<div style="float: left; width: 10;" >--}}
 
     {{--People featured in this video:--}}
     @foreach($video->people as $person)
@@ -25,7 +24,7 @@
         <br/>
 
 @endforeach
-    <br/>
+{{--</div>--}}
 
 
 @stop

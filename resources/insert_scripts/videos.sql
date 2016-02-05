@@ -38,3 +38,8 @@ INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line
 
 INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (21, '1989_pre_thanksgiving2.mp4', 'Thanksgiving#2', '1989', false, false, true, true, now(), now());
 
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (22, '1989_thanksgiving_after.mp4', 'Thanksgiving: after', '1989', false, false, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (23, '1989_thanksgiving_during.mp4', 'Thanksgiving:during', '1989', false, false, true, true, now(), now());
+
+

@@ -1,4 +1,5 @@
-0 info it worked if it ends with ok
+0exit
+ info it worked if it ends with ok
 1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'jScroll' ]
 2 info using npm@3.3.8
 3 info using node@v4.2.1

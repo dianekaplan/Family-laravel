@@ -84,3 +84,13 @@ update person_video set description = '0:54-0:56' where id =77;
 update person_video set description = '0:56-0:58' where id =78;
 update person_video set description = '0:59-1:00' where id =79;
 update person_video set description = 'Right at the 1:00 minute mark, in the front' where id =80;
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (22, 108, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (22, 112, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (22, 24, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (22, 27, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (22, 105, now(), now());
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 37, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 110, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 106, now(), now());

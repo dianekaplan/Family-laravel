@@ -61,9 +61,9 @@
 
     <h4>What's  next? </h4>
     <ul>
-        <li>Home movies!  I'm having some old footage digitized, if you have some to add, let me know. </li>
+        <li>Home movies!  I'm in the process of digitizing a bunch of old home movies- you have some to add, let me know. </li>
         <li>Choronological outline view (like the old family tree had) </li>
-        <li>Being able to add your pictures directly (instead of emailing to me) </li>
+        {{--<li>Being able to add your pictures directly (instead of emailing to me) </li>--}}
         <li>Other ideas? <a href="mailto:dianekaplan@gmail.com">Let me know</a> what you'd like to see.
     </ul>
 
