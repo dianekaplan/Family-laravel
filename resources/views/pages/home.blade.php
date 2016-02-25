@@ -50,7 +50,7 @@
     <div style="float: left; width: 41%;" id="family_section">
 
         @unless ($new_pictures->isEmpty())
-            Recent pics added:
+            Most recent pics:
             @foreach($new_pictures as $image)
                 @include ('partials._image_link', ['image' => $image])
             @endforeach
@@ -61,7 +61,19 @@
 
     <div style="float: left; width: 41%;" id="family_section">
 
-        Recent updates made:
+        @unless ($new_videos->isEmpty())
+            Most recent videos:
+            @foreach($new_videos as $video)
+                @include ('video.partials._video_link', ['video' => $video])
+            @endforeach
+        @endunless
+        {!! $new_videos->render() !!}
+
+    </div>
+
+    <div style="float: left; width: 41%;" id="family_section">
+
+        Most recent updates:
         <ul class="list-group">
             @include ('activity.partials._list', [ 'hide_types' => [] ])
         </ul>

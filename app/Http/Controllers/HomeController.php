@@ -113,13 +113,28 @@ class HomeController extends Controller {
 
 
         $new_pictures = Image::latest('created_at' )
-            ->Where('created_at', '>', Carbon::now()->subDays(30) )
+            ->Where('created_at', '>', Carbon::now()->subDays(200) )
             ->SimplePaginate(5);
 
 //            ->take(5)
 //            ->get();
 
         return $new_pictures;
+    }
+
+    public function get_recently_added_videos ()
+    {
+        $user =  \Auth::user();
+
+//       @TODO:  I'd like to use a collection so I can only show based on permissions, but the view uses render and paginate, which are
+//        for eloguent and not collections.  Could consider staying with eloquent and adding a scope for recent
+        $new_videos = new Collection;
+
+        $new_videos = Video::latest('created_at' )
+            ->Where('created_at', '>', Carbon::now()->subDays(200) )
+            ->SimplePaginate(1);
+
+        return $new_videos;
     }
 
 public function get_person_from_user(User $user)
@@ -135,12 +150,13 @@ public function get_person_from_user(User $user)
         $person = HomeController::get_person_from_user($user);
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
+        $new_videos = HomeController::get_recently_added_videos();
 
         $activity =  Activity::orderBy('created_at', 'desc')->with(['user', 'subject'])
-            ->Where('created_at', '>', Carbon::now()->subDays(30) )
+            ->Where('created_at', '>', Carbon::now()->subDays(200) )
             ->SimplePaginate(10);
 
-        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity'));
+        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity', 'new_videos'));
     }
 
 
