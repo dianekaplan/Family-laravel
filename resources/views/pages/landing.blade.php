@@ -8,6 +8,9 @@
 
 </head>
 <body>
+{{--Google analytics include--}}
+<?php include_once("analyticstracking.php") ?>
+{{--End google analytics include--}}
 
 {{--//Considered extending 'app', but the alternate navbar doesn't make sense on the landing page--}}
 

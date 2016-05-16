@@ -8,6 +8,7 @@
 <!--got this from here along with auth views: https://github.com/bestmomo/scafold/blob/master/views/app.blade.php -->
 
 <body>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
 

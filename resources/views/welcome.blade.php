@@ -36,6 +36,9 @@
         </style>
     </head>
     <body>
+    {{--Google analytics include--}}
+    <?php include_once("analyticstracking.php") ?>
+    {{--End google analytics include--}}
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>

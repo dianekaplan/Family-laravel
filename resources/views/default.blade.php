@@ -8,6 +8,9 @@
 </head>
 
 <body>
+{{--Google analytics include--}}
+<?php include_once("analyticstracking.php") ?>
+{{--End google analytics include--}}
 
 @include ('partials._nav', ['user'=> \Auth::user()])
 
