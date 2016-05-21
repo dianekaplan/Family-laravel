@@ -79,6 +79,14 @@ class VideoController extends Controller
         return view ('video/show',  compact('video', 'appearance_notes'));
     }
 
+    public function get_video_people($id)
+    {
+        $video = Video::find($id);
+        $people = $video->people;
+
+        return response()->json($people);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

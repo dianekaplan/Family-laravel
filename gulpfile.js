@@ -45,6 +45,7 @@ elixir(function(mix) {
         'libs/jquery.js',
         'libs/select2.min.js',
         'libs/bootstrap.min.js',
+        'video_hover.js',
         //'libs/jquery.min.js'  //from cloudflare, but including it made a bug during 24
     ], 'public/js', 'resources/js');
 

@@ -64,7 +64,7 @@
         @unless ($new_videos->isEmpty())
             Most recent videos:
             @foreach($new_videos as $video)
-                @include ('video.partials._video_link', ['video' => $video])
+                @include ('video.partials._video_link', ['video' => $video, 'class'=> "img-rounded"])
             @endforeach
         @endunless
         {!! $new_videos->render() !!}

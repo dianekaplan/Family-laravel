@@ -42,6 +42,7 @@ Route::get('album', 'ImageController@album');
 
 Route::get('videos', 'VideoController@album');
 Route::get('video/{video}', 'VideoController@show');
+Route::get('video/list/{video}', 'VideoController@get_video_people');
 Route::get('videotest', 'HomeController@test');
 
 
