@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel family tree</title>
+    <title>Our big family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 </head>
 <!--got this from here along with auth views: https://github.com/bestmomo/scafold/blob/master/views/app.blade.php -->
