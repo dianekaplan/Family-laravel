@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1e94042-abf4-4c25-bc18-827996dce02e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/video/partials/_video_link.blade.php" afterPath="$PROJECT_DIR$/resources/views/video/partials/_video_link.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/video/album.blade.php" afterPath="$PROJECT_DIR$/resources/views/video/album.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/person/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/person/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/video_hover.js" afterPath="$PROJECT_DIR$/resources/js/video_hover.js" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,24 +34,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33272395">
+            <state vertical-scroll-proportion="-3.3090909">
               <caret line="107" column="90" selection-start-line="107" selection-start-column="90" selection-end-line="107" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_hover.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video_hover.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.793103">
-              <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,11 +139,11 @@
         <option value="$PROJECT_DIR$/resources/css/app.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" />
         <option value="$PROJECT_DIR$/resources/css/new.css" />
-        <option value="$PROJECT_DIR$/resources/js/video_hover.js" />
         <option value="$PROJECT_DIR$/resources/views/video/album.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/video/partials/_video_link.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/person/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/video_hover.js" />
       </list>
     </option>
   </component>
@@ -836,16 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.793103">
-          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/person/partials/_person_link.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -932,8 +916,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/person/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33272395">
+        <state vertical-scroll-proportion="-3.3090909">
           <caret line="107" column="90" selection-start-line="107" selection-start-column="90" selection-end-line="107" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
           <folding />
         </state>
       </provider>

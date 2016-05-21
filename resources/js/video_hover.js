@@ -1,19 +1,4 @@
 // execute when the DOM is fully loaded
-// execute when the DOM is fully loaded
-
-//String.prototype.trim = function() {
-//    var trimmed = this.replace(/^\s+|\s+$/g, '');
-//    return trimmed;
-//};
-//String.prototype.ltrim = function() {
-//    var trimmed = this.replace(/^\s+/g, '');
-//    // \s is a whitespace character
-//    return trimmed;
-//};
-//String.prototype.rtrim = function() {
-//    var trimmed = this.replace(/\s+$/g, '');
-//    return trimmed;
-//};
 
 $(function() {
 
@@ -31,24 +16,16 @@ $(function() {
     var this_video;
     var person_list = "";
 
-
     var i;
     for (i = 0; i < videos.length; i++) {
         //videos[i].onmouseover = function(){
             videos[i].onmouseenter = function(){
             modal.style.display = "block";
             this_video = $(this).attr('data-video-id');
-            //var parameters = { video: this_video };
-
-            // Reference for later:
-            //http://stackoverflow.com/questions/33137946/laravel-ajax-422-unprocessable-entity-even-when-token-is-matching/34760819#34760819
-
-            //captionText.innerHTML = $.getJSON("http://family.app/video/list/26", function(){
+            var parameters = { video: this_video };
 
             $.getJSON("http://family.app/video/list/" + this_video, function(){
-                //var jqxhr = $.getJSON("http://family.app/video/list/" + this_video, function(){
-                //var jqxhr = $.getJSON("http://family.app/video/list/26", function(){
-                //    console.log( parameters);
+                    console.log( parameters);
             })
                 .done(function(people, textStatus, jqXHR) {
                         if (people.length === 0)
@@ -78,8 +55,5 @@ $(function() {
                 modal.style.display = "none";
             }
     }
-
-
-
 });
 
