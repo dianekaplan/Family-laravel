@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1e94042-abf4-4c25-bc18-827996dce02e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/video/album.blade.php" afterPath="$PROJECT_DIR$/resources/views/video/album.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js.map" afterPath="$PROJECT_DIR$/public/js/all.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/video_hover.js" afterPath="$PROJECT_DIR$/resources/js/video_hover.js" />
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_hover.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video_hover.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.59302324">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -76,16 +75,6 @@
               <folding>
                 <element signature="e#42#83#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/video/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4982639">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -124,8 +113,8 @@
         <option value="$PROJECT_DIR$/resources/views/video/partials/_video_link.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/person/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/video_hover.js" />
         <option value="$PROJECT_DIR$/resources/views/video/album.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/video_hover.js" />
       </list>
     </option>
   </component>
@@ -843,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/hover_reference_junk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#83#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50830567">
@@ -895,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/video/album.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -931,6 +902,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4982639">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/hover_reference_junk.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/video_hover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59302324">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="40" />
           <folding />
         </state>
       </provider>

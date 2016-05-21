@@ -24,7 +24,7 @@ $(function() {
             this_video = $(this).attr('data-video-id');
             var parameters = {video: this_video};
 
-            $.getJSON("http://family.app/video/list/" + this_video, function () {
+            $.getJSON("/video/list/" + this_video, function () {
                 console.log(parameters);
             })
                 .done(function (people, textStatus, jqXHR) {
