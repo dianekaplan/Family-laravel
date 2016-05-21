@@ -6150,7 +6150,7 @@ li.jumble
     right: 16px;
     top: 8px;
     width: 12%; /* 12% width */
-    height: 65%; /* 65% height */
+    height: 75%; /* 75% height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     /*background-color: rgba(0,0,0,0.9); /!* Black w/ opacity *!/*/

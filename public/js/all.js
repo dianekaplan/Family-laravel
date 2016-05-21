@@ -10364,7 +10364,8 @@ $(function() {
                 });
 
             // Clear out list at the end
-            person_list = "";
+            captionText.innerHTML = "<b>Featuring:</b>";  // this line resets default to show before list is ready
+            person_list = ""; // this line prevents the list from being additive as you hover
         }
 
 
