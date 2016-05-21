@@ -4,7 +4,7 @@
     <h3 align="center">
         Home Movies
     </h3>
-    <div align="center">Mouse over each (and wait a couple seconds) to see who is in the video</div>
+    <div align="center">Mouse over each (and wait a few seconds) to see who is in the video</div>
 
     @if (count($videos))
 
