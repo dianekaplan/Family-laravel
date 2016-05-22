@@ -38,7 +38,6 @@ class Family extends MyBaseModel
         $this->attributes['marriage_date'] = $this->nullIfBlank($marriage_date);
     }
 
-
     public function scopeKaplans($query)
     {
         $query->where('kaplan_line', '=', 'true')

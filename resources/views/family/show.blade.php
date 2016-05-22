@@ -91,7 +91,7 @@
             @if (count($images))
             Images:
                 @foreach($images as $image)
-                    @include ('partials._image_link', ['image' => $image])
+                    @include ('partials._image_link', ['image' => $image,  'class' => "img-rounded"])
                 @endforeach
             @endif
 

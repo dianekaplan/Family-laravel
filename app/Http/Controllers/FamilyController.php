@@ -87,13 +87,14 @@ class FamilyController extends Controller
      * @param $family
      * @return mixed
      */
-    protected function get_kids_of_family($family)
+    public static function get_kids_of_family($family)
     {
         $kids = Person::where('family_of_origin', $family->id)
             ->orderBy('sibling_seq', 'asc')
             ->get();
         return $kids;
     }
+
 
     /**
      * @param $family
@@ -122,6 +123,7 @@ class FamilyController extends Controller
         $mother =  Person::where('id', '=', $family->mother_id)->first();
         $father =  Person::where('id', '=', $family->father_id)->first();
         $kids = FamilyController::get_kids_of_family($family);
+//        $kids = Family::get_kids_of_family($family);
         $notes = FamilyController::get_notes_about_family($family);
 
         $images = Image::where('family', $id)

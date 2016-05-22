@@ -36,6 +36,7 @@ Route::post('register', 'RegistrationController@create');
 Route::resource('images', 'ImageController');
 
 Route::get('image/{image}', 'ImageController@show');
+Route::get('image/list/{image}', 'ImageController@get_image_people');
 Route::get('configure/{image}', 'ImageController@configure');
 Route::get('images', 'ImageController@index');
 Route::get('album', 'ImageController@album');

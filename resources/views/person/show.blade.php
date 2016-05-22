@@ -115,7 +115,7 @@ Update info for this person
         <h4>Pictures of @if($person->nickname){{$person->nickname}}@else{{$person->first}}@endif:</h4>
 
             @foreach($solo_images as $image)
-                @include ('partials._image_link', ['image' => $image])
+                @include ('partials._image_link', ['image' => $image, 'class' => "img-rounded"])
             @endforeach
     @endif
 </div>
@@ -126,7 +126,7 @@ Update info for this person
     @unless ($person->images->isEmpty())
                         <h4>Group pictures:</h4>
             @foreach($person->images as $image)
-                    @include ('partials._image_link', ['image' => $image])
+                    @include ('partials._image_link', ['image' => $image,  'class' => "img-rounded"])
             @endforeach
 
     @endunless

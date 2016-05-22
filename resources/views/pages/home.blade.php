@@ -52,7 +52,7 @@
         @unless ($new_pictures->isEmpty())
             Most recent pics:
             @foreach($new_pictures as $image)
-                @include ('partials._image_link', ['image' => $image])
+                @include ('partials._image_link', ['image' => $image,  'class' => "img-rounded"])
             @endforeach
         @endunless
             {!! $new_pictures->render() !!}

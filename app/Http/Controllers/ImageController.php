@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Image;
-
+use App\Person;
+use App\Family;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -48,6 +49,32 @@ class ImageController extends Controller
         return view ('image/album',  compact('images'));
     }
 
+    public function get_image_people($id)
+    {
+        $image = Image::find($id);
+        $people = $image->people;
+
+        // If there's a subject set, replace $people with that person
+        if($image->subject != null)
+            {
+                $people = [Person::find($image->subject)];
+            }
+
+        // If there's a family set, replace $people with those family members
+        if($image->family != null)
+        {
+            $family = Family::find($image->family);
+            $mother = Person::find($family->mother_id);
+            $father = Person::find($family->father_id);
+            $kids = FamilyController::get_kids_of_family($family);
+
+            $people = $kids;
+            $people->push($mother);
+            $people->push($father);
+        }
+
+        return response()->json($people);
+    }
 
     /**
      * Show the form for creating a new resource.

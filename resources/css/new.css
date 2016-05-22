@@ -128,3 +128,15 @@ div.ninety_percent {
         width: 100%;
     }
 }
+
+
+
+/*<!--style info for the image person list modal->*/
+#img_popup {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#img_popup:hover {opacity: 0.7;}
+
