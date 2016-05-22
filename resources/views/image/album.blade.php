@@ -5,6 +5,7 @@
         Family Album
     </h3>
 
+    <div class="ninety_percent">
     @if (count($images))
 
         @foreach ($images as $image)
@@ -13,5 +14,7 @@
 
         @endforeach
     @endif
-    <br/>
 
+    </div>
+
+@stop

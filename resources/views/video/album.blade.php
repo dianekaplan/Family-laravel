@@ -15,5 +15,5 @@
     @endif
 
     </p>
-    <br/>
-
+    @stop
+{{--@stop - commented out to prevent centering so there's room for the side alley--}}

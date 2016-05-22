@@ -6126,6 +6126,10 @@ li.jumble
     display: inline;
 }
 
+div.ninety_percent {
+          width: 90%; /* 12% width */
+      }
+
 /*<!--style info for the video person list modal->*/
 #popup {
     border-radius: 6px;
@@ -6137,20 +6141,15 @@ li.jumble
 
 /* The Modal (background) */
 .modal {
-
-    /*position: absolute;*/
-    /*top: 8px;*/
-    /*right: 16px;*/
-
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 60px; /* Top padding before text */
     left: auto;
-    right: 16px;
+    right: 0px;
     top: 8px;
-    width: 12%; /* 12% width */
-    height: 75%; /* 75% height */
+    width: 9.5%;
+    height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     /*background-color: rgba(0,0,0,0.9); /!* Black w/ opacity *!/*/
@@ -6166,7 +6165,6 @@ li.jumble
     text-align: center;
     /*color: #ccc; /!* text color *!/*/
     color: #2f4f4f; /* text color- dark slate gray */
-
     /*padding: 10px 0;*/
     /*height: 150px;*/
 }
