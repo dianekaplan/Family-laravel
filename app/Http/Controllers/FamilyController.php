@@ -95,6 +95,49 @@ class FamilyController extends Controller
         return $kids;
     }
 
+    /**
+     * @param $person
+     * @return mixed
+     */
+    public static function get_families_person_made($person)
+    {
+        $families = Family::where('mother_id', $person->id)
+            ->orWhere('father_id', $person->id)
+            ->orderBy("sequence", "asc")
+            ->get();
+        return $families;
+    }
+
+    /**
+     * @param $family
+     * @return mixed
+     */
+    public static function get_descendants($family, $results_so_far)
+    {
+        $descendants = FamilyController::get_kids_of_family($family);
+
+        // if family has no kids, return 0;
+        if (!count($descendants))
+        {
+            return 0;
+        }
+
+        else // if family has kids
+        {
+//            $results_so_far->push($family);  // save the family, might keep that in calling function
+
+            foreach ($descendants as $kid) {
+                $results_so_far->push($kid); // save kid, not happening so far
+
+                // get families made by kid- for each one, call get_descendants
+                $families_made = FamilyController::get_families_person_made($kid);
+                foreach ($families_made as $new_family) {
+                    FamilyController::get_descendants($new_family, $results_so_far);
+                }
+            }
+        }
+        return $results_so_far;  // confirm- is this passing by value or reference?
+    }
 
     /**
      * @param $family

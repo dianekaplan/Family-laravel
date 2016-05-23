@@ -206,7 +206,31 @@ public function get_person_from_user(User $user)
         $original_kemlers = Family::kemlers('created_at')->original()->get();
         $original_kaplans = Family::kaplans('created_at')->original()->get();
 
-        return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers', 'original_kaplans'));
+        $test_family = Family::find(132);
+//        $test_kid = Family::find(86);
+
+        $results = $test_family;
+        $results->push(FamilyController::get_descendants($test_family, $results));
+
+        $new_results = null;
+        $new_results = FamilyController::get_descendants($test_family, $results);
+
+//        $kids =  FamilyController::get_kids_of_family($test_family);
+//
+//        $families_made = FamilyController::get_families_person_made($test_kid);
+
+//        foreach ($original_keems as $family)
+//        {
+//            $kids_temp = FamilyController::get_kids_of_family($family);
+//            foreach ($kids_temp as $kid)
+//            {
+//                $families_temp = FamilyController::get_families_person_made($test_kid);
+//            }
+//        }
+
+
+        return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers',
+            'original_kaplans', 'results'));
     }
 
 

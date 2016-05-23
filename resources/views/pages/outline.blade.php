@@ -6,9 +6,30 @@
         Our Family Tree : Outline [need to build]
     </h3>
 
+    {{--Results: {{$results}} <br/>--}}
+    {{--New results: {{$results}}--}}
+    {{--<div style="float: left; width:95%;" id="family_section"><h4 align="center">test family:</h4>--}}
+        {{--<a href="{{ action('FamilyController@show', [$test_family->id]) }}" class="g{{$test_family->seq}}">{{ $test_family->caption }} </a>--}}
+
+
+    {{--@if (count($kids_temp))--}}
+       {{--<h4 align="center">kids:</h4>--}}
+            {{--@foreach ($kids_temp as $kid)--}}
+                {{--@include ('person.partials._person_link_simple', ['person' => $kid]) <br/>--}}
+                {{--<li>(Then show family's kids, and those kids' families, etc)</li>--}}
+            {{--@endforeach--}}
+
+        {{--Families for Larry:--}}
+            {{--@foreach ($families_temp as $family)--}}
+                {{--@include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq]) <br/>--}}
+            {{--@endforeach--}}
+        {{--</div>--}}
+    {{--@endif--}}
+
 
     @if (count($original_keems)&&($user->keem_access))
-        <div style="float: left; width:95%;" id="family_section"><h4 align="center">The Keems- original families:</h4>
+        <div style="float: left; width:95%;" id="family_section">
+        <h4 align="center">The Keems- original families:</h4>
         @foreach ($original_keems as $family)
             @include ('family.partials._family_link', ['family' => $family, 'generation'=>$family->branch_seq]) <br/>
                 <li>(Then show family's kids, and those kids' families, etc)</li>
