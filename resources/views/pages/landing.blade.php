@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel family tree</title>
+    <title>Our big family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
 </head>
