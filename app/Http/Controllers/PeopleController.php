@@ -46,13 +46,13 @@ class PeopleController extends Controller
             return Person::kaplans()->displayable()->get();
         });
         $keems = Cache::remember('keems', $minutes, function(){
-            return Person::kaplans()->displayable()->get();
+            return Person::keems()->displayable()->get();
         });
         $husbands = Cache::remember('husbands', $minutes, function(){
-            return Person::kaplans()->displayable()->get();
+            return Person::husbands()->displayable()->get();
         });
         $kemlers = Cache::remember('kemlers', $minutes, function(){
-            return Person::kaplans()->displayable()->get();
+            return Person::kemlers()->displayable()->get();
         });
 
         return view('person.index', compact( 'kaplans', 'keems', 'husbands', 'kemlers'));
