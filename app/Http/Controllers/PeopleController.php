@@ -14,6 +14,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use Acme\Mailers\UserMailer as Mailer;
+use Cache;
 
 use App\Update;
 
@@ -36,10 +37,32 @@ class PeopleController extends Controller
 
     public function index()
     {
-        $kaplans = Person::kaplans()->displayable()->get();
-        $keems = Person::keems()->displayable()->get();
-        $kemlers = Person::kemlers()->displayable()->get();
-        $husbands = Person::husbands()->displayable()->get();
+        $minutes = 1440; // 1440 minutes in a day
+        $kaplans = null;
+        $keems = null;
+        $kemlers = null;
+        $husbands = null;
+
+        if (Cache::has('kaplans')) {
+            $kaplans = Cache::get('kaplans');
+            $keems = Cache::get('keems');
+            $kemlers = Cache::get('kemlers');
+            $husbands = Cache::get('husbands');
+        }
+
+        else {
+            //        $kaplans = Cache::remember('kaplans', $minutes, function(){Person::kaplans()->displayable()->get();});
+            $kaplans = Person::keems()->displayable()->get();
+            $keems = Person::keems()->displayable()->get();
+            $kemlers = Person::kemlers()->displayable()->get();
+            $husbands = Person::husbands()->displayable()->get();
+
+            Cache::put('kaplans', $kaplans, 1440);
+            Cache::put('keems', $keems, 1440);
+            Cache::put('kemlers', $kemlers, 1440);
+            Cache::put('husbands', $husbands, 1440);
+
+        }
 
         return view('person.index', compact( 'kaplans', 'keems', 'husbands', 'kemlers'));
     }

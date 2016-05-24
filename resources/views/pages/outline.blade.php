@@ -6,8 +6,9 @@
         Our Family Tree : Outline [need to build]
     </h3>
 
-    {{--Results: {{$results}} <br/>--}}
-    {{--New results: {{$results}}--}}
+    Value we cached: {{$test}} <br/>
+    Results: {{$results}} <br/>
+    New results: {{$results}}
     {{--<div style="float: left; width:95%;" id="family_section"><h4 align="center">test family:</h4>--}}
         {{--<a href="{{ action('FamilyController@show', [$test_family->id]) }}" class="g{{$test_family->seq}}">{{ $test_family->caption }} </a>--}}
 
@@ -25,6 +26,7 @@
             {{--@endforeach--}}
         {{--</div>--}}
     {{--@endif--}}
+
 
 
     @if (count($original_keems)&&($user->keem_access))

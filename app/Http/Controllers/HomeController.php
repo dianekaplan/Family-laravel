@@ -22,6 +22,8 @@ use Carbon\Carbon;
 use App\User;
 use App\Activity;
 use App\Login;
+use Cache;
+//use Illuminate\Routing\Controller;
 
 
 class HomeController extends Controller {
@@ -36,11 +38,31 @@ class HomeController extends Controller {
 
     public function landing()
     {
-        $people = Person::ShowOnLandingPage()
-            ->displayable()
-            ->orderBy( 'last', 'asc')
-            ->orderBy( 'first', 'asc')
-            ->get();
+        $people = null;
+//        $result= null;
+
+        if (Cache::has('landing_page_list'))
+        {
+//            $result = "will grab from cache";
+            $people =  Cache::get('landing_page_list');
+//            $test = Cache::get('key');
+
+        }
+
+        else {
+//            $result = "will save it fresh";
+
+            $fresh_people_list = Person::ShowOnLandingPage()
+                ->displayable()
+                ->orderBy( 'last', 'asc')
+                ->orderBy( 'first', 'asc')
+                ->get();
+
+            Cache::put('landing_page_list', $fresh_people_list, 1440); // save it for 1 day
+
+            $people = $fresh_people_list;
+
+        }
 
         return view ('pages.landing', compact('people'));
     }
@@ -197,6 +219,9 @@ public function get_person_from_user(User $user)
         return view ('pages.admin', compact('user'));
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function outline()
     {
         $user = \Auth::user();
@@ -228,9 +253,13 @@ public function get_person_from_user(User $user)
 //            }
 //        }
 
+        OutlineController::save_value();
+
+        $test = Cache::get('key');
+
 
         return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers',
-            'original_kaplans', 'results'));
+            'original_kaplans', 'results', 'test'));
     }
 
 

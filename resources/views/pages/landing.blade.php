@@ -16,7 +16,6 @@
 
 
 <h3>Welcome!</h3>
-
 <p>
 Are you related to any of the folks below, or see yourself in this list? Welcome to our family tree website!
 I've spent years gathering info, dates, and pictures, and here is a place to share it all.

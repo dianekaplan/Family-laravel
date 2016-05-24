@@ -17,7 +17,6 @@ use App\Person;
 use App\User;
 use Acme\Mailers\UserMailer as Mailer;
 
-
 //Route::get('/', function () {
 //    return view('welcome');
 
