@@ -34,7 +34,6 @@ class PeopleController extends Controller
 //        $this->updated_person= $updated_person; //not sure if I'm still using this
     }
 
-
     public function index()
     {
         $minutes = 10080; // 1440 minutes in a day, 10080 in a week
