@@ -39,30 +39,42 @@ class HomeController extends Controller {
     public function landing()
     {
         $people = null;
+        $minutes = 10080; // 1440 minutes in a day, 10080 in a week
 //        $result= null;
+//
+//        if (Cache::has('landing_page_list'))
+//        {
+////            $result = "will grab from cache";
+//            $people =  Cache::get('landing_page_list');
+////            $test = Cache::get('key');
+//
+//        }
+//
+//        else {
+////            $result = "will save it fresh";
+//
+//            $fresh_people_list = Person::ShowOnLandingPage()
+//                ->displayable()
+//                ->orderBy( 'last', 'asc')
+//                ->orderBy( 'first', 'asc')
+//                ->get();
+//
+//            Cache::put('landing_page_list', $fresh_people_list, 1440); // save it for 1 day
+//
+//
+//
+//
+//            $people = $fresh_people_list;
+//
+//        }
 
-        if (Cache::has('landing_page_list'))
-        {
-//            $result = "will grab from cache";
-            $people =  Cache::get('landing_page_list');
-//            $test = Cache::get('key');
-
-        }
-
-        else {
-//            $result = "will save it fresh";
-
-            $fresh_people_list = Person::ShowOnLandingPage()
+        $people = Cache::remember('landing_page_list', $minutes, function(){
+            return Person::ShowOnLandingPage()
                 ->displayable()
                 ->orderBy( 'last', 'asc')
                 ->orderBy( 'first', 'asc')
                 ->get();
-
-            Cache::put('landing_page_list', $fresh_people_list, 1440); // save it for 1 day
-
-            $people = $fresh_people_list;
-
-        }
+        });
 
         return view ('pages.landing', compact('people'));
     }

@@ -37,32 +37,24 @@ class PeopleController extends Controller
 
     public function index()
     {
-        $minutes = 1440; // 1440 minutes in a day
+        $minutes = 10080; // 1440 minutes in a day, 10080 in a week
         $kaplans = null;
         $keems = null;
         $kemlers = null;
         $husbands = null;
 
-        if (Cache::has('kaplans')) {
-            $kaplans = Cache::get('kaplans');
-            $keems = Cache::get('keems');
-            $kemlers = Cache::get('kemlers');
-            $husbands = Cache::get('husbands');
-        }
-
-        else {
-            //        $kaplans = Cache::remember('kaplans', $minutes, function(){Person::kaplans()->displayable()->get();});
-            $kaplans = Person::keems()->displayable()->get();
-            $keems = Person::keems()->displayable()->get();
-            $kemlers = Person::kemlers()->displayable()->get();
-            $husbands = Person::husbands()->displayable()->get();
-
-            Cache::put('kaplans', $kaplans, 1440);
-            Cache::put('keems', $keems, 1440);
-            Cache::put('kemlers', $kemlers, 1440);
-            Cache::put('husbands', $husbands, 1440);
-
-        }
+        $kaplans = Cache::remember('kaplans', $minutes, function(){
+            return Person::kaplans()->displayable()->get();
+        });
+        $keems = Cache::remember('keems', $minutes, function(){
+            return Person::kaplans()->displayable()->get();
+        });
+        $husbands = Cache::remember('husbands', $minutes, function(){
+            return Person::kaplans()->displayable()->get();
+        });
+        $kemlers = Cache::remember('kemlers', $minutes, function(){
+            return Person::kaplans()->displayable()->get();
+        });
 
         return view('person.index', compact( 'kaplans', 'keems', 'husbands', 'kemlers'));
     }
