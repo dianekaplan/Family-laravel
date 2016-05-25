@@ -28,9 +28,16 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::orderBy('year', 'asc')->get();
+        $minutes = 10080; // 1440 minutes in a day, 10080 in a week
+        $images = null;
+
+        $images = Cache::remember('images', $minutes, function(){
+            return Image::orderBy('year', 'asc')->get();
+        });
+
         return view ('image/index',  compact('images'));
     }
+
 
     public function album()
     {
