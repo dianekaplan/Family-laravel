@@ -6,14 +6,16 @@
         Our Family Tree : Outline [need to build]
     </h3>
 
-    {{--Value we cached: {{$test}} <br/>--}}
-    {{--Results: {{$results}} <br/>--}}
-    {{--New results: {{$results}}--}}
+    Results:
+    @foreach ( $results as $result)
+        {{$result}}<br/>
+    @endforeach
     {{--<div style="float: left; width:95%;" id="family_section"><h4 align="center">test family:</h4>--}}
         {{--<a href="{{ action('FamilyController@show', [$test_family->id]) }}" class="g{{$test_family->seq}}">{{ $test_family->caption }} </a>--}}
 
 
     {{--@if (count($kids_temp))--}}
+        {{--@if (count($kids_temp))--}}
        {{--<h4 align="center">kids:</h4>--}}
             {{--@foreach ($kids_temp as $kid)--}}
                 {{--@include ('person.partials._person_link_simple', ['person' => $kid]) <br/>--}}

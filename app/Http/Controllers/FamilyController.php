@@ -112,9 +112,25 @@ class FamilyController extends Controller
      * @param $family
      * @return mixed
      */
-    public static function get_descendants($family, $results_so_far)
+    public static function get_descendants(Family $family, $results_array, $counter)
     {
+        // start new round with a different temp array, to keep track
+        $counter++;
+        $this_array = "array_$counter";
+        $$this_array = [];
+
+        print("<br/> Counter: " . $counter . "<br/>");
+        print($family->caption . " ");
+
+        $this_array = "array_$counter";
+//        print("<br/> Array name: " . $this_array . "<br/>");
+        $$this_array = [];
+
+//        array_push ($results_so_far, $family->caption);
+        array_push ($$this_array, $family->caption);
+
         $descendants = FamilyController::get_kids_of_family($family);
+
 
         // if family has no kids, return 0;
         if (!count($descendants))
@@ -122,21 +138,27 @@ class FamilyController extends Controller
             return 0;
         }
 
-        else // if family has kids
+        else // add kids and check for their families
         {
-//            $results_so_far->push($family);  // save the family, might keep that in calling function
-
             foreach ($descendants as $kid) {
-                $results_so_far->push($kid); // save kid, not happening so far
+                print($kid->first . "<br/> ");
+                array_push ($$this_array, $kid->first);
+//                $results_so_far->push($kid);
+//                array_push ($temp_array, $kid->first);
 
                 // get families made by kid- for each one, call get_descendants
                 $families_made = FamilyController::get_families_person_made($kid);
                 foreach ($families_made as $new_family) {
-                    FamilyController::get_descendants($new_family, $results_so_far);
+//                    FamilyController::get_descendants($new_family, $results_array, $counter);
+                    $round_results = FamilyController::get_descendants($new_family, $results_array, $counter);
+                    array_push ($results_array, $round_results);
                 }
-            }
+            };
+
+            // we've gone through the kids, add this round's array to the general results array
+            array_push ($results_array, $$this_array);
         }
-        return $results_so_far;  // confirm- is this passing by value or reference?
+        return $results_array;
     }
 
     /**
