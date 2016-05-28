@@ -29,10 +29,10 @@ Diane Kaplan (Cambridge, MA USA)
 <br/>
 </p>
 
-@include ('auth._login_partial');
+@include ('auth._login_partial')
 <br/><br/>
 
-@include ('person.partials._people_list_simple');
+@include ('person.partials._people_list_simple')
 
 
 </body>

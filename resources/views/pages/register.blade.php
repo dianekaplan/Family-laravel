@@ -19,7 +19,7 @@
 
     <br/><br/>
 
-    @include ('person.partials._people_list_simple');
+    @include ('person.partials._people_list_simple')
 
 @stop
 
