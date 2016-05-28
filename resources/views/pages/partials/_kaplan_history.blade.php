@@ -1,4 +1,6 @@
-<h4> <img src="/faces/30larry.jpg" class="img-rounded"/> Larry Kaplan's family: </h4>
+<h4> <a href="{{ action('PeopleController@show', [30]) }}">
+        <img src="/faces/30larry.jpg" class="img-rounded"/>  </a>
+    Larry Kaplan's family: </h4>
 
 The Kobrin side:
         <ul>

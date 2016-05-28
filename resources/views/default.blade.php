@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Our big family tree</title>
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
-
 </head>
 
 <body>
@@ -12,9 +11,7 @@
 <?php include_once("analyticstracking.php") ?>
 {{--End google analytics include--}}
 
-{{--Want to be able to pass the person too --}}
-{{--@include ('partials._nav', ['user'=> \Auth::user(), 'person'=> \Auth::user()->person_id])--}}
-@include ('partials._nav', ['user'=> \Auth::user()])
+@include ('partials._nav', ['user'=> \Auth::user(), 'person' => \Auth::user()->person])
 
 <div class="container">
 
@@ -22,7 +19,6 @@
     {{--@include('Fbuilder::image')  <!--added to figure out image stuff- may not need-->--}}
 
 {{--@include('partials.flash')--}}
-
 
 @yield('content')
 

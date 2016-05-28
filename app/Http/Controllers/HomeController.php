@@ -144,17 +144,21 @@ class HomeController extends Controller {
         return $new_videos;
     }
 
-public function get_person_from_user(User $user)
-{
-    $person = Person::findOrNew($user->person_id);
-    return $person;
-}
+    // don't Need this anymore after adding user relation
+//public function get_person_from_user(User $user)
+//{
+//    $person = Person::findOrNew($user->person_id);
+//    return $person;
+//}
 
     public function home()
     {
         $user =  \Auth::user();
 
-        $person = HomeController::get_person_from_user($user);
+        // don't need that anymore after adding user relation
+//        $person = HomeController::get_person_from_user($user);
+
+        $person = $user->person;
         $birthday_people = HomeController::get_birthday_people();
         $new_pictures = HomeController::get_recently_added_pictures();
         $new_videos = HomeController::get_recently_added_videos();

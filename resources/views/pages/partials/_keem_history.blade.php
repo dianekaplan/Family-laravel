@@ -1,4 +1,7 @@
-<h4> <img src="/faces/62kay.jpg" class="img-rounded"/> Kay Husband's family: </h4>
+<h4> <a href="{{ action('PeopleController@show', [62]) }}">
+        <img src="/faces/62kay.jpg" class="img-rounded"/> </a>
+    Kay Husband's family: </h4>
+
 {{--@include ('person.partials._person_link', ['person' => 75])--}}
 
 The Keem/Reisdorf side:

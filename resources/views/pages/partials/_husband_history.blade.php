@@ -1,4 +1,7 @@
-<h4> <img src="/faces/75bob.jpg" class="img-rounded"/> Bob Husband's family: </h4>
+<h4> <a href="{{ action('PeopleController@show', [75]) }}">
+        <img src="/faces/75bob.jpg" class="img-rounded"/> </a>
+
+        Bob Husband's family: </h4>
 
         The Husband side:
         <ul><li><a href="{{ action('FamilyController@show', [172]) }}">Thomas and Elanor Husband</a> were born in <b>Scotland</b>

@@ -1,14 +1,16 @@
 
+{{--show image link: --}}
+@include ('person.partials._person_link_image', ['person' => $person])
 
-@if($person->face)
-    <img src="/faces/{{  $person->face  }}" class="img-rounded"/>
-@else
-    <img src="/faces/noimage.gif" border="0" height="50" class="img-rounded"/>
+{{--then name link: --}}
+<a href="{{ action('PeopleController@show', [$person->id]) }}">
 
-@endif
+    {{--Show the name (or nickname)--}}
+    @if($person->nickname)
+        {{ $person->nickname }} {{ $person->last }}
+    @else
+            {{ $person->first }} {{ $person->last }}
+    @endif
+</a>
 
-@if($person->nickname)
-    <a href="{{ action('PeopleController@show', [$person->id]) }}">{{ $person->nickname }} {{ $person->last }}</a>
-@else
-    <a href="{{ action('PeopleController@show', [$person->id]) }}">{{ $person->first }} {{ $person->last }}</a>
-@endif
+

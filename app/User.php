@@ -70,6 +70,11 @@ class User extends Model implements AuthenticatableContract,
     }
 
 
+    public function person()
+    {
+        return $this->belongsTo(Person::class);
+    }
+
 //    public function setPasswordAttribute($password)
 //    {
 //        $this->attributes['password'] = mcrypt($password);

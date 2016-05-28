@@ -1,3 +1,9 @@
+
+/*Add padding to the top of the body (otherwise navbar overlaps it)*/
+body{
+    padding:75px;
+}
+
 ul#gallery {
     margin:0 auto;
     padding:0;
@@ -19,7 +25,6 @@ ul#gallery li p {
     border: 5px solid #99CC66;
     padding: 20px;
     margin: 10px;
-
 }
 
 #list_section {
@@ -52,7 +57,7 @@ div.ninety_percent {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 60px; /* Top padding before text */
+    padding-top: 85px; /* Top padding before text - 60px before bigger nav*/
     left: auto;
     right: 0px;
     top: 8px;

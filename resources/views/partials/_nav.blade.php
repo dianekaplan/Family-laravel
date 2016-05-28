@@ -15,10 +15,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="/families">Families</a></li>
                 <li><a href="/people">People</a></li>
-                <li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>
+                {{--<li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>--}}
+                <li>@include ('person.partials._person_link_image', ['person' => $person])</li>
 
-                {{--<li><a href="/people/{{$user->person_id}}">My Page!</a></li>--}}
-                {{--<li> @include ('person.partials._person_link', ['person' => $person])</li>--}}
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
