@@ -60,11 +60,10 @@ Route::resource('people', 'PeopleController');
 Route::resource('families', 'FamilyController');
 Route::get('users/store', 'UserController@store');
 
-//Route::get('users/{user}/activity', 'ActivitiesController@show');
-
 Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');
 Route::get('activities', 'ActivitiesController@index');
+//Route::get('users/{user}/activity', 'ActivitiesController@show');
 Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
 

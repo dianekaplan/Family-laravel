@@ -21,11 +21,13 @@
 <br/>
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/album">Family album</a></h3>
-        <h3><a href="/videos">Home movies</a> </h3> <br/>
+        <h3><a href="/videos">Home movies</a> </h3>
+        <h3><a href="/outline">Outline View</a></h3>
+        <br/>
+        My furthest ancestors here: <br/>{!! $user->furthest_html!!}
+        <br/><br/>
 
-        My furthest ancestors here: <br/>{!! $user->furthest_html!!}<br/><br/>
-        <a href="/outline">Chronological Outline</a> <br/><br/>
-      <a href="/account"> My additions to the family tree</a> <br/>
+      <a href="/account"> My additions to the family tree</a>
         </div>
 
 

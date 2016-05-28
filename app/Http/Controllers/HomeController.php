@@ -52,11 +52,11 @@ class HomeController extends Controller {
         return view ('pages.landing', compact('people'));
     }
 
-
-    public function index()
-    {
-        return view ('welcome');
-    }
+//
+//    public function index()
+//    {
+//        return view ('welcome');
+//    }
 
 
     public function branches()

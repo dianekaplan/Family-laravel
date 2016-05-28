@@ -12,8 +12,9 @@
 <?php include_once("analyticstracking.php") ?>
 {{--End google analytics include--}}
 
+{{--Want to be able to pass the person too --}}
+{{--@include ('partials._nav', ['user'=> \Auth::user(), 'person'=> \Auth::user()->person_id])--}}
 @include ('partials._nav', ['user'=> \Auth::user()])
-
 
 <div class="container">
 
@@ -38,8 +39,8 @@
     </script>
 
 
-
-    @include ('partials._footer', ['user'=> \Auth::user()])
+    @include ('partials._footer')
+    {{--@include ('partials._footer', ['user'=> \Auth::user()])--}}
 
 {{--@yield('footer')--}}
 </div>
