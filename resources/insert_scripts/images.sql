@@ -1045,6 +1045,7 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1066, '1960ish_bertha_hymie.jpg', NULL, NULL, 0, '1958?', NULL, now(), now(), false, false, false, true);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1071, '2012_ansuinis.jpg', NULL, NULL, 1, '2012', 69, now(), now(), true, false, false, false);
 
 
 
@@ -1057,6 +1058,18 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, little_name, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1052, 'T2008_rivette_daniella_abe.jpg', 
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1054, '1980s_abe_rivette.jpg', NULL, NULL, NULL, '1980s?', NULL, now(), now(), false, false, true, true);
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1057, '1970s_slon_kids.jpg', NULL, NULL, NULL, '1970s', NULL, now(), now(), false, false, true, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1067, '2009_josh_ross.jpg', NULL, 899, 1, '2009', NULL, now(), now(), false, false, false, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1068, '2015_Terri_Mark_family.jpg', NULL, NULL, 1, '2015', 282, now(), now(), false, false, false, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1069, '2016_shapiros.jpg', NULL, NULL, 1, '2016', 264, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1070, '2016_max_aaron.jpg', NULL,901, 1, '2016', NULL, now(), now(), false, false, true, false);
+
+
+
+
 ---
 
 
@@ -1083,7 +1096,10 @@ update images set big_name= replace( big_name, '+', '_') where id in (106, 801, 
 update images set little_name = NULL where id not in (759,760,762, 733, 734, 735, 736, 737, 687, 688, 705);
 update images set std_name = NULL where id = 71;
 
-update images set featured = 0 where id = 808;
+update images set featured = 0 where id in (808, 822);
+
+
+
 
 update images set year= '1850s?' where id in (514);
 update images set year= '1870ish?' where id in (710);

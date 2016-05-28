@@ -132,7 +132,6 @@ class FamilyController extends Controller
         else // add kids and check for their families
         {
             foreach ($kids as $kid) {
-//                print($kid->first . "<br/> ");
                 array_push ($$this_array, [$kid->first . " " . $kid->last, $kid->id, 'person']);
 
                 // get families made by kid- for each one, call get_descendants
@@ -142,10 +141,8 @@ class FamilyController extends Controller
                 {
                     foreach ($families_made as $new_family) {
                         array_push($$this_array, self::get_descendants($new_family, $$this_array, $counter));
-
                     }
                 }
-
             };
         }
         return $$this_array;

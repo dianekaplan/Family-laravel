@@ -298,7 +298,7 @@ INSERT INTO families ( caption, mother_id, father_id, divorced, marriage_date, N
 
 
 
-update families set no_kids_bool = false where id in (156, 182);
+update families set no_kids_bool = false where id in (156, 182, 264);
 update families set caption = 'The Schultzes (Jeff & Miriam)' where id = 91;
 update families set caption = 'Anita Gorruso & Anthony Scudiero' where id = 73; 
 update families set caption= replace( caption, 'OBrien', 'O''Brien') where id in (50, 181, 182, 225);

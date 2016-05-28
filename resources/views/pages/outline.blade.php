@@ -10,30 +10,29 @@
 
     @if (count($original_keems)&&($user->keem_access))
         @foreach ($original_keems as $family)
-            <li>{{$family->caption}}</li>
+            <li><b>{{$family->caption}}:</b> {{$family->original_family_text}}  </li>
             @endforeach
     @endif
 
     @if (count($original_husbands)&&($user->husband_access))
         @foreach ($original_husbands as $family)
-            <li>{{$family->caption}}</li>
+            <li><b>{{$family->caption}}:</b> {{$family->original_family_text}}  </li>
         @endforeach
     @endif
 
     @if (count($original_kemlers)&&($user->kemler_access))
         @foreach ($original_kemlers as $family)
-            <li>{{$family->caption}}</li>
+            <li><b>{{$family->caption}}:</b> {{$family->original_family_text}}  </li>
         @endforeach
     @endif
 
     @if (count($original_kaplans)&&($user->kaplan_access))
         @foreach ($original_kaplans as $family)
-            <li>{{$family->caption}}</li>
+            <li><b>{{$family->caption}}:</b> {{$family->original_family_text}}  </li>
         @endforeach
     @endif
 
     <br/>
-    <b>The descendants of the original families: </b><br/>
 
     @if (count($original_keems)&&($user->keem_access))
         <div style="float: left; width:95%;" id="family_section">
@@ -60,3 +59,5 @@
             @include ('pages.partials._show_outline_whole', ['results' => $kaplan_results])
         </div>
     @endif
+
+    @stop

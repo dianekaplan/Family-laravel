@@ -42,4 +42,13 @@ INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line
 
 INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (23, '1989_thanksgiving_during.mp4', 'Thanksgiving:during', '1989', false, false, true, true, now(), now());
 
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (24, 'revere_beach_1.mp4', 'Revere Beach: #1', '1949ish', false, false, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (25, 'revere_beach_2.mp4', 'Revere Beach: #2', '1949ish', false, false, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (26, 'revere_beach_3.mp4', 'Revere Beach: #3', '1949ish', false, false, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (27, 'revere_beach_4.mp4', 'Revere Beach: #4', '1949ish', false, false, true, true, now(), now());
+
+INSERT INTO videos(id, name, caption, year, keem_line, husband_line, kemler_line, kaplan_line, created_at, updated_at) VALUES (28, '1950ish_Bensons_animal_farm_nh.mp4', 'Benson''s animal farm, NH', '1949ish', false, false, true, true, now(), now());
 

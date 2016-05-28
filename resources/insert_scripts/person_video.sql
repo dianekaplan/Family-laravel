@@ -94,3 +94,46 @@ INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (2
 INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 37, now(), now());
 INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 110, now(), now());
 INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (23, 106, now(), now());
+
+update person_video set description = 'first 3 seconds' where id = 59;
+update person_video set description = '0:04-0:08' where id = 60;
+update person_video set description = '0:08-0:16, in the back' where id = 61;
+update person_video set description = 'in the end, at the left corner' where id = 62;
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 36, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 115, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 172, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 15, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 30, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (24, 25, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at, description) VALUES (24, 37, now(), now(), 'starting at 0:21, youngest girl' );
+INSERT INTO person_video (video_id, person_id, created_at, updated_at, description) VALUES (24, 114, now(), now(), 'starting at 0:21, middle girl');
+INSERT INTO person_video (video_id, person_id, created_at, updated_at, description) VALUES (24, 173, now(), now(), 'starting at 0:21, girl on the right with white hair ribbon');
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (25, 18, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (25, 15, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (25, 37, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (25, 114, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (25, 27, now(), now());
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 14, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 169, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 170, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 15, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 173, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 114, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (26, 37, now(), now());
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (27, 114, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (27, 37, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (27, 115, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (27, 173, now(), now());
+
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 30, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 27, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 113, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 25, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 115, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 114, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 37, now(), now());
+INSERT INTO person_video (video_id, person_id, created_at, updated_at) VALUES (28, 36, now(), now());
