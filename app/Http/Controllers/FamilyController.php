@@ -119,46 +119,36 @@ class FamilyController extends Controller
         $this_array = "array_$counter";
         $$this_array = [];
 
-        print("<br/> Counter: " . $counter . "<br/>");
-        print($family->caption . " ");
+        array_push ($$this_array, [$family->caption, $family->id, 'family']);
 
-        $this_array = "array_$counter";
-//        print("<br/> Array name: " . $this_array . "<br/>");
-        $$this_array = [];
-
-//        array_push ($results_so_far, $family->caption);
-        array_push ($$this_array, $family->caption);
-
-        $descendants = FamilyController::get_kids_of_family($family);
-
+        $kids = FamilyController::get_kids_of_family($family);
 
         // if family has no kids, return 0;
-        if (!count($descendants))
+        if (!count($kids))
         {
             return 0;
         }
 
         else // add kids and check for their families
         {
-            foreach ($descendants as $kid) {
-                print($kid->first . "<br/> ");
-                array_push ($$this_array, $kid->first);
-//                $results_so_far->push($kid);
-//                array_push ($temp_array, $kid->first);
+            foreach ($kids as $kid) {
+//                print($kid->first . "<br/> ");
+                array_push ($$this_array, [$kid->first . " " . $kid->last, $kid->id, 'person']);
 
                 // get families made by kid- for each one, call get_descendants
                 $families_made = FamilyController::get_families_person_made($kid);
-                foreach ($families_made as $new_family) {
-//                    FamilyController::get_descendants($new_family, $results_array, $counter);
-                    $round_results = FamilyController::get_descendants($new_family, $results_array, $counter);
-                    array_push ($results_array, $round_results);
-                }
-            };
 
-            // we've gone through the kids, add this round's array to the general results array
-            array_push ($results_array, $$this_array);
+                if (count($families_made))
+                {
+                    foreach ($families_made as $new_family) {
+                        array_push($$this_array, self::get_descendants($new_family, $$this_array, $counter));
+
+                    }
+                }
+
+            };
         }
-        return $results_array;
+        return $$this_array;
     }
 
     /**

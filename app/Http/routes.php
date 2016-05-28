@@ -20,12 +20,23 @@ use Acme\Mailers\UserMailer as Mailer;
 //Route::get('/', function () {
 //    return view('welcome');
 
+
+
+
 Route::get('/', 'HomeController@home');
 Route::get('landing', 'HomeController@landing');
+
+// special cache filter for the outline page rendering
+//* Added based on laracast: https://laracasts.com/lessons/caching-essentials
+Route::filter('cache.fetch', 'Acme\Filters\CacheFilter@fetch');
+Route::filter('cache.put', 'Acme\Filters\CacheFilter@put');
+//Route::get('outline', 'OutlineController@show_outline')->before('cache.fetch')->after('cache.put');
 Route::get('outline', 'OutlineController@show_outline');
-Route::get('branches', 'HomeController@branches');
+
+
 
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
+Route::get('branches', 'HomeController@branches');
 Route::get('account',  'HomeController@account');
 Route::get('history', 'HomeController@history');
 Route::get('help', 'HomeController@help');
@@ -33,7 +44,6 @@ Route::get('register', 'RegistrationController@register');
 Route::post('register', 'RegistrationController@create');
 
 Route::resource('images', 'ImageController');
-
 Route::get('image/{image}', 'ImageController@show');
 Route::get('image/list/{image}', 'ImageController@get_image_people');
 Route::get('configure/{image}', 'ImageController@configure');
@@ -45,24 +55,18 @@ Route::get('video/{video}', 'VideoController@show');
 Route::get('video/list/{video}', 'VideoController@get_video_people');
 Route::get('videotest', 'HomeController@test');
 
-
 Route::get('stories/{story}', 'StoryController@show');
-
 Route::resource('people', 'PeopleController');
-
 Route::resource('families', 'FamilyController');
-
 Route::get('users/store', 'UserController@store');
 
 //Route::get('users/{user}/activity', 'ActivitiesController@show');
-
 
 Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');
 Route::get('activities', 'ActivitiesController@index');
 Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
-
 
 Route::get('person_admin_fields/{id}', 'AdminController@admin_edit_person');
 Route::get('family_admin_fields/{id}', 'AdminController@admin_edit_family');

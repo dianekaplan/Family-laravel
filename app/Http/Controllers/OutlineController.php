@@ -13,6 +13,17 @@ use Illuminate\Support\Collection;
 class OutlineController extends Controller
 {
 
+    public static function make_results($set_of_families)
+    {
+        $total_results = [];
+
+        foreach ($set_of_families as $family) {
+            $these_results = [];
+            $these_results = FamilyController::get_descendants($family, $these_results, 0);
+            array_push($total_results, $these_results);
+        }
+        return $total_results;
+    }
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      *  for each of the original families: get from cache, or call get_descendants() and save results
@@ -26,42 +37,36 @@ class OutlineController extends Controller
         $original_kemlers = Family::kemlers('created_at')->original()->get();
         $original_kaplans = Family::kaplans('created_at')->original()->get();
 
-        $test_family = Family::find(132);
-//        $test_kid = Family::find(86);
-//        $results = null;
-//        $results = [$test_family];  // if it starts null, exception when we try to push on null
-        $results = [];
-        // https://laravel.com/docs/5.1/collections#method-push
-//        $results->push(FamilyController::get_descendants($test_family, $results));
-//        $results = collect (FamilyController::get_descendants($test_family, $results));
+        $keem_results = [];
+        $husband_results = [];
+        $kemler_results = [];
+        $kaplan_results = [];
 
         $counter = 0;
-//        array_push($results, FamilyController::get_descendants($test_family, $results));
-        $results =  FamilyController::get_descendants($test_family, $results, $counter);
 
-        dd($results);
+        if (Cache::has('keem_results')) {
+            $keem_results = Cache::get('keem_results');
+            $husband_results = Cache::get('husband_results');
+            $kemler_results = Cache::get('kemler_results');
+            $kaplan_results = Cache::get('kaplan_results');
+        }
+        else {
+            $keem_results = OutlineController::make_results($original_keems );
+            Cache::forever('keem_results', $keem_results); // remove with 'Cache::forget('key')', or Cache::flush();
 
-//        foreach ($original_keems as $family)
-//        {
-//                FamilyController::get_descendants($family, $results);
-//        }
+            $husband_results = OutlineController::make_results($original_husbands );
+            Cache::forever('husband_results', $husband_results); // remove with 'Cache::forget('key')', or Cache::flush();
 
-        OutlineController::save_value();
-        $test = Cache::get('key');
+            $kemler_results = OutlineController::make_results($original_kemlers );
+            Cache::forever('kemler_results', $kemler_results); // remove with 'Cache::forget('key')', or Cache::flush();
+
+            $kaplan_results = OutlineController::make_results($original_kaplans );
+            Cache::forever('kaplan_results', $kaplan_results); // remove with 'Cache::forget('key')', or Cache::flush();
+        }
 
         return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers',
-            'original_kaplans', 'results', 'test'));
-//        return view('pages.outline', compact('user', 'original_keems', 'original_husbands', 'original_kemlers',
-//            'original_kaplans', 'test'))->with(array('results' => $results));
-    }
+            'original_kaplans', 'keem_results', 'husband_results', 'kemler_results', 'kaplan_results'));
 
-    public static function save_value()
-    {
-//
-//        Cache::flush();
-
-        Cache::put('key', 'value we saved', 10);
-        Cache::forever('key', 'value we saved'); // remove with 'Cache::forget('key')', or Cache::flush();
     }
 
 }
