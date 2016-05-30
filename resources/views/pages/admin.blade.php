@@ -26,7 +26,7 @@
 
 
     <div class="bottom">
-        <div style="float: left; width: 23%;" id="family_section">
+        <div style="float: left; width: 33%;" id="family_section">
             See  <a href="/users">users</a><br/>
             See all <a href="/activities">activities</a><br/>
             See all <a href="/logins">logins</a><br/>
