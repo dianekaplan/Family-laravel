@@ -65,6 +65,9 @@ Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');
 Route::get('activities', 'ActivitiesController@index');
 //Route::get('users/{user}/activity', 'ActivitiesController@show');
+
+Route::get('clearcache', 'AdminController@clear_cache');
+
 Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
 

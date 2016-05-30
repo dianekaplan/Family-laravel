@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Cache;
 
 class AdminController extends Controller
 {
@@ -28,6 +29,13 @@ class AdminController extends Controller
         $family_to_update = Family::find($id);
         return view('admin.edit_family', compact('family_to_update'));
     }
+
+    public function clear_cache()
+    {
+        Cache::flush();
+
+    }
+
     public function index()
     {
         //

@@ -10,7 +10,7 @@
         Add a <a href="/families/create">family</a><br/>
     </div>
 
-    <div style="float: left; width: 23%;" id="family_section">
+    <div style="float: left; width: 33%;" id="family_section">
         Update a <a href="/person_admin_fields">person</a> (add /id at the end)<br/>
         Update a <a href="/family_admin_fields">family</a> (add /id at the end)<br/>
         {{--{!! Form::open(array('url' => 'person_admin_fields')) !!}--}}
@@ -30,6 +30,8 @@
             See  <a href="/users">users</a><br/>
             See all <a href="/activities">activities</a><br/>
             See all <a href="/logins">logins</a><br/>
+            <a href="/clearcache">Clear the database cache</a><br/>
+            (afterward, build it again by visiting: album, videos, person list, outline)
         </div>
 
 
