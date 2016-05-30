@@ -28,8 +28,7 @@ class PasswordController extends Controller
     public function __construct()
     {
 //        $this->middleware('guest', ['except' => 'email']);
-        $this->middleware('auth', ['except' => 'email']);
-
+//        $this->middleware('auth', ['except' => 'email']); // originally had this, but need to get here for 'forgot password' flow
 
     }
 
