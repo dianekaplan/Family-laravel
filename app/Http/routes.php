@@ -28,9 +28,10 @@ Route::get('landing', 'HomeController@landing');
 
 // special cache filter for the outline page rendering
 //* Added based on laracast: https://laracasts.com/lessons/caching-essentials
-Route::filter('cache.fetch', 'Acme\Filters\CacheFilter@fetch');
-Route::filter('cache.put', 'Acme\Filters\CacheFilter@put');
+//Route::filter('cache.fetch', 'Acme\Filters\CacheFilter@fetch');
+//Route::filter('cache.put', 'Acme\Filters\CacheFilter@put');
 //Route::get('outline', 'OutlineController@show_outline')->before('cache.fetch')->after('cache.put');
+
 Route::get('outline', 'OutlineController@show_outline');
 
 
@@ -112,12 +113,12 @@ Route::controllers ([
 
 
 //// Password reset link request routes...
-//Route::get('password/email', 'Auth\PasswordController@getEmail');
-//Route::post('password/email', 'Auth\PasswordController@postEmail');
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
 //
 //// Password reset routes...
-//Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
-//Route::post('password/reset', 'Auth\PasswordController@postReset');
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
 //
 //Route::get('foo', ['middleware' => 'super', function()
 //{

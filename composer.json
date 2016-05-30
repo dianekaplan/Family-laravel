@@ -30,8 +30,7 @@
             "app/mailers"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "Acme\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
