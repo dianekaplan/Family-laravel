@@ -14,7 +14,6 @@
 
 {{--//Considered extending 'app', but the alternate navbar doesn't make sense on the landing page--}}
 
-
 <h3>Welcome!</h3>
 <p>
 Are you related to any of the folks below, or see yourself in this list? Welcome to our family tree website!
@@ -29,7 +28,8 @@ Diane Kaplan (Cambridge, MA USA)
 <br/>
 </p>
 
-@include ('auth._login_partial')
+@include ('auth._login_partial', ['email_passed_in' => $email_passed_in])
+
 <br/><br/>
 
 @include ('person.partials._people_list_simple')

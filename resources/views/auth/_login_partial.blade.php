@@ -21,7 +21,13 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">E-Mail Address</label>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                {{--If an email value was passed on the querystring, show it in this box--}}
+                                @if(isset($email_passed_in))
+                                <input type="email" class="form-control" name="email" value="{{ $email_passed_in }}">
+                                    @else
+                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                @endif
+
                             </div>
                         </div>
 

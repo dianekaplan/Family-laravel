@@ -23,6 +23,11 @@ use App\User;
 use App\Activity;
 use App\Login;
 use Cache;
+use Illuminate\Http\Request;
+//use Illuminate\Routing\Controller;
+
+
+
 //use Illuminate\Routing\Controller;
 
 
@@ -36,10 +41,16 @@ class HomeController extends Controller {
         $this->middleware('super', ['only' => 'admin']);
     }
 
-    public function landing()
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function landing(Request $request)
     {
         $people = null;
         $minutes = 10080; // 1440 minutes in a day, 10080 in a week
+        $email_passed_in =  $request->query('email');
 
         $people = Cache::remember('landing_page_list', $minutes, function(){
             return Person::ShowOnLandingPage()
@@ -49,7 +60,7 @@ class HomeController extends Controller {
                 ->get();
         });
 
-        return view ('pages.landing', compact('people'));
+        return view ('pages.landing', compact('people', 'email_passed_in'));
     }
 
 //

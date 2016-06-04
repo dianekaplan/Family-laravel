@@ -38,7 +38,6 @@ class PasswordController extends Controller
         $this->middleware('guest');
         return view ('auth.password');
     }
-
 //
 //    // Password reset link request methods
 //    public function getEmail()
