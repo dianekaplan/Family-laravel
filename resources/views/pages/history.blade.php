@@ -20,7 +20,7 @@ if ($user->kaplan_access)  $access_tally +=1;
         Our Family Tree : History
     </h3>
 
-    @if($only_one_side)
+    @if(($only_one_side) && isset($user->connection_notes))
     <b>Your relation to this person:</b><br/>
     {{$user->connection_notes}}
     @endif

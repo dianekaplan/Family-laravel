@@ -23,9 +23,12 @@
         <h3><a href="/album">Family album</a></h3>
         <h3><a href="/videos">Home movies</a> </h3>
         <h3><a href="/outline">Outline View</a></h3>
-        <br/>
+
+        @if( isset($user->connection_notes))
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}
+        @endif
         <br/><br/>
+
 
       <a href="/account"> My additions to the family tree</a>
         </div>
