@@ -102,6 +102,24 @@ class HomeController extends Controller {
         return $birthday_people;
     }
 
+    public function get_anniversary_couples()
+    {
+        $user =  \Auth::user();
+
+        $anniversary_couples = new Collection;
+
+        if($user->keem_access) {$anniversary_couples = $anniversary_couples->merge(Family::anniversaries()->displayable()->keems()->get());}
+        if($user->husband_access) {$anniversary_couples = $anniversary_couples->merge(Family::anniversaries()->displayable()->husbands()->get());}
+        if($user->kemler_access) {$anniversary_couples = $anniversary_couples->merge(Family::anniversaries()->displayable()->kemlers()->get());}
+        if($user->kaplan_access) {$anniversary_couples = $anniversary_couples->merge(Family::anniversaries()->displayable()->kaplans()->get());}
+
+        $anniversary_couples= $anniversary_couples->unique();
+        $anniversary_couples = $anniversary_couples->sortBy('marriage_date');
+
+        return $anniversary_couples;
+    }
+
+
 
     public function get_updates_from_user (User $user)
     {
@@ -171,6 +189,7 @@ class HomeController extends Controller {
 
         $person = $user->person;
         $birthday_people = HomeController::get_birthday_people();
+        $anniversary_couples = HomeController::get_anniversary_couples();
         $new_pictures = HomeController::get_recently_added_pictures();
         $new_videos = HomeController::get_recently_added_videos();
 
@@ -178,7 +197,8 @@ class HomeController extends Controller {
             ->Where('created_at', '>', Carbon::now()->subDays(200) )
             ->SimplePaginate(10);
 
-        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures', 'activity', 'new_videos'));
+        return view ('pages.home', compact('user', 'person', 'birthday_people', 'new_pictures',
+            'activity', 'new_videos', 'anniversary_couples'));
     }
 
 

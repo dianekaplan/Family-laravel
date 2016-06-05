@@ -33,6 +33,18 @@ class Family extends MyBaseModel
 
     protected $dates = ['marriage_date'];
 
+
+    public function scopeAnniversaries($query)
+    {
+        return $query->whereRaw('extract(month from marriage_date) = ?', [Carbon::today()->month])->orderBy ('marriage_date', 'asc');
+    }
+
+    public function scopeDisplayable($query)
+    {
+        $query->where('divorced', '=', false);
+    }
+
+
     public function setMarriagedateAttribute($marriage_date)
     {
         $this->attributes['marriage_date'] = $this->nullIfBlank($marriage_date);

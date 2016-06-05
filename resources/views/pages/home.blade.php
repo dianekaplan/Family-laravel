@@ -25,6 +25,7 @@
         <h3><a href="/outline">Outline View</a></h3>
 
         @if( isset($user->connection_notes))
+            <br/>
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}
         @endif
         <br/><br/>
@@ -44,6 +45,19 @@
                     <li>
                         @include ('person.partials._person_link', ['person' => $birthday_person, 'show_flag'=>'N', 'show_book'=>'N'])
                         {{ date('M d, Y', strtotime($birthday_person->birthdate)) }}
+                        {{--{{ date('m/j/Y', strtotime($birthday_person->birthdate)) }}--}}
+                    </li>
+                @endforeach
+            @endif
+            <br/>
+
+            @if (count($anniversary_couples))
+                <br/>
+                <b>Anniversaries this month:</b>
+                @foreach ($anniversary_couples as $anniversary_couple)
+                    <li>
+                        @include ('family.partials._family_link', ['family' => $anniversary_couple, 'generation'=>$anniversary_couple->branch_seq])
+                        <br/> {{ date('M d, Y', strtotime($anniversary_couple->marriage_date)) }}
                         {{--{{ date('m/j/Y', strtotime($birthday_person->birthdate)) }}--}}
                     </li>
                 @endforeach
