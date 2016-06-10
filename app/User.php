@@ -30,7 +30,8 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $fillable = ['name', 'email', 'password', 'person_id', 'super_admin',
         'last_pestered', 'connection_notes', 'furthest_html', 'keem_access',
-        'husband_access', 'kemler_access', 'kaplan_access'];
+        'husband_access', 'kemler_access', 'kaplan_access', 'logins', 'shared_account',
+        'active_bool', 'last_login', 'last_pestered', 'created_at'];
 
     /**
      * The attributes excluded from the model's JSON form.

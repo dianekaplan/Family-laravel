@@ -25,6 +25,7 @@ The Kaplan side:
         <ul><li>Bessie's parents <a href="{{ action('FamilyController@show', [3]) }}">Ida & Barnett Kaplan</a> (four generations back)
                 were  the generation that came here (from <b>Lithuania</b> <img src="/flags/lt.gif" /> .
                 They started in NYC (where Bessie was born in August of 1888), and had moved to Massachusetts by 1893 when her
-                sister Gertrude was born. <a href="{{ action('PeopleController@show', [15]) }}">Bessie</a> married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
+                sister  <a href="{{ action('PeopleController@show', [1]) }}">Gertrude Frank</a> was born. <a href="{{ action('PeopleController@show', [15]) }}">Bessie</a>
+                married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
                 together they had <a href="{{ action('PeopleController@show', [27]) }}">Gert</a>. </li></ul>
 

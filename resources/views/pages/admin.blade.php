@@ -5,7 +5,8 @@
 
 
     <div style="float: left; width: 23%;" id="family_section">
-        Add a <a href="/auth/register">user</a><br/>
+        {{--Register a <a href="/auth/register">user</a><br/>--}}
+        Add a <a href="/users/create">user</a><br/>
         Add a <a href="/people/create">person</a><br/>
         Add a <a href="/families/create">family</a><br/>
     </div>
