@@ -23,9 +23,27 @@ The Kemler side:
 
 The Kaplan side:
         <ul><li>Bessie's parents <a href="{{ action('FamilyController@show', [3]) }}">Ida & Barnett Kaplan</a> (four generations back)
-                were  the generation that came here (from <b>Lithuania</b> <img src="/flags/lt.gif" /> .
-                They started in NYC (where Bessie was born in August of 1888), and had moved to Massachusetts by 1893 when her
-                sister  <a href="{{ action('PeopleController@show', [1]) }}">Gertrude Frank</a> was born. <a href="{{ action('PeopleController@show', [15]) }}">Bessie</a>
-                married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
-                together they had <a href="{{ action('PeopleController@show', [27]) }}">Gert</a>. </li></ul>
+                were  the generation that came here (from <b>Lithuania</b> <img src="/flags/lt.gif" />) .
+                They started in NYC (where Bessie was born in August of 1888), and it looks like they had  moved to Massachusetts by
+                1889 when her brother Harry was born (based on 1900 US census).
+                We know about children for four of Ida & Barnett's children:
+
+
+                <ul>
+                    <li><a href="{{ action('PeopleController@show', [15]) }}">Bessie</a>'s descendants include the Kemlers and the Kaplans (through her daughter Gert's marriage, different Kaplans than Ida and Barnett).  </li>
+                    <li><a href="{{ action('PeopleController@show', [1]) }}">Gertrude</a>'s descendants are the Franks and the Zorns.    </li>
+                    </li>
+                    <li><a href="{{ action('PeopleController@show', [13]) }}">Hymie</a>'s descendants are the Goodmans.  </li>
+                    <li><a href="{{ action('PeopleController@show', [14]) }}">Etta</a>'s descendants are the Nitkins, the Tennens, and the Klapmans.  </li>
+                 </ul>
+
+            </li></ul>
+
+<a href="{{ action('PeopleController@show', [15]) }}">Bessie</a>
+married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
+together they had <a href="{{ action('PeopleController@show', [26]) }}">Irving</a>,
+<a href="{{ action('PeopleController@show', [27]) }}">Gert</a>,
+<a href="{{ action('PeopleController@show', [25]) }}">Matthew</a>,
+<a href="{{ action('PeopleController@show', [24]) }}">Norman</a>, and
+<a href="{{ action('PeopleController@show', [23]) }}">Stanley</a>.
 

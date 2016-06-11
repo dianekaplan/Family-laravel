@@ -11,6 +11,7 @@
 <div class="form-group">
     {!! Form::label('email','Email:') !!}
     {!! Form::text('email', null, ['class' => 'form-control']) !!}
+    {{--{!! Form::text('email', {{$user->email}}, ['class' => 'form-control']) !!}--}}
 </div>
 
 <div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">
