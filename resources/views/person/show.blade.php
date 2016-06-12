@@ -13,7 +13,10 @@
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
 
-    <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/people/{{$person->id}}/edit">
+    <h4>  <img src="/icons/pencil.png" height="25"/>
+        {{--<a href = "/people/{{$person->id}}/edit">--}}
+        <a href="{{ action('PeopleController@edit', [$person]) }}" >
+
 @if ($logged_in_user->person_id == $person->id)
 Update my info
 @else

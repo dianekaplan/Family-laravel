@@ -36,7 +36,7 @@ class UserController extends Controller
 
         $recent_visitors = User::where('last_login', '>', Carbon::now()->subDays(30) )->orderBy('last_login', 'desc')->get();
 
-        $never_seen = User::whereNULL('last_login' )->orderBy('name', 'asc')->get();
+        $never_seen = User::whereNULL('last_login' )->orwhere('last_login', '<', '01-02-1900')->orderBy('name', 'asc')->get();
         $users_on_old_site_only = User::where('last_login', '<', '2015-12-01' )->orderBy('last_login', 'desc')->get();
         $logged_in = User::where('last_login', '>', '2015-12-01' )->orderBy('last_login', 'desc')->get();
         $users_with_activity = User::has('activity')->get();
@@ -47,6 +47,7 @@ class UserController extends Controller
         $kaplan_users = User::where('kaplan_access', true )->orderBy('name')->get();
 
         $confirmed_users_not_recently_bugged =  User::whereNotNULL('last_login' )
+            ->where('last_login', '>', '01-02-1900') // users with last_login 01/01/1900 haven't logged in
             ->where('last_login', '<', Carbon::now()->subMonths(3))
              ->where('last_pestered', '<', Carbon::now()->subMonths(3))
              ->orderBy('last_pestered', 'desc')->get();
@@ -54,6 +55,9 @@ class UserController extends Controller
         return view('user.index', compact('users', 'recent_visitors', 'never_seen', 'logged_in', 'users_with_activity', 'users_on_old_site_only', 'keem_users',
             'husband_users', 'kemler_users', 'kaplan_users', 'confirmed_users_not_recently_bugged'));
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -105,6 +109,19 @@ class UserController extends Controller
     }
 
 
+    public function pester($id)
+    {
+        $user = User::find($id);
+
+        $user->last_pestered = now();
+        $user->save();
+//        $logins = $user->logins()->get();
+//        $activity = $user->activity()->with(['user', 'subject'])->SimplePaginate(5);
+
+        flash()->success('Last_pestered value has been updated');
+        return redirect('users');
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -112,8 +129,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit(User $user)
+    public function edit($id)  // for some reason when I defined it to take User $user (which it actually does), the element had no attributes
     {
+        $user = User::find($id);
         return view('user.edit', compact('user'));
     }
 
@@ -124,9 +142,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(SaveUserRequest $request, User $user)
+//    public function update(SaveUserRequest $request, User $user)
+    public function update(SaveUserRequest $request, $id) // for some reason when I define it to take User $user, the element had no attributes
     {
+        $user = User::find($id);
+//        dd($user);
         $user->update($request->all());
+        flash()->success('Your edit has been saved');
+
         return redirect('users');
     }
 
@@ -136,9 +159,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy(User $user)
+    public function destroy($id)  // for some reason when I defined it to take User $user (which it actually does), the element had no attributes
     {
-        $user->delete();
-        return redirect()->route('user.index');
+        $user = User::find($id);
+        dd($user);
+//        $user->delete();
+//        return redirect()->route('user.index');
     }
+
+
 }

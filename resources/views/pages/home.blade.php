@@ -24,7 +24,7 @@
         <h3><a href="/videos">Home movies</a> </h3>
         <h3><a href="/outline">Outline View</a></h3>
 
-        @if( isset($user->connection_notes))
+        @if( isset($user->furthest_html))
             <br/>
         My furthest ancestors here: <br/>{!! $user->furthest_html!!}
         @endif

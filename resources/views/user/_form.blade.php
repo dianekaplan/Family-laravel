@@ -31,7 +31,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('furthest_html','Furthest HTML:') !!}
+    {!! Form::label('furthest_html','Furthest relatives:') !!}
     {!! Form::text('furthest_html', null, ['class' => 'form-control']) !!}
 </div>
 

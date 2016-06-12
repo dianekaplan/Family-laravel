@@ -34,7 +34,7 @@
                         <tbody>
                             <tr>
                                 <td>Counts</td>
-                                <td>{{count($never_seen)}} never,{{count($users_on_old_site_only)}} old site only </td>
+                                <td>{{count($never_seen)}} never, {{count($users_on_old_site_only)}} old site only </td>
                                 <td>{{count($logged_in)}} </td>
                                 <td>{{count($users_with_activity)}} </td>
                                 <td>{{count($users)}} </td>

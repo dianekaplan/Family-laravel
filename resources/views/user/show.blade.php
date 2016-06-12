@@ -4,7 +4,13 @@
 
     {{--@FIXME: figure out why user info doesn't come through despite being accessible on index page, and being the same as people pages--}}
 
-    <h3>{{$user->name}}</h3>   <img  src="/icons/pencil.png" height="25"/><a href = "/users/{{$user->id}}/edit">Edit this user</a><br/><br/>
+    <h3>{{$user->name}}</h3>   <img  src="/icons/pencil.png" height="25"/>
+    {{--<a href = "/users/{{$user->id}}/edit">Edit this user</a>--}}
+
+    {{--<a href="{{ action('UserController@pester', [$user]) }}" >Just pestered!</a>--}}
+    <a href="{{ action('UserController@edit', [$user]) }}" >Edit this user</a>
+
+    <br/><br/>
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 
     {{--Here's everything: {{$user}}--}}
