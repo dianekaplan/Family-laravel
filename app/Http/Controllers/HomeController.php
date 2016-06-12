@@ -150,7 +150,7 @@ class HomeController extends Controller {
 
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(200) )
-            ->SimplePaginate(5);
+            ->SimplePaginate(7);
 
 //            ->take(5)
 //            ->get();

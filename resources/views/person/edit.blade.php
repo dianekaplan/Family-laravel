@@ -7,7 +7,14 @@ fine on the index page--}}
     <h2>Edit:  {{$person->first}} {{$person->last}} </h2>
 
 
+
     {!! Form::model($person, ['route' => ['people.update', $person->id], 'method' => 'PATCH']) !!}
+
+    @if($user->super_admin)
+        <b> Admin fields:</b> <br/>
+        @include ('person.partials._admin_fields')
+        <b>Regular fields: </b><br/>
+    @endif
     {{--//alternative to using route is: 'action' => ['PeopleController@update', $person->id]]) --}}
     @include ('errors.list')
     @include ('person.partials._form', ['submitButtonText' => 'Update Person'])

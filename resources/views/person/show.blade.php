@@ -66,7 +66,7 @@ Update info for this person
 
 
         <div style="float: left; width: 33%;">
-            <b> Education: </b>  {{  $person->education }}  <br/>
+            <b> Education: </b>  {!!    $person->education !!}  <br/>
             <b> Work: </b> {!!    $person->work !!}<br/>
             <b> Interests: </b>  {{  $person->interests }}  <br/>
             <b> Location: </b> {{  $person->current_location }}  <br/>

@@ -122,8 +122,10 @@ class PeopleController extends Controller
 
     public function edit(Person $person)
     {
+        $user =  \Auth::user();
+
         $tags = Tag::lists('name');
-        return view('person.edit', compact('person', 'tags'));
+        return view('person.edit', compact('person', 'tags', 'user'));
     }
 
     public function update(Person $updated_person, SavePersonRequest $request)

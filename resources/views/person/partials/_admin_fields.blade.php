@@ -1,18 +1,25 @@
 
+
+
 <div class="form-group">
-{!! Form::label('deathdate','Death date: (optional)') !!}
-{!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}
+    {!! Form::label('face', 'Face image: (optional)') !!}
+    {!! Form::text('face', null, ['class' => 'form-control']) !!}
 </div>
+
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('deathdate','Death date: (optional)') !!}--}}
+    {{--{!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
 
 
 {{--//TODO:  make it default to the current value--}}
 <div class="form-group">
-{!! Form::label('gender','Gender:') !!}
+    {!! Form::label('gender','Gender:') !!}
 
-{!! Form::label('gender','Female:') !!}
-{!! Form::radio('gender', 'F') !!}
-{!! Form::label('gender','Male:') !!}
-{!! Form::radio('gender', 'M') !!}
+    {!! Form::label('gender','Female:') !!}
+    {!! Form::radio('gender', 'F') !!}
+    {!! Form::label('gender','Male:') !!}
+    {!! Form::radio('gender', 'M') !!}
 </div>
 
 {{--//@FIXME:  make it default to the current value, now showing false even when true in db--}}

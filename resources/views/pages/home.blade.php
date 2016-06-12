@@ -16,9 +16,8 @@
 <div class="bottom">
     <div style="float: left; width: 23%;" id="family_section">
 
-
         @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'Y'])
-<br/>
+    <br/>
         <h3><a href="/history">My family history</a></h3>
         <h3><a href="/album">Family album</a></h3>
         <h3><a href="/videos">Home movies</a> </h3>
@@ -63,25 +62,28 @@
                 @endforeach
             @endif
             <br/>
-
+        </div>
 </div>
 
-    <div style="float: left; width: 41%;" id="family_section">
+<div class="bottom" >
+    <div style="float: right; width: 41%;" id="family_section">
 
         @unless ($new_pictures->isEmpty())
-            Most recent pics:
+            Latest pics:
             @foreach($new_pictures as $image)
                 @include ('partials._image_link', ['image' => $image,  'class' => "img-rounded"])
             @endforeach
         @endunless
             {!! $new_pictures->render() !!}
+        <br/>        <br/>
 
     </div>
+
 
     <div style="float: left; width: 41%;" id="family_section">
 
         @unless ($new_videos->isEmpty())
-            Most recent videos:
+            Latest videos:
             @foreach($new_videos as $video)
                 @include ('video.partials._video_link', ['video' => $video, 'class'=> "img-rounded"])
             @endforeach
@@ -90,9 +92,9 @@
 
     </div>
 
-    <div style="float: left; width: 41%;" id="family_section">
+    <div style="float: right; width: 41%;" id="family_section">
 
-        Most recent updates:
+        Latest updates:
         <ul class="list-group">
             @include ('activity.partials._list', [ 'hide_types' => [] ])
         </ul>
