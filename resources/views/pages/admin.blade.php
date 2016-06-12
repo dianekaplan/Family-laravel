@@ -22,7 +22,7 @@
         {{--{!! Form::submit('Go') !!}--}}
         {{--{!! Form::close() !!}--}}
 
-        Configure an <a href="/images">image</a><br/>
+        Update <a href="/images">images</a><br/>
     </div>
 
 

@@ -10,6 +10,9 @@
     {{--<a href="{{ action('UserController@pester', [$user]) }}" >Just pestered!</a>--}}
     <a href="{{ action('UserController@edit', [$user]) }}" >Edit this user</a>
 
+    {{--Or <a href="{{ action('UserController@pester', [$user]) }}" >Just pestered</a> (not working yet: 'not defined', maybe until I can add a route via artisan)--}}
+
+
     <br/><br/>
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
 

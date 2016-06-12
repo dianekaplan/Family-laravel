@@ -150,6 +150,7 @@ class HomeController extends Controller {
 
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(200) )
+            ->Where('big_name', '!=', 'test.jpg')  // temporary while making image create page
             ->SimplePaginate(7);
 
 //            ->take(5)

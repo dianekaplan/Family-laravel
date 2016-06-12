@@ -5,6 +5,8 @@
         Image index
     </h3>
 
+    Add a <a href="/images/create">new image</a><br/>
+
     @if (count($images))
 
         @foreach ($images as $image)
