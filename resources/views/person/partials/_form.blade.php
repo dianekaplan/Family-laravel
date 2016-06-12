@@ -67,6 +67,18 @@
     {!! Form::text('current_location', null, ['class' => 'form-control']) !!}
 </div>
 
+
+<div class="form-group">
+{!! Form::label('deathdate_note', 'Death date: (optional)') !!}
+{!! Form::text('deathdate_note', null, ['class' => 'form-control']) !!}
+</div>
+
+
+{{--<div class="form-group">--}}
+{{--{!! Form::label('deathdate','Death date: (optional)') !!}--}}
+{{--{!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
+
 <div class="form-group">
     {!! Form::label('notes1','Notes field 1: (optional)') !!}
     {!! Form::text('notes1', null, ['class' => 'form-control']) !!}

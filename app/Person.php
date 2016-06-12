@@ -27,7 +27,7 @@ class Person extends MyBaseModel
         'notes1',
         'birthdate',
         'birthplace',
-        'deathdate',
+        'deathdate', 'deathdate_note',
         'resting_place',
         'keem_line',
         'husband_line',
