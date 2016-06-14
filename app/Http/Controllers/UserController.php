@@ -113,10 +113,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        $user->last_pestered = now();
+        $user->last_pestered = Carbon::now();
         $user->save();
-//        $logins = $user->logins()->get();
-//        $activity = $user->activity()->with(['user', 'subject'])->SimplePaginate(5);
 
         flash()->success('Last_pestered value has been updated');
         return redirect('users');
@@ -129,7 +127,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)  // for some reason when I defined it to take User $user (which it actually does), the element had no attributes
+    public function edit($id)  // weird: when I define it to take User $user (which I do pass), the element has no attributes
     {
         $user = User::find($id);
         return view('user.edit', compact('user'));
@@ -143,7 +141,7 @@ class UserController extends Controller
      * @return Response
      */
 //    public function update(SaveUserRequest $request, User $user)
-    public function update(SaveUserRequest $request, $id) // for some reason when I define it to take User $user, the element had no attributes
+    public function update(SaveUserRequest $request, $id) // when I define it to take User $user, the element has no attributes
     {
         $user = User::find($id);
 //        dd($user);
@@ -159,7 +157,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)  // for some reason when I defined it to take User $user (which it actually does), the element had no attributes
+    public function destroy($id)  // when I define it to take User $user, the element has no attributes
     {
         $user = User::find($id);
         dd($user);

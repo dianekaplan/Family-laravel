@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     protected $fillable = [
-        'big_name', 'std_name','little_name', 'caption', 'subject', 'featured', 'year', 'family'
+        'big_name', 'std_name','little_name', 'caption', 'subject', 'featured', 'year', 'family',
+        'keem_access', 'husband_access', 'kemler_access', 'kaplan_access',
+
     ];
 
     //get the people associated with the given tag

@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Collection;
 use Cache;
+use App\Http\Requests\SaveImageRequest;
 
 
 class ImageController extends Controller
@@ -32,9 +33,13 @@ class ImageController extends Controller
         $minutes = 10080; // 1440 minutes in a day, 10080 in a week
         $images = null;
 
+        // @TODO PUT THIS BACK ONCE YOU'RE DONE WITH CREATE IMAGE PAGE
         $images = Cache::remember('images', $minutes, function(){
             return Image::orderBy('year', 'asc')->get();
         });
+
+//        $images = Image::orderBy('year', 'asc')->get();
+
 
         return view ('image/index',  compact('images'));
     }
@@ -100,9 +105,12 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+//https://laravel.com/docs/5.1/eloquent
+    public function store(SaveImageRequest $request)
     {
-        //
+        Image::create($request->all());
+        return redirect('images');
     }
 
     /**

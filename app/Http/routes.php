@@ -21,8 +21,6 @@ use Acme\Mailers\UserMailer as Mailer;
 //    return view('welcome');
 
 
-
-
 Route::get('/', 'HomeController@home');
 Route::get('landing', 'HomeController@landing');
 
@@ -34,8 +32,6 @@ Route::get('landing', 'HomeController@landing');
 
 Route::get('outline', 'OutlineController@show_outline');
 
-
-
 Route::get('home', ['middleware' => 'auth', 'uses' => 'HomeController@home']);
 Route::get('branches', 'HomeController@branches');
 Route::get('account',  'HomeController@account');
@@ -45,11 +41,11 @@ Route::get('register', 'RegistrationController@register');
 Route::post('register', 'RegistrationController@create');
 
 Route::resource('images', 'ImageController');
-Route::get('image/{image}', 'ImageController@show');
-Route::get('image/list/{image}', 'ImageController@get_image_people');
-Route::get('configure/{image}', 'ImageController@configure');
-Route::get('images', 'ImageController@index');
-Route::get('album', 'ImageController@album');
+Route::get('image/{images}', 'ImageController@show');
+Route::get('image/list/{images}', 'ImageController@get_image_people');
+Route::get('configure/{images}', 'ImageController@configure');
+Route::get('images', 'ImageController@index'); // this one is on the admin side
+Route::get('album', 'ImageController@album'); // this is the user-facing view
 
 Route::get('videos', 'VideoController@album');
 Route::get('video/{video}', 'VideoController@show');
@@ -60,6 +56,7 @@ Route::get('stories/{story}', 'StoryController@show');
 Route::resource('people', 'PeopleController');
 Route::resource('families', 'FamilyController');
 Route::get('users/store', 'UserController@store');
+Route::get('users/{users}/pester', 'UserController@pester');
 
 Route::resource('users', 'UserController');
 Route::resource('updates', 'UpdateController');

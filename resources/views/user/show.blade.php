@@ -5,13 +5,9 @@
     {{--@FIXME: figure out why user info doesn't come through despite being accessible on index page, and being the same as people pages--}}
 
     <h3>{{$user->name}}</h3>   <img  src="/icons/pencil.png" height="25"/>
-    {{--<a href = "/users/{{$user->id}}/edit">Edit this user</a>--}}
+    <a href="{{ action('UserController@edit', [$user]) }}" >Edit this user</a> |
 
-    {{--<a href="{{ action('UserController@pester', [$user]) }}" >Just pestered!</a>--}}
-    <a href="{{ action('UserController@edit', [$user]) }}" >Edit this user</a>
-
-    {{--Or <a href="{{ action('UserController@pester', [$user]) }}" >Just pestered</a> (not working yet: 'not defined', maybe until I can add a route via artisan)--}}
-
+    <a href="{{ action('UserController@pester', [$user]) }}" >Just pestered</a>
 
     <br/><br/>
     {{--{!! link_to_route('songs.edit', 'Edit this person', $person->first) !!}--}}
@@ -24,10 +20,11 @@
     Connection notes: {{$user->connection_notes}}<br/>
     Furthest relatives: {!! $user->furthest_html !!}<br/>
     <br/>
-    Logins:{{$user->logins}}<br/>
-    last login:{{$user->last_login}}<br/>
     Email:{{$user->email}}<br/>
     Encrypted password:{{$user->password}}<br/>
+    Logins:{{$user->logins}}<br/>
+    last login:{{$user->last_login}}<br/>
+
     <br/>
 
     Active: {{$user->active}}<br/>

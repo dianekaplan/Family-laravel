@@ -2,6 +2,11 @@
 
 
 <div class="form-group">
+    {!! Form::label('big_name','Name:') !!}
+    {!! Form::text('big_name', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('caption','Caption: (optional)') !!}
     {!! Form::text('caption', null, ['class' => 'form-control']) !!}
 </div>

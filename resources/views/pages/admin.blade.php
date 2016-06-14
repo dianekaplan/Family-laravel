@@ -9,6 +9,7 @@
         Add a <a href="/users/create">user</a><br/>
         Add a <a href="/people/create">person</a><br/>
         Add a <a href="/families/create">family</a><br/>
+        Add an <a href="/images/create">image</a><br/>
     </div>
 
     <div style="float: left; width: 33%;" id="family_section">
