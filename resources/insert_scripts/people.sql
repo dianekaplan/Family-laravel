@@ -979,7 +979,10 @@ INSERT INTO people (first, middle, last, maiden, nickname, face, sibling_seq, ke
 
 INSERT INTO people (first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line,  birthdate, birthplace, deathdate, gender, family_of_origin, current_location, adopted, hide_bool, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES ('Joshua', 'Samuel', 'Ross', NULL, NULL, NULL, 3, false, false, false, true,  '1986-08-10', NULL, NULL, 'M', 284, NULL, false, false, NULL, NULL, now(), now(), true);
 
-INSERT INTO people (first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line,  birthdate, birthplace, deathdate, gender, family_of_origin, current_location, adopted, hide_bool, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES ('Max', 'Aaron', 'Shapiro', NULL, NULL, NULL, 3, false, false, true, false,  '2016-03-08', NULL, NULL, 'M', 264, 'Needham, MA', false, false, 'us', NULL, now(), now(), true);
+INSERT INTO people (first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line,  birthdate, birthplace, deathdate, gender, family_of_origin, current_location, adopted, hide_bool, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES ('Max', 'Aaron', 'Shapiro', NULL, NULL, NULL, 1, false, false, true, false,  '2016-03-08', NULL, NULL, 'M', 264, 'Needham, MA', false, false, 'us', NULL, now(), now(), true);
+
+INSERT INTO people (first, middle, last, maiden, nickname, face, sibling_seq, keem_line, husband_line, kemler_line, kaplan_line,  birthdate, birthplace, deathdate, gender, family_of_origin, current_location, adopted, hide_bool, flag1, flag2, created_at, updated_at, show_on_landing_page) VALUES ('Julia', NULL, 'Dougherty', NULL, NULL, NULL, 3, false, false, true, false,  NULL, NULL, NULL, 'F', 118, NULL, false, false, 'us', NULL, now(), now(), true);
+
 
 update people set sibling_seq = 1 where id = 358;
 update people set sibling_seq = 2 where id = 356;

@@ -42,14 +42,15 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('last_login','Last Login: (optional)') !!}
+    {!! Form::label('last_login','Last Login: (optional, 2016-06-13 12:11:34)') !!}
     {!! Form::input('datetime', 'last_login', null, ['class' => 'form-control']) !!}
 </div>
 
 
 <div class="form-group">
-    {!! Form::label('created_at','Created date: (optional)') !!}
+    {!! Form::label('created_at','Created date: (optional, 2016-06-13 12:11:34)') !!}
     {!! Form::input('datetime', 'created_at', null, ['class' => 'form-control']) !!}
+    {{--{!! Form::input('datetime', 'created_at', null, ['class' => 'form-control']) !!}--}}
 </div>
 
 

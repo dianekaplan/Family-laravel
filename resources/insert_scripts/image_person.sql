@@ -1321,6 +1321,19 @@ INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUE
 INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2241, 1066, 329, now(), now());
 
 
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2242, 1073, 863, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2243, 1073, 120, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2244, 1073, 864, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2245, 1073, 107, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2246, 1073, 118, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2247, 1073, 111, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2248, 1073, 108, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2249, 1073, 112, now(), now());
+
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2250, 1073, 862, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2251, 1073, 110, now(), now());
+INSERT INTO image_person (id, image_id, person_id, created_at, updated_at) VALUES (2252, 1073, 106, now(), now());
+
 delete from image_person where image_id = 858;
 
 

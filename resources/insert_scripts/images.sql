@@ -1067,8 +1067,9 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1070, '2016_max_aaron.jpg', NULL,901, 1, '2016', NULL, now(), now(), false, false, true, false);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1072,'1990s_stanley_elaine.jpg', NULL, NULL, 1, '1990s?', 36, now(), now(), false, false, true, false);
 
-
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1073,'2016_gus_graduation.jpg', 'Gus graduates!', NULL, NULL, '2016', NULL, now(), now(), false, false, true, false);
 
 ---
 

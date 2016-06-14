@@ -95,6 +95,47 @@ INSERT INTO users (id, name, email, shared_account, password, last_login, person
 
 INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Cathy Ansuini', 'ansuincg@buffalostate.edu', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 70, '2005-08-29', now(), true, false, false, false, 0, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
 
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Christen Ansuini', 'ansuini.c@law.wlu.edu', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 218, '2010-07-21 00:05:00', now(), true, false, false, false, 0, true, 'This is the history of your grandma''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
+
+// MADE THE REST WITHOUT CONFIRMING EMAILS YET, WILL CHECK AND UPDATE
+// email got sent back, will need a fresh one for her
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access, husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Maria Klyza', 'tjk@kih.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 69, '2010-05-09 14:41:29', now(), true, false, false, false, 0, true, 'This is the history of your mom''s side (Kay Husband was Viola''s sister)', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
+
+// Issue of special skipping special character in name, this doesn't fix it (probably has same problem): 
+update users set connection_notes = (select connection_notes from users where id = 1) where id in (106,107, 108);
+
+// previous password had been garden01, haven't confirmed email
+--also facebook messaged 1/12
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Gary Sneag', 'gsneag@pacbell.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-07-14 12:04:17', 741, '2010-07-14 08:44:08', '2010-08-23 00:00:00', false, false, false, true, 1, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Maurice Sneag and Beila Kobrin Sneag).', false, 'Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+// EMAIL HAD GOTTEN SENT BACK, NEED TO UPDATE
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Dennis Kobrin', 'denvic35@orange.fr', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 347, '2010-09-19 09:54:09', '2010-09-19 00:00:00', false, false, false, true, 0, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Sam Kobrin and Nathan Kobrin).', false, 'Great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Neville Kobrin', 'stanchait12@gmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 350, '2011-05-19 07:17:29', NULL, false, false, false, true, 0, true, 'See ''Kobrin side''; Aaron & Rochel Kobrin are your paternal great grandparents (via Toly Kobrin and Nathan Kobrin).', false, 'Great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
+
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Allan Marcus', 'allan_marcus@student.uml.edu', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 857, '2012-01-17 21:59:40', NULL, false, false, false, true, 0, true, 'See ''Kobrin side''; Kalman Kaplan is your paternal great great grandpfather (via Allan Marcus, Theresa Marcus, Sarah Alman).', false, ' Great great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>',  now());
+
+
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Marissa McDonald', 'marissakemler@hotmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2009-11-30 17:10:06', 120, '2005-08-29', '2010-06-19 00:00:00', false, false, true, false, 1, true, 'This is the history of your paternal grandfather (Norman Kemler was Gert''s sister)', false, 'Father''s father''s side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>', now());
+
+--password had been berger01
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Rachel Weeks', 'rachel_weeks04@yahoo.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-03-21 20:30:00', 133, '2005-08-29', '2010-03-16 00:00:00', false, false, true, false, 3, true, NULL, false, NULL, now());
+
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Joan Kemler', 'jlazkem@aol.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 118, '2005-08-29', NULL, false, false, true, false, 0, true, NULL, false, NULL, now());
+
+
+INSERT INTO users (name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES ('Elaine Kemler', 'smkelk@earthlink.net', true, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', NULL, 117, '2010-06-15 00:00:00', NULL, false, false, true, false, 0, true, NULL, false, NULL, now());
+
+// added her with this original stuff, need to update
+INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (37, 'Deb Kallman','deborah7@charter.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-03-27 18:38:03', 125, '2010-03-21 00:00:00', '2010-05-07 00:00:00', false, false, true, false, 3, true, 'Debbie is the daughter of Eleanor & Wally', false, 'Mother''s father''s side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>', now());
+
+--left off:
+
+UPDATE users set connection_notes = 'This is the history of your maternal grandfather (Matthew Kemler was Gert''s sister)' where id = 37;
+
+UPDATE users set furthest_html = 'Mother''s father''s side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>' where id = 37;
+
+
 
 
 - for anyone with a NULL created_at, I'll use a generic 'old site' value of '2005-08-29'
@@ -117,67 +158,144 @@ update users set last_pestered = '2016-01-04' where id in (49, 59);
 update users set last_pestered = '2016-01-08' where id in (89, 22, 48, 76, 52, 40, 49, 88);
 update users set last_pestered = '2016-01-09' where id in (82, 58, 57);
 
-===left off:
-
-
----remaining kobrins (4, emailed):
-
---also facebook messaged 1/12
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (68, 'gsneag@pacbell.net', false, 'garden01', '2010-07-14 12:04:17', 741, '2010-07-14 08:44:08', '2010-08-23 00:00:00', false, false, false, true, true, true, 'Gary/Maurice/Beila Kobrin', false, ' Great great grandparents (father''s mother''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (81, 'Dennis Kobrin', 'denvic35@orange.fr', false, 'DKpassword', NULL, 347, '2010-09-19 09:54:09', '2010-09-19 00:00:00', false, false, false, true, false, true, 'Nathan/Sam/Dennis', false, ' Great great great grandparents (father\'s father\'s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (84, 'Neville Kobrin', 'stanchait12@gmail.com', false, 'NKpassword', NULL, 350, '2011-05-19 07:17:29', NULL, false, false, false, true, false, true, 'Neville comes from Nathan Kobrin via Toly ', false, ' Great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>', now());
-
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (87, 'allan_marcus@student.uml.edu', false, 'AMpassword', NULL, 857, '2012-01-17 21:59:40', NULL, false, false, false, true, false, true, 'Great-grandson of Sarah Alman', false, ' Great great great great great grandparents (father''s father''s side): <br/><a href="/families/194">Joseph & Sarah Kobrin</a>',  now());
-
-
----remaining kemlers & zorns (15):
-
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (33, 'Marissa McDonald', 'marissakemler@hotmail.com', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2009-11-30 17:10:06', 120, NULL, '2010-06-19 00:00:00', false, false, true, false, true, true, 'This is the history of your paternal grandfather (Norman Kemler was Gert''s sister)', false, 'Father''s father''s side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>', now());
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (16, 'Rachel Weeks', 'rachel_weeks04@yahoo.com', false, 'berger01', '2010-03-21 20:30:00', 133, '2005-08-29', '2010-03-16 00:00:00', false, false, true, false, 3, true, '', false, NULL, now());
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (13, 'Joan Kemler', 'jlazkem@aol.com', false, 'password', NULL, 118, '2005-08-29', NULL, false, false, true, false, 0, true, NULL, false, NULL, now());
-
-INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (37, 'Deb Kallman','deborah7@charter.net', false, '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW', '2010-03-27 18:38:03', 125, '2010-03-21 00:00:00', '2010-05-07 00:00:00', false, false, true, false, 3, true, 'Debbie is the daughter of Eleanor & Wally', false, 'Mother''s father''s side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>', now());
+using admin page: 
+ 
+Eleanor Feinberg
+eleanorfeinberg@sbcglobal.net
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+114
+This is the history of your dad's side (Matthew Kemler was Gert's sister)'
+Father's side: 2 sets of great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>
+08/29/2005
+11/13/2010
 
 INSERT INTO users (id, name, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (14, Eleanor Feinberg', 'eleanorfeinberg@sbcglobal.net', false, 'password', NULL, 114,'2005-08-29', '2010-11-13 00:00:00', false, false, true, false, 0, true, NULL, false, 'Father''s side: 2 sets of great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>', now());
 
+Katie Kemler
+kkatelan@yahoo.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+627
+This is the history of your paternal grandfather (Stanley Kemler was Gert's sister)
+Father's father's side: 2 sets of great great grandparents:<br/><a href="/families/3">Ida & Barnett Kaplan</a><br/><a href="/families/4">Solomon & Ida Kemler</a>
+2012-01-12
+6
+02/24/2012
+
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (86, 'kkatelan@yahoo.com', false, '$2y4fun', '2012-02-24 23:30:22', 627, '2012-01-12 18:26:54', NULL, false, false, true, false, 6, true, 'granddaughter of Stanley', false, 'Great great grandparents (father\'\'s father\'\'s side): <br/><a href=/family/family.asp?familyid=3>Ida & Solomon Kemler</a> and <a href=/family/family.asp?familyid=3>Fanny & Barnett Kobrin</a>', now());
 
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (47, 'smkelk@earthlink.net', true, 'password', NULL, 117, '2010-06-15 00:00:00', NULL, false, false, true, false, false, true, NULL, false, NULL, now());
+Daniel Cohen
+dscohen00@gmail.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+836
+See "The Kemler Side": Louis Kemler was Rose Kemler's brother
+Father's mother's side: great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+11/21/2010
+4
+12/31/2013
+11/21/2010
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (83, 'dscohen00@gmail.com', false, 'DCpassword', '2013-12-31 06:36:28', 836, '2010-11-21 16:32:45', NULL, false, false, true, false, 4, true, 'Grandson of Rose Kemler', false, ' Great grandparents (father\'\'s mother\'\'s side): <br/><a href=/family/family.asp?familyid=4>Solomon & Ida Kemler</a>', now());
 
+Pete Zorn
+petezorn@comcast.net  // this email gets rejected
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+166
+See 'The Kaplan Side': Ida & Barnett were Beatie's grandparents, Gertrude Frank was sisters with Bessie Kemler
+Father's mother's side: great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+8/22/2010
+0
+NULL 
+
+INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (77, 'petezorn@comcast.net', false, 'password', NULL, 166, '2010-08-22 23:02:20', '2010-08-22 00:00:00', false, false, true, false, 0, true, 'Child of Stu & Elaine', false, ' Great great grandparents (father\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a><br/><a href=\"/family/family.asp?familyid=4\">Solomon & Ida Kemler</a>', now());
+
 email to confirm address:
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (77, 'petezorn@comcast.net', false, 'password', NULL, 166, '2010-08-22 23:02:20', '2010-08-22 00:00:00', false, false, true, false, false, true, 'Child of Stu & Elaine', false, ' Great great grandparents (father\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a><br/><a href=\"/family/family.asp?familyid=4\">Solomon & Ida Kemler</a>', now());
+
+Stuart Zorn
+thezorns@gmail.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+6
+See 'The Kaplan Side': Ida & Barnett were Beatie's grandparents, Gertrude Frank was sisters with Bessie Kemler
+Mother's side: great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+05/12/2010
+5
+8/23/2010
+8/21/2010
+
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (41, 'thezorns@gmail.com', true, 'ppj462', '2010-08-23 13:47:53', 6, '2010-05-12 00:00:00', '2010-08-21 00:00:00', false, false, true, false, 5, true, '', false, 'Great grandparents (mother\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a>', now());
 
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (42, 'jbzorn1@comcast.net', false, 'JZpassword', NULL, 8, '2010-05-12 00:00:00', '2010-08-21 00:00:00', false, false, true, false, false, true, '', false, 'Great grandparents (mother\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a>', now());
 
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (78, 'ZornAdams.Pamela@tatravelcenters.com', false, 'password', '2010-08-22 23:24:37', 167, '2010-08-22 23:02:58', '2010-08-22 00:00:00', false, false, true, false, true, true, 'Child of Stu & Elaine', false, ' Great great grandparents (father\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a><br/><a href=\"/family/family.asp?familyid=4\">Solomon & Ida Kemler</a>', now());
+
+
+Joe Zorn
+jbzorn1@comcast.net
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+8
+See 'The Kaplan Side': Ida & Barnett were Beatie's grandparents, Gertrude Frank was Bessie Kemler's sister
+Mother's side: great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+05/12/2010
+0
+01/01/1900
+8/21/2010
+8/21/2010
+
+INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (42, 'jbzorn1@comcast.net', false, 'JZpassword', NULL, 8, '2010-05-12 00:00:00', '2010-08-21 00:00:00', false, false, true, false, 0, true, '', false, 'Great grandparents (mother\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a>', now());
+
+
+Pamela Zorn Adams
+ZornAdams.Pamela@tatravelcenters.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+167
+See 'The Kaplan Side': Ida & Barnett were Beatie Zorn's grandparents, Gertrude Frank was Bessie Kemler's sister
+Father's side: great great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+08/22/2010Jerem
+1
+08/22/2010
+
+**reach out on facebook, she's there!  And friends with Jeremy Zorn too
+INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (78, 'ZornAdams.Pamela@tatravelcenters.com', false, 'password', '2010-08-22 23:24:37', 167, '2010-08-22 23:02:58', '2010-08-22 00:00:00', false, false, true, false, 1, true, 'Child of Stu & Elaine', false, ' Great great grandparents (father\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a><br/><a href=\"/family/family.asp?familyid=4\">Solomon & Ida Kemler</a>', now());
+
+
+
+
+
+Jeremy Zorn
+jeremy.zorn@gmail.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+168
+See 'The Kaplan Side': Ida & Barnett were Beatie Zorn's grandparents, Gertrude Frank was Bessie Kemler's sister
+Father's side: great great grandparents:<br/><a href="/families/4">Solomon & Ida Kemler</a>
+08/22/2010
+1
+08/22/2010
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (79, 'jeremy.zorn@gmail.com', false, 'password', '2010-08-22 23:34:46', 168, '2010-08-22 23:03:16', '2010-08-22 00:00:00', false, false, true, false, true, true, 'Child of Stu & Elaine', false, ' Great great grandparents (father\'s mother\'s side): <br/><a href=\"/family/family.asp?familyid=3\">Ida & Barnett Kaplan</a><br/><a href=\"/family/family.asp?familyid=4\">Solomon & Ida Kemler</a>', now());
+
+// Elaine passed away
+Elaine Zorn
+thezorns+elaine@gmail.com
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
+7
+See 'The Kaplan Side': Ida & Barnett were Beatie Zorn's grandparents, Gertrude Frank was Bessie Kemler's sister
+(left blank since she married in)- but need to fix, it seems to still be showing space
+08/22/2010
+0
+08/22/2010
+
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (80, 'thezorns@gmail.com', true, 'ppj462', NULL, 7, '2010-08-22 23:13:20', '2010-08-22 00:00:00', false, false, true, false, false, true, '', false, '', now());
 
 
-
-
----remaining keems (3, emailed): 
-
-
-
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (27, 'tjk@kih.net', false, 'MariA1946K', '2010-05-09 14:41:29', 69, NULL, '2010-10-25 00:00:00', true, false, false, false, 2, true, '', false, '<a href="/families/218">The Zöhlers (Mathias & Maria)</a>', now());
-
-INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (71, 'ansuini.c@law.wlu.edu', false, 'password', NULL, 218, '2010-07-21 00:05:00', '2010-10-25 00:00:00', true, false, false, false, false, true, 'Cathy\'s daughter', false, '5 sets of great great great great great great great great grandparents (mother\'\'s mother\'\'s side): <br/>see hot pink families <a href=/family/history.asp?displaybranch=y>here</a>', now());
+Deborah Nitkin Dougherty
+421
+See 'Kaplan side'; Ida & Barnett were the parents of your paternal grandmother Etta Nitkin.
+Father's Mother's side: great grandparents <a href="/families/3">Ida & Barnett Kaplan</a><br/>Father's father's side: great grandparents <a href="/families/123">Nathaniel & Lena Nitkin Kaplan</a>
+placeholder
+$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW
 
 
 
-
+===left off: 
 
 facebook messaged Ashley Johnson, Anthony (jr), Cathy, and Tony Gorruso
 
@@ -187,7 +305,7 @@ Can try Caren Adams that way too if she doesn't respond on email
 
 
 
---may skip (married in, probably don't really care):
+--may skip (married in, there isn't much for them to see):
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (15, 'wfeinber@uiuc.edu', false, 'password', NULL, 116, '2005-08-29', NULL, false, false, true, false, 0, true, NULL, false, NULL, now());
 

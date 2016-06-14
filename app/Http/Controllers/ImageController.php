@@ -34,11 +34,11 @@ class ImageController extends Controller
         $images = null;
 
         // @TODO PUT THIS BACK ONCE YOU'RE DONE WITH CREATE IMAGE PAGE
-        $images = Cache::remember('images', $minutes, function(){
-            return Image::orderBy('year', 'asc')->get();
-        });
+//        $images = Cache::remember('images', $minutes, function(){
+//            return Image::orderBy('year', 'asc')->get();
+//        });
 
-//        $images = Image::orderBy('year', 'asc')->get();
+        $images = Image::orderBy('year', 'asc')->get();
 
 
         return view ('image/index',  compact('images'));
