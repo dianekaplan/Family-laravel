@@ -8,6 +8,10 @@
     {{--{!! Form::open(['url' => 'images']) !!}--}}
     {!! Form::open(['url' => 'images', 'method' => 'POST']) !!}
 
+    <div class="form-group">
+        {!! Form::label('id','The next available ID is: ') !!}
+        {!! Form::text('id', $next_image_id, ['class' => 'form-control']) !!}
+    </div>
     {{--{!! Form::open( ['route' => ['images.create']]) !!}--}}
     {{--{!! Form::model(  ['route' => ['images.create'], 'method' => 'PUT']) !!}--}}
     {{--Both of these to above got: methodNotAllowed(array('GET', 'HEAD', 'PUT', 'PATCH', 'DELETE')) in RouteCollection.php line 206--}}

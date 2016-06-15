@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Collection;
 use Cache;
 use App\Http\Requests\SaveImageRequest;
+use DB;
 
 
 class ImageController extends Controller
@@ -96,7 +97,14 @@ class ImageController extends Controller
      */
     public function create()
     {
-        return view ('image.create');
+        $next_image_id = 1075;
+//        $next_image_id = DB::table('images')
+//            ->orderBy( 'id', 'desc')
+//            ->skip(0)
+//            ->take(1)
+//            ->get();
+
+        return view ('image.create', compact('next_image_id'));
     }
 
     /**

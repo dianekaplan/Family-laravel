@@ -34,21 +34,18 @@
 
         @include ('errors.list')
 
+        <br/>
+
         @include ('image/partials._image_form')
 
         @include ('partials._family_bools')
 
-        <div class="form-group">
-            {!! Form::submit('Update Image', ['class' => 'btn btn-primary']) !!}
+            <div class="form-group">
+                {!! Form::submit('Update Image', ['class' => 'btn btn-primary']) !!}
 
 
-        </div>
+            </div>
         {!! Form::close() !!}
-
-        {{--<b>Keem flag:  </b> {{ $image->keem_access}} <br/>--}}
-        {{--<b>Husband flag:  </b> {{ $image->husband_access}} <br/>--}}
-        {{--<b>Kemler flag:  </b> {{ $image->kemler_access}} <br/>--}}
-        {{--<b>Kaplan flag:  </b> {{ $image->kaplan_access}} <br/>--}}
 
         </div>
 
@@ -58,7 +55,7 @@
 
     {{--List everybody who's in the picture (for group pictures--}}
     @foreach($image->people as $person)
-        <li>@include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])</li>
+        @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])<br/>
     @endforeach
     <br/>
 

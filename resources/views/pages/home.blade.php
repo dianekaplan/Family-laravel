@@ -75,7 +75,7 @@
             @endforeach
         @endunless
             {!! $new_pictures->render() !!}
-        <br/>        
+        <br/>
 
     </div>
 
