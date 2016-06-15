@@ -151,7 +151,7 @@ class HomeController extends Controller {
         $new_pictures = Image::latest('created_at' )
             ->Where('created_at', '>', Carbon::now()->subDays(200) )
             ->Where('big_name', '!=', 'test.jpg')  // @TODO: REMOVE LINE ONCE IMAGE CREATE PAGE IS ALL SET
-            ->SimplePaginate(6);
+            ->SimplePaginate(7);
 
 //            ->take(5)
 //            ->get();
