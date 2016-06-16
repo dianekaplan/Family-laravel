@@ -136,8 +136,9 @@ class PeopleController extends Controller
         $user_who_made_update =  \Auth::user();
         $diane_user = User::find(1);
 
-        $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);
-        $this->mailer->person_update_thankyou($user_who_made_update, $request, $updated_person);
+        // commenting out until I can fix the emailing
+//        $this->mailer->person_update_notify($diane_user, $request, $user_who_made_update, $updated_person);
+//        $this->mailer->person_update_thankyou($user_who_made_update, $request, $updated_person);
 
         flash()->success('Your edit has been saved');
 
