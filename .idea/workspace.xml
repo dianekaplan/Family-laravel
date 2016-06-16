@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1e94042-abf4-4c25-bc18-827996dce02e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FamilyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FamilyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" />
     </list>
     <ignored path="Family-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,8 +92,8 @@
       <file leaf-file-name="PeopleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PeopleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.076923">
-              <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+            <state vertical-scroll-proportion="-11.653846">
+              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FamilyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5502742">
-              <caret line="213" column="0" selection-start-line="213" selection-start-column="2" selection-end-line="214" selection-end-column="90" />
+              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -172,8 +173,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/image/create.blade.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FamilyController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" />
       </list>
     </option>
   </component>
@@ -1367,8 +1368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PeopleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.076923">
-          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+        <state vertical-scroll-proportion="-11.653846">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1376,7 +1377,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FamilyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5502742">
-          <caret line="213" column="0" selection-start-line="213" selection-start-column="2" selection-end-line="214" selection-end-column="90" />
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="88" />
           <folding />
         </state>
       </provider>
