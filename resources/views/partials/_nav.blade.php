@@ -16,7 +16,15 @@
                 <li><a href="/families">Families</a></li>
                 <li><a href="/people">People</a></li>
                 {{--<li>{!! link_to_action('PeopleController@show', "Me!", [$user->person_id]) !!}</li>--}}
-                <li>@include ('person.partials._person_link_image', ['person' => $person])</li>
+
+                <li>
+                    @if(isset($person->face))
+                        @include ('person.partials._person_link_image', ['person' => $person])
+                    @else
+                        @include ('person.partials._person_link_name', ['person' => $person])
+                    @endif
+
+                </li>
 
             </ul>
 
