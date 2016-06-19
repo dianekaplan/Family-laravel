@@ -13,7 +13,7 @@ class Person extends MyBaseModel
 
     protected $fillable = [
 
-        'first',
+        'first', 'face',
         'last',
         'middle',
         'maiden',
