@@ -3,8 +3,9 @@
 @section('content')
     <h3>{{$family->caption}}</h3>
 
+    {{--Only let super admins update family info--}}
+    @if($user->super_admin)
     <h4>  <img  src="/icons/pencil.png" height="25"/><a href = "/families/{{$family->id}}/edit">
-            @if (true)  <!--but later check permissions-->
                 Update info for this family
             @endif
         </a> </h4>

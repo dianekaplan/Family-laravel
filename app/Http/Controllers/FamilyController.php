@@ -172,6 +172,8 @@ class FamilyController extends Controller
     {
         $id = $family->id;
 
+        $user =  \Auth::user();
+
         $mother =  Person::where('id', '=', $family->mother_id)->first();
         $father =  Person::where('id', '=', $family->father_id)->first();
         $kids = FamilyController::get_kids_of_family($family);
@@ -187,7 +189,7 @@ class FamilyController extends Controller
             ->orderBy('year', 'asc')
             ->get();
 
-        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image', 'notes'));
+        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image', 'notes', 'user'));
     }
 
     /**
