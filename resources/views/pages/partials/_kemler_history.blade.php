@@ -39,11 +39,12 @@ The Kaplan side:
 
             </li></ul>
 
+<a href="{{ action('PeopleController@show', [18]) }}">Louis</a> married
 <a href="{{ action('PeopleController@show', [15]) }}">Bessie</a>
-married <a href="{{ action('PeopleController@show', [18]) }}">Louis</a> and
-together they had <a href="{{ action('PeopleController@show', [26]) }}">Irving</a>,
-<a href="{{ action('PeopleController@show', [27]) }}">Gert</a>,
-<a href="{{ action('PeopleController@show', [25]) }}">Matthew</a>,
-<a href="{{ action('PeopleController@show', [24]) }}">Norman</a>, and
-<a href="{{ action('PeopleController@show', [23]) }}">Stanley</a>.
+and together they had:
+<li><a href="{{ action('PeopleController@show', [26]) }}">Irving</a></li>
+<li><a href="{{ action('PeopleController@show', [27]) }}">Gert</a> (where we get Kaplans & Dolphs)</li>
+<li><a href="{{ action('PeopleController@show', [25]) }}">Matthew</a> (where we get  Kemlers & Feinbergs)</li>
+<li><a href="{{ action('PeopleController@show', [24]) }}">Norman</a> (Kemlers & Bergers)</li>
+<li><a href="{{ action('PeopleController@show', [23]) }}">Stanley</a> (Kemlers) </li>
 
