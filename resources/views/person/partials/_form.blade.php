@@ -38,6 +38,11 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('birthdate_note', 'Birth date note (if only year/month are known)') !!}
+    {!! Form::text('birthdate_note', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('birthplace','Place of birth: (optional)') !!}
     {!! Form::text( 'birthplace', null, ['class' => 'form-control']) !!}
 </div>

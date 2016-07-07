@@ -34,7 +34,11 @@ The Keem/Reisdorf side:
                     in Germany in the <b>1600's</b>. </p>
                     <p>Mary Glaser's family may also have been in the US generations beforehand. Her great-great grandmother was Maria Kuhn,
                 and based on other matching trees on ancestry.com, Maria's parents, grandparents, and all 4 sets of great-grandparents had come to the
-                US together in the early 1700's. They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived and died in the US)- this data needs to be verified.
+                US together in the early 1700's. They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived
+                        and died in the US)- this data needs to be verified. </p>
+                <p>We have records for Martin Keem's ancestors in <a href="https://en.wikipedia.org/wiki/Gunstett" target="_blank">Gunstett</a>
+                    going back 7 more generations(!) to
+                    Martzolff & Marie Voltz in the 1600s.</p>
             </li>
                 </p>
 

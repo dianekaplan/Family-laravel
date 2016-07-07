@@ -28,7 +28,7 @@ class Family extends MyBaseModel
         'divorced',
         'show_on_branch_view',
         'flag1',
-        'flag2',
+        'flag2', 'branch', 'branch_seq'
     ];
 
     protected $dates = ['marriage_date'];

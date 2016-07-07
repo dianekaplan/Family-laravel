@@ -7,6 +7,7 @@
 
     @include ('errors.list')
     @include ('partials._family_bools')
+    @include ('family._admin_fields')
     @include ('family._form', ['submitButtonText' => 'Add Family'])
 
     {!! Form::close() !!}

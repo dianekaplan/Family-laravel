@@ -7,8 +7,13 @@
 </div>
 
 
-
 {{--//TODO:  make it default to the current value--}}
+<div class="form-group">
+    {!! Form::label('show_on_landing_page','Show on landing page:') !!}
+    {!! Form::select('show_on_landing_page', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
+</div>
+
+
 <div class="form-group">
     {!! Form::label('gender','Gender:') !!}
 
@@ -18,7 +23,10 @@
     {!! Form::radio('gender', 'M') !!}
 </div>
 
-{{--//@FIXME:  make it default to the current value, now showing false even when true in db--}}
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('deathdate', 'Actual death date for admins: (not note field)') !!}--}}
+    {{--{!! Form::text('deathdate', null, ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
 
 @include ('partials._family_bools')
 
