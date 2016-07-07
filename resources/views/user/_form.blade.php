@@ -84,10 +84,10 @@
     {!! Form::select('active_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
 </div>
 
-<div class="form-group">
-    {!! Form::label('shared_account','Shared Account:') !!}
-    {!! Form::select('shared_account', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
-</div>
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('shared_account','Shared Account:') !!}--}}
+    {{--{!! Form::select('shared_account', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
 
 <div class="form-group">
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
