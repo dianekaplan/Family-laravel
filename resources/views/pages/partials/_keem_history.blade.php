@@ -36,9 +36,11 @@ The Keem/Reisdorf side:
                 and based on other matching trees on ancestry.com, Maria's parents, grandparents, and all 4 sets of great-grandparents had come to the
                 US together in the early 1700's. They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived
                         and died in the US)- this data needs to be verified. </p>
-                <p>We have records for Martin Keem's ancestors in <a href="https://en.wikipedia.org/wiki/Gunstett" target="_blank">Gunstett</a>
-                    going back 7 more generations(!) to
-                    Martzolff & Marie Voltz in the 1600s.</p>
+                <p>We have records for Martin Keem's ancestors in
+                    <b><a href="https://en.wikipedia.org/wiki/Gunstett" target="_blank">Gunstett</a></b>
+                    going back 7 generations further to
+                    <a href="{{ action('FamilyController@show', [290]) }}">
+                    Martzolff & Marie Voltz</a> in the 1600s.</p>
             </li>
                 </p>
 

@@ -78,7 +78,7 @@
 {!! Form::text('deathdate_note', null, ['class' => 'form-control']) !!}
 </div>
 
-
+{{--When included, blank values fail validation--}}
 {{--<div class="form-group">--}}
 {{--{!! Form::label('deathdate','Death date: (optional)') !!}--}}
 {{--{!! Form::input('date', 'deathdate', null, ['class' => 'form-control']) !!}--}}

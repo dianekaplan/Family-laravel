@@ -23,6 +23,17 @@
     {!! Form::radio('gender', 'M') !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('flag1', 'Flag1: (optional)') !!}
+    {!! Form::text('flag1', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('flag2', 'Flag2: (optional)') !!}
+    {!! Form::text('flag2', null, ['class' => 'form-control']) !!}
+</div>
+
+
 {{--<div class="form-group">--}}
     {{--{!! Form::label('deathdate', 'Actual death date for admins: (not note field)') !!}--}}
     {{--{!! Form::text('deathdate', null, ['class' => 'form-control']) !!}--}}
