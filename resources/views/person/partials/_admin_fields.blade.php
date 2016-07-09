@@ -24,6 +24,11 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('family_of_origin', 'Family of origin (id):') !!}
+    {!! Form::text('family_of_origin', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('flag1', 'Flag1: (optional)') !!}
     {!! Form::text('flag1', null, ['class' => 'form-control']) !!}
 </div>

@@ -46,17 +46,11 @@ The Keem/Reisdorf side:
 
             </li>
 
-
-
-
             <li>Connection: Catherine Reisdorf married Nicholas Keem. Nicholas and Catherine Keem had a son named
                 <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s father.
             </li>
 
         </ul>
-
-
-
 
         The Suttell/Smith side:
 
