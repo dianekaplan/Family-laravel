@@ -24,6 +24,7 @@ $size = sizeof($chunk);
         @if (!is_array($chunk[$x][0]) &&  ($chunk[$x][2] == 'person'))
 
             <li><a href="/people/{{$chunk[$x][1]}}">{{$chunk[$x][0]}}</a></li>
+
                 {{--can't do this yet because we have an id, not a person object--}}
                 {{--@include ('person.partials._person_link', ['person' => $result[1], 'show_flag'=>'N', 'show_book'=>'Y'])--}}
         @endif

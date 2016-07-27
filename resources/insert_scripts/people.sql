@@ -1167,3 +1167,8 @@ update people set kemler_line = true where id = 855;
 update people set husband_line = true where id = 855;
 update people set flag1 = 'gb' where id = 855;
 update people set flag2 = 'us' where id = 855;
+
+update people set face = '806zoe.jpg' where id = 806;
+update people set face = '805jacob.jpg' where id = 805;
+update people set face = '804scott.jpg' where id = 804;
+update people set face = '396carol.jpg' where id = 396;

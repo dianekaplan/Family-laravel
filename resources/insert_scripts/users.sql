@@ -304,7 +304,6 @@ Messaged Kara Husband on myheritage.com
 Can try Caren Adams that way too if she doesn't respond on email
 
 
-
 --may skip (married in, there isn't much for them to see):
 
 INSERT INTO users (id, email, shared_account, password, last_login, person_id, created_at, last_pestered, keem_access,husband_access, kemler_access, kaplan_access, logins, active_bool, connection_notes, super_admin, furthest_html, updated_at) VALUES (15, 'wfeinber@uiuc.edu', false, 'password', NULL, 116, '2005-08-29', NULL, false, false, true, false, 0, true, NULL, false, NULL, now());

@@ -9,7 +9,8 @@
         Add a <a href="/users/create">user</a><br/>
         Add a <a href="/people/create">person</a><br/>
         Add a <a href="/families/create">family</a><br/>
-        Add an <a href="/images/create">image</a><br/>
+        <br/>
+        Add an <a href="/images/create">image</a> (under construction)<br/>
     </div>
 
     <div style="float: left; width: 33%;" id="family_section">
@@ -22,8 +23,8 @@
 
         {{--{!! Form::submit('Go') !!}--}}
         {{--{!! Form::close() !!}--}}
-
-        Update <a href="/images">images</a><br/>
+        <br/><br/>
+        Update <a href="/images">images</a> (under construction)<br/>
     </div>
 
 
