@@ -38,7 +38,7 @@ class Person extends MyBaseModel
         'notes2',
         'notes3',
         'show_on_landing_page',
-        'flag1', 'flag2'
+        'flag1', 'flag2', 'family_of_origin'
     ];
 
     protected $dates = ['birthdate', 'deathdate'];

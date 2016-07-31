@@ -1,4 +1,6 @@
 
+{{--Remember: family edit is only available to super admins--}}
+
 <div class="form-group">
     {!! Form::label('caption','Caption:') !!}
     {!! Form::text('caption', null, ['class' => 'form-control']) !!}
@@ -13,6 +15,11 @@
 <div class="form-group">
     {!! Form::label('father_id','Father ID:') !!}
     {!! Form::text('father_id', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('no_kids_bool','No kids:') !!}
+    {!! Form::select('no_kids_bool', array('Choose:',  'True'=>'True', 'False'=>'False'), ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">
