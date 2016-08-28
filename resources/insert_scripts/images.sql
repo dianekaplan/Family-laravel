@@ -1048,6 +1048,8 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1071, '2012_ansuinis.jpg', NULL, NULL, 1, '2012', 69, now(), now(), true, false, false, false);
 
 
+
+
 ----deleted til I hear back from Daniella:
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1048, '1970_slon_siblings.jpg', NULL, NULL, NULL, '1970ish', NULL, now(), now(), false, false, false, true);
 INSERT INTO images (id, little_name, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1052, 'T2008_rivette_daniella_abe.jpg', 
@@ -1090,9 +1092,33 @@ INSERT INTO images (id, big_name, caption, subject, featured, year, family, crea
 
 INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1084, '2016_Carol_Kara.jpg', NULL, NULL, 0, '2016', NULL, now(), now(), false, true, false, false);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1085, '2016_kowalskis.jpg', NULL, NULL, 1, '2016', 286, now(), now(), false, false, true, false);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1086, '1979_david_sonny.jpg', NULL, NULL, 0, '1979', NULL, now(), now(), false, false, true, false);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1087, '1979_david_dianne_deb.jpg', NULL, NULL, 0, '1979', NULL, now(), now(), false, false, true, false);
 
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1088, '2001ish_david_nitkin_kids.jpg', NULL, NULL, 0, '2001 or so', NULL, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1089, 'andy_and_kaplan.jpg', NULL, NULL, 0, '2016?', NULL, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1090, '2016_stella_door.jpg', NULL, 860, 1, '2016', NULL, now(), now(), true, true, true, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1091, '2016_violet_summer.jpg', NULL, 859, 1, '2016', NULL, now(), now(), true, true, true, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1092, '2016_larry_violet_smiles.jpg', NULL, NULL, 0, '2016', NULL, now(), now(), true, true, true, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1093, '2015_Doreen_Terri_Michael.jpg', NULL, NULL, 0, '2015', NULL, now(), now(), false, false, false, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1094, '2016_kemler_kids.jpg', NULL, NULL, 0, '2016', NULL, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1095, '2016_max_lederhosen.jpg', NULL, 901, 1, '2016', NULL, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1096, '2016_sam_nitkin.jpg', NULL, 424, 1, '2016', NULL, now(), now(), false, false, true, false);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1097, '2016_kai_and_brody.jpg', NULL, NULL, 0, '2016', NULL, now(), now(), false, false, false, true);
+
+INSERT INTO images (id, big_name, caption, subject, featured, year, family, created_at, updated_at, keem_line, husband_line, kemler_line, kaplan_line) VALUES (1098, '1964_david_nitkin.jpg', NULL, 420, 0, '1964', NULL, now(), now(), false, false, true, false);
 
 ---
 
