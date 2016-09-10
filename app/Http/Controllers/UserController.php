@@ -50,7 +50,7 @@ class UserController extends Controller
             ->where('last_login', '>', '01-02-1900') // users with last_login 01/01/1900 haven't logged in
             ->where('last_login', '<', Carbon::now()->subMonths(3))
              ->where('last_pestered', '<', Carbon::now()->subMonths(3))
-             ->orderBy('last_pestered', 'desc')->get();
+             ->orderBy('last_pestered', 'asc')->get();
 
         return view('user.index', compact('users', 'recent_visitors', 'never_seen', 'logged_in', 'users_with_activity', 'users_on_old_site_only', 'keem_users',
             'husband_users', 'kemler_users', 'kaplan_users', 'confirmed_users_not_recently_bugged'));
