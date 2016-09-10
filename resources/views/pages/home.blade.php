@@ -44,7 +44,6 @@
                     <li>
                         @include ('person.partials._person_link', ['person' => $birthday_person, 'show_flag'=>'N', 'show_book'=>'N'])
                         {{ date('M d, Y', strtotime($birthday_person->birthdate)) }}
-                        {{--{{ date('m/j/Y', strtotime($birthday_person->birthdate)) }}--}}
                     </li>
                 @endforeach
             @endif
@@ -57,7 +56,6 @@
                     <li>
                         @include ('family.partials._family_link', ['family' => $anniversary_couple, 'generation'=>$anniversary_couple->branch_seq])
                         <br/> {{ date('M d, Y', strtotime($anniversary_couple->marriage_date)) }}
-                        {{--{{ date('m/j/Y', strtotime($birthday_person->birthdate)) }}--}}
                     </li>
                 @endforeach
             @endif
@@ -74,8 +72,9 @@
                 @include ('partials._image_link', ['image' => $image,  'class' => "img-rounded"])
             @endforeach
         @endunless
-            {!! $new_pictures->render() !!}
         <br/>
+
+
 
     </div>
 

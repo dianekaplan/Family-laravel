@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Image extends Model
 {
@@ -27,24 +28,28 @@ class Image extends Model
 //    @TODO same as in families & people & videos- can this be a partial or a trait?
     public function scopeKaplans($query)
     {
-        $query->where('kaplan_line', '=', 'true')->orderBy('year', 'asc') ;
+        $query->where('kaplan_line', '=', 'true') ;
     }
 
     public function scopeKemlers($query)
     {
-        $query->where('kemler_line', '=', 'true')->orderBy('year', 'asc') ;
+        $query->where('kemler_line', '=', 'true') ;
     }
 
     public function scopeKeems($query)
     {
-        $query->where('keem_line', '=', 'true')->orderBy('year', 'asc') ;
+        $query->where('keem_line', '=', 'true') ;
     }
 
     public function scopeHusbands($query)
     {
-        $query->where('husband_line', '=', 'true')->orderBy('year', 'asc') ;
+        $query->where('husband_line', '=', 'true') ;
     }
 
+    public function scopeRecent($query)
+    {
+        $query->where('created_at', '>', Carbon::now()->subDays(200))->orderBy('created_at', 'desc') ;
+    }
 
 }
 

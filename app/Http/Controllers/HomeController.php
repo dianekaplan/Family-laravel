@@ -134,37 +134,31 @@ class HomeController extends Controller {
     {
         $user =  \Auth::user();
 
-//       @TODO:  I'd like to use a collection so I can only show based on permissions, but the view uses render and paginate, which are
-//        for eloguent and not collections.  Could consider staying with eloquent and adding a scope for recent
         $new_pictures = new Collection;
 
-//       if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->get());}
-//        if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->get());}
-//        if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->get());}
-//        if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->get());}
-//
-//        $new_pictures = $new_pictures->Where('created_at', '>', Carbon::now()->subDays(30) )
-//            ->perPage(5);
-////
+       if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->recent()->get());}
+        if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->recent()->get());}
+        if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->recent()->get());}
+        if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->recent()->get());}
+        $new_pictures= $new_pictures->unique()->take(7);
 
 
-        $new_pictures = Image::latest('created_at' )
-            ->Where('created_at', '>', Carbon::now()->subDays(200) )
-            ->Where('big_name', '!=', 'test.jpg')  // @TODO: REMOVE LINE ONCE IMAGE CREATE PAGE IS ALL SET
-            ->SimplePaginate(7);
-
-//            ->take(5)
-//            ->get();
+// PREVIOUS VERSION USING RENDER & PAGINATE- showed pagination (before I added family bool filter),
+// but these are for eloquent and not collections (Need collection in order to de-dupe once we grab by family bools
+//)
+//        $new_pictures = Image::latest('created_at' )
+//            ->Where('created_at', '>', Carbon::now()->subDays(200) )
+//            ->SimplePaginate(7);
 
         return $new_pictures;
     }
 
+
+    // Left this one using render & paginate because for now I don't want to filter by family bools
     public function get_recently_added_videos ()
     {
         $user =  \Auth::user();
 
-//       @TODO:  I'd like to use a collection so I can only show based on permissions, but the view uses render and paginate, which are
-//        for eloguent and not collections.  Could consider staying with eloquent and adding a scope for recent
         $new_videos = new Collection;
 
         $new_videos = Video::latest('created_at' )
