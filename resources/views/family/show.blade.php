@@ -83,12 +83,12 @@
 
             @if( $notes )
                 @include ('partials._notes', ['notes' => $notes])
+                <br/>
             @endif
 
             @include ('partials._stories', ['subject' => $family])
 
-
-
+            
             @if (count($images))
             Images:
                 @foreach($images as $image)
@@ -102,7 +102,10 @@
         {{--@FIXME: only show this note if one of the parents is showing an asterisk--}}
         <div style="float: left;width: 100%;">
             <br/>
-        *Asterisk indicates the direct ancestors up from the four grandparents
+            @if ($family_has_asterisk )
+                *Asterisk indicates the direct ancestors up the line.
+            @endif
+
         </div>
 
 </div>

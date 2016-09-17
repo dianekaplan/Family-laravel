@@ -172,10 +172,11 @@ class FamilyController extends Controller
     {
         $id = $family->id;
 
-        $user =  \Auth::user();
+        $user = \Auth::user();
 
-        $mother =  Person::where('id', '=', $family->mother_id)->first();
-        $father =  Person::where('id', '=', $family->father_id)->first();
+        $mother = Person::where('id', '=', $family->mother_id)->first();
+        $father = Person::where('id', '=', $family->father_id)->first();
+
         $kids = FamilyController::get_kids_of_family($family);
 //        $kids = Family::get_kids_of_family($family);
         $notes = FamilyController::get_notes_about_family($family);
@@ -188,8 +189,22 @@ class FamilyController extends Controller
             ->Where('family', $id)
             ->orderBy('year', 'asc')
             ->get();
+        $family_has_asterisk = false;
 
-        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image', 'notes', 'user'));
+        if ($mother->direct_bool || $father->direct_bool)
+        {
+            $family_has_asterisk = true;
+        }
+
+        foreach ($kids as $kid)
+        {
+            if ($kid->direct_bool)
+            {
+                $family_has_asterisk = true;
+            }
+        }
+
+        return view ('family.show', compact('family', 'kids', 'images', 'mother', 'father', 'featured_image', 'notes', 'user', 'family_has_asterisk'));
     }
 
     /**

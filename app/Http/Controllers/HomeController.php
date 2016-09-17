@@ -136,11 +136,14 @@ class HomeController extends Controller {
 
         $new_pictures = new Collection;
 
-       if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->recent()->get());}
+        if($user->keem_access) {$new_pictures = $new_pictures->merge(Image::keems()->recent()->get());}
         if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->recent()->get());}
         if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->recent()->get());}
         if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->recent()->get());}
         $new_pictures= $new_pictures->unique()->take(7);
+
+        // @TODO: Consider-
+        // for multi-bool users, this approach/order may mean that we have our 7 before we even get to Kaplan pics
 
 
 // PREVIOUS VERSION USING RENDER & PAGINATE- showed pagination (before I added family bool filter),
