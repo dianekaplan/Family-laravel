@@ -165,7 +165,7 @@ class HomeController extends Controller {
         $new_videos = new Collection;
 
         $new_videos = Video::latest('created_at' )
-            ->Where('created_at', '>', Carbon::now()->subDays(200) )
+            ->Where('created_at', '>', Carbon::now()->subDays(300) )
             ->SimplePaginate(1);
 
         return $new_videos;
