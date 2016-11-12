@@ -86,7 +86,7 @@ return [
 //    'username' => env('MAIL_USERNAME'),
       'username' => 'dianekaplan@gmail.com',
 //    'username' => 'diane@ourbigfamilytree.com',
-
+        // testing gitignore
 
     /*
     |--------------------------------------------------------------------------
