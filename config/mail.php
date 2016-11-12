@@ -82,8 +82,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
-//    'username' => 'dianekaplan@gmail.com',
+    // @FIXME: we should use the environment variable- this works in sandbox but not in production (PER-147)
+//    'username' => env('MAIL_USERNAME'),
+      'username' => 'dianekaplan@gmail.com',
 //    'username' => 'diane@ourbigfamilytree.com',
 
 
@@ -97,9 +98,9 @@ return [
     | connection so that the application will be able to send messages.
     |
     */
-
-    'password' => env('MAIL_PASSWORD'),
-//    'password' => "apple4KEEM",
+    // @FIXME: we should use the environment variable- this works in sandbox but not in production (PER-147)
+//    'password' => env('MAIL_PASSWORD'),
+      'password' => "apple4KEEM",
 //    'password' => "ilike2goTHERE!",
 
     /*
