@@ -26,7 +26,7 @@ The Keem/Reisdorf side:
                 had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine Reisdorf.</a>
 
                 <p>A little more history:
-            In the 1860's, three of Mary's younger brothers <a href="http://family.app/stories/797">fought in the civil war</a>, click around
+            In the 1860's, three of Mary's younger brothers <a href="/stories/797">fought in the civil war</a>, click around
                     in <a href="{{ action('FamilyController@show', [80]) }}">that family's pages</a> for some interesting history
                     (see book icons).  Also, we've traced back on Mary's side to
                     a set of her paternal great great great grandparents:
@@ -47,7 +47,8 @@ The Keem/Reisdorf side:
             </li>
 
             <li>Connection: Catherine Reisdorf married Nicholas Keem. Nicholas and Catherine Keem had a son named
-                <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s father.
+                <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was
+                <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s father.
             </li>
 
         </ul>
@@ -56,15 +57,23 @@ The Keem/Reisdorf side:
 
         <ul>
 
-            <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from <b>France</b>
+            <li>The <a href="{{ action('FamilyController@show', [107]) }}">Pochel family</a> (6 generations back) moved to this country from
+                <b>France</b>
                 <img src="/flags/fr.gif" /> in <b>1833</b> when Emily Pochel was an infant. </li>
-            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this country from the area that would become
-                <b>Luxembourg</b> <img src="/flags/lu.gif" /> (6 generations back) with their son John Smith.(need to confirm that they moved too vs whether he came on his own) </li>
-            <li>Connection: <a href="{{ action('FamilyController@show', [81]) }}">John & Emily </a>were married in 1852 (5 generations back).  They had a daughter named Helen Smith. </li>
-            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back) both came to the US from
-                <b>Alsace</b> <img src="/flags/alsace.gif" /> , Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824 and 1849.  They had a son named Amos Suttell. </li>
-            <li>Connection: Helen Smith married Amos Suttell.  <a href="{{ action('FamilyController@show', [9]) }}">Helen and Amos Suttell</a> had a daugher named
-                <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother.  </li>
+            <li><a href="{{ action('FamilyController@show', [104]) }}">Stephen & Anna Maria Schmeid</a> came to this
+                country from the area that would become
+                <b>Luxembourg</b> <img src="/flags/lu.gif" /> (6 generations back) with their son John Smith.(need to
+                confirm that they moved too vs whether he came on his own) </li>
+            <li>Connection: <a href="{{ action('FamilyController@show', [81]) }}">John & Emily </a>were married in 1852
+                (5 generations back).  They had a daughter named Helen Smith. </li>
+            <li><a href="{{ action('FamilyController@show', [89]) }}">Jacob Suttell and Rosa Mayer</a> (5 generations back)
+                both came to the US from
+                <b>Alsace</b> <img src="/flags/alsace.gif" /> , Jacob on <b>16 May 1843</b>, and Rosa sometime between 1824
+                and 1849.  They had a son named Amos Suttell. </li>
+            <li>Connection: Helen Smith married Amos Suttell.  <a href="{{ action('FamilyController@show', [9]) }}">Helen and Amos Suttell</a>
+                had a daugher named
+                <a href="{{ action('PeopleController@show', [43]) }}">Adele</a>, who was
+                <a href="{{ action('PeopleController@show', [62]) }}">Kay</a>'s mother.  </li>
 
         </ul>
 
