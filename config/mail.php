@@ -82,8 +82,8 @@ return [
     |
     */
 
-//    'username' => env('MAIL_USERNAME'),
-    'username' => 'dianekaplan@gmail.com',
+    'username' => env('MAIL_USERNAME'),
+//    'username' => 'dianekaplan@gmail.com',
 //    'username' => 'diane@ourbigfamilytree.com',
 
 
@@ -98,8 +98,8 @@ return [
     |
     */
 
-//    'password' => env('MAIL_PASSWORD'),
-    'password' => "apple4KEEM",
+    'password' => env('MAIL_PASSWORD'),
+//    'password' => "apple4KEEM",
 //    'password' => "ilike2goTHERE!",
 
     /*
