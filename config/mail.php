@@ -82,9 +82,12 @@ return [
     |
     */
 
-    // @FIXME: using the environment variable works in sandbox but errors  in production (PER-147)
+    // @FIXME: using the environment variable works in sandbox but errors in production (PER-147)
     // @FIXME: Hardcoding does work (but bad practice, and this file is visible on Github)
+    // @FIXME: For now testing with domain email that doesn't have anything else in it
     'username' => env('MAIL_USERNAME'),
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -98,8 +101,8 @@ return [
     */
     // @FIXME: using the environment variable works in sandbox but errors  in production (PER-147)
     // @FIXME: Hardcoding does work (but bad practice, and this file is visible on Github)
+    // @FIXME: For now testing with domain email that doesn't have anything else in it
     'password' => env('MAIL_PASSWORD'),
-
 
     /*
     |--------------------------------------------------------------------------
