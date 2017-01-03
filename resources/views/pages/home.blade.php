@@ -78,9 +78,9 @@
 
     </div>
 
-
-    <div style="float: left; width: 41%;" id="family_section">
-
+    {{--originally had this 41% beneath birthdays, but for users with only a few it pushes layout around--}}
+    {{--<div style="float: right; width: 41%;" id="family_section">--}}
+    <div style="float: left; width: 30%;" id="family_section">
         @unless ($new_videos->isEmpty())
             Latest videos:
             @foreach($new_videos as $video)

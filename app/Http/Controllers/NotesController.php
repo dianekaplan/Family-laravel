@@ -62,8 +62,9 @@ class NotesController extends Controller
 
 //        $user_who_added_note->notes()->save($note); //save the note for the user that's logged in
 
-        $this->mailer->note_notify($diane_user, $user_who_added_note, $entity_with_new_note, $body,$redirect_url);
-        $this->mailer->note_thankyou($user_who_added_note, $entity_with_new_note, $body, $redirect_url);
+        // @FIXME: when I fix the issue of using env values for email, I'll be able to include this back in
+//        $this->mailer->note_notify($diane_user, $user_who_added_note, $entity_with_new_note, $body,$redirect_url);
+//        $this->mailer->note_thankyou($user_who_added_note, $entity_with_new_note, $body, $redirect_url);
 
 //        return redirect('updates');
         return redirect($redirect_url);
