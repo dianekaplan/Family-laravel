@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Acme\Mailers\UserMailer as Mailer;
 use Cache;
+use App\AudioFile;
 
 use App\Update;
 
@@ -79,6 +80,15 @@ class PeopleController extends Controller
 
         return $notes;
     }
+//// Don't need this if eloquent is working correctly, but trying until it is
+//    protected function get_audio_files_about_person($person)
+//    {
+//        $audio_files = AudioFile::leftjoin ('audio_file_person', 'audio_file_person.audio_file_id', '=', 'audio_file.id')
+//            ->Where('audio_file_person.person_id', $person->id)
+//            ->get();
+//
+//        return $audio_files;
+//    }
 
     public function show(Person $person)
     {
@@ -96,10 +106,12 @@ class PeopleController extends Controller
 
         $made_family = PeopleController::get_made_family($person);
         $notes = PeopleController::get_notes_about_person($person);
+//        $audio_files_manual = PeopleController::get_audio_files_about_person($person);
 
         $origin_family = Family::where('id', $person->family_of_origin)->first();
 
-        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family', 'notes', 'logged_in_user'));
+        return view ('person.show', compact('person', 'solo_images', 'made_family', 'featured_image', 'origin_family',
+            'notes', 'logged_in_user'));
     }
 
 

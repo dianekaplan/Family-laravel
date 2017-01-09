@@ -130,7 +130,6 @@ class Person extends MyBaseModel
     }
 
 
-
     public function stories()
     {
         return $this->belongsToMany('App\Story')->withTimestamps();
@@ -139,6 +138,17 @@ class Person extends MyBaseModel
     public function getStoryListAttribute()
     {
         return $this->stories->lists('id')->all();
+    }
+
+
+    public function audio_files()
+    {
+        return $this->belongsToMany('App\AudioFile')->withTimestamps();
+    }
+
+    public function getAudioFileListAttribute()
+    {
+        return $this->audio_files->lists('id')->all();
     }
 
 }

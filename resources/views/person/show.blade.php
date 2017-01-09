@@ -108,8 +108,8 @@ Update info for this person
             @endif
 
             @include ('partials._stories', ['subject' => $person]) <br/>
-            @include ('video.partials._person_videos', ['subject' => $person, 'class' => "img-rounded"])
-
+            @include ('video.partials._person_videos', ['subject' => $person, 'class' => "img-rounded"])<br/>
+                @include ('audio.partials._person_audio_links', ['subject' => $person, 'class' => "img-rounded"])
         </div>
 
         <div style="float: left; width: 100%;">
