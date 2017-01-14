@@ -1,10 +1,9 @@
-{{--Looking for audio files:--}}
-@unless ($subject->audio_files->isEmpty())
+@unless ($subject->audiofiles->isEmpty())
     <div>
         <h4>Audio links: </h4>
-        @foreach($subject->audio_files as $video)
-
-            @include ('video.partials._video_link', ['video' => $video])
+        @foreach($subject->audiofiles as $audiofile)
+            {{--@include ('audio.partials._audio_link', ['audio' => $audiofile])--}}
+            @include ('audio.partials._audio_link')
         @endforeach
         <br/>
     </div>

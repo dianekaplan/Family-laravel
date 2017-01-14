@@ -69,6 +69,7 @@ class PeopleController extends Controller
         return $made_family;
     }
 
+    // @TODO: can refactor this to take advantage of eloquent (like video and audiofiles), wouldn't need it here
     protected function get_notes_about_person($person)
     {
         $notes = Note::Where('type', 1)
@@ -80,15 +81,6 @@ class PeopleController extends Controller
 
         return $notes;
     }
-//// Don't need this if eloquent is working correctly, but trying until it is
-//    protected function get_audio_files_about_person($person)
-//    {
-//        $audio_files = AudioFile::leftjoin ('audio_file_person', 'audio_file_person.audio_file_id', '=', 'audio_file.id')
-//            ->Where('audio_file_person.person_id', $person->id)
-//            ->get();
-//
-//        return $audio_files;
-//    }
 
     public function show(Person $person)
     {
@@ -106,7 +98,6 @@ class PeopleController extends Controller
 
         $made_family = PeopleController::get_made_family($person);
         $notes = PeopleController::get_notes_about_person($person);
-//        $audio_files_manual = PeopleController::get_audio_files_about_person($person);
 
         $origin_family = Family::where('id', $person->family_of_origin)->first();
 

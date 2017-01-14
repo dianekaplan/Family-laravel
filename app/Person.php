@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use App\MyBaseModel;
 
+
 class Person extends MyBaseModel
 {
 
     use RecordsActivity;
 
+//    protected $table = 'audiofile_person';
     protected $fillable = [
 
         'first', 'face',
@@ -42,6 +44,7 @@ class Person extends MyBaseModel
     ];
 
     protected $dates = ['birthdate', 'deathdate'];
+
 
 
     public function setBirthdateAttribute($birthdate)
@@ -140,15 +143,14 @@ class Person extends MyBaseModel
         return $this->stories->lists('id')->all();
     }
 
-
-    public function audio_files()
+    public function audiofiles()
     {
-        return $this->belongsToMany('App\AudioFile')->withTimestamps();
+        return $this->belongsToMany(Audiofile::class);
     }
 
-    public function getAudioFileListAttribute()
+    public function getAudiofileListAttribute()
     {
-        return $this->audio_files->lists('id')->all();
+        return $this->audiofiles->lists('id')->all();
     }
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAudioFilePersonTable extends Migration
+class CreateAudiofilePersonTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,15 @@ class CreateAudioFilePersonTable extends Migration
      */
     public function up()
     {
-        Schema::create('audio_file_person', function (Blueprint $table) {
+        Schema::create('audiofile_person', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('person_id');
-            $table->integer('audio_file_id');
+            $table->integer('audiofile_id');
             $table->timestamps();
 
-//            $table->foreign('audio_file_id')
+//            $table->foreign('audiofile_id')
 //                ->references('id')
-//                ->on('audio_files');
+//                ->on('audiofiles');
 //
 //             $table->foreign('person_id')
 //                ->references('id')
@@ -35,6 +35,6 @@ class CreateAudioFilePersonTable extends Migration
      */
     public function down()
     {
-        Schema::drop('audio_file_person');
+        Schema::drop('audiofile_person');
     }
 }

@@ -13,10 +13,14 @@ class Video extends Model
 
     public function people()
     {
-//        return $this->belongsToMany('App\Person', 'person_video');
-        return $this->belongsToMany('App\Person', 'person_video')->withPivot('description');
+        // working value, older syntax
+//        return $this->belongsToMany('App\Person', 'person_video')->withPivot('description');
+
         //when I add description, the whole collection seems to go empty
 //        return $this->belongsToMany('App\Person', 'person_video', 'description');
+
+    // working value, newer syntax
+        return $this->belongsToMany(Person::class, 'person_video')->withPivot('description');
     }
 
 

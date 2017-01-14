@@ -93,7 +93,6 @@ Update info for this person
         @endif
         </div>
 
-
         <div style="float: left; width: 100%;">
             @if( $person->notes1 )  {!!   $person->notes1 !!} <br/> @endif
                 @if( $person->notes2 ) {!!  $person->notes2 !!} <br/>@endif
@@ -102,13 +101,12 @@ Update info for this person
             @include ('pages.add_note_link', ['user' => Auth::user(), 'type'=>'people', 'id' => $person->id, 'name'=>$person->first])<br/>
 
 
-
             @if( $notes )
                     @include ('partials._notes', ['notes' => $notes])
             @endif
 
             @include ('partials._stories', ['subject' => $person]) <br/>
-            @include ('video.partials._person_videos', ['subject' => $person, 'class' => "img-rounded"])<br/>
+            @include ('video.partials._person_videos', ['subject' => $person, 'class' => "img-rounded"])
                 @include ('audio.partials._person_audio_links', ['subject' => $person, 'class' => "img-rounded"])
         </div>
 
