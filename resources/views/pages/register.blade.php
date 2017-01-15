@@ -16,7 +16,13 @@
 
     {!! Form::close() !!}
 
+    <br/>
 
+    Questions/issues?   <a href="mailto:dianekaplan@gmail.com?Subject=Account%20request" target="_top">
+        Email me</a>
+
+
+    <br/>
     <br/><br/>
 
     @include ('person.partials._people_list_simple')
