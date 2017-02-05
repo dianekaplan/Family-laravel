@@ -113,7 +113,6 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
 //https://laravel.com/docs/5.1/eloquent
     public function store(SaveImageRequest $request)
     {
