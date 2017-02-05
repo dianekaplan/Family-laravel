@@ -97,12 +97,12 @@ class ImageController extends Controller
      */
     public function create()
     {
-        $next_image_id = 1075;
-//        $next_image_id = DB::table('images')
-//            ->orderBy( 'id', 'desc')
-//            ->skip(0)
-//            ->take(1)
-//            ->get();
+       $latest_image = DB::table('images')
+           ->orderBy( 'id', 'last')  // same as id desc
+            ->take(1)
+            ->get();
+
+        $next_image_id = $latest_image[0]->id + 1;
 
         return view ('image.create', compact('next_image_id'));
     }

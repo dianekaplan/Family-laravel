@@ -11,6 +11,7 @@
     <div class="form-group">
         {!! Form::label('id','The next available ID is: ') !!}
         {!! Form::text('id', $next_image_id, ['class' => 'form-control']) !!}
+
     </div>
     {{--{!! Form::open( ['route' => ['images.create']]) !!}--}}
     {{--{!! Form::model(  ['route' => ['images.create'], 'method' => 'PUT']) !!}--}}
