@@ -133,16 +133,12 @@ class ImageController extends Controller
         return view ('image/show',  compact('image'));
     }
 
-
-
     public function configure($id)
     {
         $image = Image::find($id);
 
         return view ('image/configure',  compact('image'));
     }
-
-
 
     /**
      * Show the form for editing the specified resource.
