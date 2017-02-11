@@ -26,10 +26,10 @@ class SaveImageRequest extends Request
 
         $rules = [
             'big_name' => 'required',
-//            'keem_access' => 'required',
-//            'husband_access' => 'required',
-//            'kemler_access' => 'required',
-//            'kaplan_access' => 'required',
+            'keem_line' => 'required',
+            'husband_line' => 'required',
+            'kemler_line' => 'required',
+            'kaplan_line' => 'required',
         ];
         return $rules;
     }

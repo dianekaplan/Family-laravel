@@ -152,8 +152,10 @@ class ImageController extends Controller
      */
     public function edit($id)
     {
-        //
+//        $image = Image::find($id);
+//        return view('image.configure', compact('image'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -162,19 +164,17 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Image $image, Request $request)
+
+
+    public function update(Image $image, SaveImageRequest $request)
     {
         $image->update($request->all());
-        $user_who_made_update =  \Auth::user();
-        $diane_user = User::find(1);
+
         flash()->success('Your edit has been saved');
 
-//        return redirect('people');
-//        return redirect()->back();
         return redirect()->route('image.configure', [$image]);
         //
     }
-
 
     /**
      * Remove the specified resource from storage.
