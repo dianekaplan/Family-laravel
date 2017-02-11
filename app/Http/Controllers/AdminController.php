@@ -50,9 +50,16 @@ class AdminController extends Controller
 //        $highest_family_video = AdminController::get_last_id_used('family_video');
         $highest_audiofile_person = AdminController::get_last_id_used('audiofile_person');
 
+        $most_recent_image =  DB::table('images')
+            ->orderBy( 'id', 'last')  // same as id desc
+            ->take(1)
+            ->get();
+
+        $most_recent_image = $most_recent_image[0]->big_name;
+
         return view ('admin.table_view', compact('highest_image_id', 'highest_person_id', 'highest_family_id', 'highest_image_person_id',
             'highest_activities_id', 'highest_video_id', 'highest_story_id', 'highest_note', 'highest_user', 'highest_login', 'highest_audiofile',
-            'highest_family_story', 'highest_person_story', 'highest_person_video', 'highest_audiofile_person'));
+            'highest_family_story', 'highest_person_story', 'highest_person_video', 'highest_audiofile_person', 'most_recent_image'));
 
     }
 

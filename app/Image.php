@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class Image extends Model
 {
     protected $fillable = [
-        'big_name', 'std_name','little_name', 'caption', 'subject', 'featured', 'year', 'family',
+        'id', 'big_name', 'std_name','little_name', 'caption', 'subject', 'featured', 'year', 'family',
         'keem_access', 'husband_access', 'kemler_access', 'kaplan_access',
 
     ];
