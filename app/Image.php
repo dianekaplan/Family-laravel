@@ -9,7 +9,7 @@ class Image extends Model
 {
     protected $fillable = [
         'id', 'big_name', 'std_name','little_name', 'caption', 'subject', 'featured', 'year', 'family',
-        'keem_access', 'husband_access', 'kemler_access', 'kaplan_access',
+        'keem_line', 'husband_line', 'kemler_line', 'kaplan_line',
 
     ];
 

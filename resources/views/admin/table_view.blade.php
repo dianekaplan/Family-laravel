@@ -9,7 +9,7 @@
 
     Person table: {{ $highest_person_id}} <br/>
     Families table: {{ $highest_family_id}}<br/>
-    Images table: {{ $highest_image_id}}. (Most recent: {{ $most_recent_image}} )<br/><br/>
+    Images table: {{ $highest_image_id}}. (Most recent: {{ $most_recent_image_name}} , Kobrin value: {{ $most_recent_image_kaplan}})<br/><br/>
     Videos table: {{ $highest_video_id}}<br/>
     Stories table: {{ $highest_story_id}}<br/>
     Audiofiles table: {{ $highest_audiofile}}<br/><br/>
