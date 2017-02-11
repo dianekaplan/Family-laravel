@@ -67,6 +67,7 @@ Route::get('clearcache', 'AdminController@clear_cache');
 
 Route::get('logins', 'HomeController@logins');
 Route::get('admin', 'HomeController@admin');
+Route::get('tableview', 'AdminController@tableview');
 
 Route::get('person_admin_fields/{id}', 'AdminController@admin_edit_person');
 Route::get('family_admin_fields/{id}', 'AdminController@admin_edit_family');

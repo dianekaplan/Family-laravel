@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Cache;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -28,6 +29,43 @@ class AdminController extends Controller
 
         $family_to_update = Family::find($id);
         return view('admin.edit_family', compact('family_to_update'));
+    }
+
+    public function tableview()
+    {
+        $highest_image_id = AdminController::get_last_id_used('images');
+        $highest_person_id = AdminController::get_last_id_used('people');
+        $highest_family_id = AdminController::get_last_id_used('families');
+        $highest_image_person_id = AdminController::get_last_id_used('image_person');
+        $highest_activities_id = AdminController::get_last_id_used('activities');
+        $highest_video_id = AdminController::get_last_id_used('videos');
+        $highest_story_id = AdminController::get_last_id_used('stories');
+        $highest_note = AdminController::get_last_id_used('notes');
+        $highest_user = AdminController::get_last_id_used('users');
+        $highest_login = AdminController::get_last_id_used('logins');
+        $highest_audiofile = AdminController::get_last_id_used('audiofiles');
+        $highest_family_story = AdminController::get_last_id_used('family_story');
+        $highest_person_story = AdminController::get_last_id_used('person_story');
+        $highest_person_video = AdminController::get_last_id_used('person_video');
+//        $highest_family_video = AdminController::get_last_id_used('family_video');
+        $highest_audiofile_person = AdminController::get_last_id_used('audiofile_person');
+
+        return view ('admin.table_view', compact('highest_image_id', 'highest_person_id', 'highest_family_id', 'highest_image_person_id',
+            'highest_activities_id', 'highest_video_id', 'highest_story_id', 'highest_note', 'highest_user', 'highest_login', 'highest_audiofile',
+            'highest_family_story', 'highest_person_story', 'highest_person_video', 'highest_audiofile_person'));
+
+    }
+
+
+    public function get_last_id_used($tablename)
+    {
+        $highest_id = DB::table($tablename)
+            ->orderBy( 'id', 'last')  // same as id desc
+            ->take(1)
+            ->get();
+
+        $highest_id = $highest_id[0]->id;
+        return $highest_id;
     }
 
     public function clear_cache()
