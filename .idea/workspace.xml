@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1e94042-abf4-4c25-bc18-827996dce02e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/image/configure.blade.php" afterPath="$PROJECT_DIR$/resources/views/image/configure.blade.php" />
     </list>
     <ignored path="Family-laravel.iws" />
@@ -35,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="445">
@@ -65,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configure.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="configure.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/image/configure.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="30" column="115" selection-start-line="30" selection-start-column="115" selection-end-line="30" selection-end-column="115" />
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -139,8 +137,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/table_view.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/SaveImageRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/resources/views/image/configure.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/image/configure.blade.php" />
       </list>
     </option>
   </component>
@@ -784,12 +782,12 @@
       <workItem from="1484482436445" duration="1817000" />
       <workItem from="1486317296645" duration="5009000" />
       <workItem from="1486379066785" duration="369000" />
-      <workItem from="1486819277442" duration="13454000" />
+      <workItem from="1486819277442" duration="14091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63304000" />
+    <option name="totallyTimeSpent" value="63941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
@@ -1173,6 +1171,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="173" column="19" selection-start-line="173" selection-start-column="19" selection-end-line="173" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1184,15 +1190,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/image/configure.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
-          <caret line="30" column="115" selection-start-line="30" selection-start-column="115" selection-end-line="30" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="173" column="19" selection-start-line="173" selection-start-column="19" selection-end-line="173" selection-end-column="19" />
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>
