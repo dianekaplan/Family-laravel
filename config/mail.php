@@ -29,7 +29,8 @@ return [
     */
 
 //    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+//    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.ourbigfamilytree.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,8 +56,8 @@ return [
     |
     */
 
-    'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
-//    'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
+ //   'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
+   'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
 
     /*
     |--------------------------------------------------------------------------
@@ -82,9 +83,8 @@ return [
     |
     */
 
-    // @FIXME: using the environment variable works in sandbox but errors in production (PER-147)
-    // @FIXME: Hardcoding does work (but bad practice, and this file is visible on Github)
-    // @FIXME: For now testing with domain email that doesn't have anything else in it
+    // @FIXME: originally this was hardcoded here but that's insecure, so just using .env and gitignore it)
+    // @FIXME: now using this for sandbox and trying config variables for production
     'username' => env('MAIL_USERNAME'),
 
 
@@ -99,9 +99,8 @@ return [
     | connection so that the application will be able to send messages.
     |
     */
-    // @FIXME: using the environment variable works in sandbox but errors  in production (PER-147)
-    // @FIXME: Hardcoding does work (but bad practice, and this file is visible on Github)
-    // @FIXME: For now testing with domain email that doesn't have anything else in it
+    // @FIXME: originally this was hardcoded here but that's insecure, so just using .env and gitignore it)
+    // @FIXME: now using this for sandbox and trying config variables for production
     'password' => env('MAIL_PASSWORD'),
 
     /*
