@@ -28,16 +28,15 @@
 
     <div style="float: left; width: 33%;">
 
-
+    // Doing it the right way (passing $image) made a bug where I was updating ALL images (so keep other way below)
+        {{--{!! Form::model($image, ['route' => ['images.update', $image], 'method' => 'PATCH']) !!}--}}
 
         {!! Form::model($image, ['route' => ['images.update', $image->id], 'method' => 'PATCH']) !!}
 
         @include ('errors.list')
-
         <br/>
 
         @include ('image/partials._image_form')
-
         @include ('partials._family_bools')
 
             <div class="form-group">
@@ -46,8 +45,8 @@
 
             </div>
         {!! Form::close() !!}
-
         </div>
+
 
     <div style="float: left; width: 33%;">
         <b> People:  </b>  <br/>

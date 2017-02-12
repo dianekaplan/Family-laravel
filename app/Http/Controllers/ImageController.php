@@ -140,7 +140,6 @@ class ImageController extends Controller
     public function configure($id)
     {
         $image = Image::find($id);
-
         return view ('image/configure',  compact('image'));
     }
 
@@ -150,11 +149,11 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-//        $image = Image::find($id);
-//        return view('image.configure', compact('image'));
-    }
+//    public function edit($id)  //handled by configure (will edit the image fields AND associate people)
+//    {
+////        $image = Image::find($id);
+////        return view('image.configure', compact('image'));
+//    }
 
 
     /**
@@ -165,15 +164,19 @@ class ImageController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-    public function update(Image $image, SaveImageRequest $request)
+    public function update($id, SaveImageRequest $request)
     {
+        $image = Image::find($id);
         $image->update($request->all());
 
         flash()->success('Your edit has been saved');
 
-        return redirect()->route('image.configure', [$image]);
-        //
+        // doing it the right way (of passing Image $image) made a bug where ALL images where updated
+        // (so leave it this $id way)
+        // doing this succeeded but updated ALL images with the new one
+//        $image->update($request->except(['_method', '_token']));
+
+        return redirect('images');
     }
 
     /**
