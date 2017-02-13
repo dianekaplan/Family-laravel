@@ -30,12 +30,8 @@ Diane Kaplan (Cambridge, MA USA)
 <br/>
 </p>
 
-<h4>
-    <br/>
-February 12, 2017: I'm doing site maintenance today (so the family tree is unavailable), sorry for the inconvenience.
-</h4>
 
-{{--@include ('auth._login_partial', ['email_passed_in' => $email_passed_in])--}}
+@include ('auth._login_partial', ['email_passed_in' => $email_passed_in])
 
 <br/><br/>
 
