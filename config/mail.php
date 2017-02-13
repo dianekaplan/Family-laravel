@@ -29,8 +29,8 @@ return [
     */
 
 //    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-//    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-    'host' => env('MAIL_HOST', 'smtp.ourbigfamilytree.com'),
+
+    'host' => env('MAIL_HOST'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     |
     */
 
- //   'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
-   'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
+    'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
+//   'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
 
     /*
     |--------------------------------------------------------------------------
@@ -83,11 +83,8 @@ return [
     |
     */
 
-    // @FIXME: originally this was hardcoded here but that's insecure, so just using .env and gitignore it)
-    // @FIXME: now using this for sandbox and trying config variables for production
+    // Note: .env is in gitignore, so in production you have heroku config vars
     'username' => env('MAIL_USERNAME'),
-
-
 
     /*
     |--------------------------------------------------------------------------
@@ -99,8 +96,8 @@ return [
     | connection so that the application will be able to send messages.
     |
     */
-    // @FIXME: originally this was hardcoded here but that's insecure, so just using .env and gitignore it)
-    // @FIXME: now using this for sandbox and trying config variables for production
+
+    // Note: .env is in gitignore, so in production you have heroku config vars
     'password' => env('MAIL_PASSWORD'),
 
     /*
