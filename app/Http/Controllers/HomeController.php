@@ -140,7 +140,7 @@ class HomeController extends Controller {
         if($user->husband_access) {$new_pictures = $new_pictures->merge(Image::husbands()->recent()->get());}
         if($user->kemler_access){$new_pictures = $new_pictures->merge(Image::kemlers()->recent()->get());}
         if($user->kaplan_access) {$new_pictures = $new_pictures->merge(Image::kaplans()->recent()->get());}
-        $new_pictures= $new_pictures->unique()->take(7);
+        $new_pictures= $new_pictures->unique()->take(9);
 
         // @TODO: Consider-
         // for multi-bool users, this approach/order may mean that we have our 7 before we even get to Kaplan pics
