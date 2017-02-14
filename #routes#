@@ -1,0 +1,87 @@
++--------+--------------------------------+-------------------------------------------------------+------------------+------------------------------------------------------------+------------+
+| Domain | Method                         | URI                                                   | Name             | Action                                                     | Middleware |
++--------+--------------------------------+-------------------------------------------------------+------------------+------------------------------------------------------------+------------+
+|        | GET|HEAD                       | /                                                     |                  | App\Http\Controllers\HomeController@home                   | auth       |
+|        | GET|HEAD                       | account                                               |                  | App\Http\Controllers\HomeController@account                | auth       |
+|        | GET|HEAD                       | activities                                            |                  | App\Http\Controllers\ActivitiesController@index            |            |
+|        | POST                           | add_note/save                                         |                  | App\Http\Controllers\NotesController@store                 | auth       |
+|        | GET|HEAD                       | add_note/{type}/{id}/{name}                           |                  | App\Http\Controllers\NotesController@add_note              | auth       |
+|        | GET|HEAD                       | admin                                                 |                  | App\Http\Controllers\HomeController@admin                  | auth,super |
+|        | GET|HEAD                       | album                                                 |                  | App\Http\Controllers\ImageController@album                 | auth       |
+|        | GET|HEAD                       | auth/login                                            |                  | App\Http\Controllers\HomeController@landing                |            |
+|        | POST                           | auth/login/{one?}/{two?}/{three?}/{four?}/{five?}     |                  | App\Http\Controllers\Auth\AuthController@postLogin         | guest      |
+|        | GET|HEAD                       | auth/login/{one?}/{two?}/{three?}/{four?}/{five?}     |                  | App\Http\Controllers\Auth\AuthController@getLogin          | guest      |
+|        | GET|HEAD                       | auth/logout/{one?}/{two?}/{three?}/{four?}/{five?}    |                  | App\Http\Controllers\Auth\AuthController@getLogout         |            |
+|        | GET|HEAD                       | auth/register/{one?}/{two?}/{three?}/{four?}/{five?}  |                  | App\Http\Controllers\Auth\AuthController@getRegister       | guest      |
+|        | POST                           | auth/register/{one?}/{two?}/{three?}/{four?}/{five?}  |                  | App\Http\Controllers\Auth\AuthController@postRegister      | guest      |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE | auth/{_missing}                                       |                  | App\Http\Controllers\Auth\AuthController@missingMethod     | guest      |
+|        | GET|HEAD                       | branches                                              |                  | App\Http\Controllers\HomeController@branches               | auth       |
+|        | GET|HEAD                       | clearcache                                            |                  | App\Http\Controllers\AdminController@clear_cache           | auth,super |
+|        | GET|HEAD                       | configure/{images}                                    |                  | App\Http\Controllers\ImageController@configure             | auth       |
+|        | GET|HEAD                       | families                                              | families.index   | App\Http\Controllers\FamilyController@index                | auth       |
+|        | POST                           | families                                              | families.store   | App\Http\Controllers\FamilyController@store                | auth       |
+|        | GET|HEAD                       | families/create                                       | families.create  | App\Http\Controllers\FamilyController@create               | auth       |
+|        | DELETE                         | families/{families}                                   | families.destroy | App\Http\Controllers\FamilyController@destroy              | auth       |
+|        | PUT                            | families/{families}                                   | families.update  | App\Http\Controllers\FamilyController@update               | auth       |
+|        | GET|HEAD                       | families/{families}                                   | families.show    | App\Http\Controllers\FamilyController@show                 | auth       |
+|        | PATCH                          | families/{families}                                   |                  | App\Http\Controllers\FamilyController@update               | auth       |
+|        | GET|HEAD                       | families/{families}/edit                              | families.edit    | App\Http\Controllers\FamilyController@edit                 | auth       |
+|        | GET|HEAD                       | family_admin_fields/{id}                              |                  | App\Http\Controllers\AdminController@admin_edit_family     | auth,super |
+|        | GET|HEAD                       | help                                                  |                  | App\Http\Controllers\HomeController@help                   | auth       |
+|        | GET|HEAD                       | history                                               |                  | App\Http\Controllers\HomeController@history                | auth       |
+|        | GET|HEAD                       | home                                                  |                  | App\Http\Controllers\HomeController@home                   | auth,auth  |
+|        | GET|HEAD                       | image/list/{images}                                   |                  | App\Http\Controllers\ImageController@get_image_people      | auth       |
+|        | GET|HEAD                       | image/{images}                                        |                  | App\Http\Controllers\ImageController@show                  | auth       |
+|        | GET|HEAD                       | images                                                |                  | App\Http\Controllers\ImageController@index                 | auth       |
+|        | POST                           | images                                                | images.store     | App\Http\Controllers\ImageController@store                 | auth       |
+|        | GET|HEAD                       | images/create                                         | images.create    | App\Http\Controllers\ImageController@create                | auth       |
+|        | PATCH                          | images/{images}                                       |                  | App\Http\Controllers\ImageController@update                | auth       |
+|        | GET|HEAD                       | images/{images}                                       | images.show      | App\Http\Controllers\ImageController@show                  | auth       |
+|        | DELETE                         | images/{images}                                       | images.destroy   | App\Http\Controllers\ImageController@destroy               | auth       |
+|        | PUT                            | images/{images}                                       | images.update    | App\Http\Controllers\ImageController@update                | auth       |
+|        | GET|HEAD                       | images/{images}/edit                                  | images.edit      | App\Http\Controllers\ImageController@edit                  | auth       |
+|        | GET|HEAD                       | landing                                               |                  | App\Http\Controllers\HomeController@landing                |            |
+|        | GET|HEAD                       | logins                                                |                  | App\Http\Controllers\HomeController@logins                 | auth       |
+|        | GET|HEAD                       | outline                                               |                  | App\Http\Controllers\OutlineController@show_outline        |            |
+|        | GET|HEAD                       | password/email/{one?}/{two?}/{three?}/{four?}/{five?} |                  | App\Http\Controllers\Auth\PasswordController@getEmail      |            |
+|        | POST                           | password/email/{one?}/{two?}/{three?}/{four?}/{five?} |                  | App\Http\Controllers\Auth\PasswordController@postEmail     |            |
+|        | GET|HEAD                       | password/reset/{one?}/{two?}/{three?}/{four?}/{five?} |                  | App\Http\Controllers\Auth\PasswordController@getReset      |            |
+|        | POST                           | password/reset/{one?}/{two?}/{three?}/{four?}/{five?} |                  | App\Http\Controllers\Auth\PasswordController@postReset     |            |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE | password/{_missing}                                   |                  | App\Http\Controllers\Auth\PasswordController@missingMethod |            |
+|        | GET|HEAD                       | people                                                | people.index     | App\Http\Controllers\PeopleController@index                | auth       |
+|        | POST                           | people                                                | people.store     | App\Http\Controllers\PeopleController@store                | auth       |
+|        | GET|HEAD                       | people/create                                         | people.create    | App\Http\Controllers\PeopleController@create               | auth       |
+|        | GET|HEAD                       | people/{people}                                       | people.show      | App\Http\Controllers\PeopleController@show                 | auth       |
+|        | DELETE                         | people/{people}                                       | people.destroy   | App\Http\Controllers\PeopleController@destroy              | auth       |
+|        | PATCH                          | people/{people}                                       |                  | App\Http\Controllers\PeopleController@update               | auth       |
+|        | PUT                            | people/{people}                                       | people.update    | App\Http\Controllers\PeopleController@update               | auth       |
+|        | GET|HEAD                       | people/{people}/edit                                  | people.edit      | App\Http\Controllers\PeopleController@edit                 | auth       |
+|        | GET|HEAD                       | person_admin_fields/{id}                              |                  | App\Http\Controllers\AdminController@admin_edit_person     | auth,super |
+|        | GET|HEAD                       | register                                              |                  | App\Http\Controllers\RegistrationController@register       |            |
+|        | POST                           | register                                              |                  | App\Http\Controllers\RegistrationController@create         |            |
+|        | GET|HEAD                       | stories/{story}                                       |                  | App\Http\Controllers\StoryController@show                  | auth       |
+|        | GET|HEAD                       | tableview                                             |                  | App\Http\Controllers\AdminController@tableview             | auth,super |
+|        | GET|HEAD                       | tags/{tags}                                           |                  | App\Http\Controllers\TagsController@show                   | auth       |
+|        | GET|HEAD                       | updates                                               | updates.index    | App\Http\Controllers\UpdateController@index                | auth       |
+|        | POST                           | updates                                               | updates.store    | App\Http\Controllers\UpdateController@store                | auth       |
+|        | GET|HEAD                       | updates/create                                        | updates.create   | App\Http\Controllers\UpdateController@create               | auth       |
+|        | DELETE                         | updates/{updates}                                     | updates.destroy  | App\Http\Controllers\UpdateController@destroy              | auth       |
+|        | PUT                            | updates/{updates}                                     | updates.update   | App\Http\Controllers\UpdateController@update               | auth       |
+|        | PATCH                          | updates/{updates}                                     |                  | App\Http\Controllers\UpdateController@update               | auth       |
+|        | GET|HEAD                       | updates/{updates}                                     | updates.show     | App\Http\Controllers\UpdateController@show                 | auth       |
+|        | GET|HEAD                       | updates/{updates}/edit                                | updates.edit     | App\Http\Controllers\UpdateController@edit                 | auth       |
+|        | POST                           | users                                                 | users.store      | App\Http\Controllers\UserController@store                  | auth,super |
+|        | GET|HEAD                       | users                                                 | users.index      | App\Http\Controllers\UserController@index                  | auth,super |
+|        | GET|HEAD                       | users/create                                          | users.create     | App\Http\Controllers\UserController@create                 | auth,super |
+|        | GET|HEAD                       | users/store                                           |                  | App\Http\Controllers\UserController@store                  | auth,super |
+|        | GET|HEAD                       | users/{users}                                         | users.show       | App\Http\Controllers\UserController@show                   | auth,super |
+|        | PUT                            | users/{users}                                         | users.update     | App\Http\Controllers\UserController@update                 | auth,super |
+|        | DELETE                         | users/{users}                                         | users.destroy    | App\Http\Controllers\UserController@destroy                | auth,super |
+|        | PATCH                          | users/{users}                                         |                  | App\Http\Controllers\UserController@update                 | auth,super |
+|        | GET|HEAD                       | users/{users}/edit                                    | users.edit       | App\Http\Controllers\UserController@edit                   | auth,super |
+|        | GET|HEAD                       | users/{users}/pester                                  |                  | App\Http\Controllers\UserController@pester                 | auth,super |
+|        | GET|HEAD                       | video/list/{video}                                    |                  | App\Http\Controllers\VideoController@get_video_people      |            |
+|        | GET|HEAD                       | video/{video}                                         |                  | App\Http\Controllers\VideoController@show                  |            |
+|        | GET|HEAD                       | videos                                                |                  | App\Http\Controllers\VideoController@album                 |            |
+|        | GET|HEAD                       | videotest                                             |                  | App\Http\Controllers\HomeController@test                   |            |
++--------+--------------------------------+-------------------------------------------------------+------------------+------------------------------------------------------------+------------+

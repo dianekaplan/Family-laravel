@@ -26,14 +26,12 @@ class AdminController extends Controller
 
     public function admin_edit_person($id)
     {
-
         $person_to_update = Person::find($id);
         return view('admin.edit_person', compact('person_to_update'));
     }
 
     public function admin_edit_family($id)
     {
-
         $family_to_update = Family::find($id);
         return view('admin.edit_family', compact('family_to_update'));
     }
@@ -85,7 +83,6 @@ class AdminController extends Controller
     public function clear_cache()
     {
         Cache::flush();
-
     }
 
     public function index()
