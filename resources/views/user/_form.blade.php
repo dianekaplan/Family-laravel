@@ -25,7 +25,7 @@
 
 
 <div class="form-group">
-    {!! Form::label('email','Email:') !!}
+   {!! Form::label('email','Email: (---use all lowercase---)') !!}
     {!! Form::text('email', null, ['class' => 'form-control']) !!}
     {{--{!! Form::text('email', {{$user->email}}, ['class' => 'form-control']) !!}--}}
 </div>
