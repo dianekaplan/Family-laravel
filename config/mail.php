@@ -57,7 +57,7 @@ return [
     */
 
     'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
-//   'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
+  // 'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
 
     /*
     |--------------------------------------------------------------------------

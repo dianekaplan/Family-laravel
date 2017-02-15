@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Http\Request; // adding for overridden postEmail
+use Illuminate\Support\Facades\Password;  // adding for overridden postEmail
+use Illuminate\Mail\Message; // adding for overridden postEmail
+use Illuminate\Support\Str; // adding for overridden postEmail
 
 class PasswordController extends Controller
 {
@@ -45,10 +49,34 @@ class PasswordController extends Controller
 //
 //    }
 ////
-//    public function postEmail()
-//    {
-//
-//    }
+
+    // I'm overriding this function from the ResetsPasswords trait,
+    // modified to convert the typed email value to lowercase
+    /**
+     * Send a reset link to the given user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postEmail(Request $request)
+    {
+        $this->validate($request, ['email' => 'required|email']);
+
+        // adding this line
+        $request['email'] =  Str::lower($request['email']);
+
+        $response = Password::sendResetLink($request->only('email'), function (Message $message) {
+            $message->subject($this->getEmailSubject());
+        });
+
+        switch ($response) {
+            case Password::RESET_LINK_SENT:
+                return redirect()->back()->with('status', trans($response));
+
+            case Password::INVALID_USER:
+                return redirect()->back()->withErrors(['email' => trans($response)]);
+        }
+    }
 ////
 //    // Password reset methods
 //    public function getReset()
@@ -56,8 +84,42 @@ class PasswordController extends Controller
 //
 //    }
 //
-//    public function postReset()
-//    {
-//
-//    }
+
+    // I'm overriding this function from the ResetsPasswords trait,
+    // modified to convert the typed email value to lowercase
+    /**
+     * Reset the given user's password.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postReset(Request $request)
+    {
+        $this->validate($request, [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:6',
+        ]);
+
+        // adding this line
+        $request['email'] =  Str::lower($request['email']);
+
+        $credentials = $request->only(
+            'email', 'password', 'password_confirmation', 'token'
+        );
+
+        $response = Password::reset($credentials, function ($user, $password) {
+            $this->resetPassword($user, $password);
+        });
+
+        switch ($response) {
+            case Password::PASSWORD_RESET:
+                return redirect($this->redirectPath())->with('status', trans($response));
+
+            default:
+                return redirect()->back()
+                    ->withInput($request->only('email'))
+                    ->withErrors(['email' => trans($response)]);
+        }
+    }
 }
