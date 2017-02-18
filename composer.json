@@ -15,6 +15,8 @@
         "cloudinary/cloudinary_php": "dev-master",
         "jrm2k6/cloudder": "0.2.*",
         "Illuminate/Support": "^5.1"
+
+        "guzzlehttp/guzzle": "~5.3|~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
