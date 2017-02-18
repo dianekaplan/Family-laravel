@@ -228,9 +228,8 @@ class FamilyController extends Controller
         $user_who_made_update =  \Auth::user();
         $diane_user = User::find(1);
 
-        // @FIXME: when I fix the issue of using env values for email, I'll be able to include this back in
-//        $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
-//        $this->mailer->family_update_thankyou($user_who_made_update, $request, $family);
+        $this->mailer->family_update_notify($diane_user, $request, $user_who_made_update, $family);
+        $this->mailer->family_update_thankyou($user_who_made_update, $request, $family);
 
         flash()->success('Your edit has been saved');
 

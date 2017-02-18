@@ -60,11 +60,12 @@ class NotesController extends Controller
         $note->active = true;
         $note->save();
 
+        // @FIXME: come back and fix; including this gives Undefined column: 7 ERROR: column "user_id" of relation "notes" does not exist
 //        $user_who_added_note->notes()->save($note); //save the note for the user that's logged in
 
-        // @FIXME: when I fix the issue of using env values for email, I'll be able to include this back in
-//        $this->mailer->note_notify($diane_user, $user_who_added_note, $entity_with_new_note, $body,$redirect_url);
-//        $this->mailer->note_thankyou($user_who_added_note, $entity_with_new_note, $body, $redirect_url);
+
+        $this->mailer->note_notify($diane_user, $user_who_added_note, $entity_with_new_note, $body,$redirect_url);
+        $this->mailer->note_thankyou($user_who_added_note, $entity_with_new_note, $body, $redirect_url);
 
 //        return redirect('updates');
         return redirect($redirect_url);
