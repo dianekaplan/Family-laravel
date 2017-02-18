@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+//    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +30,6 @@ return [
     */
 
 //    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-
     'host' => env('MAIL_HOST'),
 
     /*
@@ -56,8 +56,11 @@ return [
     |
     */
 
-    'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
-  // 'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
+//    'port' => env('MAIL_FROM'),
+
+
+//    'from' => ['address' => 'dianekaplan@gmail.com', 'name' => 'Diane Kaplan'],
+   'from' => ['address' => 'diane@ourbigfamilytree.com', 'name' => 'Diane Kaplan'],
 
     /*
     |--------------------------------------------------------------------------

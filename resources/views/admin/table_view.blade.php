@@ -1,7 +1,7 @@
 @extends('default')
 
 @section('content')
-    <h3>Table view</h3> <br/>
+    <h3>Table view (highest ids used)</h3> <br/>
 
     <h4>Content:</h4>
 
