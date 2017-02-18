@@ -91,15 +91,14 @@
 
     </div>
 
-    <div style="float: right; width: 41%;" id="family_section">
+    {{--<div style="float: right; width: 41%;" id="family_section">--}}
 
-        Latest updates:
-        <ul class="list-group">
-            @include ('activity.partials._list', [ 'hide_types' => [] ])
-        </ul>
-
-
-    </div>
+        {{--Latest updates:--}}
+        {{--<ul class="list-group">--}}
+            {{--@include ('activity.partials._list', [ 'hide_types' => [] ])--}}
+        {{--</ul>--}}
+        {{----}}
+    {{--</div>--}}
 
 
 </div>
