@@ -80,25 +80,28 @@
 
     {{--originally had this 41% beneath birthdays, but for users with only a few it pushes layout around--}}
     {{--<div style="float: right; width: 41%;" id="family_section">--}}
-    <div style="float: left; width: 30%;" id="family_section">
-        @unless ($new_videos->isEmpty())
-            Latest videos:
-            @foreach($new_videos as $video)
-                @include ('video.partials._video_link', ['video' => $video, 'class'=> "img-rounded"])
-            @endforeach
-        @endunless
-        {!! $new_videos->render() !!}
+    @unless ($new_videos->isEmpty())
+
+        <div style="float: left; width: 30%;" id="family_section">
+
+                Latest videos:
+                @foreach($new_videos as $video)
+                    @include ('video.partials._video_link', ['video' => $video, 'class'=> "img-rounded"])
+                @endforeach
+
+            {!! $new_videos->render() !!}
+        </div>
+
+    @endunless
+
+    <div style="float: right; width: 41%;" id="family_section">
+
+        Latest updates:
+        <ul class="list-group">
+            @include ('activity.partials._list', [ 'hide_types' => [] ])
+        </ul>
 
     </div>
-
-    {{--<div style="float: right; width: 41%;" id="family_section">--}}
-
-        {{--Latest updates:--}}
-        {{--<ul class="list-group">--}}
-            {{--@include ('activity.partials._list', [ 'hide_types' => [] ])--}}
-        {{--</ul>--}}
-        {{----}}
-    {{--</div>--}}
 
 
 </div>

@@ -13,7 +13,6 @@ use App\User;
 
 class NotesController extends Controller
 {
-
     protected $mailer;
 
     public function __construct(Mailer $mailer)
@@ -24,7 +23,6 @@ class NotesController extends Controller
     }
 
     public function add_note($type, $id, $name)
-//            public function add_note($type, $id, $name)
     {
         $user =  \Auth::user();
 
@@ -33,7 +31,6 @@ class NotesController extends Controller
 
 
     public function store(SaveNoteRequest $request)
-
     {
 //        $note->body = $request->input('body');
         $diane_user = User::find(1);
@@ -63,11 +60,9 @@ class NotesController extends Controller
         // @FIXME: come back and fix; including this gives Undefined column: 7 ERROR: column "user_id" of relation "notes" does not exist
 //        $user_who_added_note->notes()->save($note); //save the note for the user that's logged in
 
-
         $this->mailer->note_notify($diane_user, $user_who_added_note, $entity_with_new_note, $body,$redirect_url);
         $this->mailer->note_thankyou($user_who_added_note, $entity_with_new_note, $body, $redirect_url);
 
-//        return redirect('updates');
         return redirect($redirect_url);
     }
 

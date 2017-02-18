@@ -1,5 +1,4 @@
 
-
 <a href="/people/{{$event->user->person_id}}">{{ $event->user->name }}</a>
 added a note {{ $event->created_at->diffForHumans() }}:
 
