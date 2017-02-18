@@ -145,6 +145,38 @@
                     </table>
                 </div>
 
+                                            <h4>Users needing password change:</h4>
+                                            (have logged in, but still have original default password) <br/>
+                                            <div class="table-responsive">
+                                                @if (count($users_needing_password_update))
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>User</th>
+
+                                                            <th>Last time they logged in</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                        @foreach ($users_needing_password_update as $user)
+                                                            <tr>
+                                                                <td><a href="{{ action('UserController@show', [$user]) }}">{{ $user->name}}</a></td>
+                                                                <td> {{ $user->last_login}}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                @else
+                                                    Everyone has updated their password
+                                                @endif
+
+
+                                            </div>
+                                            <br/>
+
+
     <h4>Next pester candidates:</h4>
                 (have logged in before but no logins or emails in the past 3 months) <br/>
                 <div class="table-responsive">

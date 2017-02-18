@@ -40,6 +40,7 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
+
     //A user can have many updates he/she adds
     public function updates()
     {
@@ -50,6 +51,21 @@ class User extends Model implements AuthenticatableContract,
     {
         if ($this->super_admin)
         return true;
+    }
+
+    public function scopeNeverSeen($query)
+    {
+        $query->where('last_login')->orwhere('last_login', '<', '01-02-1900');
+    }
+
+    public function scopeHaveSeen($query)
+    {
+        $query->where('last_login', '>', '01-02-1900');
+    }
+    public function scopeUnchangedPassword($query)
+    {
+        // encrypted version of 'password' (original default)
+        $query->where('password', '=', '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW');
     }
 
     public function activity()

@@ -1,6 +1,15 @@
 
 <a href="/people/{{$event->user->person_id}}">{{ $event->user->name }}</a>
-added a note {{ $event->created_at->diffForHumans() }}:
+added a
+
+{{--added this to specify person note or family note, but not worth wrapping to a second line )--}}
+{{--@if ($event->subject->type =='1' )--}}
+    {{--person--}}
+{{--@else--}}
+    {{--family--}}
+{{--@endif--}}
+
+note {{ $event->created_at->diffForHumans() }}:
 
 
 @if ($event->subject->type =='1' )
@@ -8,5 +17,3 @@ added a note {{ $event->created_at->diffForHumans() }}:
 @else
     <a href="/families/{{$event->subject->ref_id}} ">here</a>
 @endif
-
- {{--{{$event->subject->body}}--}}
