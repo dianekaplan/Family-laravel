@@ -32,10 +32,15 @@
             See  <a href="/users">users</a><br/>
             See all <a href="/activities">activities</a><br/>
             See  <a href="/tableview">table view</a><br/>
-            <br/>
+
+        </div>
+
+        <div style="float: left; width: 33%;" id="family_section">
+            Send a group <a href="/email_sender">email</a><br/><br/>
             <a href="/clearcache">Clear the database cache</a><br/>
             (afterward, build it again by visiting: album, videos, person list, outline)
         </div>
+
 
 
         @section('footer')

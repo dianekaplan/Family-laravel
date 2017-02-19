@@ -215,5 +215,36 @@ class UserMailer extends Mailer {
 
         return $this->sendTo($user, $subject, $view, $data);
     }
+
+    public function general_notify (User $user, $request)
+    {
+        //in this one the email recipient user will always be me
+        $subject= 'An email has been sent!';
+        $view = 'emails.general_notify';
+        $data = [
+            'recipient_list'=> $request['recipient_list'],
+            'subject'=> $request['subject'],
+            'body'=> $request['body'],
+        ];
+
+
+        return $this->sendTo($user, $subject, $view, $data);
+    }
+
+    // here's where we send using the emails and subject from the form
+    public function general_send ( $request)
+    {
+        $view = 'emails.general_send';
+
+        // make comma-separated list into an array
+        $recipient_list = explode(",", $request['recipient_list']);
+
+        $subject = $request['subject'];
+        $data = [
+            'body'=> $request['body'],
+        ];
+
+        return $this->sendToMany($subject, $recipient_list, $view, $data);
+    }
 }
 

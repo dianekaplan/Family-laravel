@@ -13,17 +13,15 @@
     @include ('errors.list')
     @include ('pages.partials._registration_request', ['submitButtonText' => 'Send account request'])
 
-
     {!! Form::close() !!}
 
     <br/>
 
-    Questions/issues?   <a href="mailto:dianekaplan@gmail.com?Subject=Account%20request" target="_top">
+    Questions/issues?
+    <a href="mailto:dianekaplan@gmail.com?Subject=Account%20request" target="_top">
         Email me</a>
 
-
-    <br/>
-    <br/><br/>
+    <br/><br/><br/>
 
     @include ('person.partials._people_list_simple')
 

@@ -2,26 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;  // This one seems older, can use this way except can't be called statically:
+//https://laravel.com/docs/5.1/requests#basic-request-information
 
+use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Cache;
 use Illuminate\Support\Facades\DB;
+use Acme\Mailers\UserMailer as Mailer;
+use App\User;  // need this to grab my user for notification mail
+//use Mail;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
+    protected $mailer;
 
-    public function __construct()
+    public function __construct(Mailer $mailer)
     {
         $this->middleware('auth');
         $this->middleware('super');
+        $this->mailer= $mailer;
     }
 
     public function admin_edit_person($id)
@@ -34,6 +36,46 @@ class AdminController extends Controller
     {
         $family_to_update = Family::find($id);
         return view('admin.edit_family', compact('family_to_update'));
+    }
+
+    public function mail_form()
+    {
+        return view('admin.email_sender');
+    }
+
+    public function send_mail()
+    {
+
+        $request_info = Request::all();
+        $recipient_list = Request::input('recipient_list');
+        $subject = Request::input('subject');
+        $body = Request::input('body');
+
+        $diane_user = User::find(1);
+
+//        $body = $request_info->input('body');
+
+
+//        $body = $request->body;
+
+//        $recipient_list = $request_info->input('recipient_list');
+//        dd($body);
+//        dd($request_info[0]->input('body'));
+//            Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+//            {
+//                $message->subject($subject);
+//                $message->from('diane@ourbigfamilytree.com', 'Diane Kaplan');
+//                $message->to($recipient_list);
+//                $message->body($body);
+//            });
+
+
+        $this->mailer->general_notify($diane_user, $request_info);
+        $this->mailer->general_send($request_info);
+
+//        flash()->overlay('Your message has been sent!');
+
+        return redirect('admin');
     }
 
     public function tableview()

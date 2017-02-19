@@ -14,5 +14,18 @@ abstract class Mailer {
 
     }
 
+    // This one takes a recipient list to email to
+    public function sendToMany($subject, $recipient_list, $view, $data= [])
+    {
+        foreach ($recipient_list as $recipient) {
+
+            Mail::queue($view, $data, function($message) use($subject, $recipient)
+            {
+                $message->to($recipient)->subject($subject);
+            });
+        }
+
+    }
+
 
 }
