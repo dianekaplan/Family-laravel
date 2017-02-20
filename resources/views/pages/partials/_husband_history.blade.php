@@ -4,13 +4,29 @@
         Bob Husband's family: </h4>
 
         The Husband side:
-        <ul><li><a href="{{ action('FamilyController@show', [172]) }}">Thomas and Elanor Husband</a> were born in <b>Scotland</b>
+        <ul>
+                <li><a href="{{ action('FamilyController@show', [292]) }}">Leander Wilcox and Amanda Penhallow</a>
+                        were born (and later married) in
+                        Chautauqua county New York, both with several generations going back in CT, both of their fathers served in the War of 1812, and each of their
+                        grandfathers (
+                        <a href="{{ action('PeopleController@show', [925]) }}">Richard Penhallow</a>,
+                        <a href="{{ action('PeopleController@show', [929]) }}">Stephen Wilcox</a>,
+                        <a href="{{ action('PeopleController@show', [931]) }}">Halliday Ingraham</a>, and
+                        <a href="{{ action('PeopleController@show', [927]) }}">Abner House</a>)
+
+                        served in the Revolutionary War.
+
+                </li>
+
+                <li><a href="{{ action('FamilyController@show', [172]) }}">Thomas and Elanor Husband</a> were born in <b>Scotland</b>
                         <img src="/flags/scotland.gif" /> and moved to Canada <img src="/flags/ca.gif" /> sometime before 1835.
                         They started their family in Canada before <b>moving to the US in the mid 1830's</b>.
-                Their oldest son <a href="{{ action('FamilyController@show', [86]) }}">Andrew married a woman named Mary</a> (who was born in the US),
-                        and their son
-                <a href="{{ action('PeopleController@show', [74]) }}">Thomas</a> was
-                <a href="{{ action('PeopleController@show', [75]) }}">Bob</a>'s father. </li></ul>
+                </li>
+
+                <li>Connection: Leander & Amanda's oldest daughter Mary Wilcox married Thomas & Eleanor's oldest son Andrew Husband.
+                        Their son
+                        <a href="{{ action('PeopleController@show', [74]) }}">Thomas</a> was
+                        <a href="{{ action('PeopleController@show', [75]) }}">Bob</a>'s father.</li></ul>
 
 
 
