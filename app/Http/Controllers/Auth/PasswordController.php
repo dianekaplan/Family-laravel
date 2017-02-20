@@ -42,13 +42,25 @@ class PasswordController extends Controller
         $this->middleware('guest');
         return view ('auth.password');
     }
-//
-//    // Password reset link request methods
-//    public function getEmail()
-//    {
-//
-//    }
-////
+
+
+    // I'm overriding this function from the ResetsPasswords trait,
+    // modified for the case where user is logged in ('Reset My Password'), to show THAT email address
+    /**
+     * Display the form to request a password reset link.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getEmail()
+    {
+        $user =  \Auth::user();
+//        return view('auth.password');
+        return view('auth.password', compact('user'));
+
+
+    }
+
+
 
     // I'm overriding this function from the ResetsPasswords trait,
     // modified to convert the typed email value to lowercase

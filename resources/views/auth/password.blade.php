@@ -27,12 +27,22 @@
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
                             {!! csrf_field() !!}
 
+                            @if($user)
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">E-Mail Address</label>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="email" value="{{$user->email}}" readonly>
+                                    </div>
+                                </div>
+                            @else
                             <div class="form-group">
                                 <label class="col-md-4 control-label">E-Mail Address</label>
                                 <div class="col-md-6">
                                     <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                                 </div>
                             </div>
+                        @endif
+
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">

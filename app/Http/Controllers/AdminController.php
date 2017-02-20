@@ -12,7 +12,6 @@ use Cache;
 use Illuminate\Support\Facades\DB;
 use Acme\Mailers\UserMailer as Mailer;
 use App\User;  // need this to grab my user for notification mail
-//use Mail;
 
 class AdminController extends Controller
 {
@@ -45,30 +44,8 @@ class AdminController extends Controller
 
     public function send_mail()
     {
-
         $request_info = Request::all();
-        $recipient_list = Request::input('recipient_list');
-        $subject = Request::input('subject');
-        $body = Request::input('body');
-
         $diane_user = User::find(1);
-
-//        $body = $request_info->input('body');
-
-
-//        $body = $request->body;
-
-//        $recipient_list = $request_info->input('recipient_list');
-//        dd($body);
-//        dd($request_info[0]->input('body'));
-//            Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
-//            {
-//                $message->subject($subject);
-//                $message->from('diane@ourbigfamilytree.com', 'Diane Kaplan');
-//                $message->to($recipient_list);
-//                $message->body($body);
-//            });
-
 
         $this->mailer->general_notify($diane_user, $request_info);
         $this->mailer->general_send($request_info);
@@ -107,7 +84,6 @@ class AdminController extends Controller
         return view ('admin.table_view', compact('highest_image_id', 'highest_person_id', 'highest_family_id', 'highest_image_person_id',
             'highest_activities_id', 'highest_video_id', 'highest_story_id', 'highest_note', 'highest_user', 'highest_login', 'highest_audiofile',
             'highest_family_story', 'highest_person_story', 'highest_person_video', 'highest_audiofile_person', 'most_recent_image_name'));
-
     }
 
 

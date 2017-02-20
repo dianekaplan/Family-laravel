@@ -227,7 +227,6 @@ class UserMailer extends Mailer {
             'body'=> $request['body'],
         ];
 
-
         return $this->sendTo($user, $subject, $view, $data);
     }
 
