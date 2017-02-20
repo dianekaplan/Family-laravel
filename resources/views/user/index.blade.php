@@ -17,7 +17,20 @@
                 @endif
                 <br/>
 
-    <h4>Users by activity level:</h4>
+                <h4>Admin users:</h4>
+
+                @foreach ($admins as $admin)
+                    <li><a href="{{ action('UserController@show', [$admin]) }}">{{ $admin->name}}</a>
+                        - last login: {{ $admin->last_login }}
+                        (last nudged: {{ $admin->last_pestered }})
+
+                        <br/>
+                        @endforeach
+
+                        <br/>
+
+
+                        <h4>Users by activity level:</h4>
     <br/>
                 <div class="table-responsive">
                     <table class="table">

@@ -68,6 +68,12 @@ class User extends Model implements AuthenticatableContract,
         $query->where('password', '=', '$2y$10$eOAL7mwV3ov9LOmMa/DgNu0iOt/IH/90fNt5Scva2taZss8PLi5AW');
     }
 
+
+    public function scopeAdminUser($query)
+    {
+        $query->where('super_admin', '=', 'true');
+    }
+
     public function activity()
     {
 //            return $this->hasMany('App\Activity');

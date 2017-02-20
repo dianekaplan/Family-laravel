@@ -47,6 +47,8 @@ class UserController extends Controller
         $kemler_users = User::where('kemler_access', true )->orderBy('name')->get();
         $kaplan_users = User::where('kaplan_access', true )->orderBy('name')->get();
 
+        $admins = User::AdminUser()->get();
+
         $users_needing_password_update = User::HaveSeen()->UnchangedPassword()->get();
 
         $confirmed_users_not_recently_bugged =  User::HaveSeen()
@@ -55,7 +57,7 @@ class UserController extends Controller
              ->orderBy('last_pestered', 'asc')->get();
 
         return view('user.index', compact('users', 'recent_visitors', 'never_seen', 'logged_in', 'users_with_activity', 'users_on_old_site_only', 'keem_users',
-            'husband_users', 'kemler_users', 'kaplan_users', 'confirmed_users_not_recently_bugged', 'users_needing_password_update'));
+            'husband_users', 'kemler_users', 'kaplan_users', 'confirmed_users_not_recently_bugged', 'users_needing_password_update', 'admins'));
     }
 
 
