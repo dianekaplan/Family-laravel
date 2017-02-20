@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1e94042-abf4-4c25-bc18-827996dce02e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/partials/_husband_history.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_husband_history.blade.php" />
     </list>
     <ignored path="Family-laravel.iws" />
@@ -117,8 +116,8 @@
       <file leaf-file-name="_husband_history.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_husband_history.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="187">
+              <caret line="11" column="150" selection-start-line="11" selection-start-column="150" selection-end-line="11" selection-end-column="150" />
               <folding />
             </state>
           </provider>
@@ -873,12 +872,12 @@
       <workItem from="1487206686037" duration="2459000" />
       <workItem from="1487420940664" duration="9301000" />
       <workItem from="1487431783395" duration="3375000" />
-      <workItem from="1487507302543" duration="22953000" />
+      <workItem from="1487507302543" duration="24686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132471000" />
+    <option name="totallyTimeSpent" value="134204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
@@ -1345,8 +1344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_husband_history.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="187">
+          <caret line="11" column="150" selection-start-line="11" selection-start-column="150" selection-end-line="11" selection-end-column="150" />
           <folding />
         </state>
       </provider>

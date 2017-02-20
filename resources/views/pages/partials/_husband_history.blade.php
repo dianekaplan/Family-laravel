@@ -8,13 +8,12 @@
                 <li><a href="{{ action('FamilyController@show', [292]) }}">Leander Wilcox and Amanda Penhallow</a>
                         were born (and later married) in
                         Chautauqua county New York, both with several generations going back in CT, both of their fathers served in the War of 1812, and each of their
-                        grandfathers (
-                        <a href="{{ action('PeopleController@show', [925]) }}">Richard Penhallow</a>,
-                        <a href="{{ action('PeopleController@show', [929]) }}">Stephen Wilcox</a>,
-                        <a href="{{ action('PeopleController@show', [931]) }}">Halliday Ingraham</a>, and
-                        <a href="{{ action('PeopleController@show', [927]) }}">Abner House</a>)
-
-                        served in the Revolutionary War.
+                        grandfathers (Richard Penhallow, Stephen Wilcox, Halliday Ingraham, and Abner House)
+                        served in the Revolutionary War. <a href="{{ action('PeopleController@show', [925]) }}">Richard Penhallow's</a> father's side immigrated
+                        from England in the late 1600's.
+                        <a href="{{ action('PeopleController@show', [929]) }}">Stephen Wilcox</a>' ancestors <b>immigrated in the first half of the 1600's (mostly
+                        via England & Holland)</b>, including one of the passengers on the Mayflower,
+                        <a href="http://mayflowerhistory.com/warren/" target="_blank">Richard Warren</a>.
 
                 </li>
 
