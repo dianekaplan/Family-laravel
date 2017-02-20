@@ -119,7 +119,7 @@ class PeopleController extends Controller
 //        flash()->success('You successfully added a person');
         flash()->overlay('You successfully added a person', 'Thank you');
 
-        return redirect('people');
+        return redirect('admin');
     }
 
 
