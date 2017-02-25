@@ -10,11 +10,11 @@ use App\Http\Controllers\Controller;
 class MailController extends Controller
 {
 
-    public function Sending_Email()
-    {
-        $this->call('GET','Email.test');
-        return View('Email.test');
-    }
+//    public function Sending_Email()
+//    {
+//        $this->call('GET','Email.test');
+//        return View('Email.test');
+//    }
 
 
 
