@@ -4,7 +4,8 @@
 </head>
 
 <body>
- {{$body}}
+
+ {!! $body !!}
 
 </body>
 </html>
