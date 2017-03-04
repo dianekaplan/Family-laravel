@@ -8,7 +8,7 @@ Welcome to the family tree!  <br/><br/>
 
 Dear {{$name}},
 I'm so excited to have you check out the family tree!  You can log at
-<a href="https://dk-family.herokuapp.com/">https://dk-family.herokuapp.com/ </a>, using your email:
+<a href="http://www.ourbigfamilytree.com">http://www.ourbigfamilytree.com </a>, using your email:
 {{$email}} <br/><br/>
 
 Check that I can pull some data from person record: {{$face}}<br/><br/>

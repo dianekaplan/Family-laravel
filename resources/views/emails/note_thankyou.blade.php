@@ -11,7 +11,7 @@ Thank you so much for adding a note to the family tree for {{$redirect_url}}: <b
 
 <br/> <br/>
 Check it out here: <br/>
-<a href="https://dk-family.herokuapp.com/{{$redirect_url}}">https://dk-family.herokuapp.com/{{$redirect_url}} </a>
+<a href="http://www.ourbigfamilytree.com/{{$redirect_url}}">http://www.ourbigfamilytree.com/{{$redirect_url}} </a>
 
 <br/><br/>
 

@@ -13,7 +13,8 @@
                         from England in the late 1600's.
                         <a href="{{ action('PeopleController@show', [929]) }}">Stephen Wilcox</a>' ancestors <b>immigrated in the first half of the 1600's (mostly
                         via England <img src="/flags/gb.gif" /> & Holland)</b>, including one of the passengers on the Mayflower,
-                        <a href="https://en.wikipedia.org/wiki/Richard_Warren" target="_blank">Richard Warren</a>.
+                        <a href="https://en.wikipedia.org/wiki/Richard_Warren" target="_blank">Richard Warren</a>. We came down through his daughter Sarah Warren
+                        and her husband John Cooke.
 
                 </li>
 

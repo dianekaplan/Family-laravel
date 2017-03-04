@@ -11,7 +11,7 @@ Thank you so much for making an update to the family tree: <br/>
 
 <br/> <br/>
 Check it out here: <br/>
-<a href="https://dk-family.herokuapp.com/">https://dk-family.herokuapp.com/ </a>
+<a href="http://www.ourbigfamilytree.com">http://www.ourbigfamilytree.com </a>
 
 <br/><br/>
 
