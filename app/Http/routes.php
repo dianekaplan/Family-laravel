@@ -81,8 +81,6 @@ Route::get('auth/login', 'HomeController@landing');
 Route::get('add_note/{type}/{id}/{name}', 'NotesController@add_note');
 Route::post('add_note/save', 'NotesController@store');
 
-http://bin.mailgun.net/e0547c8b
-
 
 //Route::get('updates/{user}', [ 'uses' => 'UpdateController@user_updates']); //missing argument 1
 //
