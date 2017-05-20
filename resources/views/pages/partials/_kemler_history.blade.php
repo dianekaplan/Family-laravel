@@ -22,7 +22,7 @@ The Kemler side:
 
 
 The Kaplan side:
-        <ul><li>Bessie's parents <a href="{{ action('FamilyController@show', [3]) }}">Ida & Barnett Kaplan</a> (four generations back)
+        <ul><li>Bessie's parents <a href="{{ action('FamilyController@show', [3]) }}">Ida & Bernard Kaplan</a> (four generations back)
                 were  the generation that came here (from <b>Lithuania</b> <img src="/flags/lt.gif" />) .
                 They started in NYC (where Bessie was born in August of 1888), and it looks like they had  moved to Massachusetts by
                 1889 when her brother Harry was born (based on 1900 US census).
