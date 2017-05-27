@@ -1,4 +1,4 @@
-<h2>Disastrous Fire in Strykersville</h2>
+<h2>Peter Reisdorf's Mill</h2>
 
 <img src="http://res.cloudinary.com/hnyiprajv/image/upload/MReisdorf_mill.jpg" align="left" class="img-rounded"/>
 
