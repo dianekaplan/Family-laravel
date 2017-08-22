@@ -4,6 +4,12 @@
 
 The Kobrin side:
         <ul>
+            <li>We have Russian/Lithuanian census records back to the 1700s for our 'Kabrun' ancestors: Nokhim Kabron (born in 1700's)
+                had a son Khaim Kabron (1768-1822) who married Frume Kabron (1771- after 1834). They had a son Orel Kabron (1800-1831),
+                who had a son Josel/Yosel/Iosel Kabron (1824-1877) who was a craftsman by trade. He had children Aron David,
+                Esther/Etta-Mera, and Brayne/Brina. Aron David was born in Kovno, Russia (which became Kaunas, Lithuania), and he moved
+                to Panevezys community in 1884).</li>
+
             <li>In <b>1896</b>, </b><a href="{{ action('FamilyController@show', [90]) }}">Aaron & Rochel Kobrin</a> left Russia in (the area that's now
                 Lithuania <img src="/flags/lt.gif" />)
                 with their children, and settled in South Africa <img src="/flags/za.gif" /> and the US <img src="/flags/us.gif" />  around the same time.
