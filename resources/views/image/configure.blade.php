@@ -49,28 +49,29 @@
         <br/>
         <b> People:  </b>  <br/>
 
-        {{--An image either has exactly one person or one family, or it has a one-to-many associations with people.--}}
-        {{--The first type is editable in the form already (saved to the image itself), the second type uses image_person table--}}
+        {{--Images can be associated with one person or with one family (in the image record itself)- that can be edited in the form. --}}
+        {{----}}
+        {{--For group images that aren't exactly a family list, we add individual associations in the image_person table. --}}
+        {{--(And sometimes they have the family association too). --}}
 
-        @if ( ($image->subject) or ($image->family))
+        {{--This image is of one person--}}
+        @if ($image->subject)
             {{--Show person link:--}}
-            @if ($image->subject)
-                Associated person: <a href="{{ action('PeopleController@show', [$image->subject]) }}">here</a>
-            @endif
-
-            {{--Show family link:--}}
-            @if ($image->family)
-                Associated family: <a href="{{ action('FamilyController@show', [$image->family]) }}">here</a>
-            @endif
-
+            Associated person: <a href="{{ action('PeopleController@show', [$image->subject]) }}">here</a>
         @else
 
+        {{--This is a group picture- either saved to a family, or one-to-many associations (or both)--}}
 
-    {{--We have a picture with invidual person associations- list everyone associated --}}
+            {{--Show person associations if they exist--}}
             @foreach($image->people as $person)
                 @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])<br/>
             @endforeach
             <br/>
+
+            {{--Show family link if there is one--}}
+            @if ($image->family)
+                Associated family: <a href="{{ action('FamilyController@show', [$image->family]) }}">here</a><br/><br/>
+            @endif
 
 
     {{--If picture doesn't have specified person/family, show option to associate more people (one-to-many)--}}
