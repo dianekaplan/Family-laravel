@@ -63,6 +63,7 @@ class ImageController extends Controller
         return view ('image/album',  compact('images'));
     }
 
+    // used in the image hover on the gallery page, to populate list of people shown
     public function get_image_people($id)
     {
         $image = Image::find($id);
@@ -137,9 +138,25 @@ class ImageController extends Controller
         return view ('image/show',  compact('image'));
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function configure($id)
     {
         $image = Image::find($id);
+       // $people = Image::get_image_people($id);
+//        return view ('image/configure',  compact('image', 'people'));
+        return view ('image/configure',  compact('image'));
+    }
+
+    public function add_person_association($image_id, $person_id)
+    {
+        // add row in image_person for those
+
+        $image = Image::find($image_id);
+        // $people = Image::get_image_people($id);
+//        return view ('image/configure',  compact('image', 'people'));
         return view ('image/configure',  compact('image'));
     }
 
