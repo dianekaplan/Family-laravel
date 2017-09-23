@@ -16,14 +16,21 @@
             @endforeach
 <br/>
 
-{{--@TODO: one day may add image associations to handle as expected, but that gets in the way of individual pictures --}}
-{{--In the meantime, we handle them separately--}}
+{{--@TODO: one day may add image associations for solo/family images, but that gets in the way of individual pictures --}}
+{{--In the meantime, we handle them differently--}}
 
     @if ($person)
         @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])
     @endif
 
-    @if ($family)
+    @if ($family != null )
+        @include ('person.partials._person_link', ['person' => $mother, 'show_flag'=>'N', 'show_book'=>'N'])<br/>
+        @include ('person.partials._person_link', ['person' => $father, 'show_flag'=>'N', 'show_book'=>'N'])<br/>
+        @foreach($kids as $kid)
+            @include ('person.partials._person_link', ['person' => $kid, 'show_flag'=>'N', 'show_book'=>'N'])
+            <br/>
+        @endforeach
+        <br/>
         Go to family page: <br/>    @include ('family.partials._family_link', ['family' => $family, 'generation' => 'NA'])
     @endif
 
