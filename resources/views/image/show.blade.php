@@ -10,24 +10,21 @@
     </div>
 
 {{--List everybody who's in the picture (for group pictures--}}
-        @foreach($image->people as $person)
-                @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])
+        @foreach($image->people as $person_included)
+                @include ('person.partials._person_link', ['person' => $person_included, 'show_flag'=>'N', 'show_book'=>'N'])
             <br/>
             @endforeach
 <br/>
 
+{{--@TODO: one day may add image associations to handle as expected, but that gets in the way of individual pictures --}}
+{{--In the meantime, we handle them separately--}}
 
-{{--@TODO: make script to go through images and add the appropriate image_person records so you can just handle it one way--}}
-{{--Workaround in the meantime: generic link based on relevant id in the image record--}}
+    @if ($person)
+        @include ('person.partials._person_link', ['person' => $person, 'show_flag'=>'N', 'show_book'=>'N'])
+    @endif
 
-{{--Show person link:--}}
-@if ($image->subject)
-    <a href="{{ action('PeopleController@show', [$image->subject]) }}">Go to this person's page</a>
-@endif
-
-{{--Show family link:--}}
-@if ($image->family)
-    <a href="{{ action('FamilyController@show', [$image->family]) }}">Go to this family's page</a>
-@endif
+    @if ($family)
+        Go to family page: <br/>    @include ('family.partials._family_link', ['family' => $family, 'generation' => 'NA'])
+    @endif
 
 @stop

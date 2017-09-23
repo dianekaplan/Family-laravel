@@ -135,7 +135,15 @@ class ImageController extends Controller
     {
         $image = Image::find($id);
 
-        return view ('image/show',  compact('image'));
+
+//        get featured person or family if they exist
+        $person_id = $image->subject;
+        $person = Person::find($person_id);
+
+        $family_id = $image->family;
+        $family = Family::find($family_id);
+
+        return view ('image/show',  compact('image', 'person', 'family'));
     }
 
     /**
