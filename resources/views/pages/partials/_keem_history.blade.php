@@ -14,7 +14,7 @@ The Keem/Reisdorf side:
                 <a href="{{ action('PeopleController@show', [51]) }}">Nicholas</a>.
                 <p>
                     Going further back for Martin: through his paternal grandfather Jean, we can trace 7 generations further back to
-                    <a href="{{ action('FamilyController@show', [290]) }}">Martzolff & Marie Voltz<a/> in the 1600s in
+                    <a href="{{ action('FamilyController@show', [290]) }}">Martzolff & Marie Voltz</a> in the 1600s in
                         <a href="https://en.wikipedia.org/wiki/Gunstett" target="_blank">Gunstett</a>, and the Kühn/Kihm family
                         into the 1600's in Mettnich, Germany. </p>
                 <p>
@@ -54,7 +54,7 @@ The Keem/Reisdorf side:
                 US together in the early 1700's. They stayed for 3 generations but Maria Kuhn was born in Germany (though her parents lived
                         and died in the US)- this data needs to be verified. </p>
             </li>
-            
+
 
             <li>Connection: Catherine Reisdorf married Nicholas Keem. Nicholas and Catherine Keem had a son named
                 <a href="{{ action('PeopleController@show', [52]) }}">Albert</a>, who was
