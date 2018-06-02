@@ -11,7 +11,11 @@ The Keem/Reisdorf side:
                     <img src="/flags/alsace.gif" />
                     (Gunstett and Schaenenburg, respectively)</b>, and
                 they were married and came to the US together <b>around 1830</b>. They had a son named
-                <a href="{{ action('PeopleController@show', [51]) }}">Nicholas</a>. </li>
+                <a href="{{ action('PeopleController@show', [51]) }}">Nicholas</a>. (Going further back for Martin: via his paternal
+                grandfather Jean, we trace the Kühn/Kihm family into the late 1600's and the Irr family in the 1600's in Gunstett,
+                Germany. Going further back for Catherine (Kornprobst) Keem: via her paternal grandmother Catherine Wolff,
+                we trace the Sturny and Wolff families into the 1700s in Alsace, France).
+            </li>
 
             <li>Mary Glaser came to this country from <b>Germany</b>  <img src="/flags/de.gif" />
                 with
@@ -24,6 +28,11 @@ The Keem/Reisdorf side:
 
                 Mary & Peter Reisdorf (5 generations back)
                 had a daughter named <a href="{{ action('PeopleController@show', [50]) }}">Catherine Reisdorf.</a>
+                (Going back further for Mary: through her paternal grandmother Gertrude, we trace the Simon and Franck families
+                into the 1700s, and via her paternal grandfather Peter, we trace the Zohler, Aatz, Gläser, and Threin families
+                into the 1600s, all in Saarland Germany. Going back furher for Peter: through his paternal grandfather Johann,
+                we can trace back to the Schlarp family in the late 1600s in Rheinland-Pfalz, Germany, and the Reisdorf, Jager,
+                and Gard, families into the 1700s in the same area, then known as Prussia).
 
                 <p>A little more history:
             In the 1860's, three of Mary's younger brothers <a href="/stories/797">fought in the civil war</a>, click around
